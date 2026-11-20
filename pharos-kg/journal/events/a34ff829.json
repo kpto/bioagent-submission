@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "4dc6aa12"
+ ],
+ "code": "B-14",
+ "created_time": "2026-11-16T21:45:57Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "The existing exporter was pointed at the compact branch graph and evidence sidecar without changes. It reconciled and wrote KGX tables, verdicts and a PyG bundle including a 16-column node feature matrix.",
+  "message": 37225,
+  "numbers": "15,000 nodes; 67,588 edges; 67,588 verdicts; keep 67,587; prune 1 (R08); 16 node features",
+  "status": "published (F-0069)"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "a34ff829",
+ "references": [],
+ "subject": "B-14",
+ "title": "Compact profile exports through the same competition tool"
+}

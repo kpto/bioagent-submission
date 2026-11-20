@@ -1,0 +1,18 @@
+{
+ "code": "EV-11",
+ "created_time": "2026-11-16T06:31:38Z",
+ "evaluated_revision": "32bce02c",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "aba763a4",
+ "references": [],
+ "result": {
+  "detail": "The full suite passed 72 tests and pyright reported zero errors; kgctl validate returned no errors on 1 asset, 10 bindings, 5 edges, 5 nodes and 41 properties at revision 424beaec2d79057d. The quick gate passed audit, explainability, pruning and QA with link prediction skipped, and kgkit passed 7 tests. An end-to-end console test loaded the framework viewer on port 8001 and received subject node:biological_process.",
+  "message": 24139,
+  "numbers": "72 passed; 7 passed in kgkit; 0 pyright errors; validate: assets 1, bindings 10, edges 5, nodes 5, properties 41; quick 4 passed/1 skipped",
+  "status": "passed"
+ },
+ "subject": "EV-11",
+ "title": "Final gate battery on the aligned project"
+}

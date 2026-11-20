@@ -1,0 +1,13 @@
+{
+ "code": "F-30",
+ "created_time": "2026-11-16T08:11:29Z",
+ "event_type": "finding.created",
+ "evidence": "A relation-aware RGCN that keeps associated_with, ligand-target, PPI and GO edge types reaches macro AUPRC 0.976050 and micro 0.964371",
+ "external_references": [],
+ "id": "fd034878",
+ "metric": "0.976050 / 0.964371; CI [0.971643, 0.98]; mean of seeds 0.95065 / 0.937113; 40/60 0.974460 / 0.966500",
+ "observation": "An R-GCN that keeps associated_with, ligand-target, PPI and GO edge types reached macro AUPRC 0.976050 and micro 0.964371 as a ten-seed rank ensemble, with 95% macro interval [0.971643, 0.98]; the mean of its seeds was 0.95065/0.937113. Mixing it 40/60 with GATv2+GraphSAGE gave 0.974460/0.966500, and F-0023 first named it the primary macro-AUPRC model.",
+ "references": [],
+ "subject": "F-30",
+ "title": "Relation-aware RGCN is the strongest committed-protocol model"
+}

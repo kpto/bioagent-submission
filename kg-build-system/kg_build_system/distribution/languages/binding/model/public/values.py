@@ -1,0 +1,251 @@
+"""Binding values and options returned to a graph author.
+
+``NodeBinding`` and ``EdgeBinding`` are the frozen results of the binding
+factories; ``NodeValues`` and ``EdgeValues`` are the row-derived values a
+``bind`` callable returns; ``BindingOptions`` attaches portable annotations.
+
+Example:
+    ```python
+    from kg_build_system.distribution.languages.binding import (
+        BindingOptions, NodeBinding, node_binding,
+    )
+
+    binding: NodeBinding[UnitNode] = node_binding(
+        target=UnitNode,
+        build_key=UnitTable.unit_ref,
+        properties=UnitNode(name=UnitTable.unit_name),
+        options=BindingOptions(meaning=...),
+    )
+    ```
+"""
+from __future__ import annotations
+
+from collections.abc import Sequence
+from dataclasses import dataclass
+from typing import TYPE_CHECKING, Generic, Literal, TypeVar
+
+from kg_build_system.distribution.languages.annotations.model.public import (
+    Annotation,
+)
+from kg_build_system.distribution.languages.annotations.service.internal import (
+    annotation_tuple,
+)
+from kg_build_system.distribution.languages.data.model.public import (
+    DerivedRowSource,
+    RelationRowSource,
+)
+from kg_build_system.distribution.languages.expressions.model.public import (
+    Selection,
+)
+from kg_build_system.distribution.languages.meaning.model.public import (
+    Meaning,
+    require_declaration_meaning,
+)
+from kg_build_system.distribution.languages.topology.model.public import (
+    EdgeRoot,
+    Node,
+    NonNullableGraphValue,
+)
+from kg_build_system.kernel.model.public.types import Shape
+
+if TYPE_CHECKING:
+    from kg_build_system.distribution.languages.meaning.model.public import (
+        Meaning,
+    )
+
+N_co = TypeVar("N_co", bound=Node, covariant=True)
+E_co = TypeVar("E_co", bound=EdgeRoot, covariant=True)
+K = TypeVar("K", bound=NonNullableGraphValue, covariant=True)
+SK = TypeVar("SK", bound=NonNullableGraphValue, covariant=True)
+TK = TypeVar("TK", bound=NonNullableGraphValue, covariant=True)
+
+# External property name paired with the expression the binding supplies for it.
+type PropertyValues = tuple[tuple[str, Selection[object]], ...]
+type BindingMode = Literal["declarative", "python"]
+
+
+@dataclass(frozen=True, slots=True)
+class PythonRef:
+    """A stable reference to the callable that produced a Python binding.
+
+    The reference carries no live callable. It names the module and qualified
+    name plus the callable's source signature, so a consumer can report where a
+    rows-form binding came from.
+
+    Example:
+        ```python
+        from kg_build_system.distribution.languages.binding import PythonRef
+
+        reference = PythonRef("example.bindings", "build_unit", "(row)")
+        ```
+    """
+
+    module: str
+    qualname: str
+    signature: str
+
+    def __post_init__(self) -> None:
+        if not self.module:
+            raise ValueError("a Python reference requires a module")
+        if not self.qualname:
+            raise ValueError("a Python reference requires a qualified name")
+
+
+@dataclass(frozen=True, slots=True)
+class BindingOptions:
+    """Portable metadata attached to one graph binding.
+
+    A binding's meaning is the fulfilment, and a fulfilment without a purpose has
+    nothing to be adequate to. The meaning is therefore required and must carry a
+    ``Purpose``.
+
+    Example:
+        ```python
+        from kg_build_system.distribution.languages.binding import BindingOptions
+        from kg_build_system.distribution.languages.meaning import Meaning, Purpose
+
+        options = BindingOptions(
+            meaning=Meaning(
+                purpose=Purpose("Fulfil the node from the register grain."),
+            ),
+        )
+        ```
+    """
+
+    meaning: Meaning
+    annotations: Sequence[Annotation] = ()
+
+    def __post_init__(self) -> None:
+        if self.meaning is None:
+            raise ValueError("a binding requires a meaning with a purpose")
+        require_declaration_meaning(self.meaning)
+        if self.meaning.purpose is None:
+            raise ValueError("a binding requires a meaning with a purpose")
+        object.__setattr__(
+            self, "annotations", annotation_tuple(list(self.annotations)),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class NodeValues(Generic[N_co, K]):
+    """The row-derived values one node binding supplies.
+
+    Example:
+        ```python
+        from kg_build_system.distribution.languages.binding import NodeValues
+
+        values = NodeValues(build_key=row.unit_ref, properties=UnitNode(...))
+        ```
+    """
+
+    build_key: Selection[K]
+    properties: N_co
+
+
+@dataclass(frozen=True, slots=True)
+class EdgeValues(Generic[E_co, K, SK, TK]):
+    """The row-derived values one edge binding supplies.
+
+    The four parameters keep each key distinct: the edge key, the source node
+    key and the target node key.
+
+    Example:
+        ```python
+        from kg_build_system.distribution.languages.binding import EdgeValues
+
+        values = EdgeValues(
+            build_key=row.unit_ref,
+            source_build_key=row.site_id,
+            target_build_key=row.unit_ref,
+            properties=HasUnitEdge(...),
+        )
+        ```
+    """
+
+    build_key: Selection[K]
+    source_build_key: Selection[SK]
+    target_build_key: Selection[TK]
+    properties: E_co
+
+
+@dataclass(frozen=True, slots=True)
+class NodeBinding(Generic[N_co]):
+    """One row context mapped onto one concrete node component.
+
+    ``name`` is a display handle; it is excluded from the binding's identity
+    digest, so renaming a binding does not change what it declares.
+
+    Example:
+        ```python
+        from kg_build_system import Meaning, Purpose
+        from kg_build_system.distribution.languages.binding import NodeBinding
+
+        binding: NodeBinding[UnitNode] = node_binding(
+            target=UnitNode,
+            build_key=UnitTable.unit_ref,
+            properties=UnitNode(name=UnitTable.unit_name),
+            meaning=Meaning(
+                purpose=Purpose("Fulfil the unit record from the register."),
+            ),
+        )
+        ```
+    """
+
+    name: str | None
+    target: type[N_co]
+    build_key: Selection[NonNullableGraphValue]
+    properties: PropertyValues
+    annotations: tuple[Annotation, ...] = ()
+    rows: DerivedRowSource[Shape] | RelationRowSource[Shape] | None = None
+    mode: BindingMode = "declarative"
+    python_ref: PythonRef | None = None
+    meaning: Meaning | None = None
+
+
+@dataclass(frozen=True, slots=True)
+class EdgeBinding(Generic[E_co]):
+    """One row context mapped onto one concrete edge component.
+
+    ``name`` is a display handle; it is excluded from the binding's identity
+    digest, so renaming a binding does not change what it declares.
+
+    Example:
+        ```python
+        from kg_build_system import Meaning, Purpose
+        from kg_build_system.distribution.languages.binding import EdgeBinding
+
+        binding: EdgeBinding[HasUnitEdge] = edge_binding(
+            target=HasUnitEdge,
+            build_key=UnitTable.unit_ref,
+            source_build_key=UnitTable.site_id,
+            target_build_key=UnitTable.unit_ref,
+            properties=HasUnitEdge(as_at=UnitTable.as_at),
+            meaning=Meaning(
+                purpose=Purpose("Fulfil the installed-at relation from the register."),
+            ),
+        )
+        ```
+    """
+
+    name: str | None
+    target: type[E_co]
+    build_key: Selection[NonNullableGraphValue]
+    source_build_key: Selection[NonNullableGraphValue]
+    target_build_key: Selection[NonNullableGraphValue]
+    properties: PropertyValues
+    annotations: tuple[Annotation, ...] = ()
+    source_node: type[Node] | None = None
+    target_node: type[Node] | None = None
+    rows: DerivedRowSource[Shape] | RelationRowSource[Shape] | None = None
+    mode: BindingMode = "declarative"
+    python_ref: PythonRef | None = None
+    meaning: Meaning | None = None
+
+
+type Binding = NodeBinding[Node] | EdgeBinding[EdgeRoot]
+
+
+__all__ = [
+    "Binding", "BindingMode", "BindingOptions", "EdgeBinding", "EdgeValues",
+    "NodeBinding", "NodeValues", "PropertyValues", "PythonRef",
+]

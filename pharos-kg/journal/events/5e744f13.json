@@ -1,0 +1,53 @@
+{
+ "code": "EV-262",
+ "created_time": "2026-11-16T16:37:15Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-3",
+    "graph": "enriched authored graph",
+    "method": "IDF-SVD + disease-degree rank blend (50/50)",
+    "protocol": "fair per-positive (13,807 pairs; 16.76% base)"
+   },
+   "name": "experiments/prediction/svd_robustness.json",
+   "type": "report"
+  }
+ ],
+ "id": "5e744f13",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "cb8bd6d8"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); guarded held-out sets; ensemble beats degree on degree-matched and hard, loses on fair",
+  "config": "IDF-SVD k=8/16/24/32/48/64/96; rank blend; 5,584 eval-negative overlaps removed",
+  "design": "E-3",
+  "findings": [
+   "F-50",
+   "F-51",
+   "F-52"
+  ],
+  "graph": "enriched authored graph",
+  "method": "IDF-SVD + disease-degree rank blend (50/50)",
+  "metric_text": "macro AUPRC 0.758881; micro AUPRC 0.7705362120657855; macro AUROC 0.889796; micro AUROC 0.8893353859148867; macro MRR 0.827821; micro MRR 0.84315; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.758881,
+   "macro_auroc": 0.889796,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.827821,
+   "micro_auprc": 0.7705362120657855,
+   "micro_auroc": 0.8893353859148867,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.84315
+  },
+  "protocol": "fair per-positive (13,807 pairs; 16.76% base)",
+  "report": "experiments/prediction/svd_robustness.json"
+ },
+ "subject": "B-10",
+ "title": "IDF-SVD + disease-degree rank blend (50/50) \u00b7 fair negatives"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-47",
+ "created_time": "2026-11-16T16:11:10Z",
+ "event_type": "finding.created",
+ "evidence": "The IDF-SVD gain survives two leakage checks.",
+ "external_references": [],
+ "id": "a989a61d",
+ "metric": "879 queries; 5220 pairs; 16.84% positive; SVD 0.436267 / 0.544888; degree 0.167494 / 0.167992; permutation 0.279272 / 0.249671 vs real 0.445936 / 0.509497",
+ "observation": "On 879 exactly degree-matched queries (5,220 pairs, 16.84% positive) the SVD ensemble scored 0.436267/0.544888 while disease degree was at chance (0.167494/0.167992). A degree-preserving target permutation dropped the real 0.445936/0.509497 to 0.279272/0.249671, so F-0040 reads the gain as association-pattern signal rather than degree or topology.",
+ "references": [],
+ "subject": "F-47",
+ "title": "IDF-SVD survives exact-degree and permutation checks"
+}

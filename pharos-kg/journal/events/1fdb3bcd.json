@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "1f72e27c"
+ ],
+ "code": "B-21",
+ "created_time": "2026-11-18T02:17:08Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "The chain is asset opentargets2609 (19 pinned files, 888.2 MB, CC0) through ot_association, ot_target_protein and ot_disease to target_disease_evidence, target_disease_evidence_pair, target_disease_annotation and finally an evidence_class property. The built graph keeps 15,430 associated_with edges with zero duplicate pairs: high 2,527, literature_only 4,379 and none 8,524, with evidence_count totalling 18,738. The fetcher re-downloads the release and reproduces the committed parquet byte for byte.",
+  "message": 49652,
+  "numbers": "19 source files, 888.2 MB; association 7,495,759 rows; target_protein 526,681; disease 45,896; 15,430 edges; high 2,527 / literature_only 4,379 / none 8,524; duplicate pairs 0; evidence_count total 18,738",
+  "status": "F-0113; committed 5a19720"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "1fdb3bcd",
+ "references": [],
+ "subject": "B-21",
+ "title": "Open Targets 26.09 declared as an asset with evidence_class on every edge"
+}

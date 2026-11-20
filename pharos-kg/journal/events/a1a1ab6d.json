@@ -1,0 +1,12 @@
+{
+ "code": "FW-1",
+ "created_time": "2026-11-16T08:36:18Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "a1a1ab6d",
+ "reason": "The earlier 0.997 cold-start figure was withdrawn because the sampler gave 2,236 positives only 600 shared negatives, so the score measured an easy class balance rather than generalization. The corrected per-positive run puts histogram base at 0.500586/0.488776 and GATv2 at 0.094595/0.091132 (F-0026, F-0029).",
+ "references": [],
+ "subject": "F-33",
+ "title": "Cold-start 0.997 withdrawn as a sampler artefact",
+ "withdrawn_finding": "a45f2302"
+}

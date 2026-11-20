@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">The kinase graph</title>
+  <desc id="desc">Three independent releases join into one declared graph. Every link carries evidence and a stated limit. The graph answers why a kinase is linked and what the link does not mean. A research loop proposes, runs, measures, keeps or rejects, and revises the design.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b45309"/>
+    </marker>
+    <style>
+      .paper { fill: #fbfaf7; stroke: #e7e2d8; }
+      .card { fill: #ffffff; stroke: #ddd6ca; }
+      .panel { fill: #ffffff; stroke: #ddd6ca; }
+      .title { font: 600 30px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 15px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7280; }
+      .cardtitle { font: 600 16px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2937; }
+      .body { font: 400 12px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7280; }
+      .tiny { font: 400 10px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #9ca3af; }
+      .label { font: 600 10px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #b45309; letter-spacing: 0.12em; }
+      .node { font: 600 11px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #ffffff; }
+      .edge { stroke: #b8b2a7; stroke-width: 1.6; fill: none; }
+      .edgelabel { font: 400 9px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7280; }
+      .flow { stroke: #b45309; stroke-width: 1.6; fill: none; }
+      .rule { stroke: #e7e2d8; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect class="paper" x="8" y="8" width="1184" height="764" rx="20"/>
+
+  <text class="title" x="48" y="60">The kinase graph</text>
+  <text class="subtitle" x="48" y="86">Three releases. One argument. Evidence beside every link.</text>
+
+  <rect class="card" x="48" y="198" width="250" height="82" rx="12"/>
+  <text class="cardtitle" x="68" y="225">Pharos 3.19</text>
+  <text class="body" x="68" y="246">targets, ligands, activities</text>
+  <text class="tiny" x="68" y="265">CC-BY-SA-4.0</text>
+
+  <rect class="card" x="48" y="294" width="250" height="82" rx="12"/>
+  <text class="cardtitle" x="68" y="321">Open Targets 26.09</text>
+  <text class="body" x="68" y="342">independent associations + class</text>
+  <text class="tiny" x="68" y="361">CC0-1.0</text>
+
+  <rect class="card" x="48" y="390" width="250" height="82" rx="12"/>
+  <text class="cardtitle" x="68" y="417">HPO 2026-09-02</text>
+  <text class="body" x="68" y="438">disease and gene phenotypes</text>
+  <text class="tiny" x="68" y="457">CC-BY-4.0</text>
+
+  <path class="flow" d="M298 239 H330"/>
+  <path class="flow" d="M298 335 H330"/>
+  <path class="flow" d="M298 431 H330"/>
+  <path class="flow" d="M330 239 V431"/>
+  <path class="flow" d="M330 335 H360" marker-end="url(#arrow)"/>
+
+  <rect class="panel" x="360" y="120" width="470" height="430" rx="16"/>
+  <text class="label" x="384" y="148">THE GRAPH</text>
+
+  <line class="edge" x1="600" y1="300" x2="450" y2="190"/>
+  <line class="edge" x1="600" y1="300" x2="750" y2="190"/>
+  <line class="edge" x1="600" y1="300" x2="750" y2="410"/>
+  <line class="edge" x1="600" y1="300" x2="450" y2="410"/>
+  <line class="edge" x1="600" y1="300" x2="600" y2="452"/>
+
+  <text class="edgelabel" x="482" y="236">binds</text>
+  <text class="edgelabel" x="686" y="236">associated_with</text>
+  <text class="edgelabel" x="700" y="366">participates_in</text>
+  <text class="edgelabel" x="472" y="366">in_pathway</text>
+  <text class="edgelabel" x="610" y="386">has_phenotype</text>
+
+  <circle cx="600" cy="300" r="40" fill="#4d7c0f"/>
+  <text class="node" x="600" y="296" text-anchor="middle">Protein</text>
+  <text class="node" x="600" y="311" text-anchor="middle" style="font-weight:400;font-size:9px">PHAROS</text>
+
+  <circle cx="450" cy="190" r="32" fill="#1d4ed8"/>
+  <text class="node" x="450" y="194" text-anchor="middle">Ligand</text>
+
+  <circle cx="750" cy="190" r="32" fill="#b45309"/>
+  <text class="node" x="750" y="194" text-anchor="middle">Disease</text>
+
+  <circle cx="450" cy="410" r="32" fill="#0f766e"/>
+  <text class="node" x="450" y="414" text-anchor="middle">Pathway</text>
+
+  <circle cx="750" cy="410" r="32" fill="#6d28d9"/>
+  <text class="node" x="750" y="410" text-anchor="middle">GO</text>
+  <text class="node" x="750" y="423" text-anchor="middle" style="font-weight:400;font-size:9px">process</text>
+
+  <circle cx="600" cy="452" r="28" fill="#be123c"/>
+  <text class="node" x="600" y="456" text-anchor="middle">Phenotype</text>
+
+  <text class="body" x="384" y="516">A link is not a mechanism, a diagnosis or a probability.</text>
+  <text class="body" x="384" y="534">It is a claim with a source, a meaning and a limit.</text>
+
+  <path class="flow" d="M830 335 H860" marker-end="url(#arrow)"/>
+
+  <rect class="card" x="860" y="120" width="290" height="430" rx="14"/>
+  <text class="label" x="884" y="190">THE QUESTION</text>
+  <text class="cardtitle" x="884" y="220" style="font-size:15px">Why is this kinase linked</text>
+  <text class="cardtitle" x="884" y="240" style="font-size:15px">to a disease, a compound,</text>
+  <text class="cardtitle" x="884" y="260" style="font-size:15px">another kinase or a process —</text>
+  <text class="cardtitle" x="884" y="280" style="font-size:15px">and what does that link</text>
+  <text class="cardtitle" x="884" y="300" style="font-size:15px">not mean?</text>
+
+  <line class="rule" x1="884" y1="340" x2="1126" y2="340"/>
+  <text class="label" x="884" y="370">THE ANSWER</text>
+  <circle cx="890" cy="396" r="3" fill="#b45309"/>
+  <text class="body" x="902" y="400">the source rows behind it</text>
+  <circle cx="890" cy="422" r="3" fill="#b45309"/>
+  <text class="body" x="902" y="426">what the link does not claim</text>
+  <circle cx="890" cy="448" r="3" fill="#b45309"/>
+  <text class="body" x="902" y="452">why a candidate was kept or pruned</text>
+  <circle cx="890" cy="474" r="3" fill="#b45309"/>
+  <text class="body" x="902" y="478">a graph you can review</text>
+
+  <rect class="panel" x="48" y="570" width="1102" height="180" rx="14"/>
+  <text class="label" x="68" y="596">THE RESEARCH LOOP</text>
+
+  <rect class="card" x="68" y="612" width="180" height="44" rx="8"/>
+  <text class="cardtitle" x="82" y="630" style="font-size:12px">Propose</text>
+  <text class="tiny" x="82" y="646">a change</text>
+
+  <rect class="card" x="288" y="612" width="180" height="44" rx="8"/>
+  <text class="cardtitle" x="302" y="630" style="font-size:12px">Run</text>
+  <text class="tiny" x="302" y="646">an experiment</text>
+
+  <rect class="card" x="508" y="612" width="180" height="44" rx="8"/>
+  <text class="cardtitle" x="522" y="630" style="font-size:12px">Measure</text>
+  <text class="tiny" x="522" y="646">against a baseline</text>
+
+  <rect class="card" x="728" y="612" width="200" height="44" rx="8"/>
+  <text class="cardtitle" x="742" y="630" style="font-size:12px">Keep or reject</text>
+  <text class="tiny" x="742" y="646">with the rule</text>
+
+  <rect class="card" x="968" y="612" width="160" height="44" rx="8"/>
+  <text class="cardtitle" x="982" y="630" style="font-size:12px">Revise</text>
+  <text class="tiny" x="982" y="646">the declaration</text>
+
+  <path class="flow" d="M248 634 H288" marker-end="url(#arrow)"/>
+  <path class="flow" d="M468 634 H508" marker-end="url(#arrow)"/>
+  <path class="flow" d="M688 634 H728" marker-end="url(#arrow)"/>
+  <path class="flow" d="M928 634 H968" marker-end="url(#arrow)"/>
+  <path class="flow" d="M1048 656 V690 H158 V660" marker-end="url(#arrow)"/>
+  <text class="tiny" x="603" y="676" text-anchor="middle">repeat</text>
+
+  <text class="body" x="68" y="708">Predictors: degree · logistic · histogram · IDF-SVD · GraphSAGE · GATv2 · TransformerConv · R-GCN · ensembles</text>
+  <text class="body" x="68" y="726">Designs: fair per-positive · degree-matched · hard negatives · cold start · per-relation</text>
+
+</svg>

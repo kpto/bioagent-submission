@@ -1,0 +1,13 @@
+{
+ "code": "F-43",
+ "created_time": "2026-11-16T08:54:14Z",
+ "event_type": "finding.created",
+ "evidence": "Degree-matched cold start is the honest generalization number: about 0.29 macro AUPRC.",
+ "external_references": [],
+ "id": "45ded2ce",
+ "metric": "593 targets; 120 held out; hist 0.287942 / 0.313606; hpo+string 0.275278 / 0.266358; gatv2+sage 0.151411 / 0.163733",
+ "observation": "Holding out 120 of 593 targets (20% per TDL) with degree-matched negatives gives histogram base 0.287942/0.313606 and HPO+STRING 0.275278/0.266358, while the GATv2+GraphSAGE mix reached 0.151411/0.163733. The earlier 0.500586 figure came from degree-uncontrolled negatives; F-0036 names about 0.29 macro as the honest generalization number.",
+ "references": [],
+ "subject": "F-43",
+ "title": "Degree-matched cold start is about 0.29 macro AUPRC"
+}

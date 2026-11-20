@@ -1,0 +1,13 @@
+{
+ "code": "F-115",
+ "created_time": "2026-11-18T06:13:17Z",
+ "event_type": "finding.created",
+ "evidence": "Technically yes, semantically it is a **rewrite, not a merge**.",
+ "external_references": [],
+ "id": "cb6cc240",
+ "metric": "pytest 64 passed; 1 asset, 17 bindings, 9 edges, 8 nodes, 65 properties; 12 declaration conflicts; 97 ledger conflicts",
+ "observation": "Run in its own worktree, the branch passed its tests and validate, and it carries the completed dump migration plus pathway/expression/anatomy context and the notebook surface. A trial merge showed it is a rewrite rather than a merge: 12 conflicts are the same declaration implemented twice, the rest are the kgkit->notebook rename.",
+ "references": [],
+ "subject": "F-115",
+ "title": "relation-extension audit: complete migration, complementary research layers"
+}

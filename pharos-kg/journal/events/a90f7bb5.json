@@ -1,0 +1,19 @@
+{
+ "code": "F-127",
+ "created_time": "2026-11-16T20:46:32Z",
+ "event_type": "finding.created",
+ "evidence": "The typed model reverses the earlier conclusion.",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "The phenotype dilution result was model-limited, not graph-limited",
+   "type": "unattached_correction"
+  }
+ ],
+ "id": "a90f7bb5",
+ "metric": "5-seed RGCN: core 0.4535 / 0.4497; core_disease 0.4752 / 0.4565; core_protein 0.4623 / 0.4555; full 0.4707 / 0.4434; 10-seed: core 0.4507 / 0.4463; core_disease 0.4741 / 0.4475; core_protein 0.4607 / 0.4585; full 0.4666 / 0.4452",
+ "observation": "The earlier conclusion that phenotype edges dilute the GNN came from a homogeneous encoder and a collapsing decoder. With relation-typed convolutions and a working decoder, core plus disease phenotype became the best graph at 5 and 10 seeds, and the full phenotype stayed close to core rather than far below it.",
+ "references": [],
+ "subject": "F-127",
+ "title": "The phenotype dilution result was model-limited, not graph-limited"
+}

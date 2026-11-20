@@ -1,0 +1,21 @@
+{
+ "based_revision": "a34ff829",
+ "change": null,
+ "code": "P-15",
+ "created_time": "2026-11-16T22:14:12Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "9828ea9e",
+ "rationale": "A literature check identified path and subgraph models, graph transformers, text-LLM fusion, multimodal contrastive methods, pre-training and hyper-relational models as the current families. The proposed order for Pharos was a path model (NBFNet or BioPathNet) first, then Simple-HGN or HGT, then text-graph features, then self-supervised pre-training, all scored on the existing honest protocols rather than the committed gate.",
+ "references": [],
+ "subject": "P-15",
+ "title": "Next model directions from the 2025-2026 link-prediction literature"
+}

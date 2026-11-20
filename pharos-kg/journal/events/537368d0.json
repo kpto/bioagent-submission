@@ -1,0 +1,19 @@
+{
+ "based_proposals": [
+  "4dc6aa12"
+ ],
+ "code": "B-15",
+ "created_time": "2026-11-17T10:09:36Z",
+ "description": {
+  "detail": "The project moved to a new extract and a core-only ledger, recorded as revision 98758c1bbe8be51e. Four core suites run (audit, pruning, QA, link prediction); the explainability suite was retired, and the revision message records that change without a finding.",
+  "message": 39169,
+  "numbers": "9,519 nodes; 37,325 edges; 46,844 evidence rows; 1,920 diseases; 2,415 PPI; 3,035 GO terms; 11,384 target-disease pairs; 635 targets; revision 98758c1bbe8be51e; 4/4 suites",
+  "status": "published"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "537368d0",
+ "references": [],
+ "subject": "B-15",
+ "title": "2026-11-17 extract refresh: 9,519 nodes / 37,325 edges"
+}

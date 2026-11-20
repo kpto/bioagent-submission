@@ -1,0 +1,13 @@
+{
+ "code": "F-22",
+ "created_time": "2026-11-16T07:18:41Z",
+ "event_type": "finding.created",
+ "evidence": "hist:hpo+string macro AUPRC 0.944786 AUROC 0.927709",
+ "external_references": [],
+ "id": "a7ebc9ae",
+ "metric": "logistic base 0.906185 / 0.868778; logistic hpo+reactome 0.806841; hist base 0.933012 / 0.932889; hist hpo+string 0.944786 / 0.943522; coverage 3218 / 4717 / 4639 of 4999",
+ "observation": "Using HPO/Reactome/STRING as pair features instead of edges: the logistic model degraded (base 0.906185/0.868778 macro/micro; HPO+Reactome 0.806841), while histogram gradient boosting improved from 0.933012/0.932889 to 0.944786/0.943522 with HPO+STRING and 0.944410/0.943641 with HPO+Reactome+STRING. Coverage on the 4,999 evaluation pairs was HPO 3,218, Reactome 4,717 and STRING 4,639.",
+ "references": [],
+ "subject": "F-22",
+ "title": "External context helps only the nonlinear model"
+}

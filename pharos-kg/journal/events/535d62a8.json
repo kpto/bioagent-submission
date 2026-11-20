@@ -1,0 +1,87 @@
+{
+ "code": "EV-190",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "896182b5",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "personalised PageRank only",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/path_features.json",
+   "type": "report"
+  }
+ ],
+ "id": "535d62a8",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "ae5816e1"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); PPR negative result; follows degree hubs",
+  "config": "PPR alpha 0.15, 30 iterations",
+  "design": "E-4",
+  "findings": [
+   "F-44"
+  ],
+  "graph": "enriched authored graph",
+  "method": "personalised PageRank only",
+  "metric_text": "macro AUPRC 0.255146; micro AUPRC 0.24686648362502586; macro AUROC 0.568034; micro AUROC 0.5753210067418519; macro MRR 0.396016; micro MRR 0.389261; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.235083, 0.259437], \"auroc\": [0.563672, 0.586548], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.21025, 0.327326], \"macro_auroc\": [0.516643, 0.615163], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.345845, 0.465646], \"mrr\": [0.377051, 0.401751]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.235083,
+    0.259437
+   ],
+   "ci95_auroc": [
+    0.563672,
+    0.586548
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.21025,
+    0.327326
+   ],
+   "ci95_macro_auroc": [
+    0.516643,
+    0.615163
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.345845,
+    0.465646
+   ],
+   "ci95_mrr": [
+    0.377051,
+    0.401751
+   ],
+   "macro_auprc": 0.255146,
+   "macro_auroc": 0.568034,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.396016,
+   "micro_auprc": 0.24686648362502586,
+   "micro_auroc": 0.5753210067418519,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.389261
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/path_features.json"
+ },
+ "subject": "B-10",
+ "title": "personalised PageRank only \u00b7 degree-matched negatives"
+}

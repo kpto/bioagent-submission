@@ -1,0 +1,53 @@
+{
+ "code": "EV-331",
+ "created_time": "2026-11-17T00:14:27Z",
+ "evaluated_revision": "a34ff829",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-5",
+    "graph": "phenotype branch graph (2026-11-16)",
+    "method": "IDF-SVD direct score only",
+    "protocol": "hard same-disease/same-target (14,994 pairs)"
+   },
+   "name": "experiments/prediction/metapath_pilot.json",
+   "type": "report"
+  }
+ ],
+ "id": "4832793e",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "d9487197"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "5347bab1"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); phenotype branch graph, not the master graph; no earlier finding; later_findings: F-72",
+  "config": "IDF-SVD k=32 + PPI2/shared-GO/shared-phenotype paths; seed 1729",
+  "design": "E-5",
+  "findings": [],
+  "graph": "phenotype branch graph (2026-11-16)",
+  "method": "IDF-SVD direct score only",
+  "metric_text": "macro AUPRC 0.392229; micro AUPRC 0.4283821241207684; macro AUROC 0.695858; micro AUROC 0.7379550036944235; macro MRR 0.562704; micro MRR 0.603844; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.392229,
+   "macro_auroc": 0.695858,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.562704,
+   "micro_auprc": 0.4283821241207684,
+   "micro_auroc": 0.7379550036944235,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.603844
+  },
+  "protocol": "hard same-disease/same-target (14,994 pairs)",
+  "report": "experiments/prediction/metapath_pilot.json"
+ },
+ "subject": "B-14",
+ "title": "IDF-SVD direct score only \u00b7 hard negatives"
+}

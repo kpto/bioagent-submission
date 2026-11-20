@@ -1,0 +1,324 @@
+"""Typed node and edge declarations a graph author writes.
+
+Declare a node by subclassing ``Node`` and an edge by subclassing
+``Edge[Source, Target]``. Abstract categories are shared parents, templates add
+properties and annotations without becoming graph components, and
+``property()`` and ``endpoint()`` declare the two authoring references.
+
+Example:
+    ```python
+    from kg_build_system import (
+        AbstractNode, Edge, Node, Omitted, PropertySlot, property,
+    )
+
+    class AssetNode(AbstractNode):
+        summary: PropertySlot[str] = property(meaning=Omitted)
+
+    class SiteNode(AssetNode, Node):
+        name: PropertySlot[str] = property(meaning=Omitted)
+
+    class UnitNode(Node):
+        name: PropertySlot[str] = property(meaning=Omitted)
+
+    class HasUnitEdge(Edge[SiteNode, UnitNode]):
+        since: PropertySlot[str | None] = property(meaning=Omitted)
+    ```
+"""
+from __future__ import annotations
+
+from collections.abc import Sequence
+from dataclasses import dataclass
+from typing import (
+    ClassVar, Generic, TypeVar, dataclass_transform, cast,
+)
+
+from kg_build_system.distribution.languages.annotations.model.public import (
+    Annotation,
+)
+from kg_build_system.distribution.languages.meaning.model.public import (
+    Meaning,
+    Omitted,
+)
+from ..internal.model.metadata import ComponentMetadata, PropertyDeclaration
+from .options import (
+    EdgeOptions, EdgeOptionsTemplate, NodeOptions, NodeOptionsTemplate,
+)
+from .values import (
+    GraphArray, GraphScalar, GraphValue, NonNullableGraphValue, PropertySlot,
+)
+
+
+def property[T: GraphValue](
+    *, name: str | None = None,
+    annotations: Sequence[Annotation] = (),
+    meaning: Meaning | type[Omitted],
+) -> PropertySlot[T]:
+    """Declare a graph property accepting an authoring value of type ``T``.
+
+    Assign the result to a class attribute annotated ``PropertySlot[T]``. The
+    external name defaults to the attribute in snake case. ``meaning=`` is
+    required: attach a ``Meaning`` or pass ``Omitted`` to state that the
+    property has none.
+
+    Example:
+        ```python
+        from kg_build_system import Node, Omitted, PropertySlot, property
+
+        class SiteNode(Node):
+            name: PropertySlot[str] = property(meaning=Omitted)
+            region: PropertySlot[str | None] = property(meaning=Omitted)
+        ```
+    """
+    from .._private.properties import make_property
+
+    return cast(PropertySlot[T], make_property(
+        name=name, annotations=annotations, meaning=meaning,
+    ))
+
+
+@dataclass_transform(field_specifiers=(property,), kw_only_default=True)
+class TopologyDeclarationBase:
+    """Internal root of every topology declaration.
+
+    Every MRO class between a declaration and ``object`` descends from this
+    root. The root also gives the synthesized authoring value a minimal
+    keyword constructor without decorating the user's class as a dataclass.
+    """
+
+    _framework_root: ClassVar[bool] = True
+    _kind: ClassVar[str] = "component"
+    _properties: ClassVar[dict[str, PropertyDeclaration]] = {}
+    _metadata: ClassVar[dict[str, type[TopologyDeclarationBase]]] = {}
+    _component_declaration_kind: ClassVar[str | None] = None
+    _component_abstract: ClassVar[bool] = False
+    _component_parent_class: ClassVar[type[TopologyDeclarationBase] | None] = None
+    _component_name: ClassVar[str] = "component"
+    _component_annotations: ClassVar[tuple[Annotation, ...]] = ()
+    _template_annotations: ClassVar[tuple[Annotation, ...]] = ()
+    _template_meaning: ClassVar[Meaning | None] = None
+    _declaration: ClassVar[ComponentMetadata | None] = None
+
+    def __init__(self, **values: object) -> None:
+        for name, value in values.items():
+            setattr(self, name, value)
+
+    def __init_subclass__(cls, **kwargs: object) -> None:
+        super().__init_subclass__(**kwargs)
+        from ...service._private.class_creation import (
+            prepare_topology_declaration,
+        )
+
+        prepare_topology_declaration(cls)
+
+
+class EdgeRoot(TopologyDeclarationBase):
+    """The non-generic root of every concrete edge declaration.
+
+    A concrete edge is invariant in its endpoint pair, so no narrower
+    instantiation is a supertype of every edge. Code that must accept any
+    concrete edge names this root instead of ``Edge[Any, Any]``; endpoint
+    types stay on the declaration.
+    """
+
+    _framework_root: ClassVar[bool] = True
+
+
+class NodeSideBase(TopologyDeclarationBase):
+    """Internal node-side root shared by ``AbstractNode`` and ``Node``.
+
+    Every endpoint-category parameter is bound to this root, so an edge-kind
+    type argument is statically impossible.
+    """
+
+    _framework_root: ClassVar[bool] = True
+
+
+class NodeTemplate(TopologyDeclarationBase):
+    """Inert node-side mixin sharing property slots and annotation flow.
+
+    A node template contributes properties and annotations to its host but
+    never becomes a graph component, receives a name, or becomes a binding
+    target. Use ``NodeOptionsTemplate`` for its options.
+
+    Example:
+        ```python
+        from kg_build_system import Node, NodeTemplate, PropertySlot, property
+
+        class ProvenancedNodeTemplate(NodeTemplate):
+            source_version: PropertySlot[str] = property(meaning=Omitted)
+
+        class SiteNode(ProvenancedNodeTemplate, Node):
+            name: PropertySlot[str] = property(meaning=Omitted)
+        ```
+    """
+
+    _framework_root: ClassVar[bool] = True
+    options: ClassVar[NodeOptions | NodeOptionsTemplate] = (
+        NodeOptionsTemplate(meaning=Omitted)
+    )
+    _template_annotations: ClassVar[tuple[Annotation, ...]] = ()
+
+
+class EdgeTemplate(TopologyDeclarationBase):
+    """Inert edge-side mixin sharing property slots and annotation flow.
+
+    An edge template contributes properties and annotations to its host but
+    never becomes a graph component, receives a name, or becomes a binding
+    target. Use ``EdgeOptionsTemplate`` for its options.
+
+    Example:
+        ```python
+        from kg_build_system import Edge, EdgeTemplate, Node, PropertySlot, property
+
+        class SiteNode(Node):
+            ...
+
+        class ProvenancedEdgeTemplate(EdgeTemplate):
+            source_version: PropertySlot[str] = property(meaning=Omitted)
+
+        class LinkedEdge(ProvenancedEdgeTemplate, Edge[SiteNode, SiteNode]):
+            ...
+        ```
+    """
+
+    _framework_root: ClassVar[bool] = True
+    options: ClassVar[EdgeOptions | EdgeOptionsTemplate] = (
+        EdgeOptionsTemplate(meaning=Omitted)
+    )
+    _template_annotations: ClassVar[tuple[Annotation, ...]] = ()
+
+
+# Endpoint categories are node-side. Constrained typevars were measured and
+# rejected: they break binding inference and the base-consistency order guard.
+N_co = TypeVar("N_co", bound=NodeSideBase, covariant=True)
+S_co = TypeVar("S_co", bound=NodeSideBase, covariant=True)
+D_co = TypeVar("D_co", bound=NodeSideBase, covariant=True)
+S = TypeVar("S", bound=NodeSideBase)
+D = TypeVar("D", bound=NodeSideBase)
+
+
+class AbstractNode(NodeSideBase):
+    """Category node: a graph-visible parent for concrete nodes.
+
+    A category carries shared properties and can be an edge endpoint, but it is
+    never a binding target and produces no records of its own. Declare a
+    concrete child by mixing the category into a ``Node``.
+
+    Example:
+        ```python
+        from kg_build_system import AbstractNode, Node, Omitted, PropertySlot, property
+
+        class AssetNode(AbstractNode):
+            summary: PropertySlot[str] = property(meaning=Omitted)
+
+        class SiteNode(AssetNode, Node):
+            name: PropertySlot[str] = property(meaning=Omitted)
+        ```
+    """
+
+    _framework_root: ClassVar[bool] = True
+    options: ClassVar[NodeOptions] = NodeOptions(meaning=Omitted)
+
+
+class Node(NodeSideBase):
+    """Concrete node base: bindable, terminal, and a sibling of AbstractNode.
+
+    Declare a node by subclassing ``Node`` and assigning ``PropertySlot``
+    attributes. A concrete node is the only kind a ``node_binding`` can target,
+    and it cannot be subclassed.
+
+    Example:
+        ```python
+        from kg_build_system import Node, Omitted, PropertySlot, property
+
+        class SiteNode(Node):
+            name: PropertySlot[str] = property(meaning=Omitted)
+            region: PropertySlot[str | None] = property(meaning=Omitted)
+        ```
+    """
+
+    _framework_root: ClassVar[bool] = True
+    options: ClassVar[NodeOptions] = NodeOptions(meaning=Omitted)
+
+
+class AbstractEdge(TopologyDeclarationBase, Generic[S_co, D_co]):
+    """Category edge; endpoint parameters are covariant so children may descend.
+
+    An abstract edge declares a relationship family. A concrete child may keep
+    or narrow its endpoint pair, and the pair is part of the edge's meaning.
+
+    Example:
+        ```python
+        from kg_build_system import AbstractEdge, Edge, Node
+
+        class SiteNode(Node):
+            ...
+
+        class LinkedAbstractEdge(AbstractEdge[SiteNode, SiteNode]):
+            ...
+
+        class SiteLinkedEdge(LinkedAbstractEdge, Edge[SiteNode, SiteNode]):
+            ...
+        ```
+    """
+
+    _framework_root: ClassVar[bool] = True
+    options: ClassVar[EdgeOptions] = EdgeOptions(meaning=Omitted)
+
+
+class Edge(AbstractEdge[S, D], EdgeRoot, Generic[S, D]):
+    """Concrete edge base; endpoint parameters stay invariant.
+
+    Declare a directed relationship by subclassing ``Edge[Source, Target]``.
+    Both parameters are node-side declarations; a concrete edge is terminal and
+    is the only edge kind an ``edge_binding`` can target.
+
+    Example:
+        ```python
+        from kg_build_system import Edge, Node, Omitted, PropertySlot, property
+
+        class SiteNode(Node):
+            ...
+
+        class UnitNode(Node):
+            ...
+
+        class HasUnitEdge(Edge[SiteNode, UnitNode]):
+            since: PropertySlot[str | None] = property(meaning=Omitted)
+        ```
+    """
+
+    _framework_root: ClassVar[bool] = True
+
+
+@dataclass(frozen=True, slots=True)
+class Endpoint(Generic[N_co]):
+    """A graph-identity reference to one concrete node component.
+
+    Use :func:`endpoint` to create the value; constructing it directly skips
+    the concrete-node check.
+
+    Example:
+        ```python
+        from kg_build_system import Endpoint, Node, endpoint
+
+        class SiteNode(Node):
+            ...
+
+        site = endpoint(SiteNode)
+        assert isinstance(site, Endpoint)
+        assert site.target is SiteNode
+        ```
+    """
+
+    target: type[N_co]
+
+
+__all__ = [
+    "AbstractEdge", "AbstractNode", "D", "D_co", "Edge", "EdgeOptions",
+    "EdgeOptionsTemplate", "EdgeRoot", "EdgeTemplate", "Endpoint", "GraphArray",
+    "GraphScalar", "GraphValue", "N_co", "Node", "NodeOptions",
+    "NodeOptionsTemplate", "NodeSideBase", "NodeTemplate",
+    "NonNullableGraphValue", "PropertySlot", "S", "S_co",
+    "TopologyDeclarationBase",
+]

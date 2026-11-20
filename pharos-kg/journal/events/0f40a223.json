@@ -1,0 +1,13 @@
+{
+ "code": "F-95",
+ "created_time": "2026-11-17T22:11:54Z",
+ "event_type": "finding.created",
+ "evidence": "Decisive usability evidence: the full PPI graph saturates multihop reach.",
+ "external_references": [],
+ "id": "0f40a223",
+ "metric": "current 138.3 (5.6%), 0 targets reaching half; ppi700 and policy_context 189.9 (7.6%), 3 targets; raw_all 1,081.1 (43.4%), 242/635; direct mean 24.3",
+ "observation": "Depth-2 disease reach per kinase target is 138.3 diseases (5.6% of 2,489) on the migrated graph, 189.9 (7.6%) on ppi700 and policy_context, and 1,081.1 (43.4%) on the full raw graph, where 242 of 635 targets reach at least half the disease universe. Direct reach is 24.3 diseases per target in all four graphs, so only the second hop changes. This settled balanced versus complete independently of prediction.",
+ "references": [],
+ "subject": "F-95",
+ "title": "Full raw PPI saturates multihop reach"
+}

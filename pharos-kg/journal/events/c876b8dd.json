@@ -1,0 +1,13 @@
+{
+ "code": "F-35",
+ "created_time": "2026-11-16T08:35:55Z",
+ "event_type": "finding.created",
+ "evidence": "disease nodes with no training edges have zero embeddings, so dot products tie at 0.5",
+ "external_references": [],
+ "id": "c876b8dd",
+ "metric": "floor 0.5; gatv2 0.092534 / 0.091171; rgcn 0.130120 / 0.141856",
+ "observation": "Disease nodes with no training edges get zero embeddings, so GATv2 and RGCN dot products tie at sigmoid 0.5 and connected negative diseases outrank cold test positives, while GraphSAGE embeddings collapse near zero. F-0028 records the mechanism and asks for self-loops or cold-node features before further GNN claims.",
+ "references": [],
+ "subject": "F-35",
+ "title": "GATv2 and RGCN dot products floor at 0.5 on cold disease nodes"
+}

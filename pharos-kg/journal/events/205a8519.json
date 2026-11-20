@@ -1,0 +1,13 @@
+{
+ "code": "F-108",
+ "created_time": "2026-11-18T04:00:08Z",
+ "event_type": "finding.created",
+ "evidence": "The cold gain is the phenotype layer working on a smaller graph",
+ "external_references": [],
+ "id": "205a8519",
+ "metric": "policy_context 0.4734/0.4033/0.2474; built 0.4619/0.4146/0.3140; -0.0115 macro, +0.0113 micro, +0.0667 cold; cold_std 0.0174",
+ "observation": "The built artifact was measured rather than a research variant: RGCN, 3 seeds, degree-matched, fixed held-out set, against balanced policy_context. Cold AUPRC rose 0.067 while macro fell 0.0115; the same phenotype layer on the balanced graph had measured +0.105 cold and +0.025 macro, so the gap was missing context rather than a failed layer.",
+ "references": [],
+ "subject": "F-108",
+ "title": "Built artifact trades macro for cold start against the balanced research graph (F-0124)"
+}

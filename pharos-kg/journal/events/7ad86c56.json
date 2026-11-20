@@ -1,0 +1,18 @@
+{
+ "code": "EV-7",
+ "created_time": "2026-11-16T02:16:35Z",
+ "evaluated_revision": "d142946f",
+ "evaluation": "9ab270b9",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "7ad86c56",
+ "references": [],
+ "result": {
+  "detail": "The GPU experiment reused the committed split, negative sampling and metric code: 11,567 target-disease positives, 20% held out (9,253 train / 2,314 test), five negatives per positive, seeds 0-4, 200-sample bootstrap, and no held-out edge in message passing. The report checks zero held-out edges in training and zero feature leakage in all three arms. Hits@10 is 1.0 for every arm, so arm comparison rests on macro/micro AUPRC and MRR; the result is a within-graph ablation, not a comparison against the hosted Pharos graph.",
+  "message": 10011,
+  "numbers": "11,567 positives; 9,253 train; 2,314 test; negatives per positive 5; seeds 0-4; bootstrap 200; 4,999 evaluated pairs; 2,685 negatives; held-out-in-training 0",
+  "status": "gate passed; caveat within-graph ablation"
+ },
+ "subject": "EV-7",
+ "title": "GraphSAGE evaluated on the committed link-prediction split"
+}

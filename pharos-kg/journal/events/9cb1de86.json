@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "ab499010"
+ ],
+ "code": "B-28",
+ "created_time": "2026-11-18T06:44:20Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "A third asset (opentargets2609) feeds ot_association / ot_target_protein / ot_disease into target_disease_evidence, ot_evidence_pair and target_disease_annotation, ending as an evidence_class property on associated_with. Graph size was unchanged and the split reproduced the measured one.",
+  "message": 53427,
+  "numbers": "none 8524 / literature_only 4379 / high 2527 on 15430 edges; 23872 nodes / 116803 edges; 18 source relations; commit 8cafae5",
+  "status": "accepted"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "9cb1de86",
+ "references": [],
+ "subject": "B-28",
+ "title": "Open Targets evidence class declared on the base"
+}

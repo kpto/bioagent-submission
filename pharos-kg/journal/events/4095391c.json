@@ -1,0 +1,18 @@
+{
+ "code": "BEGIN-1",
+ "created_time": "2026-11-10T18:38:56Z",
+ "event_type": "beginning",
+ "external_references": [
+  {
+   "detail": {
+    "reason": "root event before the first recorded event"
+   },
+   "name": "ledger beginning",
+   "type": "beginning"
+  }
+ ],
+ "id": "4095391c",
+ "references": [],
+ "subject": "BEGIN-1",
+ "title": "Beginning"
+}

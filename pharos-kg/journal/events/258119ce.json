@@ -1,0 +1,12 @@
+{
+ "code": "FW-10",
+ "created_time": "2026-11-18T18:33:49Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "258119ce",
+ "reason": "The SQL comment showed the filter had been removed deliberately: the candidate graph carries every reported pair and pruning is a projection step on master, so the 46,052 interacts_with edges were the annotated graph, not a regression. The shipped graph.jsonl still had 3,357 PPI and 12,441 ligands.",
+ "references": [],
+ "subject": "F-31",
+ "title": "The 'interaction threshold regression' was a misread of the candidate graph",
+ "withdrawn_finding": "5a2e8417"
+}

@@ -1,0 +1,22 @@
+{
+ "code": "F-132",
+ "created_time": "2026-11-18T18:30:27Z",
+ "event_type": "finding.created",
+ "evidence": "kbs workflow on the current tree lists those four components with 21, 3, 21 and 1 steps; validate, build, pyright, pytest and evaluator quick all pass after the rename, and the graph is unchanged at 28,359 nodes and 150,856 edges.",
+ "external_references": [
+  {
+   "detail": {
+    "path": "notebook/records/findings/F-0081.json",
+    "state": "accepted"
+   },
+   "name": "F-0081.json",
+   "type": "notebook"
+  }
+ ],
+ "id": "2f46a800",
+ "metric": "components: publish_annotated_records 21 steps, annotate_rule_matches 3, project_kept_records 21, reconcile_outputs 1; graph unchanged",
+ "observation": "The pruning workflow components are named like Python functions: verb first, snake_case, no project prefix, and the name states the single thing the component does. The pruning components are publish_annotated_records, annotate_rule_matches, project_kept_records and reconcile_outputs; each module exports COMPONENT and its planner reads it, so the artifact namespace and the plan label cannot drift from the name. Step names stay component-local, such as interacts_with.string_below_700.",
+ "references": [],
+ "subject": "F-132",
+ "title": "Name workflow components as verb-first Python functions"
+}

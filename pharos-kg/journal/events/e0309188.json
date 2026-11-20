@@ -1,0 +1,21 @@
+{
+ "based_revision": "4095391c",
+ "change": null,
+ "code": "P-1",
+ "created_time": "2026-11-10T18:38:57Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "beginning"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "e0309188",
+ "rationale": "Proposed evaluating at four layers: design contract (semantics, Biolink mapping, identity, provenance resolvable, seconds per commit), build audit (rows in/out, drop reasons, duplicates, dangling endpoints, null rates, latency), task benchmark (answer accuracy, unanswerable count, provenance retrieval, weekly), and prediction trial (macro AUPRC, Hits@10, MRR per relation against a frozen split). Standards conformance becomes a layer-1 gate rather than a separate project, and usability is measured with real people at layer 3. Every change must name the gate it moves and the gate it must not break; accept a change only when it closes a failing item.",
+ "references": [],
+ "subject": "P-1",
+ "title": "Four-layer evaluation and named-gate iteration loop"
+}

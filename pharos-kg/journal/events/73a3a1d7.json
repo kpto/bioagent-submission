@@ -1,0 +1,96 @@
+{
+ "code": "EV-36",
+ "created_time": "2026-11-16T07:52:38Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "external-context histogram (HPO+STRING)",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/ensemble.json",
+   "type": "report"
+  }
+ ],
+ "id": "73a3a1d7",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "5a4b8eec"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "cf708e8f"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e3a2d0a4"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol; five-seed GNN; 95% bootstrap intervals overlap single-model intervals",
+  "config": "5 seeds (0-4); rank averaging; features hpo+string; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-25",
+   "F-24"
+  ],
+  "graph": "enriched authored graph",
+  "method": "external-context histogram (HPO+STRING)",
+  "metric_text": "macro AUPRC 0.944786; micro AUPRC 0.9435215700278621; macro AUROC 0.927709; micro AUROC 0.918642897495449; macro MRR 0.908331; micro MRR 0.904206; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.938131, 0.949554], \"auroc\": [0.910154, 0.926294], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.909511, 0.96168], \"macro_auroc\": [0.901643, 0.943094], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.887209, 0.927762], \"mrr\": [0.894338, 0.914477]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.938131,
+    0.949554
+   ],
+   "ci95_auroc": [
+    0.910154,
+    0.926294
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.909511,
+    0.96168
+   ],
+   "ci95_macro_auroc": [
+    0.901643,
+    0.943094
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.887209,
+    0.927762
+   ],
+   "ci95_mrr": [
+    0.894338,
+    0.914477
+   ],
+   "macro_auprc": 0.944786,
+   "macro_auroc": 0.927709,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.908331,
+   "micro_auprc": 0.9435215700278621,
+   "micro_auroc": 0.918642897495449,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.904206
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/ensemble.json"
+ },
+ "subject": "B-10",
+ "title": "external-context histogram (HPO+STRING) \u00b7 the committed split"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-2",
+ "created_time": "2026-11-10T19:19:59Z",
+ "event_type": "finding.created",
+ "evidence": "The data path is viable: Pharos 3.19 GraphQL exposes the full 635-kinase family, disease associations, ligand activities, PPIs and GO annotations.",
+ "external_references": [],
+ "id": "6484d649",
+ "metric": "20,412 targets; 635 kinases; Tbio 12303, Tdark 5501, Tchem 1904, Tclin 704; kinase Tclin 68 / Tchem 374 / Tbio 176 / Tdark 17",
+ "observation": "Probing the Pharos GraphQL API showed 20,412 targets, of which the IDG Family = Kinase facet is 635, with TDL counts Tbio 12,303, Tdark 5,501, Tchem 1,904 and Tclin 704 across the whole target set; the kinase subsets are Tclin 68, Tchem 374, Tbio 176 and Tdark 17. The API returns diseases, ligand activities with references, kinase-kinase interactions, GO annotations and HGNC cross-references, so the planned target-disease-ligand-evidence graph is buildable from one source.",
+ "references": [],
+ "subject": "F-2",
+ "title": "Pharos 3.19 GraphQL exposes the full kinase family and its associations"
+}

@@ -1,0 +1,87 @@
+{
+ "code": "EV-183",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "63bf147f",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "full-graph truncated SVD (32 components)",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/graph_svd_features.json",
+   "type": "report"
+  }
+ ],
+ "id": "8e6111d4",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "20f1de3b"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); full-graph SVD negative result; below bipartite IDF-SVD",
+  "config": "symmetric degree normalisation; 32 components",
+  "design": "E-4",
+  "findings": [
+   "F-45"
+  ],
+  "graph": "enriched authored graph",
+  "method": "full-graph truncated SVD (32 components)",
+  "metric_text": "macro AUPRC 0.269385; micro AUPRC 0.26416668030227963; macro AUROC 0.563777; micro AUROC 0.5865014174380265; macro MRR 0.459805; micro MRR 0.46805; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.250377, 0.278099], \"auroc\": [0.573006, 0.599468], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.22936, 0.35006], \"macro_auroc\": [0.51186, 0.630409], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.405732, 0.524373], \"mrr\": [0.457271, 0.480463]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.250377,
+    0.278099
+   ],
+   "ci95_auroc": [
+    0.573006,
+    0.599468
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.22936,
+    0.35006
+   ],
+   "ci95_macro_auroc": [
+    0.51186,
+    0.630409
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.405732,
+    0.524373
+   ],
+   "ci95_mrr": [
+    0.457271,
+    0.480463
+   ],
+   "macro_auprc": 0.269385,
+   "macro_auroc": 0.563777,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.459805,
+   "micro_auprc": 0.26416668030227963,
+   "micro_auroc": 0.5865014174380265,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.46805
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/graph_svd_features.json"
+ },
+ "subject": "B-10",
+ "title": "full-graph truncated SVD (32 components) \u00b7 degree-matched negatives"
+}

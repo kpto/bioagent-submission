@@ -1,0 +1,13 @@
+{
+ "code": "F-103",
+ "created_time": "2026-11-18T01:51:22Z",
+ "event_type": "finding.created",
+ "evidence": "Open Targets covers **44.8%** of our edges \u2014 a strong, novel result.",
+ "external_references": [],
+ "id": "473b75a8",
+ "metric": "6,906/15,430 (44.8%); literature 5,603 (36.3%); rna_expression 1,838 (11.9%); known_drug 1,181 (7.7%); genetic_association 1,123 (7.3%); somatic_mutation 815 (5.3%); animal_model 530 (3.4%); affected_pathway 254 (1.6%); 7,495,759 rows; 79.9% MONDO",
+ "observation": "Mapping Open Targets diseaseId (79.9% MONDO of 7,495,759 association rows) by swapping underscore for colon, and targets via uniprot_swissprot accessions, gives an Open Targets row for 6,906 of 15,430 graph edges. Literature covers 5,603 (36.3%), rna_expression 1,838 (11.9%), known_drug 1,181 (7.7%), genetic_association 1,123 (7.3%), somatic_mutation 815 (5.3%), animal_model 530 (3.4%) and affected_pathway 254 (1.6%).",
+ "references": [],
+ "subject": "F-103",
+ "title": "Open Targets covers 44.8% of target-disease edges, per data type"
+}

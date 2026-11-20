@@ -1,0 +1,21 @@
+{
+ "based_revision": "4095391c",
+ "change": null,
+ "code": "P-2",
+ "created_time": "2026-11-10T18:52:10Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "beginning"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "a4d7f585",
+ "rationale": "Proposed splitting the work into a deterministic domain core (kg-build-system plus a JSON CLI), a thin plugin adapter (tools, commands, context injection, permissions) and OpenCode as the harness owning the loop, sessions and approvals. The hard constraint is that the model may only assert what a tool returned, so every number, edge and audit finding comes from the domain core rather than generated prose. The first increment was kgctl validate/build/audit plus three tools, the /kg-build command, an agent profile and an authoring skill.",
+ "references": [],
+ "subject": "P-2",
+ "title": "Ship a domain capability and agent profile on an existing harness, not a new agent"
+}

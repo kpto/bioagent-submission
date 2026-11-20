@@ -1,0 +1,13 @@
+{
+ "code": "F-81",
+ "created_time": "2026-11-17T11:26:05Z",
+ "event_type": "finding.created",
+ "evidence": "The compact export passes the standards audit cleanly: 0 empty categories, 0 empty predicates, verdicts reconcile.",
+ "external_references": [],
+ "id": "fee4014a",
+ "metric": "15,007 nodes, 0 empty categories (PhenotypicFeature 5,488; ChemicalEntity 3,294; BiologicalProcess 3,035; Disease 1,920; Gene 635; Protein 635); 67,390 edges, 0 empty predicates; 67,390 verdicts, keep 67,389 / prune 1; id sets equal",
+ "observation": "The compact profile's KGX export was audited at the artifact level: every node has a Biolink category and every edge a Biolink predicate, and verdict rows reconcile one-to-one with emitted edges. This is independent of the prediction debate and covers the standards weight.",
+ "references": [],
+ "subject": "F-81",
+ "title": "Compact export passes the standards and reconciliation audit"
+}

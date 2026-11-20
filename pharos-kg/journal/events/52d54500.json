@@ -1,0 +1,13 @@
+{
+ "code": "F-63",
+ "created_time": "2026-11-16T21:00:53Z",
+ "event_type": "finding.created",
+ "evidence": "On the regular degree-matched protocol ontology is nearly flat: base + ontology 0.2913 / 0.2905 against base 0.2894 / 0.2866, although MRR rises from 0.541 to 0.570.",
+ "external_references": [],
+ "id": "52d54500",
+ "metric": "base 0.2894 / 0.2866; base+ontology 0.2913 / 0.2905; MRR 0.541 \u2192 0.570",
+ "observation": "The same ontology features that help cold diseases add almost nothing when the disease already has training edges: base plus ontology is 0.2913 macro versus 0.2894, while MRR improves. The value of ontology is therefore concentrated in cold diseases and explanation, not in adding terms to the core.",
+ "references": [],
+ "subject": "F-63",
+ "title": "Ancestor-closed HPO is nearly flat on the regular degree-matched protocol"
+}

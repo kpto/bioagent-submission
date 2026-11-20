@@ -1,0 +1,13 @@
+{
+ "code": "F-113",
+ "created_time": "2026-11-18T05:06:07Z",
+ "event_type": "finding.created",
+ "evidence": "edges with an independent 2-hop path: 10461/15430 (67.8%)",
+ "external_references": [],
+ "id": "dd1bb4ba",
+ "metric": "built 10461/15430 (67.8%), median 1, p90 12, max 186; policy_context 8687/15430 (56.3%), p90 9, max 60; intermediates protein 45890 / phenotype 18173 / disease 4134",
+ "observation": "Coverage was defined structurally: remove the direct target-disease pair, count intermediate nodes connecting both endpoints, and type them. The built graph reached 67.8% against 56.3% for the balanced graph without disease->phenotype; the measure needs no split, seeds or GPU.",
+ "references": [],
+ "subject": "F-113",
+ "title": "Explanation coverage measured per edge (F-0128)"
+}

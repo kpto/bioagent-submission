@@ -1,0 +1,13 @@
+{
+ "code": "F-48",
+ "created_time": "2026-11-16T16:11:13Z",
+ "event_type": "finding.created",
+ "evidence": "A held-out target has no training target-disease edges and therefore a zero SVD factor row.",
+ "external_references": [],
+ "id": "d4034956",
+ "metric": "0.320883 / 0.366264; base 0.287942 / 0.313606; unsmoothed 0.204616 / 0.207471; beta 1.0",
+ "observation": "A held-out target has no training target-disease edges and therefore a zero SVD factor row; averaging its PPI neighbours' factors (beta 1.0) gave 0.320883/0.366264 on degree-matched cold start. That beats the base histogram 0.287942/0.313606 and the unsmoothed SVD 0.204616/0.207471; F-0041 keeps PPI smoothing with the base model as fallback.",
+ "references": [],
+ "subject": "F-48",
+ "title": "PPI-neighbour smoothing adapts the SVD to cold targets"
+}

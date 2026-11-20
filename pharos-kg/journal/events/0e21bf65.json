@@ -1,0 +1,13 @@
+{
+ "code": "F-17",
+ "created_time": "2026-11-16T06:30:24Z",
+ "event_type": "finding.created",
+ "evidence": "47209 47209 same multiset True first diff line 0",
+ "external_references": [],
+ "id": "0e21bf65",
+ "metric": "47209 lines in both builds; multiset same True; first diff line 0; GO:0000278 vs GO:0000212",
+ "observation": "Two consecutive builds of revision 424beaec2d79057d each wrote 47,209 lines with an identical multiset of records, but the first line already differed (GO:0000278 versus GO:0000212) and the files were not byte-identical. Rebuilds are therefore content-stable but not byte-deterministic, so graph_sha256 changes without any declaration change. The revision record pins one build's hash.",
+ "references": [],
+ "subject": "F-17",
+ "title": "A rebuild changes graph bytes but not graph content"
+}

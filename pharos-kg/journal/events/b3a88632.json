@@ -1,0 +1,13 @@
+{
+ "code": "F-60",
+ "created_time": "2026-11-16T20:57:28Z",
+ "event_type": "finding.created",
+ "evidence": "The weighting test is conclusive: binary IDF beats evidence- and confidence-weighted variants, and every filter loses signal.",
+ "external_references": [],
+ "id": "b3a88632",
+ "metric": "9,253 edges: binary IDF 0.3666 / 0.4302; evidence-count IDF 0.3694 / 0.4230; confidence IDF 0.2705 / 0.2770; curated-only 0.2743 / 0.2914; evidence>=2 0.2145 / 0.2249; >=3 0.1883 / 0.1928; curated>=2 0.2045 / 0.2124; has_score 0.2678 / 0.2835; binary 0.2931 / 0.3311",
+ "observation": "An edge-selection experiment compared cosine scores from an IDF-SVD of the training target-disease matrix under different filters and weightings. Every restriction (curated sources only, evidence count at least 2 or 3, scored rows only) and every confidence-based weighting lost signal, so the authoring rule became keep all associations and use binary IDF.",
+ "references": [],
+ "subject": "F-60",
+ "title": "Keeping every association with binary IDF beats every evidence filter"
+}

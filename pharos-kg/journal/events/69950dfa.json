@@ -1,0 +1,91 @@
+{
+ "code": "EV-54",
+ "created_time": "2026-11-16T07:52:38Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "ee5b90d5",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "logistic regression (base features)",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/ensemble10.json",
+   "type": "report"
+  }
+ ],
+ "id": "69950dfa",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "49588615"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e3a2d0a4"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol; ten-seed GNN; best point estimate on this protocol, not deployment performance",
+  "config": "10 seeds (0-9); rank averaging; features hpo+string; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-26"
+  ],
+  "graph": "enriched authored graph",
+  "method": "logistic regression (base features)",
+  "metric_text": "macro AUPRC 0.906185; micro AUPRC 0.86877845991923; macro AUROC 0.876706; micro AUROC 0.8211538059162189; macro MRR 0.875129; micro MRR 0.872882; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.861124, 0.879327], \"auroc\": [0.811461, 0.833864], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.870703, 0.925051], \"macro_auroc\": [0.850022, 0.895648], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.848151, 0.897075], \"mrr\": [0.862186, 0.883525]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.861124,
+    0.879327
+   ],
+   "ci95_auroc": [
+    0.811461,
+    0.833864
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.870703,
+    0.925051
+   ],
+   "ci95_macro_auroc": [
+    0.850022,
+    0.895648
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.848151,
+    0.897075
+   ],
+   "ci95_mrr": [
+    0.862186,
+    0.883525
+   ],
+   "macro_auprc": 0.906185,
+   "macro_auroc": 0.876706,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.875129,
+   "micro_auprc": 0.86877845991923,
+   "micro_auroc": 0.8211538059162189,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.872882
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/ensemble10.json"
+ },
+ "subject": "B-10",
+ "title": "logistic regression (base features) \u00b7 the committed split"
+}

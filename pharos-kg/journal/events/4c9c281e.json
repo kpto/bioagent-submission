@@ -1,0 +1,92 @@
+{
+ "code": "EV-320",
+ "created_time": "2026-11-16T21:27:58Z",
+ "evaluated_revision": "5a2c0ca6",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "IDF-SVD edge-selection variant (evidence_plain)",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/edge_selection.json",
+   "type": "report"
+  }
+ ],
+ "id": "4c9c281e",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "b3a88632"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "cdb46e34"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); edge-selection ablation; binary IDF over all associations beats every filter",
+  "config": "k=32; cosine of IDF-SVD factors; edges_used 9253",
+  "design": "E-4",
+  "findings": [
+   "F-60",
+   "F-67"
+  ],
+  "graph": "enriched authored graph",
+  "method": "IDF-SVD edge-selection variant (evidence_plain)",
+  "metric_text": "macro AUPRC 0.293123; micro AUPRC 0.31828939270623713; macro AUROC 0.626243; micro AUROC 0.6241458937878526; macro MRR 0.494281; micro MRR 0.508874; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.299217, 0.339066], \"auroc\": [0.612346, 0.636132], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.258704, 0.349474], \"macro_auroc\": [0.574709, 0.671649], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.458375, 0.529045], \"mrr\": [0.496325, 0.519975]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.299217,
+    0.339066
+   ],
+   "ci95_auroc": [
+    0.612346,
+    0.636132
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.258704,
+    0.349474
+   ],
+   "ci95_macro_auroc": [
+    0.574709,
+    0.671649
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.458375,
+    0.529045
+   ],
+   "ci95_mrr": [
+    0.496325,
+    0.519975
+   ],
+   "macro_auprc": 0.293123,
+   "macro_auroc": 0.626243,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.494281,
+   "micro_auprc": 0.31828939270623713,
+   "micro_auroc": 0.6241458937878526,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.508874
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/edge_selection.json"
+ },
+ "subject": "B-13",
+ "title": "IDF-SVD edge-selection variant (evidence_plain) \u00b7 degree-matched negatives"
+}

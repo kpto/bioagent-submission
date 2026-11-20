@@ -1,0 +1,81 @@
+{
+ "code": "EV-297",
+ "created_time": "2026-11-16T19:37:09Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "896182b5",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "raw ancestor-closed HPO ontology features",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/ontology_degree_matched.json",
+   "type": "report"
+  }
+ ],
+ "id": "b2b3c2f0",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); ontology nearly flat on regular degree-matched protocol; no earlier finding; later_findings: F-63",
+  "config": "8 HPO ontology features; 412 covered diseases / 245 targets",
+  "design": "E-4",
+  "findings": [],
+  "graph": "enriched authored graph",
+  "method": "raw ancestor-closed HPO ontology features",
+  "metric_text": "macro AUPRC 0.300357; micro AUPRC 0.2685803980773248; macro AUROC 0.587814; micro AUROC 0.5752950104996055; macro MRR 0.33752; micro MRR 0.296644; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.256797, 0.282347], \"auroc\": [0.56315, 0.586672], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.244068, 0.372957], \"macro_auroc\": [0.528314, 0.634605], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.284856, 0.396236], \"mrr\": [0.287367, 0.310015]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.256797,
+    0.282347
+   ],
+   "ci95_auroc": [
+    0.56315,
+    0.586672
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.244068,
+    0.372957
+   ],
+   "ci95_macro_auroc": [
+    0.528314,
+    0.634605
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.284856,
+    0.396236
+   ],
+   "ci95_mrr": [
+    0.287367,
+    0.310015
+   ],
+   "macro_auprc": 0.300357,
+   "macro_auroc": 0.587814,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.33752,
+   "micro_auprc": 0.2685803980773248,
+   "micro_auroc": 0.5752950104996055,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.296644
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/ontology_degree_matched.json"
+ },
+ "subject": "B-10",
+ "title": "raw ancestor-closed HPO ontology features \u00b7 degree-matched negatives"
+}

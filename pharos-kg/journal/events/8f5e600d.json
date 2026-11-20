@@ -1,0 +1,12 @@
+{
+ "code": "PW-1",
+ "created_time": "2026-11-16T02:04:00Z",
+ "event_type": "proposal.withdrawal",
+ "external_references": [],
+ "id": "8f5e600d",
+ "reason": "proposed; steps 2 and 4 partly pursued, raw-edge enrichment rejected by measurement. Proposed freezing the current Pharos-only graph as a true baseline, then adding safe external context (Reactome pathway membership, STRING/BioGRID PPI confidence, HPO phenotype similarity, ChEMBL ligand profiles, GO evidence codes) while avoiding direct target-disease tables from Open Targets or DisGeNET because they can leak the held-out label. The plan also called for merging multiple sources per edge, giving every edge a keep/prune/undecided verdict with confidence, explaining every edge, and exporting KGX TSV, keeping the schema small rather than adding node kinds for coverage. The thesis was that each edge should be decision-ready rather than that the graph should be larger; the external-context step was later tested in its raw-edge form and rejected.",
+ "references": [],
+ "subject": "P-4",
+ "title": "Withdraw P-4",
+ "withdrawn_proposal": "92e0ea7e"
+}

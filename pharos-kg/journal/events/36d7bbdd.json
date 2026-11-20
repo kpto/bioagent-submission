@@ -1,0 +1,55 @@
+{
+ "code": "EV-303",
+ "created_time": "2026-11-16T21:14:12Z",
+ "evaluated_revision": "69dd4cb3",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-10",
+    "graph": "enriched authored graph",
+    "method": "source degree baseline",
+    "protocol": "per-relation held-out (interacts_with; 5406 pairs)"
+   },
+   "name": "experiments/prediction/relation_link_prediction.json",
+   "type": "report"
+  }
+ ],
+ "id": "36d7bbdd",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "c4c70805"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "a863c8b8"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); per-relation held-out, not target-disease; source/target degree controls",
+  "config": "degree control",
+  "design": "E-10",
+  "findings": [
+   "F-64"
+  ],
+  "graph": "enriched authored graph",
+  "method": "source degree baseline",
+  "metric_text": "macro AUPRC 0.169327; micro AUPRC 0.16932652603495343; macro AUROC 0.501859; micro AUROC 0.5018588679352376; macro MRR 0.166667; micro MRR 0.166667; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.169327,
+   "macro_auroc": 0.501859,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.166667,
+   "micro_auprc": 0.16932652603495343,
+   "micro_auroc": 0.5018588679352376,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.166667
+  },
+  "protocol": "per-relation held-out (interacts_with; 5406 pairs)",
+  "report": "experiments/prediction/relation_link_prediction.json"
+ },
+ "subject": "B-12",
+ "title": "source degree baseline \u00b7 a held-out relation"
+}

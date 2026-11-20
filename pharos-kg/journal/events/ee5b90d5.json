@@ -1,0 +1,33 @@
+{
+ "code": "E-14",
+ "created_time": "2026-11-16T07:51:38Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "eval/report.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/ensemble.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/ensemble10.json",
+   "type": "report"
+  }
+ ],
+ "id": "ee5b90d5",
+ "method": "standardised logistic regression over the arm's structural, ligand, PPI, GO, phenotype and external-context features",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-14",
+ "title": "Logistic regression"
+}

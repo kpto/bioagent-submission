@@ -1,0 +1,34 @@
+{
+ "based_revision": "1fdb3bcd",
+ "change": null,
+ "code": "P-25",
+ "created_time": "2026-11-18T03:36:36Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "d5a4078f",
+ "rationale": "Proposes replacing the core-only build with the measured design: multi-target ligands, thresholded PPI, typed context, ontology hierarchy, Open Targets evidence classes and HPO phenotype layers, gated per increment. The attached metric is the shipped graph at 27,405 nodes / 151,231 edges with RGCN +0.0252 macro, +0.0510 micro and +0.1054 cold AUPRC, and the strict HPO ablation at +0.0877 cold.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "45ded2ce"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "54091feb"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "0c60e7d9"
+  }
+ ],
+ "subject": "P-25",
+ "title": "Ship the measured graph (F-0036)"
+}

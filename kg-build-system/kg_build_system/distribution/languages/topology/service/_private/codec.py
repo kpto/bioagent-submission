@@ -1,0 +1,240 @@
+"""Canonical JSON codec for the topology blueprint DTO."""
+from __future__ import annotations
+
+from collections.abc import Mapping, Sequence
+from typing import Any
+
+from kg_build_system.distribution.languages.annotations.service.internal import (
+    annotation_from_document,
+    annotation_to_document,
+)
+from kg_build_system.distribution.model.public.refs import (
+    PropertyRef, ref_from_document, ref_to_document,
+)
+from kg_build_system.kernel.service.internal.types import (
+    type_from_document, type_to_document,
+)
+
+from ...model.internal.dto.blueprint_dto import (
+    EdgeDTO, GraphPartDTO, NodeDTO, PropertyDTO,
+)
+from .meaning import meaning_from_document, meaning_to_document
+
+
+def _object(value: Any, context: str) -> Mapping[str, Any]:
+    if not isinstance(value, Mapping):
+        raise ValueError(f"{context} must be an object")
+    return value
+
+
+def _array(value: Any, context: str) -> Sequence[Any]:
+    if not isinstance(value, Sequence) or isinstance(value, (str, bytes, bytearray)):
+        raise ValueError(f"{context} must be an array")
+    return value
+
+
+def _text(value: Mapping[str, Any], key: str) -> str:
+    result = value.get(key)
+    if not isinstance(result, str) or not result:
+        raise ValueError(f"{key!r} must be a non-empty string")
+    return result
+
+
+def _optional_text(value: Mapping[str, Any], key: str) -> str | None:
+    result = value.get(key)
+    if result is None:
+        return None
+    if not isinstance(result, str) or not result:
+        raise ValueError(f"{key!r} must be null or a non-empty string")
+    return result
+
+
+def _ref_document(value: object) -> Sequence[str]:
+    """A reference document is a non-empty sequence of non-empty strings."""
+    if not isinstance(value, Sequence) or isinstance(value, (str, bytes)):
+        raise ValueError("a reference must be a document sequence")
+    if not value or not all(isinstance(item, str) and item for item in value):
+        raise ValueError("a reference must name at least one non-empty segment")
+    return value
+
+
+def _node_ref(value: Mapping[str, Any], key: str):
+    from kg_build_system.distribution.model.public.refs import NodeRef
+
+    reference = ref_from_document(_ref_document(value.get(key)))
+    if not isinstance(reference, NodeRef):
+        raise ValueError(f"{key!r} must be a node reference")
+    return reference
+
+
+def _optional_node_ref(value: Mapping[str, Any], key: str):
+    from kg_build_system.distribution.model.public.refs import NodeRef
+
+    if value.get(key) is None:
+        return None
+    reference = ref_from_document(_ref_document(value.get(key)))
+    if not isinstance(reference, NodeRef):
+        raise ValueError(f"{key!r} must be a node reference")
+    return reference
+
+
+def _optional_edge_ref(value: Mapping[str, Any], key: str):
+    from kg_build_system.distribution.model.public.refs import EdgeRef
+
+    if value.get(key) is None:
+        return None
+    reference = ref_from_document(_ref_document(value.get(key)))
+    if not isinstance(reference, EdgeRef):
+        raise ValueError(f"{key!r} must be an edge reference")
+    return reference
+
+
+def _labels(value: Mapping[str, Any]) -> tuple[str, ...]:
+    result = tuple(_array(value.get("labels", ()), "labels"))
+    if any(not isinstance(item, str) or not item for item in result):
+        raise ValueError("'labels' must contain non-empty strings")
+    return result
+
+
+def _property_to_document(value: PropertyDTO) -> dict[str, Any]:
+    result: dict[str, Any] = {
+        "name": value.name,
+        "logical_type": type_to_document(value.logical_type),
+        "ref": ref_to_document(value.ref),
+        "annotations": [annotation_to_document(item) for item in value.annotations],
+    }
+    if value.meaning is not None:
+        result["meaning"] = meaning_to_document(value.meaning)
+    return result
+
+
+def _property_from_document(value: Mapping[str, Any]) -> PropertyDTO:
+    reference = ref_from_document(_ref_document(value.get("ref")))
+    if not isinstance(reference, PropertyRef):
+        raise ValueError("a property 'ref' must be a property reference")
+    return PropertyDTO(
+        name=_text(value, "name"),
+        logical_type=type_from_document(_object(value.get("logical_type"), "logical_type")),
+        ref=reference,
+        annotations=tuple(
+            annotation_from_document(_object(item, "property annotation"))
+            for item in _array(value.get("annotations", ()), "annotations")
+        ),
+        meaning=(
+            None if value.get("meaning") is None
+            else meaning_from_document(value.get("meaning"))
+        ),
+    )
+
+
+def _common_to_document(value: NodeDTO | EdgeDTO) -> dict[str, Any]:
+    result: dict[str, Any] = {
+        "name": value.name,
+        "labels": list(value.labels),
+        "abstract": value.abstract,
+        "properties": [_property_to_document(item) for item in value.properties],
+        "annotations": [annotation_to_document(item) for item in value.annotations],
+    }
+    if value.parent is not None:
+        result["parent"] = ref_to_document(value.parent)
+    if value.meaning is not None:
+        result["meaning"] = meaning_to_document(value.meaning)
+    return result
+
+
+def _node_to_document(value: NodeDTO) -> dict[str, Any]:
+    return _common_to_document(value)
+
+
+def _edge_to_document(value: EdgeDTO) -> dict[str, Any]:
+    result = _common_to_document(value)
+    result["source"] = ref_to_document(value.source)
+    result["target"] = ref_to_document(value.target)
+    return result
+
+
+def _common_from_document(value: Mapping[str, Any]) -> dict[str, Any]:
+    abstract = value.get("abstract", False)
+    if not isinstance(abstract, bool):
+        raise ValueError("'abstract' must be a boolean")
+    return {
+        "name": _text(value, "name"),
+        "labels": _labels(value),
+        "properties": tuple(
+            _property_from_document(_object(item, "property"))
+            for item in _array(value.get("properties", ()), "properties")
+        ),
+        "annotations": tuple(
+            annotation_from_document(_object(item, "annotation"))
+            for item in _array(value.get("annotations", ()), "annotations")
+        ),
+        "abstract": abstract,
+        "meaning": (
+            None if value.get("meaning") is None
+            else meaning_from_document(value.get("meaning"))
+        ),
+    }
+
+
+def _node_from_document(value: Mapping[str, Any]) -> NodeDTO:
+    common = _common_from_document(value)
+    return NodeDTO(
+        **common,
+        parent=_optional_node_ref(value, "parent"),
+    )
+
+
+def _edge_from_document(value: Mapping[str, Any]) -> EdgeDTO:
+    common = _common_from_document(value)
+    return EdgeDTO(
+        **common,
+        source=_node_ref(value, "source"),
+        target=_node_ref(value, "target"),
+        parent=_optional_edge_ref(value, "parent"),
+    )
+
+
+def graph_to_document(part: GraphPartDTO) -> dict[str, Any]:
+    """Encode the topology part as a JSON-compatible object.
+
+    Example:
+        ```python
+        from kg_build_system.distribution.languages.topology.model.internal.dto import (
+            GraphPartDTO, graph_to_document,
+        )
+
+        document = graph_to_document(GraphPartDTO())
+        assert document == {"nodes": [], "edges": []}
+        ```
+    """
+    return {
+        "nodes": [_node_to_document(item) for item in part.nodes],
+        "edges": [_edge_to_document(item) for item in part.edges],
+    }
+
+
+def graph_from_document(document: Mapping[str, Any]) -> GraphPartDTO:
+    """Rebuild the topology part from its JSON-compatible object.
+
+    Example:
+        ```python
+        from kg_build_system.distribution.languages.topology.model.internal.dto import (
+            graph_from_document,
+        )
+
+        part = graph_from_document({"nodes": [], "edges": []})
+        ```
+    """
+    return GraphPartDTO(
+        nodes=tuple(
+            _node_from_document(_object(item, "node"))
+            for item in _array(document.get("nodes", ()), "nodes")
+        ),
+        edges=tuple(
+            _edge_from_document(_object(item, "edge"))
+            for item in _array(document.get("edges", ()), "edges")
+        ),
+    )
+
+
+__all__ = ["graph_from_document", "graph_to_document"]

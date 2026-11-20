@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "2170ace9"
+ ],
+ "code": "B-29",
+ "created_time": "2026-11-18T06:53:32Z",
+ "description": {
+  "based_proposals_basis": "two shared topic words",
+  "detail": "MP and HP cannot share one node type because one binding serves one node type, so HP terms became hpo_term nodes with disease_has_phenotype edges. Coverage did not move, because disease->phenotype attaches at the disease end while the intermediate must sit on the protein side.",
+  "message": 53566,
+  "numbers": "hpo_term 4487; disease_has_phenotype 19133; 28359 nodes / 135936 edges; coverage 9975/15430 (64.6%); KeyPrefix added; commit 0875c33",
+  "status": "accepted"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "ddafa65b",
+ "references": [],
+ "subject": "B-29",
+ "title": "HPO disease phenotypes added as a second phenotype vocabulary"
+}

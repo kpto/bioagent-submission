@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "c2f04dc5"
+ ],
+ "code": "B-3",
+ "created_time": "2026-11-10T20:05:02Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "The first end-to-end build published the graph, evidence sidecar and explanation document at revision f11c429a1fa75e9f. The audit reported zero duplicate build keys, zero dangling endpoints, zero null keys and 100% evidence coverage over 47,209 evidence entries, with 5 node types and 5 edge types.",
+  "message": 3338,
+  "numbers": "9,512 nodes, 37,697 edges; 11,568 associated_with, 10,000 binds, 2,703 interacts_with, 12,823 participates_in, 603 translates_to; 47,209 evidence rows; duplicates 0, dangling 0, null keys 0",
+  "status": "built; audit passed"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "f6dd301f",
+ "references": [],
+ "subject": "B-3",
+ "title": "First full build: 9,512 nodes and 37,697 edges"
+}

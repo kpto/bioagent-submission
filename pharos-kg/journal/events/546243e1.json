@@ -1,0 +1,21 @@
+{
+ "based_proposals": [
+  "d3100431",
+  "4de13849"
+ ],
+ "code": "B-17",
+ "created_time": "2026-11-17T20:26:03Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "A stdlib mysqldump reader parsed CREATE TABLE declarations and extended INSERT rows, staged them as NDJSON and loaded one Parquet file per table. Row counts were recorded per table with digests, giving a replayable cache of the pinned archive.",
+  "message": 42974,
+  "numbers": "17 tables; 15,910,347 rows; 169.2 s; disease 363,134; ncats_ppi 11,691,825; xref 2,600,229; alias 170,524; goa 258,719; go 42,950; mondo 22,311; protein 20,412; target 20,412",
+  "status": "superseded by the chdb adaptor"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "546243e1",
+ "references": [],
+ "subject": "B-17",
+ "title": "Project parser extracted 17 tables and 15.9M rows to Parquet in 169 s"
+}

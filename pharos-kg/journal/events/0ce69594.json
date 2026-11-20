@@ -1,0 +1,13 @@
+{
+ "code": "F-77",
+ "created_time": "2026-11-17T10:53:04Z",
+ "event_type": "finding.created",
+ "evidence": "The compact profile nearly doubles short-path reachability on the current extract: core 97.0 diseases/target at depth 2 (585/635 targets), compact 187.5 (603/635)",
+ "external_references": [],
+ "id": "0ce69594",
+ "metric": "core direct 17.93; depth2 97.03 (585/635); compact depth2 187.48 (603/635); phenotype paths 337.61; PPI 106.04",
+ "observation": "Reachability was recomputed for the core and compact graphs on the 2026-11-17 extract. Core already reaches about 1,800 diseases within three hops, but the compact profile nearly doubled two-hop reach and 613 targets gained a phenotype path.",
+ "references": [],
+ "subject": "F-77",
+ "title": "Compact profile doubles two-hop reachability on the new extract"
+}

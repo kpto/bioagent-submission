@@ -1,0 +1,21 @@
+{
+ "based_revision": "a34ff829",
+ "change": null,
+ "code": "P-16",
+ "created_time": "2026-11-16T22:40:33Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "5347bab1",
+ "rationale": "In response to the user's proposal, the design was framed as four explicit layers: bounded typed metapath extraction, semantic validity scoring (ontology, evidence type, grounded LLM check, learned path encoder), soft proof aggregation (t-norm along a path, noisy-OR across paths) and only then materialised inferred edges. The stated hard part is semantic path selection, not generating indirect associations.",
+ "references": [],
+ "subject": "P-16",
+ "title": "Deduction-like architecture: typed paths, semantic validity and soft proof aggregation"
+}

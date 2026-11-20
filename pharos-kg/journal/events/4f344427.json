@@ -1,0 +1,13 @@
+{
+ "code": "F-76",
+ "created_time": "2026-11-17T10:52:50Z",
+ "event_type": "finding.created",
+ "evidence": "The biomedical sentence embeddings are also negative globally: text-only 0.2338 / 0.2507; SVD+text 0.3383 / 0.4205 versus SVD 0.3592 / 0.4122 \u2014 micro +0.008 but macro \u22120.021.",
+ "external_references": [],
+ "id": "4f344427",
+ "metric": "text-only 0.2338 / 0.2507; SVD 0.3592 / 0.4122; SVD+text 0.3383 / 0.4205; 768 dimensions; 15,007 nodes embedded",
+ "observation": "A 768-dimensional PubMedBERT sentence encoder replaced TF-IDF for the same node-text probe. Text-only scoring fell further and adding it to the SVD traded a small micro gain for a macro loss, so the negative text result was not an artifact of lexical matching.",
+ "references": [],
+ "subject": "F-76",
+ "title": "Biomedical sentence embeddings are also negative globally"
+}

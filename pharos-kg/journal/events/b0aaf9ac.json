@@ -1,0 +1,22 @@
+{
+ "code": "F-131",
+ "created_time": "2026-11-18T11:15:57Z",
+ "event_type": "finding.created",
+ "evidence": "Build on master: 74,747 nodes / 239,939 edges annotated, 28,359 / 150,856 shipped; 43,057 pruned edges and 46,388 pruned ligand nodes; marks name the module, its confidence and its reason on each record. Reconciliation passed on the same run. Framework commit a61c42d plus the component-identity fix; project f5e6e8a plus this change.",
+ "external_references": [
+  {
+   "detail": {
+    "path": "notebook/records/findings/F-0080.json",
+    "state": "accepted"
+   },
+   "name": "F-0080.json",
+   "type": "notebook"
+  }
+ ],
+ "id": "b0aaf9ac",
+ "metric": "annotated 239,939 edges / 74,747 nodes; shipped 150,856 / 28,359; pruned 43,057 edges, 46,388 ligand nodes; gates pytest 62 passed, pyright 0 errors, eval --quick passed",
+ "observation": "Pruning is now a post-processing chain in the workflow, not a filter in the relation SQL. pharos_publish emits every candidate record with an empty mark list and a keep verdict; pharos_annotate contributes one step per (rule, component) that appends the rule's mark where its predicate holds; pharos_project keeps the records whose verdict is keep and drops the annotation columns; file.annotated writes the marked view, file.graph writes the projection, and pharos_reconcile fails the build unless annotated minus pruned equals shipped, per kind. The interaction threshold and the ligand policy are both rule modules: string_below_700 and single_target_ligand, the latter reading target_count that the relations now carry instead of HAVING count >= 2.",
+ "references": [],
+ "subject": "F-131",
+ "title": "Pruning is a post-processing chain, not a relation filter"
+}

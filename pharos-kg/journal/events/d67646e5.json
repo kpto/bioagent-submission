@@ -1,0 +1,22 @@
+{
+ "code": "F-133",
+ "created_time": "2026-11-19T01:43:09Z",
+ "event_type": "finding.created",
+ "evidence": "Build on master: annotated 74,747 nodes / 239,939 edges, 135,471 pruned records; shipped 28,359 / 150,856 with no annotation column on any record. Marks: single_target_ligand on 92,776 records (46,388 edges + 46,388 ligand nodes), string_below_700 on 42,695 edges. The blueprint declares 10 node kinds and 13 edge kinds: 9 and 12 produce records, the two annotation categories do not. Framework change: the notebook contract exempts abstract categories from the Biolink requirement.",
+ "external_references": [
+  {
+   "detail": {
+    "path": "notebook/records/findings/F-0082.json",
+    "state": "accepted"
+   },
+   "name": "F-0082.json",
+   "type": "notebook"
+  }
+ ],
+ "id": "d67646e5",
+ "metric": "annotated 239,939 edges / 74,747 nodes; shipped 150,856 / 28,359; annotation fields absent from shipped on every component; gates pytest 62 passed, pyright 0 errors, eval --quick passed",
+ "observation": "The annotation fields are declared graph properties, not columns a post-processor invents. Every node kind inherits them from the abstract category annotated_record_node and every edge kind from annotated_record_edge: verdict, annotation_rule, annotation_confidence and annotation_reason, the last three parallel arrays where index i is one mark. Every binding seeds a record with keep and three empty arrays, the annotator steps append a mark, and project_kept_records keeps the keep rows with the schema intact.",
+ "references": [],
+ "subject": "F-133",
+ "title": "The annotation is a declared field, omitted at the file boundary"
+}

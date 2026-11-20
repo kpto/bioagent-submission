@@ -1,0 +1,18 @@
+{
+ "code": "EV-23",
+ "created_time": "2026-11-18T03:36:23Z",
+ "evaluated_revision": "1fdb3bcd",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "e6cc5b86",
+ "references": [],
+ "result": {
+  "detail": "13,997 of 19,250 kinase phenotype rows (72.7%) are recorded in a disease the target is already associated with and could restate the pair; dropping them leaves 4,972 distinct gene-phenotype edges. Cold AUPRC still rises 0.2529 to 0.3406 (+0.088) and micro 0.4031 to 0.4452, so the gain is phenotype similarity rather than the same clinical cohort.",
+  "message": 50769,
+  "numbers": "13,997 of 19,250 rows dropped (72.7%); 4,972 distinct kept edges; cold 0.2529 to 0.3406; micro 0.403086 to 0.445168",
+  "status": "F-0121 accepted"
+ },
+ "subject": "EV-23",
+ "title": "Strict HPO ablation: cold gain survives removing restated rows"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-78",
+ "created_time": "2026-11-17T10:54:02Z",
+ "event_type": "finding.created",
+ "evidence": "The usability audit found a second gap: the subject endpoint resolves **all sampled keys** (40/40 nodes, 40/40 edges) but **no labels**",
+ "external_references": [],
+ "id": "d627adac",
+ "metric": "40/40 node ids; 40/40 edge ids; 0/3 labels (EGFR, Epidermal growth factor receptor, non-small cell lung carcinoma)",
+ "observation": "A coverage audit sampled node and edge identifiers from the core export and queried the running console. Every sampled key resolved, but the three label queries a non-expert would type all failed, so label resolution is a separate usability gap from the missing input.",
+ "references": [],
+ "subject": "F-78",
+ "title": "Subject endpoint resolves exact keys but no labels"
+}

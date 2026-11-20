@@ -1,0 +1,55 @@
+{
+ "code": "EV-187",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "disease degree baseline",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/path_features.json",
+   "type": "report"
+  }
+ ],
+ "id": "0bbba639",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "ae5816e1"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); PPR negative result; follows degree hubs",
+  "config": "PPR alpha 0.15, 30 iterations",
+  "design": "E-4",
+  "findings": [
+   "F-44"
+  ],
+  "graph": "enriched authored graph",
+  "method": "disease degree baseline",
+  "metric_text": "macro AUPRC 0.271237; micro AUPRC 0.24820282286267042; macro AUROC 0.552359; micro AUROC 0.5561724536234011; macro MRR 0.351147; micro MRR 0.344649; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.271237,
+   "macro_auroc": 0.552359,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.351147,
+   "micro_auprc": 0.24820282286267042,
+   "micro_auroc": 0.5561724536234011,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.344649
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/path_features.json"
+ },
+ "subject": "B-10",
+ "title": "disease degree baseline \u00b7 degree-matched negatives"
+}

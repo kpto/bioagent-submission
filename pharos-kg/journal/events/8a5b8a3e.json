@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "ab499010"
+ ],
+ "code": "B-31",
+ "created_time": "2026-11-18T08:06:45Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "tools/score_candidates.py applied the four policy rules to the release candidate universe, turning the empty verdict file into 131,750 prune decisions with named rules. It double counted interaction pairs and covered only interactions and ligand binding, so it was a prototype for the design rather than the design.",
+  "message": 54614,
+  "numbers": "candidates 172916; keep 41166; prune 131750; keep:K01 1470 / K02 5244 / K03 34452; prune:P01 85390 / P02 46360",
+  "status": "prototype, later superseded on master"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "8a5b8a3e",
+ "references": [],
+ "subject": "B-31",
+ "title": "Candidate verdict file scores the release's edges (prototype)"
+}

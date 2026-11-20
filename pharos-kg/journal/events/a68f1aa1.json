@@ -1,0 +1,13 @@
+{
+ "code": "F-66",
+ "created_time": "2026-11-16T21:17:09Z",
+ "event_type": "finding.created",
+ "evidence": "The compact filter retains the cold-disease gain: support\u22655 gives 0.4681 / 0.5319 versus the full layer 0.4586 / 0.5388.",
+ "external_references": [],
+ "id": "a68f1aa1",
+ "metric": "full layer 0.4586 / 0.5388; support>=5 0.4681 / 0.5319; base 0.1718 / 0.1719; raw ontology 0.2989 / 0.2795",
+ "observation": "Restricting disease phenotypes to HPO terms annotated to at least five graph diseases was tested on the same cold-disease split. It kept the borrowed-factor gain and even improved macro AUPRC slightly while cutting the annotation count, justifying the compact layer on cold-disease prediction as well as reachability.",
+ "references": [],
+ "subject": "F-66",
+ "title": "The support>=5 compact filter retains the cold-disease gain"
+}

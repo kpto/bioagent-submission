@@ -1,0 +1,22 @@
+# Generated artefacts.
+**/.venv/
+**/__pycache__/
+**/*.py[oc]
+**/.pytest_cache/
+**/.pyright/
+**/.kbs/
+**/dist/
+**/*.egg-info/
+**/.next/
+**/node_modules/
+**/.sources/
+**/.uv-cache/
+**/site/
+**/docs/public/
+**/docs/.quartz-cache/
+**/*.duckdb
+**/*.duckdb.wal
+**/.env
+# Framework and template builds; the Pharos build is shipped.
+kg-build-system/**/build/
+**/build/_workdir/

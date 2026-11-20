@@ -1,0 +1,21 @@
+{
+ "based_revision": "260f36f4",
+ "change": null,
+ "code": "P-6",
+ "created_time": "2026-11-16T06:19:50Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "f0dcaa62",
+ "rationale": "The resolver was changed to read the graph declaration's meaning and fall back to the legacy semantics key, and the extractor's binding semantics helper was renamed to read binding meaning. The change was made so the document survives the framework's semantics-to-meaning rename without rewriting older snapshots. The next build returned 323 explanation subjects with Biolink annotations present again on the protein and association subjects.",
+ "references": [],
+ "subject": "P-6",
+ "title": "Read meaning, with a semantics fallback, in the explanation engine"
+}

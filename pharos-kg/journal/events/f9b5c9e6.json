@@ -1,0 +1,13 @@
+{
+ "code": "F-7",
+ "created_time": "2026-11-10T20:45:39Z",
+ "event_type": "finding.created",
+ "evidence": "Provenance questions score 4/5 partial and 1 incorrect because the graph-only answer path cannot join occurrence evidence.",
+ "external_references": [],
+ "id": "f9b5c9e6",
+ "metric": "4/5 partial, 1 incorrect; F-0008",
+ "observation": "Provenance questions scored 4 partial and 1 incorrect because the graph-only answer path cannot join the occurrence evidence sidecar, making this the only QA area below full accuracy. The finding was left in state proposed, making it the second-highest priority for the next iteration after pruning.",
+ "references": [],
+ "subject": "F-7",
+ "title": "F-0008: provenance QA is the weakest question area"
+}

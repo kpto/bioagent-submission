@@ -1,0 +1,19 @@
+{
+ "code": "F-130",
+ "created_time": "2026-11-18T05:04:42Z",
+ "event_type": "finding.created",
+ "evidence": "the word \"migrate\" was doing too much work",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "What 'migrate' meant: five relations still read the legacy JSON extract",
+   "type": "unattached_correction"
+  }
+ ],
+ "id": "6902b955",
+ "metric": "8 relations on the pinned dump; 5 on legacy JSON; data/raw 974M; associated_with 11384 -> 15430; binds 10000/3294 -> 34452/12429; interacts_with 2415 -> 3357",
+ "observation": "Asked whether the work was not on raw data, the assistant withdrew the implication of 'migrate': every quoted number came from graphs built off the raw release, but the declared build still read five relations (genes, go_annotation, go_terms, targets, translations) from a 974 MB API-era extract. Migrating means repointing a declaration to the pinned dump: stale-derived vs source, not raw vs processed.",
+ "references": [],
+ "subject": "F-130",
+ "title": "What 'migrate' meant: five relations still read the legacy JSON extract"
+}

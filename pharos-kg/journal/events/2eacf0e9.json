@@ -1,0 +1,19 @@
+{
+ "based_revision": "7ebc8bf1",
+ "change": null,
+ "code": "P-31",
+ "created_time": "2026-11-19T22:27:02.358433Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "kbs proposal create",
+   "type": "cli"
+  }
+ ],
+ "id": "2eacf0e9",
+ "rationale": "Declare the archive digest and byte size with the asset and pass a DumpSourceConfiguration into the planner, so the plan records them. Verify a fetched archive, write a per-table cache marker, and use the marker to decide whether a cache is current. Delete the global dump manifest and the unused pharos319-chdb cache, and put chdb in the main dependencies so a cold data directory rebuilds with kbs run.",
+ "references": [],
+ "subject": "pharos_kg/modules/dump_source.py",
+ "title": "Make the dump cache self-describing and rebuildable"
+}

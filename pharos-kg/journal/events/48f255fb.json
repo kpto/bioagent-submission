@@ -1,0 +1,96 @@
+{
+ "code": "EV-68",
+ "created_time": "2026-11-16T07:52:38Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched (pair features)",
+    "method": "histogram gradient boosting (HPO+REACTOME+STRING pair features)",
+    "protocol": "committed shared five negatives (4,999 pairs; 46.3% base)"
+   },
+   "name": "experiments/prediction/external_features.json",
+   "type": "report"
+  }
+ ],
+ "id": "48f255fb",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "a7ebc9ae"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "c13e1fd1"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e3a2d0a4"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol (46.3% base); pair features built from training positives only",
+  "config": "seed 1729; histogram GBM; features hpo+reactome+string; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-22",
+   "F-21"
+  ],
+  "graph": "enriched (pair features)",
+  "method": "histogram gradient boosting (HPO+REACTOME+STRING pair features)",
+  "metric_text": "macro AUPRC 0.94441; micro AUPRC 0.9436414990897464; macro AUROC 0.927683; micro AUROC 0.920122113151427; macro MRR 0.908881; micro MRR 0.904041; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.938093, 0.949317], \"auroc\": [0.912189, 0.927777], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.908993, 0.961301], \"macro_auroc\": [0.901022, 0.943248], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.888062, 0.928717], \"mrr\": [0.894118, 0.914266]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.938093,
+    0.949317
+   ],
+   "ci95_auroc": [
+    0.912189,
+    0.927777
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.908993,
+    0.961301
+   ],
+   "ci95_macro_auroc": [
+    0.901022,
+    0.943248
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.888062,
+    0.928717
+   ],
+   "ci95_mrr": [
+    0.894118,
+    0.914266
+   ],
+   "macro_auprc": 0.94441,
+   "macro_auroc": 0.927683,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.908881,
+   "micro_auprc": 0.9436414990897464,
+   "micro_auroc": 0.920122113151427,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.904041
+  },
+  "protocol": "committed shared five negatives (4,999 pairs; 46.3% base)",
+  "report": "experiments/prediction/external_features.json"
+ },
+ "subject": "B-10",
+ "title": "histogram gradient boosting (HPO+REACTOME+STRING pair features) \u00b7 the committed split"
+}

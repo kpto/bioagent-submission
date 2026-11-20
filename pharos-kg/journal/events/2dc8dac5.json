@@ -1,0 +1,13 @@
+{
+ "code": "F-61",
+ "created_time": "2026-11-16T20:58:43Z",
+ "event_type": "finding.created",
+ "evidence": "Phenotype **features** are also negative: on the core homogeneous GNN, base 0.2406 / 0.2179 versus pheno16 0.1875 / 0.1902.",
+ "external_references": [],
+ "id": "2dc8dac5",
+ "metric": "base 0.2406 / 0.2179 (8 features); pheno16 0.1875 / 0.1902 (24); pheno32 0.2105 / 0.1990 (40); pheno64 0.1992 / 0.1963 (72); 657/9,512 nodes covered; 6,192 terms; 98,336 non-zeros",
+ "observation": "Rather than noisy edges, 16, 32 and 64-dimensional SVD embeddings of ancestor-closed HPO terms were added as node features on the core graph. All three hurt the ten-seed homogeneous GraphSAGE relative to the base features, and only 657 of 9,512 nodes carry any phenotype annotation.",
+ "references": [],
+ "subject": "F-61",
+ "title": "HPO context as node features also fails on the homogeneous GNN"
+}

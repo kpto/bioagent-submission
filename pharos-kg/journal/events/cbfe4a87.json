@@ -1,0 +1,18 @@
+{
+ "code": "EV-26",
+ "created_time": "2026-11-18T23:42:17Z",
+ "evaluated_revision": "8a5b8a3e",
+ "evaluation": "9ab270b9",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "cbfe4a87",
+ "references": [],
+ "result": {
+  "detail": "notebook/eval/design.json lists four gates. Audit requires no duplicate build keys, dangling endpoints or null keys, holding identifier namespaces and evidence coverage 1.0; pruning requires precision, recall and F1 each at least 0.8 on a balanced 100-good/100-injected set plus a calibration table; qa answers a fixed question set without the explanations document or raw extract; link_prediction ranks held-out target-disease links with static, enriched and pruned feature graphs and no leakage. The pruning gate records that it measures injected-error performance, not biological truth.",
+  "message": 60508,
+  "numbers": "precision/recall/F1 >= 0.8; 100 good / 100 injected; evidence coverage 1.0",
+  "status": "active protocol"
+ },
+ "subject": "EV-26",
+ "title": "Eval design defines four gates: audit, pruning, qa, link_prediction"
+}

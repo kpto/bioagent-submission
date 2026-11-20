@@ -1,0 +1,48 @@
+"""Create a graph blueprint from declarations."""
+from __future__ import annotations
+
+from collections.abc import Iterable, Sequence
+from pathlib import Path
+from typing import TYPE_CHECKING
+
+from ...model.public import GraphBlueprint
+
+if TYPE_CHECKING:
+    from kg_build_system.distribution.languages.binding.model.public import (
+        Binding,
+    )
+    from kg_build_system.kernel import Language
+
+
+def create_blueprint(
+    *,
+    namespace_path: str | Path | None = None,
+    bindings: Iterable[Binding] = (),
+    languages: Sequence[Language] | None = None,
+) -> GraphBlueprint:
+    """Collect declarations into a validated, frozen graph blueprint.
+
+    Supply either ``namespace_path`` or explicit ``bindings``.
+    The declared languages are run through the kernel toolchain; each language
+    collects and transcribes its own DTO, and :class:`BlueprintLinker` assembles
+    the DTOs into one blueprint.
+
+    Example:
+    ```python
+    from pathlib import Path
+
+    from kg_build_system.distribution.interpreter import create_blueprint
+
+    blueprint = create_blueprint(namespace_path=Path("graph_pipeline"))
+    ```
+    """
+    from .._private.create import create_blueprint as implementation
+
+    return implementation(
+        namespace_path=namespace_path,
+        bindings=bindings,
+        languages=languages,
+    )
+
+
+__all__ = ["create_blueprint"]

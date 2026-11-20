@@ -1,0 +1,87 @@
+{
+ "code": "EV-153",
+ "created_time": "2026-11-16T08:49:39Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-11",
+    "graph": "enriched authored graph",
+    "method": "RGCN (relation-aware, hard-negative training)",
+    "protocol": "hard eval (13,357 pairs; 17.3% base)"
+   },
+   "name": "experiments/prediction/hard_negative_training.json",
+   "type": "report"
+  }
+ ],
+ "id": "cdc6aa45",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "cc8ba6c0"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "e749e5fb"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); training-condition ablation; both conditions share split and held-out sets; hard training did not help",
+  "config": "RGCN 2 layers, 128 hidden, 300 epochs, 10 seeds; train negatives 74929 hard",
+  "design": "E-11",
+  "findings": [
+   "F-42"
+  ],
+  "graph": "enriched authored graph",
+  "method": "RGCN (relation-aware, hard-negative training)",
+  "metric_text": "macro AUPRC 0.120876; micro AUPRC 0.12759553169099772; macro AUROC 0.26163; micro AUROC 0.33402253436730517; macro MRR 0.234968; micro MRR 0.262626; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.123031, 0.13251], \"auroc\": [0.324839, 0.341982], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.107485, 0.144751], \"macro_auroc\": [0.233669, 0.29753], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.230489, 0.240209], \"mrr\": [0.257512, 0.267395]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.123031,
+    0.13251
+   ],
+   "ci95_auroc": [
+    0.324839,
+    0.341982
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.107485,
+    0.144751
+   ],
+   "ci95_macro_auroc": [
+    0.233669,
+    0.29753
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.230489,
+    0.240209
+   ],
+   "ci95_mrr": [
+    0.257512,
+    0.267395
+   ],
+   "macro_auprc": 0.120876,
+   "macro_auroc": 0.26163,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.234968,
+   "micro_auprc": 0.12759553169099772,
+   "micro_auroc": 0.33402253436730517,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.262626
+  },
+  "protocol": "hard eval (13,357 pairs; 17.3% base)",
+  "report": "experiments/prediction/hard_negative_training.json"
+ },
+ "subject": "B-10",
+ "title": "RGCN (relation-aware, hard-negative training) \u00b7 hard-negative training"
+}

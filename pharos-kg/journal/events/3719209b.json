@@ -1,0 +1,19 @@
+{
+ "based_revision": "7ebc8bf1",
+ "change": null,
+ "code": "P-30",
+ "created_time": "2026-11-19T22:16:19.370943Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "kbs proposal create",
+   "type": "cli"
+  }
+ ],
+ "id": "3719209b",
+ "rationale": "Declare HPO_RELEASE and OPENTARGETS_RELEASE beside the assets: each source file with its URL, size and digest; each table with its relation, cache file and row count; the reader's assumptions. Give RemoteSourcePlanner a RemoteSourceConfiguration(asset, release), encode it in the instruction payload, and let the executor read only that payload. Delete the two data-side manifests. A missing table rebuilds from the declaration, and workflow_plan.json records exactly what will be fetched and verified.",
+ "references": [],
+ "subject": "pharos_kg/asset/release.py",
+ "title": "Declare the releases beside the assets and record the fetch config in the plan"
+}

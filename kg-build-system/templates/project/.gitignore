@@ -1,0 +1,9 @@
+build/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+uv.lock
+
+# Viewer request queue (plugin bridge)
+.kbs/

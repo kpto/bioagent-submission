@@ -1,0 +1,13 @@
+{
+ "code": "F-62",
+ "created_time": "2026-11-16T21:00:33Z",
+ "event_type": "finding.created",
+ "evidence": "GO hierarchy is also negative: core 0.4444 / 0.4442 versus core+GO 0.4390 / 0.4365.",
+ "external_references": [],
+ "id": "25e45aa9",
+ "metric": "core 0.4444 / 0.4442; core+GO 0.4390 / 0.4365; 1,703 is_a edges; 3,061 GO nodes; 2,812/3,061 have a parent; ancestor median 8, max 62",
+ "observation": "1,703 direct GO is_a edges among the existing 3,061 GO nodes were added and the typed RGCN re-run. The hierarchy lowered both macro and micro AUPRC, completing a sweep in which no ontology hierarchy improved ranking.",
+ "references": [],
+ "subject": "F-62",
+ "title": "GO is_a hierarchy is negative for the typed graph"
+}

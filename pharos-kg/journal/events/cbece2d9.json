@@ -1,0 +1,84 @@
+{
+ "code": "EV-386",
+ "created_time": "2026-11-18T01:20:40Z",
+ "evaluated_revision": "2066f869",
+ "evaluation": "ee5b90d5",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "pruned arm",
+    "method": "logistic regression",
+    "protocol": "committed shared five negatives (current split: 12,343 train / 3,085 test; 5 seeds)"
+   },
+   "name": "eval/report.json",
+   "type": "report"
+  }
+ ],
+ "id": "cbece2d9",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); current 2026-11-19 rebuild; split differs from the historical 9,253/2,314; supersedes the historical static/enriched/pruned arms in docs/SUBMISSION.md",
+  "config": "5 seeds; target-disease features; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-119",
+   "F-120"
+  ],
+  "graph": "pruned arm",
+  "method": "logistic regression",
+  "metric_text": "macro AUPRC 0.771139; micro AUPRC 0.831697; macro AUROC 0.731185; micro AUROC 0.767991; macro MRR 0.583242; micro MRR 0.577126; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.820763, 0.841899], \"auroc\": [0.757044, 0.779074], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.695742, 0.830567], \"macro_auroc\": [0.666817, 0.786205], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.521685, 0.648083], \"mrr\": [0.562538, 0.590975]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.820763,
+    0.841899
+   ],
+   "ci95_auroc": [
+    0.757044,
+    0.779074
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.695742,
+    0.830567
+   ],
+   "ci95_macro_auroc": [
+    0.666817,
+    0.786205
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.521685,
+    0.648083
+   ],
+   "ci95_mrr": [
+    0.562538,
+    0.590975
+   ],
+   "macro_auprc": 0.771139,
+   "macro_auroc": 0.731185,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.583242,
+   "micro_auprc": 0.831697,
+   "micro_auroc": 0.767991,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.577126
+  },
+  "protocol": "committed shared five negatives (current split: 12,343 train / 3,085 test; 5 seeds)",
+  "report": "eval/report.json"
+ },
+ "subject": "B-20",
+ "title": "logistic regression \u00b7 the committed split"
+}

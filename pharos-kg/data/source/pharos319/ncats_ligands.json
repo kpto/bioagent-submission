@@ -1,0 +1,8 @@
+{
+ "archive_bytes": 2257847063,
+ "archive_sha256": "86ebfffdd5fd03bcc23ef43a31251d40572ccd7feec62dadd3215f276f8b0953",
+ "bytes": 19766474,
+ "rows": 355932,
+ "sha256": "e13480bd5cfaf56e1d538dbc24b0da9d08c94ce4e44986a9e50f3f5e7889ddc0",
+ "table": "ncats_ligands"
+}

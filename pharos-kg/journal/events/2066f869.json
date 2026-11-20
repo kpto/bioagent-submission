@@ -1,0 +1,22 @@
+{
+ "based_proposals": [
+  "9416f19f",
+  "1c7c7dc9",
+  "1f72e27c"
+ ],
+ "code": "B-20",
+ "created_time": "2026-11-18T00:16:18Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "Restricting ligands to compounds measured against two or more kinases cuts the balanced graph from 71,949 nodes / 160,462 edges to 22,531 / 114,098 (-69% nodes, -46,364 edges), with single-target compounds moved to the verdict layer rather than discarded. On the fixed held-out set RGCN macro rose 0.338123 to 0.347516 and micro 0.274393 to 0.275689.",
+  "message": 47299,
+  "numbers": "nodes 71,949 to 22,531 (-69%); edges 160,462 to 114,098 (-46,364); macro 0.338123 to 0.347516; micro 0.274393 to 0.275689",
+  "status": "F-0105 accepted for usability; prediction gain later found neutral (F-0120)"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "2066f869",
+ "references": [],
+ "subject": "B-20",
+ "title": "Ligand identity policy: multi-target compounds only"
+}

@@ -1,0 +1,18 @@
+{
+ "code": "EV-15",
+ "created_time": "2026-11-17T22:06:42Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "e745d2ec",
+ "references": [],
+ "result": {
+  "detail": "Five seeds on a shared split and negatives: degree-matched macro/micro is 0.2897/0.2910 for the migrated graph, 0.3040/0.2679 for raw_all and 0.2803/0.2812 for ppi700; on the fair protocol 0.7672/0.7212, 0.7583/0.7115 and 0.7602/0.7149. The protocols disagree and every difference is about 0.01 against standard deviations of 0.003-0.011. Removing the disease cap is the only coverage change that clearly helps: the pre-migration core scored 0.2528/0.2672 degree-matched and 0.7113/0.6922 fair.",
+  "message": 45127,
+  "numbers": "degree current 0.289697/0.290970, raw_all 0.303966/0.267882, ppi700 0.280266/0.281151; fair current 0.767199/0.721168, raw_all 0.758272/0.711474, ppi700 0.760221/0.714901; pre-migration 0.2528/0.2672 and 0.7113/0.6922; 5 seeds",
+  "status": "accepted (F-0097); coverage buys completeness, not prediction"
+ },
+ "subject": "EV-15",
+ "title": "Leakage-controlled RGCN: raw coverage does not improve prediction"
+}

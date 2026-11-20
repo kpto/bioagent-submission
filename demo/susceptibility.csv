@@ -1,0 +1,11 @@
+isolate_id,antibiotic,method,value,unit,interpretation
+ISO-001,ampicillin,MIC,>32,mg/L,R
+ISO-001,ciprofloxacin,MIC,0.25,mg/L,S
+ISO-002,gentamicin,MIC,2,mg/L,S
+ISO-003,vancomycin,MIC,1,mg/L,S
+ISO-003,ampicillin,MIC,0.5,mg/L,S
+ISO-004,ciprofloxacin,MIC,4,mg/L,R
+ISO-004,gentamicin,MIC,500,µg/mL,S
+ISO-005,ampicillin,MIC,,mg/L,
+ISO-999,gentamicin,MIC,8,mg/L,R
+ISO-002,gentamicin,MIC,2,mg/L,S

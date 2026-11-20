@@ -1,0 +1,13 @@
+{
+ "code": "F-3",
+ "created_time": "2026-11-10T19:30:55Z",
+ "event_type": "finding.created",
+ "evidence": "# Pharos returns null when the offset reaches 400, so the family is fetched in four Target Development Level subsets, each below that offset.",
+ "external_references": [],
+ "id": "0f65d6d3",
+ "metric": "null at skip 400/425/450; 55.6s at 0, 3.1s at 399; HTTP 504 on nested Tbio pages",
+ "observation": "The unfiltered kinase listing returns a null target list at skip 400, 425 and 450, so the family must be fetched in per-TDL subsets below that offset. Latencies were highly variable: 55.6s at skip 0, 34.9s at skip 100, 25.7s at skip 300 and 3.1s at skip 399, and heavy nested Tbio pages later timed out with HTTP 504. The downloader was therefore restructured around TDL subsets and per-target detail requests.",
+ "references": [],
+ "subject": "F-3",
+ "title": "Pharos returns null target pages beyond offset 400 and is slow on heavy pages"
+}

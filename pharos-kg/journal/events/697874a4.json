@@ -1,0 +1,19 @@
+{
+ "code": "F-126",
+ "created_time": "2026-11-16T19:54:17Z",
+ "event_type": "finding.created",
+ "evidence": "871ec5f Stop treating max_conf as a probability in pruning",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "max_conf is a source weight, not a probability: 1,014 prunes withdrawn",
+   "type": "unattached_correction"
+  }
+ ],
+ "id": "697874a4",
+ "metric": "max_conf on 1,247 edges, missing on 10,321, over 1 on 1,014; min 0.5, median 1.8, max 5.0; prune 1,015 \u2192 1; R09 hits 1,014 \u2192 0; keep 36,682 \u2192 37,696",
+ "observation": "The export had pruned every associated_with edge whose max_conf exceeded 1 under an invalid-probability rule and reported the 1,014 hits as a structural audit signal. The correction: max_conf is a source-specific release weight observed from 0.5 to 5.0, the field was removed from PROBABILITY_FIELDS, and the export re-ran with only the one impossible-activity prune.",
+ "references": [],
+ "subject": "F-126",
+ "title": "max_conf is a source weight, not a probability: 1,014 prunes withdrawn"
+}

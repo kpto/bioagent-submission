@@ -1,0 +1,34 @@
+{
+ "based_revision": "69dd4cb3",
+ "change": null,
+ "code": "P-12",
+ "created_time": "2026-11-16T20:52:46Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "2170ace9",
+ "rationale": "Proposed authoring disease HPO phenotypes and MONDO ancestry as a background ontology layer, using disease-phenotype similarity to borrow latent factors for cold diseases, and explicitly not mixing phenotype terms into the target-disease core or the main message-passing graph. It was recorded as proposed at 19:31 and later adopted on the phenotype-layer branch.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "36d31890"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "5441af6f"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "5668699e"
+  }
+ ],
+ "subject": "P-12",
+ "title": "CD-0006: disease phenotype background layer for cold diseases"
+}

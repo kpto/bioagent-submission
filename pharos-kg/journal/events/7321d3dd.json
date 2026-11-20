@@ -1,0 +1,21 @@
+{
+ "based_revision": "8a5b8a3e",
+ "change": null,
+ "code": "P-28",
+ "created_time": "2026-11-18T08:15:17Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "7321d3dd",
+ "rationale": "CD-0006 as agreed: the KG states facts only, with no policy filter and no verdict fields; a chain of monotone annotator modules, one predicate per rule with its own confidence, reason and boundary tests, marks edges; the pruned graph is the projection of unmarked edges and reconciliation asserts they agree. Annotators are order-independent because each reads source evidence, not another annotator's marks.",
+ "references": [],
+ "subject": "P-28",
+ "title": "Pruning is post-processing: one module per rule, annotated graph plus pruned projection"
+}

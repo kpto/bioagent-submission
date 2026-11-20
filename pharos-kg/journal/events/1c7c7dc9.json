@@ -1,0 +1,21 @@
+{
+ "based_revision": "b7a9055e",
+ "change": null,
+ "code": "P-23",
+ "created_time": "2026-11-17T21:54:32Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "1c7c7dc9",
+ "rationale": "Thresholding PPI to pairs with an experimental source (BioPlex or Reactome) or STRING score at least 700 keeps 3,357 pairs at average degree 7.7 and maximum 74, against 46,686 raw pairs. Of the raw pairs 735 carry an experimental row and 3,192 a STRING score of 700 or more, and the union is 3,357. The policy was adopted because it keeps two-hop reach discriminative.",
+ "references": [],
+ "subject": "P-23",
+ "title": "PPI policy: experimental or STRING >= 700"
+}

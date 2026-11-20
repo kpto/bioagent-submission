@@ -1,0 +1,18 @@
+{
+ "code": "EV-25",
+ "created_time": "2026-11-18T07:06:18Z",
+ "evaluated_revision": "5515a85c",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "25d64d1b",
+ "references": [],
+ "result": {
+  "detail": "With HPO and the split interactions retained, the fully ported base was run against the same reference on the fixed degree-matched split, RGCN with 3 seeds. Its cold effect is an order of magnitude outside the seed spread, unlike the macro deltas.",
+  "message": 53658,
+  "numbers": "extension_full 0.4711/0.4195/0.3380 (cold std 0.0017) vs policy_context 0.4808/0.4024/0.2525; +0.0856 cold",
+  "status": "accepted"
+ },
+ "subject": "EV-25",
+ "title": "Fully ported base gives +0.086 cold (extension_full)"
+}

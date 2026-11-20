@@ -1,0 +1,13 @@
+{
+ "code": "F-107",
+ "created_time": "2026-11-18T03:01:42Z",
+ "event_type": "finding.created",
+ "evidence": "The graph we would ship is measurably easier to read than the graph we measured earlier, and it is still not browsable in two hops.",
+ "external_references": [],
+ "id": "0c60e7d9",
+ "metric": "22,531 nodes / 116,708 edges; protein 1-hop median 111, p90 403, max 2,474, 93.4% under 500; 2-hop median 1,291.5, p90 7,046, max 13,339, 0% under 500; median 126 diseases within 2 hops",
+ "observation": "The reader-facing export (multi-target ligands, thresholded PPI, typed context, hierarchy, Open Targets classes, no inverse edges) is 22,531 nodes / 116,708 edges. Protein one-hop ego networks have median 111 edges (p90 403, max 2,474) and 93.4% are under 500; two hops reach a median 1,291.5 nodes with 0% under 500, and a kinase reaches a median 126 diseases within two hops. Gene nodes have exactly one edge each.",
+ "references": [],
+ "subject": "F-107",
+ "title": "Recommended export is readable one hop; 93.4% of proteins fit under 500 edges"
+}

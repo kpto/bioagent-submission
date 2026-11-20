@@ -1,0 +1,13 @@
+{
+ "code": "F-88",
+ "created_time": "2026-11-17T20:32:27Z",
+ "event_type": "finding.created",
+ "evidence": "Counts match exactly \u2014 that's the independent audit, and it passed:",
+ "external_references": [],
+ "id": "768da24d",
+ "metric": "disease 363,134 = 363,134; xref 2,600,229 = 2,600,229; ncats_ppi 11,691,825 = 11,691,825; about 30 s per full scan; 17 tables would take 8-10 min vs 169 s for one parser pass",
+ "observation": "DuckDB has no mysqldump reader (its mysql extension needs a running server, and none of 439 community extensions parses a dump), but chdb, the in-process ClickHouse package, reads MySQLDump input directly. Its row counts matched the project parser on three tables including the 11.7M-row interaction table, giving an independent check on the custom reader.",
+ "references": [],
+ "subject": "F-88",
+ "title": "chdb reads the dump natively and matches the project parser exactly"
+}

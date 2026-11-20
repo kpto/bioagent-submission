@@ -1,0 +1,13 @@
+{
+ "code": "F-37",
+ "created_time": "2026-11-16T08:37:35Z",
+ "event_type": "finding.created",
+ "evidence": "training disease degree alone reaches macro AUPRC 0.7354 / micro 0.7087, above the histogram base 0.6834 / 0.6201",
+ "external_references": [],
+ "id": "7a6ba53a",
+ "metric": "disease degree 0.735377 / 0.708668; histogram base 0.683398 / 0.620132; target degree 0.16753; degree product 0.730228",
+ "observation": "Training disease degree reaches 0.735377 macro/0.708668 micro on the fair suite, above histogram base 0.683398/0.620132, while target degree sits at the 0.16753 base rate and the degree product reaches 0.730228. F-0030 requires a degree-only baseline beside every fair result.",
+ "references": [],
+ "subject": "F-37",
+ "title": "Disease degree alone beats the fair feature model"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-70",
+ "created_time": "2026-11-17T10:10:46Z",
+ "event_type": "finding.created",
+ "evidence": "the profile branch is currently a **full** phenotype build (29,413 / 89,943), while the compact export and docs describe a **15,000 / 67,588** profile",
+ "external_references": [],
+ "id": "f4ee2ecb",
+ "metric": "branch build 29,413 nodes / 89,943 edges; 19,894 terms; min_disease_support 0; compact_terms false; docs and CD-0006 claim 15,000 / 67,588; export nodes.tsv 15,001 lines",
+ "observation": "An audit found the branch's prepared phenotype data used min_disease_support 0 with compact_terms false and 19,894 terms, so the build was the full layer, while CD-0006 and the scorecard described the compact profile. The committed compact export still held the older 15,000 / 67,588 artifact, so the branch did not reproduce its own documented profile.",
+ "references": [],
+ "subject": "F-70",
+ "title": "Profile branch drifted from compact to full phenotype; compact export is stale"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-34",
+ "created_time": "2026-11-16T08:31:30Z",
+ "event_type": "finding.created",
+ "evidence": "hist_base macro {'auroc': 0.861999, 'auprc': 0.683398, 'hits_at_10': 1.0, 'mrr': 0.816126}",
+ "external_references": [],
+ "id": "7ff4bc4a",
+ "metric": "13807 pairs; 11493 unique negatives; 16.76% base; hist 0.683398 / 0.620132; sage 0.304360 / 0.218772; rgcn 0.130120 / 0.141856; gatv2 0.092534 / 0.091171",
+ "observation": "With five independently sampled negatives per positive on the same split, the evaluation is 13,807 pairs, 11,493 unique negatives and a 16.76% base rate. Histogram base features were best at 0.683398/0.620132; GraphSAGE scored 0.304360/0.218772, RGCN 0.130120/0.141856, GATv2 0.092534/0.091171 and GNN+histogram 0.118811/0.123371.",
+ "references": [],
+ "subject": "F-34",
+ "title": "Fair per-positive negatives reverse the model ranking"
+}

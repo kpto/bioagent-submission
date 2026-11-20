@@ -1,0 +1,13 @@
+{
+ "code": "F-33",
+ "created_time": "2026-11-16T08:17:21Z",
+ "event_type": "finding.created",
+ "evidence": "The committed negative sampler reuses one five-negative list per target",
+ "external_references": [],
+ "id": "a45f2302",
+ "metric": "2314 test positives; 537 targets; 2685 unique negatives; 46.3% base rate; 15 max positives per list",
+ "observation": "eval/link_prediction._sample_negatives builds one five-negative list per target, so 2,314 test positives over 537 targets yield only 2,685 unique negatives, a 46.3% positive base rate, and up to 15 positives share one list. Recorded as F-0026 with the decision to keep the committed gate unchanged and report a fair suite beside it.",
+ "references": [],
+ "subject": "F-33",
+ "title": "Committed negative sampler reuses one list per target"
+}

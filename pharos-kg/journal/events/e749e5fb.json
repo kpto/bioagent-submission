@@ -1,0 +1,13 @@
+{
+ "code": "F-42",
+ "created_time": "2026-11-16T08:46:05Z",
+ "event_type": "finding.created",
+ "evidence": "random hard {'auroc': 0.446654, 'auprc': 0.165679, 'hits_at_10': 1.0, 'mrr': 0.337701}",
+ "external_references": [],
+ "id": "e749e5fb",
+ "metric": "74929 training negatives (45001 random + 33600 hard); hard-eval 0.120876 vs 0.165679; random-eval 0.741838 vs 0.798867",
+ "observation": "Training the RGCN with 74,929 negatives (45,001 random plus 33,600 same-disease/same-target) gave hard-eval macro AUPRC 0.120876 against 0.165679 with random-negative training, and random-eval fell from 0.798867 to 0.741838. The dot-product collapse dominates and F-0034 keeps hard negatives as an evaluation suite only.",
+ "references": [],
+ "subject": "F-42",
+ "title": "Hard-negative training did not help"
+}

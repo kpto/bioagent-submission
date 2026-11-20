@@ -1,0 +1,53 @@
+{
+ "code": "EV-286",
+ "created_time": "2026-11-16T16:37:15Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-5",
+    "graph": "enriched authored graph",
+    "method": "target degree baseline",
+    "protocol": "hard same-disease/same-target (13,357 pairs; 17.32% base)"
+   },
+   "name": "experiments/prediction/svd_robustness.json",
+   "type": "report"
+  }
+ ],
+ "id": "c446134d",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "d9487197"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); guarded held-out sets; ensemble beats degree on degree-matched and hard, loses on fair",
+  "config": "control score; degree counters from training positives",
+  "design": "E-5",
+  "findings": [
+   "F-50",
+   "F-51",
+   "F-52"
+  ],
+  "graph": "enriched authored graph",
+  "method": "target degree baseline",
+  "metric_text": "macro AUPRC 0.205524; micro AUPRC 0.19600976714570859; macro AUROC 0.576293; micro AUROC 0.5737112079588935; macro MRR 0.252951; micro MRR 0.257901; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.205524,
+   "macro_auroc": 0.576293,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.252951,
+   "micro_auprc": 0.19600976714570859,
+   "micro_auroc": 0.5737112079588935,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.257901
+  },
+  "protocol": "hard same-disease/same-target (13,357 pairs; 17.32% base)",
+  "report": "experiments/prediction/svd_robustness.json"
+ },
+ "subject": "B-10",
+ "title": "target degree baseline \u00b7 hard negatives"
+}

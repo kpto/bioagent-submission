@@ -1,0 +1,40 @@
+{
+  "format_version": "7",
+  "owned_directories": [
+    "readings",
+    "readings/mechanical"
+  ],
+  "owned_file_hashes": {
+    "__init__.py": "f81bd15bdb8901c756e1086839c8a3c8fad792395f12c95ba6bf69a5c31695c5",
+    "equipment.py": "e9ddfcc472c9baf6c0a326811741bc165f45a9e6498b134f57d9802de8684ef3",
+    "group.py": "b4d5d75bbd956f921c953cccb9e1c4cec8119ac6d18e0d584e33ed20a77993ba",
+    "readings/__init__.py": "2a004d7059e0dc69e6c68497696ec32d9e7eb11e54c4efa8b02bb75530756672",
+    "readings/group.py": "2cd8287c16cba358d42a4e3cab61d3835409384d6e5a522e354ff50c10367a7a",
+    "readings/mechanical/__init__.py": "99f9e69cb41dc5e71c182251708a2d1a4f25b16e0a62f6c63e5091e8aada1894",
+    "readings/mechanical/group.py": "8d7d2032d01d0f8dabbf384a2c7c65da57a18c62e5e30b5df7cb3535bb3b1f12",
+    "readings/mechanical/vibration.py": "712cea864e5d8a556fd109ac833191bef242e3f0939c960d40eccf5d33a86fcd",
+    "readings/temperature.py": "d8adfbdc3d57566e58f07cad6eae9275a549df42c990589cd517038bb83f8a64",
+    "sites.py": "8102cc942df09c16b55431a95aebccd0ce3d9314dd85e74f40ce07005a39a8ec",
+    "surveys.py": "67b1b4eaea3642041d1f0bf81fdcfe6113e039a52bf53244d75f071413c689bf"
+  },
+  "owned_files": [
+    "__init__.py",
+    "equipment.py",
+    "group.py",
+    "readings/__init__.py",
+    "readings/group.py",
+    "readings/mechanical/__init__.py",
+    "readings/mechanical/group.py",
+    "readings/mechanical/vibration.py",
+    "readings/temperature.py",
+    "sites.py",
+    "surveys.py"
+  ],
+  "provider_import": "kg_build_system.generation.code_generation.service._private.builtins.provider",
+  "provider_qualname": "InferDataContractProvider",
+  "provider_version": "8",
+  "request_fingerprint": "f549d399030b3c08a65fef32e29c75cbf80237cef5344ceac90ba530f97ffae8",
+  "request_id": "estate",
+  "request_source_package": "reference_project.asset",
+  "source_digest": "6089248fe29cb9fe79751a7d54721eec2c4d198a7d1cf30b894c311a94fa16dd"
+}

@@ -1,0 +1,18 @@
+{
+ "code": "EV-8",
+ "created_time": "2026-11-16T05:03:17Z",
+ "evaluated_revision": "260f36f4",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "9cf175a3",
+ "references": [],
+ "result": {
+  "detail": "The seven-day quick gate re-ran on revision f11c429a1fa75e9f after the snapshot and catalog changes: audit, explainability, pruning and QA passed, and held-out link prediction was skipped by design. The run used a 30-question QA sample with counterfactual and link-prediction sampling disabled, so it is a smoke gate, not the acceptance run. The run used seed 1729 and reported a passed status.",
+  "message": 17290,
+  "numbers": "mode quick; status passed; audit/explainability/pruning/qa passed; link_prediction skipped; qa_sample 30; counterfactual false; link_prediction false; seed 1729; blueprint fingerprint f11c429a1fa75e9f",
+  "status": "passed"
+ },
+ "subject": "EV-8",
+ "title": "Quick gate passes on revision f11c429a1fa75e9f"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-55",
+ "created_time": "2026-11-16T20:00:24Z",
+ "event_type": "finding.created",
+ "evidence": "provenance-005 gold= target_disease.json pred= none",
+ "external_references": [],
+ "id": "8a245221",
+ "metric": "provenance-001..005 partial or wrong before fix; qa positive 0.98 \u2192 1.00; negative 1.00; example gold 'CTD_human;target_disease.json' vs pred 'CTD_human'",
+ "observation": "The five provenance questions expect the relation asset (target_disease.json) plus the named sources, but the graph-only answer returned only the named sources. All five were partial or wrong before the fix; attaching the relation's source file made all five exact and moved QA positive accuracy to 1.0.",
+ "references": [],
+ "subject": "F-55",
+ "title": "Provenance QA answered without the relation's source asset"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-73",
+ "created_time": "2026-11-17T10:45:30Z",
+ "event_type": "finding.created",
+ "evidence": "The lexical text probe is also negative globally: SVD 0.3592 / 0.4122 vs SVD+text 0.3546 / 0.4139.",
+ "external_references": [],
+ "id": "32789d68",
+ "metric": "SVD 0.3592 / 0.4122; SVD+text 0.3546 / 0.4139; SVD+text+degree 0.3330 / 0.3993; text alone 0.3022 / 0.3343; degree 0.2624 / 0.2364",
+ "observation": "A TF-IDF space was built from the graph's own node text (protein name and description, disease, ligand, GO and phenotype labels) and pair features added to the direct score. Text alone beat degree but adding it to the SVD lowered macro AUPRC, so lexical semantics did not add signal where structure already existed.",
+ "references": [],
+ "subject": "F-73",
+ "title": "Lexical text semantics is negative globally"
+}

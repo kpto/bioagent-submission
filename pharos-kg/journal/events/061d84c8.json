@@ -1,0 +1,13 @@
+{
+ "code": "F-84",
+ "created_time": "2026-11-17T19:55:16Z",
+ "event_type": "finding.created",
+ "evidence": "The API returns **at most five association detail records per target\u2013disease pair**.",
+ "external_references": [],
+ "id": "061d84c8",
+ "metric": "associations(top: 5) at two query sites; observed counts 1-5, maximum 5; evidence_count == len(evidence) on every row; associationCount fetched but discarded",
+ "observation": "The GraphQL queries request associations(top: 5), so at most five association detail rows are returned per target-disease pair. The API also returns associationCount, but the extractor fetches it and does not store it, and evidence_count is set to len(evidence), so the field name implies a total that the value does not carry.",
+ "references": [],
+ "subject": "F-84",
+ "title": "evidence_count is a capped detail count, not the release's association total"
+}

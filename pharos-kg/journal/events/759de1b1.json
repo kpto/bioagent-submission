@@ -1,0 +1,13 @@
+{
+ "code": "F-14",
+ "created_time": "2026-11-16T02:16:35Z",
+ "event_type": "finding.created",
+ "evidence": "The enriched authored graph now **beats the best non-GNN baseline on macro AUPRC by +0.021** and ties it on micro AUPRC.",
+ "external_references": [],
+ "id": "759de1b1",
+ "metric": "enriched macro 0.946854 / micro 0.939521; static macro 0.815509 / micro 0.897513; pruned macro 0.841558 / micro 0.863795; logistic static macro 0.926341 / micro 0.940424; +0.021 macro",
+ "observation": "A two-layer GraphSAGE encoder on the homogeneous projection, 500 epochs, five seeds, reached macro AUPRC 0.947 / micro 0.940 on the enriched authored graph, against static 0.816/0.898 and pruned 0.842/0.864; the best non-GNN baseline (logistic static) was 0.926/0.940. Enriched was stable across seeds (0.934-0.956 macro) while static was not (0.806-0.824), which the assistant read as the extra ligand, PPI and GO structure regularising the model. The stated caveat is that this is a within-graph ablation, not yet a win against Pharos.",
+ "references": [],
+ "subject": "F-14",
+ "title": "GraphSAGE: enriched graph beats the best non-GNN baseline on macro AUPRC"
+}

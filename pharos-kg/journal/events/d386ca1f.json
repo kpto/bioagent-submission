@@ -1,0 +1,84 @@
+{
+ "code": "EV-389",
+ "created_time": "2026-11-18T01:20:40Z",
+ "evaluated_revision": "2066f869",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "pruned arm",
+    "method": "truncated SVD (embeddings)",
+    "protocol": "committed shared five negatives (current split: 12,343 train / 3,085 test; 5 seeds)"
+   },
+   "name": "eval/report.json",
+   "type": "report"
+  }
+ ],
+ "id": "d386ca1f",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); current 2026-11-19 rebuild; split differs from the historical 9,253/2,314; supersedes the historical static/enriched/pruned arms in docs/SUBMISSION.md",
+  "config": "5 seeds; target-disease features; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-119",
+   "F-120"
+  ],
+  "graph": "pruned arm",
+  "method": "truncated SVD (embeddings)",
+  "metric_text": "macro AUPRC 0.714578; micro AUPRC 0.747675; macro AUROC 0.698974; micro AUROC 0.680363; macro MRR 0.595583; micro MRR 0.568807; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.73555, 0.758894], \"auroc\": [0.667432, 0.692236], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.643197, 0.775254], \"macro_auroc\": [0.651717, 0.737235], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.530817, 0.653051], \"mrr\": [0.554287, 0.582366]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.73555,
+    0.758894
+   ],
+   "ci95_auroc": [
+    0.667432,
+    0.692236
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.643197,
+    0.775254
+   ],
+   "ci95_macro_auroc": [
+    0.651717,
+    0.737235
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.530817,
+    0.653051
+   ],
+   "ci95_mrr": [
+    0.554287,
+    0.582366
+   ],
+   "macro_auprc": 0.714578,
+   "macro_auroc": 0.698974,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.595583,
+   "micro_auprc": 0.747675,
+   "micro_auroc": 0.680363,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.568807
+  },
+  "protocol": "committed shared five negatives (current split: 12,343 train / 3,085 test; 5 seeds)",
+  "report": "eval/report.json"
+ },
+ "subject": "B-20",
+ "title": "truncated SVD (embeddings) \u00b7 the committed split"
+}

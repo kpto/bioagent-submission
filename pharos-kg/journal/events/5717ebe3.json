@@ -1,0 +1,53 @@
+{
+ "code": "EV-30",
+ "created_time": "2026-11-16T02:35:46Z",
+ "evaluated_revision": "d142946f",
+ "evaluation": "43eb9ff3",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph (baseline)",
+    "method": "GraphSAGE",
+    "protocol": "committed shared five negatives (seed-0 run)"
+   },
+   "name": "experiments/gnn/external_context.json",
+   "type": "report"
+  }
+ ],
+ "id": "5717ebe3",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "9ba7057c"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e0309188"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); within-graph ablation; external edges added as ordinary message-passing context; negative result; baseline for the external-edge arms; later_findings: F-20",
+  "config": "seed 0, 500 epochs, enriched message graph",
+  "design": "E-2",
+  "findings": [
+   "F-15"
+  ],
+  "graph": "enriched authored graph (baseline)",
+  "method": "GraphSAGE",
+  "metric_text": "macro AUPRC 0.955507; micro AUPRC 0.942289",
+  "metrics": {
+   "macro_auprc": 0.955507,
+   "micro_auprc": 0.942289
+  },
+  "protocol": "committed shared five negatives (seed-0 run)",
+  "report": "experiments/gnn/external_context.json"
+ },
+ "subject": "B-6",
+ "title": "GraphSAGE \u00b7 the committed split"
+}

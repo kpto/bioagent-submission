@@ -1,0 +1,13 @@
+{
+ "code": "F-27",
+ "created_time": "2026-11-16T07:49:36Z",
+ "event_type": "finding.created",
+ "evidence": "gatv2_sage_60_40 macro 0.964279 micro 0.9660113072831821",
+ "external_references": [],
+ "id": "47dcbb34",
+ "metric": "GATv2 0.961737 / 0.961672; SAGE 0.956696 / 0.962935; Transformer 0.951702 / 0.953550; 60/40 0.964279 / 0.966011; 50/50 0.963577 / 0.966330",
+ "observation": "Ten-seed rank ensembles per encoder were GATv2 0.961737/0.961672, GraphSAGE 0.956696/0.962935 and TransformerConv 0.951702/0.953550. Mixing GATv2 and GraphSAGE 60/40 gave 0.964279/0.966011 and 50/50 0.963577/0.966330; the transformer added no gain, and intervals overlap widely, so F-0020 called 60/40 the candidate rather than a proven lift.",
+ "references": [],
+ "subject": "F-27",
+ "title": "GATv2 and GraphSAGE ten-seed mix is the best point estimate"
+}

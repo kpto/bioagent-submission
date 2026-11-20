@@ -1,0 +1,4219 @@
+{
+  "edges": [
+    {
+      "abstract": true,
+      "annotations": [],
+      "bindings": [],
+      "children": [
+        "associated_with",
+        "binds",
+        "disease_has_phenotype",
+        "expressed_in",
+        "has_hpo_phenotype",
+        "has_phenotype",
+        "interacts_with",
+        "participates_in",
+        "participates_in_pathway",
+        "process_subclass_of",
+        "subclass_of",
+        "translates_to"
+      ],
+      "counts": {
+        "bindings": 0,
+        "declared_children": 12,
+        "inclusive_records": 150856,
+        "records": 0
+      },
+      "depth": 0,
+      "description": "Carry the annotation fields every edge shares, so a pruning decision is declared on the edge rather than added as an undeclared column.",
+      "endpoints": {
+        "source": "annotated_record_node",
+        "target": "annotated_record_node"
+      },
+      "kind": "edge",
+      "label": "annotated_record_edge",
+      "labels": [],
+      "name": "annotated_record_edge",
+      "parent": null,
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        }
+      ],
+      "source": "annotated_record_node",
+      "target": "annotated_record_node"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:associated_with"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "associated_with",
+          "source_node": "protein",
+          "target_node": "disease"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 15430,
+        "records": 15430
+      },
+      "depth": 1,
+      "description": "Read the edge with its evidence types and sources when the question is whether the release associates a kinase with a disease.",
+      "endpoints": {
+        "source": "protein",
+        "target": "disease"
+      },
+      "kind": "edge",
+      "label": "ASSOCIATED_WITH",
+      "labels": [
+        "ASSOCIATED_WITH"
+      ],
+      "name": "associated_with",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The association types returned for the pair.",
+          "examples": [
+            [
+              "DisGeNET"
+            ],
+            [
+              "DrugCentral Indication"
+            ],
+            [
+              "Expression Atlas"
+            ]
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "evidence_types",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The data sources named by the association records.",
+          "examples": [
+            [
+              "CTD_human"
+            ],
+            [
+              "UNIPROT"
+            ],
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "sources",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The largest confidence value among the pair's association records.",
+          "examples": [
+            1.2,
+            4.0,
+            5.0
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "max_conf",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "The largest score among the pair's association records.",
+          "examples": [
+            0.3,
+            0.31,
+            0.4
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "max_score",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "Say what kind of independent evidence stands behind the edge, so that a genetic association and a literature co-mention are not read as the same claim.",
+          "examples": [
+            "high",
+            "literature_only",
+            "none"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "evidence_class",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The number of association records aggregated into the edge.",
+          "examples": [
+            1,
+            2,
+            3
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "evidence_count",
+          "nullable": false,
+          "type": "int"
+        }
+      ],
+      "source": "protein",
+      "target": "disease"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:molecularly_interacts_with"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "binds",
+          "source_node": "ligand",
+          "target_node": "protein"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 34526,
+        "records": 34526
+      },
+      "depth": 1,
+      "description": "Read the measured binding activity when the question is whether a ligand was measured against a kinase.",
+      "endpoints": {
+        "source": "ligand",
+        "target": "protein"
+      },
+      "kind": "edge",
+      "label": "BINDS",
+      "labels": [
+        "BINDS"
+      ],
+      "name": "binds",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The mean activity in -log10 molar units.",
+          "examples": [
+            8.3,
+            8.7,
+            9.0
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "mean_p_activity",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "The standard deviation of the measurements.",
+          "examples": [
+            0.0,
+            0.005,
+            0.15
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "std",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "The number of measurements aggregated into the pair.",
+          "examples": [
+            1,
+            2,
+            3
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "count",
+          "nullable": false,
+          "type": "int"
+        },
+        {
+          "annotations": [],
+          "description": "The number of kinases the release measures this ligand against, repeated on every edge it has.",
+          "examples": [
+            2,
+            3,
+            4
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "target_count",
+          "nullable": false,
+          "type": "int"
+        },
+        {
+          "annotations": [],
+          "description": "The PubMed identifiers named by the activity records.",
+          "examples": [
+            [
+              "22037378"
+            ],
+            [
+              "29191878"
+            ],
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "pmids",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The references named by the activity records.",
+          "examples": [
+            [
+              "None, (2014) None:None:None"
+            ],
+            [
+              "None, (2016) None:None:None"
+            ],
+            [
+              "None, None:None:None"
+            ]
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "references",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The weakest measured activity in the pair.",
+          "examples": [
+            8.0,
+            8.7,
+            9.0
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "min_p_activity",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "The strongest measured activity in the pair.",
+          "examples": [
+            8.4,
+            8.7,
+            9.0
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "max_p_activity",
+          "nullable": true,
+          "type": "float | None"
+        }
+      ],
+      "source": "ligand",
+      "target": "protein"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:has_phenotype"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "disease_has_phenotype",
+          "source_node": "disease",
+          "target_node": "hpo_term"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 19133,
+        "records": 19133
+      },
+      "depth": 1,
+      "description": "Read the edge when the question is what a disease looks like in a patient, including diseases no target in the graph reaches.",
+      "endpoints": {
+        "source": "disease",
+        "target": "hpo_term"
+      },
+      "kind": "edge",
+      "label": "DISEASE_HAS_PHENOTYPE",
+      "labels": [
+        "DISEASE_HAS_PHENOTYPE"
+      ],
+      "name": "disease_has_phenotype",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The distinct frequencies the release states for the pair.",
+          "examples": [
+            [
+              ""
+            ],
+            [
+              "HP:0040282"
+            ],
+            [
+              "HP:0040283"
+            ]
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "frequencies",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The number of annotation rows the pair aggregates.",
+          "examples": [
+            1,
+            2,
+            3
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "annotation_count",
+          "nullable": false,
+          "type": "int"
+        },
+        {
+          "annotations": [],
+          "description": "A reference or evidence code cited by the annotations.",
+          "examples": [
+            "IEA",
+            "PCS",
+            "TAS"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "evidence",
+          "nullable": true,
+          "type": "str | None"
+        }
+      ],
+      "source": "disease",
+      "target": "hpo_term"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:expressed_in"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "expressed_in",
+          "source_node": "protein",
+          "target_node": "anatomical_entity"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 11313,
+        "records": 11313
+      },
+      "depth": 1,
+      "description": "Read the expression location when the question is where a kinase is detected.",
+      "endpoints": {
+        "source": "protein",
+        "target": "anatomical_entity"
+      },
+      "kind": "edge",
+      "label": "EXPRESSED_IN",
+      "labels": [
+        "EXPRESSED_IN"
+      ],
+      "name": "expressed_in",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The expression resources that support the pair, such as HPA Protein or HPM Protein.",
+          "examples": [
+            [
+              "HPA Protein"
+            ]
+          ],
+          "logical_type": {
+            "item": {
+              "kind": "unit",
+              "name": "str"
+            },
+            "kind": "array"
+          },
+          "name": "sources",
+          "nullable": false,
+          "type": "Array[str]"
+        },
+        {
+          "annotations": [],
+          "description": "The strongest detection level, High or Medium.",
+          "examples": [
+            "High",
+            "Medium"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "level",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The number of supporting expression rows.",
+          "examples": [
+            1,
+            2,
+            3
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "count",
+          "nullable": false,
+          "type": "int"
+        }
+      ],
+      "source": "protein",
+      "target": "anatomical_entity"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:has_phenotype"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "has_hpo_phenotype",
+          "source_node": "protein",
+          "target_node": "hpo_term"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 14920,
+        "records": 14920
+      },
+      "depth": 1,
+      "description": "Read the edge when the question is what a kinase's variants produce in a patient, including kinases with no target-disease row.",
+      "endpoints": {
+        "source": "protein",
+        "target": "hpo_term"
+      },
+      "kind": "edge",
+      "label": "HAS_HPO_PHENOTYPE",
+      "labels": [
+        "HAS_HPO_PHENOTYPE"
+      ],
+      "name": "has_hpo_phenotype",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The diseases the annotations were recorded in.",
+          "examples": [
+            [
+              "ORPHA:1606"
+            ],
+            [
+              "ORPHA:244"
+            ],
+            [
+              "ORPHA:744"
+            ]
+          ],
+          "logical_type": {
+            "item": {
+              "kind": "unit",
+              "name": "str"
+            },
+            "kind": "array"
+          },
+          "name": "recording_diseases",
+          "nullable": false,
+          "type": "Array[str]"
+        },
+        {
+          "annotations": [],
+          "description": "The number of annotation rows the edge aggregates.",
+          "examples": [
+            1,
+            2,
+            3
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "annotation_count",
+          "nullable": false,
+          "type": "int"
+        }
+      ],
+      "source": "protein",
+      "target": "hpo_term"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:has_phenotype"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "has_phenotype",
+          "source_node": "protein",
+          "target_node": "phenotype"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 4904,
+        "records": 4904
+      },
+      "depth": 1,
+      "description": "Read the phenotype association when the question is what a model with a perturbed kinase shows.",
+      "endpoints": {
+        "source": "protein",
+        "target": "phenotype"
+      },
+      "kind": "edge",
+      "label": "HAS_PHENOTYPE",
+      "labels": [
+        "HAS_PHENOTYPE"
+      ],
+      "name": "has_phenotype",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The contributing programs, such as IMPC, OMIM or a mouse ortholog resource.",
+          "examples": [
+            [
+              "IMPC"
+            ],
+            [
+              "JAX/MGI Human Ortholog Phenotype"
+            ]
+          ],
+          "logical_type": {
+            "item": {
+              "kind": "unit",
+              "name": "str"
+            },
+            "kind": "array"
+          },
+          "name": "sources",
+          "nullable": false,
+          "type": "Array[str]"
+        },
+        {
+          "annotations": [],
+          "description": "The procedures the contributing rows name.",
+          "examples": [
+            [
+              "Clinical Chemistry"
+            ],
+            [
+              "Gross Pathology and Tissue Collection"
+            ],
+            []
+          ],
+          "logical_type": {
+            "item": {
+              "kind": "unit",
+              "name": "str"
+            },
+            "kind": "array"
+          },
+          "name": "procedures",
+          "nullable": false,
+          "type": "Array[str]"
+        },
+        {
+          "annotations": [],
+          "description": "The smallest p-value among the pair's rows.",
+          "examples": [
+            0.0,
+            5.92610927270254e-05,
+            8.31538435267061e-06
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "min_p_value",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "The number of phenotype rows behind the pair.",
+          "examples": [
+            1,
+            2,
+            4
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "count",
+          "nullable": false,
+          "type": "int"
+        }
+      ],
+      "source": "protein",
+      "target": "phenotype"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:interacts_with"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "interacts_with",
+          "source_node": "protein",
+          "target_node": "protein"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 3357,
+        "records": 3357
+      },
+      "depth": 1,
+      "description": "Read the edge when the question is which kinases act together, at the confidence the project's threshold admits.",
+      "endpoints": {
+        "source": "protein",
+        "target": "protein"
+      },
+      "kind": "edge",
+      "label": "INTERACTS_WITH",
+      "labels": [
+        "INTERACTS_WITH"
+      ],
+      "name": "interacts_with",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The largest score among the kept sources.",
+          "examples": [
+            904.0,
+            906.0,
+            913.0
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "score",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "The sources that report the pair.",
+          "examples": [
+            [
+              "BioPlex,STRINGDB"
+            ],
+            [
+              "Reactome,STRINGDB"
+            ],
+            [
+              "STRINGDB"
+            ]
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "sources",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "A source's probability that the pair interacts.",
+          "examples": [
+            0.999791505,
+            0.999999997,
+            1.0
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "p_int",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "A source's probability that the pair does not interact.",
+          "examples": [
+            0.0,
+            2e-09,
+            5e-09
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "p_ni",
+          "nullable": true,
+          "type": "float | None"
+        },
+        {
+          "annotations": [],
+          "description": "Whether any kept source is experimental rather than predicted.",
+          "examples": [
+            "experimental",
+            "predicted"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "evidence_class",
+          "nullable": true,
+          "type": "str | None"
+        }
+      ],
+      "source": "protein",
+      "target": "protein"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:participates_in"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "participates_in",
+          "source_node": "protein",
+          "target_node": "biological_process"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 16618,
+        "records": 16618
+      },
+      "depth": 1,
+      "description": "Read the annotation assertion when the question is which GO term a kinase is annotated to and on what evidence.",
+      "endpoints": {
+        "source": "protein",
+        "target": "biological_process"
+      },
+      "kind": "edge",
+      "label": "PARTICIPATES_IN",
+      "labels": [
+        "PARTICIPATES_IN"
+      ],
+      "name": "participates_in",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The GO evidence code, such as IDA or IEA.",
+          "examples": [
+            "IDA",
+            "IEA",
+            "TAS"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "evidence",
+          "nullable": false,
+          "type": "str"
+        }
+      ],
+      "source": "protein",
+      "target": "biological_process"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:participates_in"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "participates_in_pathway",
+          "source_node": "protein",
+          "target_node": "pathway"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 26597,
+        "records": 26597
+      },
+      "depth": 1,
+      "description": "Read the pathway membership when the question is which curated process a kinase belongs to.",
+      "endpoints": {
+        "source": "protein",
+        "target": "pathway"
+      },
+      "kind": "edge",
+      "label": "PARTICIPATES_IN_PATHWAY",
+      "labels": [
+        "PARTICIPATES_IN_PATHWAY"
+      ],
+      "name": "participates_in_pathway",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The database that curates the pathway.",
+          "examples": [
+            "KEGG",
+            "Reactome",
+            "WikiPathways"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "source",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The page the release links for the pathway.",
+          "examples": [
+            "http://www.wikipathways.org/instance/WP2018_r106175",
+            "http://www.wikipathways.org/instance/WP2380_r106165",
+            "http://www.wikipathways.org/instance/WP4262_r105490"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "url",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The number of release rows asserting the membership.",
+          "examples": [
+            1,
+            2,
+            3
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "count",
+          "nullable": false,
+          "type": "int"
+        }
+      ],
+      "source": "protein",
+      "target": "pathway"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:subclass_of"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "process_subclass_of",
+          "source_node": "biological_process",
+          "target_node": "biological_process"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 2576,
+        "records": 2576
+      },
+      "depth": 1,
+      "description": "Read the edge when the question is how a specific process relates to a broader one, so that an annotation at a leaf term can be read at the level a question asks.",
+      "endpoints": {
+        "source": "biological_process",
+        "target": "biological_process"
+      },
+      "kind": "edge",
+      "label": "PROCESS_SUBCLASS_OF",
+      "labels": [
+        "PROCESS_SUBCLASS_OF"
+      ],
+      "name": "process_subclass_of",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        }
+      ],
+      "source": "biological_process",
+      "target": "biological_process"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:subclass_of"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "subclass_of",
+          "source_node": "disease",
+          "target_node": "disease"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 842,
+        "records": 842
+      },
+      "depth": 1,
+      "description": "Read the edge when the question is what a disease belongs to, so that a rare disease can be understood through its class without a second lookup.",
+      "endpoints": {
+        "source": "disease",
+        "target": "disease"
+      },
+      "kind": "edge",
+      "label": "SUBCLASS_OF",
+      "labels": [
+        "SUBCLASS_OF"
+      ],
+      "name": "subclass_of",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        }
+      ],
+      "source": "disease",
+      "target": "disease"
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:translates_to"
+          },
+          "id": "predicate",
+          "namespace": "biolink"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "translates_to",
+          "source_node": "gene",
+          "target_node": "protein"
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 640,
+        "records": 640
+      },
+      "depth": 1,
+      "description": "Read the genomic-to-protein bridge: the HGNC gene encodes the UniProt protein.",
+      "endpoints": {
+        "source": "gene",
+        "target": "protein"
+      },
+      "kind": "edge",
+      "label": "TRANSLATES_TO",
+      "labels": [
+        "TRANSLATES_TO"
+      ],
+      "name": "translates_to",
+      "parent": "annotated_record_edge",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        }
+      ],
+      "source": "gene",
+      "target": "protein"
+    }
+  ],
+  "examples": {
+    "limit": 3,
+    "method": "approx_top_k"
+  },
+  "generated_by": {
+    "module_id": "meta_graph",
+    "module_version": "2"
+  },
+  "nodes": [
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:AnatomicalEntity"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "UBERON:0001062"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "UBERON:",
+              "CL:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "anatomical_entity",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 1213,
+        "records": 1213
+      },
+      "depth": 1,
+      "description": "Read the anatomical structure when the question is where a kinase is expressed.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Anatomical entity",
+      "labels": [
+        "Anatomical entity"
+      ],
+      "name": "anatomical_entity",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The UBERON term identity, such as UBERON:0001013.",
+          "examples": [
+            "UBERON:0002188",
+            "UBERON:0002373",
+            "UBERON:0002686"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "anatomical_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The tissue label the release states for the structure.",
+          "examples": [
+            "Femoral artery",
+            "Gastric mucosa",
+            "Palatine tonsil"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "label",
+          "nullable": false,
+          "type": "str"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": true,
+      "annotations": [],
+      "bindings": [],
+      "children": [
+        "anatomical_entity",
+        "biological_process",
+        "disease",
+        "gene",
+        "hpo_term",
+        "ligand",
+        "pathway",
+        "phenotype",
+        "protein"
+      ],
+      "counts": {
+        "bindings": 0,
+        "declared_children": 9,
+        "inclusive_records": 28359,
+        "records": 0
+      },
+      "depth": 0,
+      "description": "Carry the annotation fields every node shares, so a pruning decision is declared on the node rather than added as an undeclared column.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "annotated_record_node",
+      "labels": [],
+      "name": "annotated_record_node",
+      "parent": null,
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:BiologicalProcess"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "GO:0008150"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "GO:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "biological_process",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 3833,
+        "records": 3833
+      },
+      "depth": 1,
+      "description": "Read the GO term for functional context around a kinase.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Biological process",
+      "labels": [
+        "Biological process"
+      ],
+      "name": "biological_process",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The GO term identity.",
+          "examples": [
+            "GO:0005547",
+            "GO:0035580",
+            "GO:0097718"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "go_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The GO term label.",
+          "examples": [
+            "mannokinase activity",
+            "regulation of T cell apoptotic process",
+            "regulation of protein stability"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "label",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The GO branch: biological_process, molecular_function or cellular_component.",
+          "examples": [
+            "biological_process",
+            "cellular_component",
+            "molecular_function"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "aspect",
+          "nullable": false,
+          "type": "str"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:Disease"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "MONDO:0000001"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "MONDO:",
+              "DOID:",
+              "UMLS:",
+              "MESH:",
+              "OMIM:",
+              "MIM:",
+              "NAME:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "disease",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 2489,
+        "records": 2489
+      },
+      "depth": 1,
+      "description": "Read the disease when the question is about a condition rather than a target.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Disease",
+      "labels": [
+        "Disease"
+      ],
+      "name": "disease",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The stable disease identity, preferably a MONDO or DOID CURIE.",
+          "examples": [
+            "MESH:D051556",
+            "MONDO:0005233",
+            "UMLS:C2861596"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "disease_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The release's disease label.",
+          "examples": [
+            "LEUKEMIA, ACUTE MYELOID, SUSCEPTIBILITY TO",
+            "Malignant neoplasm of brain",
+            "Urticaria Pigmentosa"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "name",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The MONDO accession when the release provides one.",
+          "examples": [
+            "MONDO:0005009",
+            "MONDO:0005059",
+            "MONDO:0019756"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "mondo_id",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The DOID accession when the release provides one.",
+          "examples": [
+            "DOID:3458",
+            "DOID:6846",
+            "DOID:980"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "doid",
+          "nullable": true,
+          "type": "str | None"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:Gene"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "SO:0001217"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "HGNC:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "gene",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 640,
+        "records": 640
+      },
+      "depth": 1,
+      "description": "Read the genomic locus when the question is about the gene or the gene-disease literature.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Gene",
+      "labels": [
+        "Gene"
+      ],
+      "name": "gene",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The HGNC accession that identifies the gene.",
+          "examples": [
+            "HGNC:11809",
+            "HGNC:18282",
+            "HGNC:19006"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "gene_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The HGNC gene symbol.",
+          "examples": [
+            "CDKL1",
+            "GRK3",
+            "SPHK2"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "symbol",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The HGNC accession repeated as a property.",
+          "examples": [
+            "HGNC:11809",
+            "HGNC:18282",
+            "HGNC:19006"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "hgnc_id",
+          "nullable": false,
+          "type": "str"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:PhenotypicFeature"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "HP:0000118"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "HP:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "hpo_term",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 4487,
+        "records": 4487
+      },
+      "depth": 1,
+      "description": "Read a phenotype term when the question is what a disease looks like in a patient, including diseases no target in the graph reaches.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "HPO term",
+      "labels": [
+        "HPO term"
+      ],
+      "name": "hpo_term",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The HPO accession, such as HP:0001250.",
+          "examples": [
+            "HP:0005028",
+            "HP:0012486",
+            "HP:0040022"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "hpo_id",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The ontology's label for the term.",
+          "examples": [
+            "Basal ganglia calcification",
+            "Hypoplasia of the radius",
+            "Submucous cleft palate"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "name",
+          "nullable": true,
+          "type": "str | None"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:ChemicalEntity"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "CHEBI:23888"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "PHAROS:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "ligand",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 12441,
+        "records": 12441
+      },
+      "depth": 1,
+      "description": "Read the chemical entity for measured binding activity against a kinase.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Ligand",
+      "labels": [
+        "Ligand"
+      ],
+      "name": "ligand",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The stable ligand identity, PHAROS:<ligand identifier>.",
+          "examples": [
+            "PHAROS:2VHDTD4TQ4XR",
+            "PHAROS:AMQUQC1UN7ND",
+            "PHAROS:SLHG4S3SUPZG"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "ligand_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The Pharos ligand identifier.",
+          "examples": [
+            "PHAROS:2VHDTD4TQ4XR",
+            "PHAROS:AMQUQC1UN7ND",
+            "PHAROS:SLHG4S3SUPZG"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "identifier",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The number of kinases the release measures this ligand against.",
+          "examples": [
+            2,
+            3,
+            4
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "int"
+          },
+          "name": "target_count",
+          "nullable": false,
+          "type": "int"
+        },
+        {
+          "annotations": [],
+          "description": "The ligand name reported by Pharos.",
+          "examples": [
+            "CHEMBL3394164::US9321756, 17",
+            "US9359338, Exe. 009",
+            "US9403801, 28"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "name",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "Whether Pharos classifies the ligand as a drug.",
+          "examples": [
+            false,
+            true
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "bool"
+            }
+          },
+          "name": "isdrug",
+          "nullable": true,
+          "type": "bool | None"
+        },
+        {
+          "annotations": [],
+          "description": "The canonical SMILES when the release provides one.",
+          "examples": [
+            "CCCS(=O)(=O)Nc1ccc(F)c(-n2cc(-c3cncnc3)c3nc(N(C)C4CCN(CC)CC4)ccc32)c1F",
+            "COc1ccc(C#N)cc1-c1nn(CC2(O)CCCC2)cc1NC(=O)c1cnn2cccnc12",
+            "N#C[C@H]1CCCCC1n1cc(C(N)=O)c(Nc2ccc(S(=O)(=O)C(F)(F)F)cc2)n1"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "smiles",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The ChEMBL identifier when the release provides one.",
+          "examples": [
+            "",
+            "CHEMBL1945803",
+            "CHEMBL4247248"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "chembl_id",
+          "nullable": true,
+          "type": "str | None"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:Pathway"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "values": [
+              "Reactome:",
+              "WikiPathways:",
+              "KEGG:",
+              "PathwayCommons:",
+              "panther.pathway:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "pathway",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 2214,
+        "records": 2214
+      },
+      "depth": 1,
+      "description": "Read the curated pathway when the question is which process a kinase takes part in according to a pathway database.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Pathway",
+      "labels": [
+        "Pathway"
+      ],
+      "name": "pathway",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The pathway identity as a CURIE, such as Reactome:R-HSA-164843.",
+          "examples": [
+            "KEGG:hsa04925",
+            "Reactome:R-HSA-597592",
+            "WikiPathways:WP3678_r105879"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "pathway_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The pathway name the source database states.",
+          "examples": [
+            "Pyrimidine metabolism",
+            "RNA Polymerase II Transcription",
+            "Signaling by plasma membrane FGFR1 fusions"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "label",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The database that curates the pathway, such as Reactome, KEGG or WikiPathways.",
+          "examples": [
+            "KEGG",
+            "Reactome",
+            "WikiPathways"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "source",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The identifier the source database uses.",
+          "examples": [
+            "PathwayCommons:41cc678a81d52c1b5a6107079157bb00",
+            "WP3940_r106213",
+            "WP4538_r104390"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "source_id",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The page the release links for the pathway.",
+          "examples": [
+            "http://apps.pathwaycommons.org/pathways?uri=http%3A%2F%2Fpathwaycommons.org%2Fpc11%2FPathway_95e8621fbea598a771f0577f2e4f1e10",
+            "http://www.reactome.org/content/detail/R-HSA-203615",
+            "http://www.reactome.org/content/detail/R-HSA-8979227"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "url",
+          "nullable": true,
+          "type": "str | None"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:PhenotypicFeature"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "MP:0000001"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "MP:",
+              "MPATH:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "phenotype",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 407,
+        "records": 407
+      },
+      "depth": 1,
+      "description": "Read the observed phenotype when the question is what a model with a perturbed kinase looks like, rather than which disease it causes.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Phenotype",
+      "labels": [
+        "Phenotype"
+      ],
+      "name": "phenotype",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The MP term identity, such as MP:0005385.",
+          "examples": [
+            "MP:0002968",
+            "MP:0005562",
+            "MP:0009709"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "phenotype_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The phenotype term name.",
+          "examples": [
+            "enlarged testis",
+            "kyphosis",
+            "neoplasm"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "label",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The coarser MP term the release groups this one under.",
+          "examples": [
+            "MP:0005376",
+            "MP:0005386",
+            "MP:0005387,MP:0005397"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "top_level_key",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of the coarser MP term.",
+          "examples": [
+            "behavior/neurological phenotype",
+            "homeostasis/metabolism phenotype",
+            "immune system phenotype,hematopoietic system phenotype"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "top_level_label",
+          "nullable": true,
+          "type": "str | None"
+        }
+      ],
+      "source": null,
+      "target": null
+    },
+    {
+      "abstract": false,
+      "annotations": [
+        {
+          "arguments": {
+            "value": "biolink:Protein"
+          },
+          "id": "class",
+          "namespace": "biolink"
+        },
+        {
+          "arguments": {
+            "value": "PR:000000001"
+          },
+          "id": "term",
+          "namespace": "obo"
+        },
+        {
+          "arguments": {
+            "values": [
+              "PHAROS:"
+            ]
+          },
+          "id": "key_prefix",
+          "namespace": "pharos"
+        }
+      ],
+      "bindings": [
+        {
+          "name": "protein",
+          "source_node": null,
+          "target_node": null
+        }
+      ],
+      "children": [],
+      "counts": {
+        "bindings": 1,
+        "declared_children": 0,
+        "inclusive_records": 635,
+        "records": 635
+      },
+      "depth": 1,
+      "description": "Read the protein for ligand binding, interactions and disease associations.",
+      "endpoints": null,
+      "kind": "node",
+      "label": "Protein",
+      "labels": [
+        "Protein"
+      ],
+      "name": "protein",
+      "parent": "annotated_record_node",
+      "properties": [
+        {
+          "annotations": [],
+          "description": "keep means no annotator rule selected the record; prune means at least one did.",
+          "examples": [
+            "keep"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "verdict",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "The name of each annotator module that selected the record.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_rule",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The confidence the annotator module assigns to its own decision.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "float"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_confidence",
+          "nullable": true,
+          "type": "Array[float] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The one-sentence reason the annotator module states.",
+          "examples": [
+            []
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "item": {
+                "kind": "unit",
+                "name": "str"
+              },
+              "kind": "array"
+            }
+          },
+          "name": "annotation_reason",
+          "nullable": true,
+          "type": "Array[str] | None"
+        },
+        {
+          "annotations": [],
+          "description": "The stable target identity, PHAROS:<UniProt accession>.",
+          "examples": [
+            "PHAROS:Q32MK0",
+            "PHAROS:Q96S53",
+            "PHAROS:Q99683"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "target_key",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The preferred gene symbol for the protein.",
+          "examples": [
+            "COQ8A",
+            "PKM",
+            "TESK2"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "symbol",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The UniProt accession.",
+          "examples": [
+            "Q7L7X3",
+            "Q96MA6",
+            "Q9NYV4"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "uniprot",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The protein name reported by Pharos.",
+          "examples": [
+            "KCC4_HUMAN",
+            "TBCK_HUMAN",
+            "TSSK1_HUMAN"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "name",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The release's protein description.",
+          "examples": [
+            "Adenylate kinase isoenzyme 5",
+            "Kinase suppressor of Ras 1",
+            "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform"
+          ],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "str"
+            }
+          },
+          "name": "description",
+          "nullable": true,
+          "type": "str | None"
+        },
+        {
+          "annotations": [],
+          "description": "Stratify a kinase by its Pharos Target Development Level.",
+          "examples": [
+            "Tbio",
+            "Tchem",
+            "Tclin"
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "tdl",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The IDG protein family.",
+          "examples": [
+            "Belongs to the protein kinase superfamily. CMGC Ser/Thr protein kinase family. CDC2/CDKX subfamily.",
+            "Belongs to the protein kinase superfamily. STE Ser/Thr protein kinase family. STE20 subfamily.",
+            "Belongs to the protein kinase superfamily. Ser/Thr protein kinase family."
+          ],
+          "logical_type": {
+            "kind": "unit",
+            "name": "str"
+          },
+          "name": "family",
+          "nullable": false,
+          "type": "str"
+        },
+        {
+          "annotations": [],
+          "description": "The release's novelty score.",
+          "examples": [],
+          "logical_type": {
+            "kind": "nullable",
+            "value": {
+              "kind": "unit",
+              "name": "float"
+            }
+          },
+          "name": "novelty",
+          "nullable": true,
+          "type": "float | None"
+        }
+      ],
+      "source": null,
+      "target": null
+    }
+  ],
+  "summary": {
+    "abstract_components": 2,
+    "edge_components": 13,
+    "html_location": "/home/paul/Repos/bioagent-submission/pharos-kg/build/meta_graph.html",
+    "location": "/home/paul/Repos/bioagent-submission/pharos-kg/build/meta_graph.json",
+    "node_components": 10,
+    "total_edges": 150856,
+    "total_nodes": 28359
+  }
+}

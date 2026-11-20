@@ -1,0 +1,13 @@
+{
+ "code": "F-96",
+ "created_time": "2026-11-17T22:12:29Z",
+ "event_type": "finding.created",
+ "evidence": "Quality-adjusted: **78.7%** of pairs have a path through an intermediate shared by \u226410 targets (67.3% at \u22645, 86.1% at \u226425).",
+ "external_references": [],
+ "id": "2f8f8a3e",
+ "metric": "67.3% (df<=5), 78.7% (df<=10), 86.1% (df<=25) of 15,430; GO 4,003 terms, max 613; phenotype 407, max 553; pathway 1,727, max 430; PPI median degree 5, max 74",
+ "observation": "Counting only intermediates shared by at most N kinase targets, 10,378 of 15,430 pairs (67.3%) qualify at df<=5, 12,147 (78.7%) at df<=10 and 13,279 (86.1%) at df<=25. Hub terms are why raw coverage overstates quality: GO has 4,003 terms with median 1 target per term but a maximum of 613, phenotype 407 with maximum 553, pathway 1,727 with maximum 430. The explanation policy therefore ranks intermediates by IDF rather than leading with a hub.",
+ "references": [],
+ "subject": "F-96",
+ "title": "Quality-adjusted coverage: 78.7% of pairs have a specific intermediate"
+}

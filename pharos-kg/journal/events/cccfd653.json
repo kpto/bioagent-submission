@@ -1,0 +1,81 @@
+{
+ "code": "EV-296",
+ "created_time": "2026-11-16T19:37:09Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "histogram gradient boosting (base features)",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/ontology_degree_matched.json",
+   "type": "report"
+  }
+ ],
+ "id": "cccfd653",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); ontology nearly flat on regular degree-matched protocol; no earlier finding; later_findings: F-63",
+  "config": "8 HPO ontology features; 412 covered diseases / 245 targets",
+  "design": "E-4",
+  "findings": [],
+  "graph": "enriched authored graph",
+  "method": "histogram gradient boosting (base features)",
+  "metric_text": "macro AUPRC 0.289355; micro AUPRC 0.286595452140605; macro AUROC 0.596599; micro AUROC 0.6145990843395673; macro MRR 0.541471; micro MRR 0.551901; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.274211, 0.300325], \"auroc\": [0.602922, 0.62588], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.24204, 0.350189], \"macro_auroc\": [0.544436, 0.642836], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.497469, 0.591787], \"mrr\": [0.539613, 0.566232]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.274211,
+    0.300325
+   ],
+   "ci95_auroc": [
+    0.602922,
+    0.62588
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.24204,
+    0.350189
+   ],
+   "ci95_macro_auroc": [
+    0.544436,
+    0.642836
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.497469,
+    0.591787
+   ],
+   "ci95_mrr": [
+    0.539613,
+    0.566232
+   ],
+   "macro_auprc": 0.289355,
+   "macro_auroc": 0.596599,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.541471,
+   "micro_auprc": 0.286595452140605,
+   "micro_auroc": 0.6145990843395673,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.551901
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/ontology_degree_matched.json"
+ },
+ "subject": "B-10",
+ "title": "histogram gradient boosting (base features) \u00b7 degree-matched negatives"
+}

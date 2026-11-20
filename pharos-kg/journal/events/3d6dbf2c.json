@@ -1,0 +1,13 @@
+{
+ "code": "F-117",
+ "created_time": "2026-11-18T06:48:15Z",
+ "event_type": "finding.created",
+ "evidence": "a derived relation's fields must be `rows.shape.<field>`",
+ "external_references": [],
+ "id": "3d6dbf2c",
+ "metric": "15430 edges with empty class; fix to rows.shape.pair_key / rows.shape.evidence_class; then none 8524 / literature_only 4379 / high 2527",
+ "observation": "Declaring a derived relation field as value_expression(\"\") makes the planner emit a constant projection, so every value arrives empty and no error is raised; the same code worked on raw-source because there the aggregate module replaced the SQL body wholesale. All 15,430 edges carried an empty class until the fields were declared as rows.shape.<field>.",
+ "references": [],
+ "subject": "F-117",
+ "title": "A constant projection silently emptied a derived field"
+}

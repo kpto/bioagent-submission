@@ -1,0 +1,13 @@
+{
+ "code": "F-9",
+ "created_time": "2026-11-11T11:58:13Z",
+ "event_type": "finding.created",
+ "evidence": "Legacy cached target pages can carry more than the 10-row Tbio/Tdark stratum budget",
+ "external_references": [],
+ "id": "7484acd3",
+ "metric": "425 legacy targets cached; 10-row Tbio/Tdark budget; F-0011",
+ "observation": "The first 425 targets were cached before the per-target detail path existed and are reused by UniProt, so some Tbio/Tdark targets carry more than the declared 10-row nested sample even though the normaliser trims new pages. The KB records the effective behaviour rather than repeating the manifest guarantee, and the next revision must either re-apply the stratum trim or amend the manifest.",
+ "references": [],
+ "subject": "F-9",
+ "title": "F-0011: legacy cached pages exceed the declared Tbio/Tdark row budget"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-97",
+ "created_time": "2026-11-17T22:32:03Z",
+ "event_type": "finding.created",
+ "evidence": "Modelling PPI evidence class as a relation subtype, rather than as an edge property, improves prediction on both protocols.",
+ "external_references": [],
+ "id": "0e079aed",
+ "metric": "735 experimental, 2,622 predicted; 117,477 edges, 69,609 nodes; degree 0.282028/0.281726 to 0.284315/0.284265; fair 0.758574/0.712475 to 0.760365/0.715780",
+ "observation": "Splitting the PPI relation into experimental (735) and predicted (2,622) subtypes over the same 117,477 edges and 69,609 nodes raises RGCN degree-matched 0.282028/0.281726 to 0.284315/0.284265 and fair 0.758574/0.712475 to 0.760365/0.715780, with six relation types instead of five. The later fixed-sampler sweep measured the same arm at -0.0146 macro against policy_context, so the size of the gain depends on the reference graph.",
+ "references": [],
+ "subject": "F-97",
+ "title": "PPI evidence subtypes help both protocols at identical size"
+}

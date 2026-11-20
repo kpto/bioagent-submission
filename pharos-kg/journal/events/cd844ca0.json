@@ -1,0 +1,13 @@
+{
+ "code": "F-12",
+ "created_time": "2026-11-11T14:54:16Z",
+ "event_type": "finding.created",
+ "evidence": "There is no gold-set keep/prune verdict file for real Pharos edges.",
+ "external_references": [],
+ "id": "cd844ca0",
+ "metric": "pruning precision 0.990; recall 1.000; F1 0.995; 323 explanation subjects; sufficiency 20/20; 125 of 37,697 edges",
+ "observation": "The same review measured the project against the rubric: pruning precision 0.990, recall 1.000 and F1 0.995 are on injected structural errors, with no gold-set keep/prune verdict file for real Pharos edges; explainability has 323 subjects, 20/20 sufficiency and zero dangling provenance but occurrence explanations for only 125 of 37,697 edges. Standards annotations exist without a KGX/BioLink TSV export, and the extract is Pharos-only so the brief's cross-source integration is unmet. Link prediction has static, enriched and pruned arms but no GNN and no head-to-head comparison against Pharos; enrichment gave no lift, pruning lost signal, and Hits@10 is saturated at five negatives per positive.",
+ "references": [],
+ "subject": "F-12",
+ "title": "Gap audit of the submission against the rubric"
+}

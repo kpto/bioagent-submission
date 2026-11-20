@@ -1,0 +1,13 @@
+{
+ "code": "F-80",
+ "created_time": "2026-11-17T10:54:45Z",
+ "event_type": "finding.created",
+ "evidence": "Path coverage for explanation on the compact graph, degree-matched: PPI 2-hop is non-zero for 47.15% of positives and 34.33% of negatives",
+ "external_references": [],
+ "id": "9ada013b",
+ "metric": "PPI 2-hop non-zero 47.15% of positives / 34.33% negatives; phenotype 9.13% / 6.50%; PPI+phenotype 18.17% / 14.55%; shared GO 86.7% / 82.2%; direct SVD AUC 0.6926; disease degree 0.5488",
+ "observation": "Before committing to path-based explanations, the pilot's feature diagnostics measured how often each metapath is non-zero for positives versus negatives. Shared GO has the widest coverage but is low-specificity, PPI covers about half the positives, and phenotype paths are rare but comparatively discriminating.",
+ "references": [],
+ "subject": "F-80",
+ "title": "Path coverage for explanation: PPI 47%, phenotype 9%, shared GO 87%"
+}

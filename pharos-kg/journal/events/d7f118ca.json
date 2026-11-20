@@ -1,0 +1,13 @@
+{
+ "code": "F-99",
+ "created_time": "2026-11-17T22:42:13Z",
+ "event_type": "finding.created",
+ "evidence": "The dump's own `mondo_xref` table resolves only **9 of 1,140** non-MONDO disease keys for kinases \u2014 I checked the join format, it is genuinely that thin.",
+ "external_references": [],
+ "id": "d7f118ca",
+ "metric": "2,489 disease keys, 1,349 MONDO; non-MONDO 1,140, resolvable 9; MESH 2/132; UMLS 3/890; mondo_xref 99,770 rows; earlier branch 196/744",
+ "observation": "Mapping the graph's 2,489 disease keys through the release's mondo_xref table (99,770 rows) resolves 9 of the 1,140 keys that are not already MONDO, and only 2 of 132 MESH keys and 3 of 890 UMLS keys. The earlier compact branch resolved 196 of 744 using mondo.obo directly, so identity should come from the ontology file rather than this xref table.",
+ "references": [],
+ "subject": "F-99",
+ "title": "The dump's mondo_xref resolves only 9 of 1,140 non-MONDO disease keys"
+}

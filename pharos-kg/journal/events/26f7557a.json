@@ -1,0 +1,26 @@
+{
+ "based_revision": "4ee20a99",
+ "change": null,
+ "code": "P-26",
+ "created_time": "2026-11-18T04:07:10Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "26f7557a",
+ "rationale": "Recorded in F-0125: port hpo_is_a as a declared phenotype subclass_of with no prediction claim, take the branch's phenotype test fixtures, and use F-0064 reachability as the usability argument. Retire tools/prepare_phenotype.py, the hpo_release asset and data/phenotype; keep the compact profile only as a size lever because frequent-term pruning measured -0.0002 macro.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "d535858d"
+  }
+ ],
+ "subject": "P-26",
+ "title": "Cherry-pick hierarchy, fixtures and reachability from phenotype-layer; do not merge it"
+}

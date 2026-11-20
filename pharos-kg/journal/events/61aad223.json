@@ -1,0 +1,12 @@
+{
+ "code": "E-1",
+ "created_time": "2026-11-10T18:40:15Z",
+ "event_type": "evaluation.created",
+ "external_references": [],
+ "id": "61aad223",
+ "method": "quick and full modes over audit, explainability, pruning, QA and link prediction",
+ "metric": "gates",
+ "references": [],
+ "subject": "E-1",
+ "title": "Five-gate evaluation protocol"
+}

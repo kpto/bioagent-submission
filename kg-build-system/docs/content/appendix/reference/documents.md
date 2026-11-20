@@ -1,0 +1,263 @@
+---
+title: Documents
+summary: Canonical blueprint, plan and report documents, omit-versus-null rules, and provenance.
+section: reference
+order: 30
+status: normative
+verified: 2026-11-10
+sources:
+  - kg_build_system/distribution/interpreter/service/_private/codec.py
+  - kg_build_system/distribution/languages/
+  - kg_build_system/kernel/service/_private/workflow_codec.py
+  - kg_build_system/kernel/service/_private/report_codec.py
+  - kg_build_system/kernel/model/public/runtime.py
+subject: identity
+perspective: reference
+---
+
+<!-- BEGIN GENERATED:views -->
+<div class="kb-views"><span class="kb-views-subject">Identity, references and documents</span><a href="/appendix/subjects/identity">Overview</a><a href="/book/part-3/01-linking-and-blueprint">Guide</a><a href="/appendix/spec/identity">Spec</a><a href="/appendix/reference/documents">API</a><a href="/appendix/philosophy/semantic-hierarchy">Philosophy</a><a href="/appendix/review/contracts">Review</a></div>
+<!-- END GENERATED:views -->
+
+A build has three canonical documents: the blueprint in memory, the workflow plan written as `workflow_plan.json`, and the report written as `build_report.json`. The codecs define their member names, order and optionality.
+
+## Surface
+
+| Artifact | Produced by | Top-level members |
+| --- | --- | --- |
+| Blueprint document | `create_blueprint`; the blueprint itself is not written by `execute`. | `graph`, `data`, `assets`, `bindings`, `operations`, optional `graph_declaration`. |
+| Workflow plan document | `compile`; `execute` writes it before the run starts. | `components`, `steps`, `connections`, `provenance`. |
+| Report document | `execute`; written after the run. | `published_artifacts`, `recovered_failures`, `unresolved_failures`, `provenance`. |
+
+The blueprint has `graph` and `data` as objects, and `assets` and `bindings` as arrays. Every typed reference is a `[language, role, *key segments]` array: a field is `["data", "field", "sites.site_name"]`, a node is `["topology", "node", "site"]`, an asset is `["asset", "asset", "estate"]`, and an operation is `["expressions", "operation", "default_to"]`. A data part holds `SourceRelationDTO` and `DerivedRelationDTO` values; a relation's contract is stored as `definition` and `meaning`, and the `meaning` member is a `MeaningDTO`.
+
+`operations` is an `ExpressionsPartDTO` with an `operations` array. Each `OperationDTO` states the operation's name, arity, positional argument declarations, named parameter declarations, static result type and row effect:
+
+```json
+{
+  "name": "severity_rank",
+  "arity": 1,
+  "arguments": [
+    {"expected": {"kind": "unit", "name": "str"}, "description": "severity label"}
+  ],
+  "parameters": [],
+  "result_type": {"kind": "unit", "name": "int"},
+  "row_effect": "preserve"
+}
+```
+
+`arity` is a number for an exact count or `[minimum, maximum]` with `null` for unbounded. `expected` and `result_type` are explicitly `null` when the specification resolves them from the call; the operation expression's own `logical_type` remains the actual result. Callable validators, result resolvers, row-effect scope and predicate index are not serialised. A document without `operations` decodes to an empty part.
+
+## Details
+
+**Blueprint.**
+
+| Member | Shape |
+| --- | --- |
+| `graph` | Object with `nodes` and `edges` arrays. Each component carries `name`, `labels`, `abstract`, `properties`, `annotations` and optional `meaning`; an edge also carries `source` and `target`. |
+| `data` | Object with `structs`, `source_relations` and `derived_relations` arrays. Each declaration carries `name`, `columns` and `annotations`; a source relation carries `asset` and an optional `definition` with its `meaning`; a derived relation carries `row_source`, `definition`, `meaning` and `visibility`; a stage is a derived relation with `visibility="internal"` and no meaning. |
+| `assets` | Array of asset objects: `name`, `website`, `version`, `layout`, `profile`, `governance`, `annotations`, optional `meaning`. |
+| `bindings` | Array of node or edge bindings. A binding carries `kind`, its target ref, `identity`, `properties`, `rows`, `annotations`, `meaning` and `mode`. |
+| `operations` | Object with an `operations` array. Each operation carries `name`, `arity`, `arguments`, `parameters`, `result_type` and `row_effect`. |
+| `graph_declaration` | Optional object with `name` and `meaning` carrying a required purpose. Omitted when the project has no graph declaration. |
+
+```json
+{
+  "graph_declaration": {
+    "name": "estate",
+    "meaning": {"purpose": {"text": "Track survey observations."}}
+  },
+  "graph": {
+    "nodes": [
+      {
+        "name": "site",
+        "labels": ["Site"],
+        "abstract": false,
+        "properties": [],
+        "annotations": []
+      }
+    ],
+    "edges": []
+  },
+  "data": {
+    "structs": [],
+    "source_relations": [
+      {
+        "name": "sites",
+        "columns": [
+          {
+            "name": "site_name",
+            "logical_type": {"kind": "unit", "name": "str"},
+            "ref": ["data", "field", "sites.site_name"],
+            "annotations": [],
+            "definition": {
+              "value": "the site's stable name",
+              "unit": null,
+              "null_meaning": "the register omits the name"
+            }
+          }
+        ],
+        "annotations": [],
+        "asset": ["asset", "asset", "estate"],
+        "definition": {
+          "grain": "one row per site",
+          "identity": "site_name"
+        },
+        "meaning": {
+          "claims": [{"text": "One row names one estate site."}]
+        }
+      }
+    ],
+    "derived_relations": []
+  },
+  "assets": [
+    {
+      "name": "estate",
+      "website": null,
+      "version": null,
+      "layout": null,
+      "profile": {
+        "subject": "sites",
+        "coverage": "one row per site",
+        "authority": "primary",
+        "basis": "survey",
+        "title": null
+      },
+      "governance": {"license": null, "owner": null, "metadata": {}},
+      "annotations": []
+    }
+  ],
+  "bindings": [
+    {
+      "kind": "node",
+      "node": ["topology", "node", "site"],
+      "identity": {
+        "kind": "field",
+        "field": ["data", "field", "sites.site_name"],
+        "path": [],
+        "logical_type": {"kind": "unit", "name": "str"}
+      },
+      "properties": {},
+      "rows": null,
+      "annotations": [],
+      "meaning": {
+        "purpose": {"text": "Populate each site record from the estate survey."}
+      },
+      "mode": "declarative"
+    }
+  ]
+}
+```
+
+**Workflow plan.**
+
+| Member | Shape |
+| --- | --- |
+| `components` | Array of `{id, version, runtime_fields}` objects. |
+| `steps` | Array of steps. A step carries `id`, `inputs`, `outputs`, `instruction` and `assembly_preference`. |
+| `connections` | Array of `{input, output}` opening keys. |
+| `provenance` | Preserved verbatim. `api.compile` stores the source blueprint at `provenance["blueprint"]`. |
+
+A step owns one instruction: `{"kind": [operation, engine], "payload": ...}`. The executor registered for that exact kind reads the payload. An output row has `kind` `"output"` or `"publication"`, a concrete `type` key and an `opening_name`. `assembly_preference` is `"eager"` or `"deferred"`.
+
+```json
+{
+  "components": [
+    {"id": "file", "version": "2", "runtime_fields": []}
+  ],
+  "steps": [
+    {
+      "id": ["file", "write"],
+      "inputs": [],
+      "outputs": [
+        {
+          "kind": "publication",
+          "type": ["file", "write_result"],
+          "opening_name": ["result"]
+        }
+      ],
+      "instruction": {
+        "kind": ["file", "default"],
+        "payload": {"relative_path": "graph.jsonl"}
+      },
+      "assembly_preference": "eager"
+    }
+  ],
+  "connections": [],
+  "provenance": {
+    "blueprint": {
+      "graph": {"nodes": [], "edges": []},
+      "data": {"structs": [], "source_relations": [], "derived_relations": []},
+      "assets": [],
+      "bindings": []
+    }
+  }
+}
+```
+
+**Report.**
+
+| Member | Shape |
+| --- | --- |
+| `published_artifacts` | Array of `{opening, type, value}` objects. `value` is executor-defined and may be any JSON-safe value. |
+| `recovered_failures` | Array of `{message, step_id, exception_type}` rows for failures a later step handled. |
+| `unresolved_failures` | Array of the same rows for failures that blocked a publication. |
+| `provenance` | The plan's provenance, including `blueprint` when compilation went through `api.compile`. |
+
+`step_id` is a two-segment `[component, name]` array. `exception_type` is the exception class name, or `null` when the failure has no exception. `report.succeeded` is true exactly when `unresolved_failures` is empty.
+
+```json
+{
+  "published_artifacts": [
+    {
+      "opening": ["file", "write", "output", "result"],
+      "type": ["file", "write_result"],
+      "value": {"location": "build/graph.jsonl", "nodes": 21, "edges": 21}
+    }
+  ],
+  "recovered_failures": [
+    {
+      "message": "source row was dropped",
+      "step_id": ["core", "projection.defect"],
+      "exception_type": "ValueError"
+    }
+  ],
+  "unresolved_failures": [],
+  "provenance": {
+    "blueprint": {
+      "graph": {"nodes": [], "edges": []},
+      "data": {"structs": [], "source_relations": [], "derived_relations": []},
+      "assets": [],
+      "bindings": []
+    }
+  }
+}
+```
+
+**Omit versus null.**
+
+The rule is not symmetric. Some absent values are omitted, some are written as explicit `null`, and some members are always written.
+
+| Member | When absent |
+| --- | --- |
+| `graph_declaration` | Omitted from the blueprint. An explicit `null` decodes to no graph declaration and is omitted on the next encode. |
+| Binding `rows` | Always written; an absent row plan is explicit `null`. |
+| Binding `name`, `python_ref` | Omitted. |
+| Binding `meaning` | Always written; a binding requires a meaning with a purpose. |
+| Asset `website`, `version`, `layout` | Always written; an absent value is explicit `null`. |
+| Asset `governance.license`, `governance.owner` | Always written; an absent value is explicit `null`. |
+| Asset `profile.title` | Always written; an absent value is explicit `null`. |
+| A declaration's `meaning` after `Omitted` | Omitted; the marker is authoring-only and the blueprint records no meaning. |
+| Topology `parent`, `meaning` | Omitted. |
+| Topology `labels`, `abstract`, `properties`, `annotations` | Always written. |
+| Data column `expression`, `definition` | Optional; omitted when the author states none. |
+| Data declaration `definition` | Always written for a derived relation; written for a source relation only when that source relation declares a contract. |
+| Data declaration `meaning` | Always written for a derived relation and for a source relation that declares a contract; omitted otherwise. A stage never carries one. |
+| Data declaration `visibility` | Always written for a derived relation: `"public"` for a consumer relation, `"internal"` for a stage. A source relation carries no visibility. |
+| Meaning `purpose`, `claims` | `purpose` is omitted when absent; its `limitations` are omitted when empty; a graph declaration requires a purpose and a binding requires a purpose. |
+
+Decoding does not validate. The codecs check the document's own shape and required scalar forms, but a decoded blueprint is not re-linked or cross-validated; a decoded plan is not checked for executability. Run the model through the pipeline before trusting it.
+
+A codec round trip is canonical-document equality, not original text. Key order, whitespace and omitted optional members can change, so compare the re-encoded document with the canonical document rather than the bytes you started with.
+
+Continue with [Blueprint](/book/part-3/01-linking-and-blueprint) for how the blueprint is assembled, [Plan](/book/part-3/02-planning) for plan assembly, and [Execute](/book/part-3/03-execution-and-outputs) for the run and report. The public calls are listed on [API surface](/appendix/reference/api); the failure rows in this shape are catalogued on [Failures](/appendix/reference/failures).

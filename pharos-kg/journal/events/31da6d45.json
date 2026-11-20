@@ -1,0 +1,96 @@
+{
+ "code": "EV-96",
+ "created_time": "2026-11-16T08:13:34Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "50/50 GATv2 + TransformerConv",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/combined.json",
+   "type": "report"
+  }
+ ],
+ "id": "31da6d45",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "47dcbb34"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "fd034878"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e3a2d0a4"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol (46.3% base); RGCN 0.976 is an easy-gate result, not deployment performance",
+  "config": "10 seeds per model; rank-average each model then mix; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-27",
+   "F-30"
+  ],
+  "graph": "enriched authored graph",
+  "method": "50/50 GATv2 + TransformerConv",
+  "metric_text": "macro AUPRC 0.961683; micro AUPRC 0.9617609370797516; macro AUROC 0.953701; micro AUROC 0.9505272738685582; macro MRR 0.971766; micro MRR 0.966191; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.957554, 0.96668], \"auroc\": [0.944174, 0.95663], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.918832, 0.979374], \"macro_auroc\": [0.911898, 0.97235], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.965564, 0.976957], \"mrr\": [0.960093, 0.971516]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.957554,
+    0.96668
+   ],
+   "ci95_auroc": [
+    0.944174,
+    0.95663
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.918832,
+    0.979374
+   ],
+   "ci95_macro_auroc": [
+    0.911898,
+    0.97235
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.965564,
+    0.976957
+   ],
+   "ci95_mrr": [
+    0.960093,
+    0.971516
+   ],
+   "macro_auprc": 0.961683,
+   "macro_auroc": 0.953701,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.971766,
+   "micro_auprc": 0.9617609370797516,
+   "micro_auroc": 0.9505272738685582,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.966191
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/combined.json"
+ },
+ "subject": "B-10",
+ "title": "50/50 GATv2 + TransformerConv \u00b7 the committed split"
+}

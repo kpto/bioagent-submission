@@ -1,0 +1,87 @@
+{
+ "code": "EV-158",
+ "created_time": "2026-11-16T08:54:44Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-6",
+    "graph": "enriched authored graph",
+    "method": "60/40 GATv2 + GraphSAGE",
+    "protocol": "target cold start + degree-matched (120 targets; 9,592 pairs; 23.31% base)"
+   },
+   "name": "experiments/prediction/cold_start_degree_matched.json",
+   "type": "report"
+  }
+ ],
+ "id": "53572b1a",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "c56cf720"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "45ded2ce"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); target cold start plus degree-matched negatives; honest cold-start number about 0.29",
+  "config": "10 seeds; held-out target-disease edges; degree-matched negatives",
+  "design": "E-6",
+  "findings": [
+   "F-43"
+  ],
+  "graph": "enriched authored graph",
+  "method": "60/40 GATv2 + GraphSAGE",
+  "metric_text": "macro AUPRC 0.151411; micro AUPRC 0.16373334118824584; macro AUROC 0.216321; micro AUROC 0.2877478049632247; macro MRR 0.347951; micro MRR 0.393284; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.157415, 0.169921], \"auroc\": [0.277772, 0.297057], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.135262, 0.181078], \"macro_auroc\": [0.208913, 0.224594], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.33672, 0.361659], \"mrr\": [0.379218, 0.409114]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.157415,
+    0.169921
+   ],
+   "ci95_auroc": [
+    0.277772,
+    0.297057
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.135262,
+    0.181078
+   ],
+   "ci95_macro_auroc": [
+    0.208913,
+    0.224594
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.33672,
+    0.361659
+   ],
+   "ci95_mrr": [
+    0.379218,
+    0.409114
+   ],
+   "macro_auprc": 0.151411,
+   "macro_auroc": 0.216321,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.347951,
+   "micro_auprc": 0.16373334118824584,
+   "micro_auroc": 0.2877478049632247,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.393284
+  },
+  "protocol": "target cold start + degree-matched (120 targets; 9,592 pairs; 23.31% base)",
+  "report": "experiments/prediction/cold_start_degree_matched.json"
+ },
+ "subject": "B-10",
+ "title": "60/40 GATv2 + GraphSAGE \u00b7 target cold start"
+}

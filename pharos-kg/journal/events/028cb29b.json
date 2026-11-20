@@ -1,0 +1,13 @@
+{
+ "code": "F-93",
+ "created_time": "2026-11-17T21:55:26Z",
+ "event_type": "finding.created",
+ "evidence": "Path coverage is high but coverage isn't specificity.",
+ "external_references": [],
+ "id": "028cb29b",
+ "metric": "15,430 pairs; GO 14,050 (91.1%); phenotype 12,844 (83.2%); pathway 12,348 (80.0%); tissue 10,776 (69.8%); PPI 6,458 (41.9%); any 14,051 (91.1%)",
+ "observation": "Of the 15,430 target-disease pairs, a typed two-hop path exists through shared GO for 91.1%, phenotype for 83.2%, pathway for 80.0%, tissue (High/Medium) for 69.8% and thresholded PPI for 41.9%; any typed path covers 91.1%. Coverage is the explainability ceiling of a layer, not its quality.",
+ "references": [],
+ "subject": "F-93",
+ "title": "Typed two-hop path coverage per context layer"
+}

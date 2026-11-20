@@ -1,0 +1,13 @@
+{
+ "code": "F-52",
+ "created_time": "2026-11-16T16:37:15Z",
+ "event_type": "finding.created",
+ "evidence": "A held-out target has no SVD factor row.",
+ "external_references": [],
+ "id": "ddb40986",
+ "metric": "base 0.2879 / 0.3136; unsmoothed SVD 0.2046 / 0.2075; PPI/ligand/GO smoothed 0.3431 / 0.3913",
+ "observation": "A held-out target has no SVD factor row, so its factor is smoothed from PPI, ligand-Jaccard and GO-Jaccard neighbours at beta = 1.0. Smoothing lifts degree-matched cold-target AUPRC above both the base feature model and the unsmoothed SVD.",
+ "references": [],
+ "subject": "F-52",
+ "title": "PPI/ligand/GO factor smoothing rescues cold targets"
+}

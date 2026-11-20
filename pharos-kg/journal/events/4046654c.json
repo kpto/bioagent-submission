@@ -1,0 +1,18 @@
+{
+ "code": "EV-10",
+ "created_time": "2026-11-16T06:30:10Z",
+ "evaluated_revision": "260f36f4",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "4046654c",
+ "references": [],
+ "result": {
+  "detail": "The acceptance run finished all five suites at seed 1729 on revision 424beaec2d79057d: 323 explanation subjects (61 declaration, 250 occurrence), 20/20 sufficiency items, pruning with one false positive on 200 edges, 55 QA questions and four link-prediction arms. Enriched features did not beat the static arm and the pruned arm lost signal, the outcome recorded as findings F-0006 and F-0007. Coverage of occurrence evidence was complete at 1.0.",
+  "message": 23919,
+  "numbers": "status passed, 5 passed/0 failed/0 skipped; subjects 323 (61 declaration, 250 occurrence); sufficiency 20/20; pruning precision 0.990099, recall 1.0, F1 0.995025, fn 0, fp 1, tn 99, tp 100; qa 0.909091, 55 questions, positive 0.98, negative 1.00; static logistic AUPRC 0.926341, AUROC 0.898379, MRR 0.872936; static heuristic 0.92082/0.894798; enriched logistic 0.906185/0.876706; enriched heuristic 0.92082/0.894798; pruned logistic 0.743797/0.729965",
+  "status": "passed"
+ },
+ "subject": "EV-10",
+ "title": "Full evaluation passes 5/5 on revision 424beaec2d79057d"
+}

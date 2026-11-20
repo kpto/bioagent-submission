@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "26f7557a"
+ ],
+ "code": "B-25",
+ "created_time": "2026-11-18T05:03:51Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "compound_activity reads cmpd_activity.parquet, kinase_ligand_activity joins it to kinase_protein, multi_target_ligand keeps compounds measured against at least two kinases keyed PHAROS:<lychi_h4>, and ligand_binds aggregates one row per pair. Counts landed exactly on the research policy graph; LigandNode.isdrug was dropped because the release table carries no drug flag and asserting one would be invention.",
+  "message": 52470,
+  "numbers": "12429 ligands (research 12429); 34452 binds (research 34452); 23710 nodes / 103428 edges; isdrug removed",
+  "status": "accepted with two defects open"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "d4b8b898",
+ "references": [],
+ "subject": "B-25",
+ "title": "Ligand layer migrated to the release with the multi-target policy"
+}

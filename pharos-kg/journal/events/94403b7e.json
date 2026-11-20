@@ -1,0 +1,46 @@
+{
+ "code": "EV-349",
+ "created_time": "2026-11-17T22:07:27Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "896182b5",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-8",
+    "graph": "enriched authored graph",
+    "method": "univariate feature AUC (tissue)",
+    "protocol": "leakage-controlled fixed held-out (16,060 eval pairs)"
+   },
+   "name": "experiments/prediction/results/context_signal.json",
+   "type": "report"
+  }
+ ],
+ "id": "94403b7e",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "f7afc3ca"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "1f72e27c"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); leakage-controlled rerun; the earlier 0.95 context AUC is withdrawn by FW-4; no accepted finding states these AUPRCs; AUC, not AUPRC; AUC, not a ranking metric",
+  "config": "single-feature AUC",
+  "design": "E-8",
+  "findings": [],
+  "graph": "enriched authored graph",
+  "method": "univariate feature AUC (tissue)",
+  "metric_text": "univariate AUC 0.54090598114439",
+  "metrics": {
+   "univariate_auc": 0.54090598114439
+  },
+  "protocol": "leakage-controlled fixed held-out (16,060 eval pairs)",
+  "report": "experiments/prediction/results/context_signal.json"
+ },
+ "subject": "B-19",
+ "title": "univariate feature AUC (tissue) \u00b7 the fixed held-out split"
+}

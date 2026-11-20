@@ -1,0 +1,21 @@
+{
+ "based_revision": "591af43d",
+ "change": null,
+ "code": "P-10",
+ "created_time": "2026-11-16T08:14:06Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "83c18f30",
+ "rationale": "Proposal to train the relation-aware RGCN with node-type-aware hard negatives and report random-negative and hard-negative ranking side by side, motivated by the hard-negative collapse. It was implemented as hard_negative_training.py and rejected by F-0034, which measured worse ranking with hard-negative training.",
+ "references": [],
+ "subject": "P-10",
+ "title": "Train the RGCN on hard negatives (F-0025)"
+}

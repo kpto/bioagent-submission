@@ -1,0 +1,13 @@
+{
+ "code": "F-31",
+ "created_time": "2026-11-16T08:11:34Z",
+ "event_type": "finding.created",
+ "evidence": "Under same-disease and same-target hard negatives the random-negative rank ensemble drops from macro AUPRC 0.964 to 0.223",
+ "external_references": [],
+ "id": "5a2e8417",
+ "metric": "13357 pairs; 11043 unique negatives; 2314 positives; 6942 same-disease / 4628 same-target; 20 removed; gatv2 0.225298 / 0.222455; sage 0.207770 / 0.214457; 60/40 0.223439 / 0.221395; hist_base 0.264083 / 0.285026",
+ "observation": "A hard-negative suite replaced random negatives with same-disease (another target of the same TDL) and same-target (another disease of a same-TDL target) pairs: 2,314 positives, 11,043 unique negatives and 13,357 pairs, with 20 hard pairs removed because they were training negatives. GATv2 scored 0.225298/0.222455, GraphSAGE 0.207770/0.214457, 60/40 0.223439/0.221395 and the base histogram 0.264083/0.285026; recorded as F-0024.",
+ "references": [],
+ "subject": "F-31",
+ "title": "Hard negatives collapse every model"
+}

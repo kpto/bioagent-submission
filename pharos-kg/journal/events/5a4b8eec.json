@@ -1,0 +1,13 @@
+{
+ "code": "F-25",
+ "created_time": "2026-11-16T07:31:56Z",
+ "event_type": "finding.created",
+ "evidence": "Rank-averaging five GraphSAGE seeds gives macro AUPRC 0.951298 and micro 0.958844; adding the HPO+STRING histogram at 10% gives 0.951695 and 0.957978.",
+ "external_references": [],
+ "id": "5a4b8eec",
+ "metric": "0.951298 / 0.958844; 90/10 0.951695 / 0.957978; CI [0.908755, 0.970305]",
+ "observation": "Rank-averaging five GraphSAGE seeds gave macro AUPRC 0.951298 and micro 0.958844 with 95% macro interval [0.908755, 0.970305]; adding the HPO+STRING histogram at 10% gave 0.951695/0.957978. Recorded as F-0018, five-seed rank averaging improves stability.",
+ "references": [],
+ "subject": "F-25",
+ "title": "Five-seed rank averaging stabilises the GNN"
+}

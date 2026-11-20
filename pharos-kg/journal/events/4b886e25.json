@@ -1,0 +1,13 @@
+{
+ "code": "F-13",
+ "created_time": "2026-11-16T02:03:59Z",
+ "event_type": "finding.created",
+ "evidence": "The enriched authored graph is much better under the graph-embedding model. It is slightly worse under the tabular logistic model.",
+ "external_references": [],
+ "id": "4b886e25",
+ "metric": "logistic static macro 0.926 -> enriched 0.906 (-0.020); SVD static 0.611 -> enriched 0.871 (+0.260); enriched logistic micro 0.869 vs static 0.940",
+ "observation": "Reading the committed report per model, the enriched authored graph was worse than the static arm under tabular logistic regression but far better under truncated-SVD embeddings. The assistant argued that because the competition explicitly evaluates GNNs and graph embeddings, the SVD result is closer to the competition setting than the logistic headline, and that the submission should lead with the embedding result while reporting the logistic one honestly.",
+ "references": [],
+ "subject": "F-13",
+ "title": "The enrichment effect depends on the model class"
+}

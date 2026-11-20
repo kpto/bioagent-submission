@@ -1,0 +1,87 @@
+{
+ "code": "EV-118",
+ "created_time": "2026-11-16T08:13:34Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "RGCN (relation-aware)",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/rgcn.json",
+   "type": "report"
+  }
+ ],
+ "id": "10425578",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "fd034878"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol; dot-product decoder; relations associated_with/ligand_target/ppi/go plus reverses; rank-averaged seeds",
+  "config": "2 layers, 128 hidden, 300 epochs, 10 seeds, 4 relations + reverses, dot-product decoder, 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-30"
+  ],
+  "graph": "enriched authored graph",
+  "method": "RGCN (relation-aware)",
+  "metric_text": "macro AUPRC 0.97605; micro AUPRC 0.9643708839875395; macro AUROC 0.966007; micro AUROC 0.951961021005651; macro MRR 0.961955; micro MRR 0.95891; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.959883, 0.969188], \"auroc\": [0.9445, 0.958356], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.971643, 0.98], \"macro_auroc\": [0.959099, 0.971109], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.954649, 0.96757], \"mrr\": [0.951777, 0.964998]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.959883,
+    0.969188
+   ],
+   "ci95_auroc": [
+    0.9445,
+    0.958356
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.971643,
+    0.98
+   ],
+   "ci95_macro_auroc": [
+    0.959099,
+    0.971109
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.954649,
+    0.96757
+   ],
+   "ci95_mrr": [
+    0.951777,
+    0.964998
+   ],
+   "macro_auprc": 0.97605,
+   "macro_auroc": 0.966007,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.961955,
+   "micro_auprc": 0.9643708839875395,
+   "micro_auroc": 0.951961021005651,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.95891
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/rgcn.json"
+ },
+ "subject": "B-10",
+ "title": "RGCN (relation-aware) \u00b7 the committed split"
+}

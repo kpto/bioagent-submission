@@ -1,0 +1,13 @@
+{
+ "code": "F-45",
+ "created_time": "2026-11-16T15:51:58Z",
+ "event_type": "finding.created",
+ "evidence": "An IDF-weighted truncated SVD of the training target-disease matrix is the first model to beat disease degree on the honest protocols.",
+ "external_references": [],
+ "id": "20f1de3b",
+ "metric": "degree-matched 0.454379 / 0.515572; hard 0.445564 / 0.516262; fair 0.543386 / 0.608806; k=16 svd_only 0.405173 / 0.443106; components 16/32/48/64/96",
+ "observation": "An IDF-weighted truncated SVD of the training target-disease matrix, rank-averaged over components 16/32/48/64/96 and selected on a 20% slice of training positives, scored 0.454379/0.515572 on degree-matched, 0.445564/0.516262 on hard and 0.543386/0.608806 on fair negatives. A single 16-component IDF SVD alone reached 0.405173/0.443106; recorded as F-0038.",
+ "references": [],
+ "subject": "F-45",
+ "title": "IDF-weighted target-disease SVD is the first model above degree"
+}

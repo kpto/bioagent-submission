@@ -1,0 +1,13 @@
+{
+ "code": "F-79",
+ "created_time": "2026-11-17T10:54:19Z",
+ "event_type": "finding.created",
+ "evidence": "The standards lever is concrete: 196 of the 744 non-MONDO diseases map through MONDO xrefs, which would raise MONDO coverage from 1,176 to 1,372 of 1,920.",
+ "external_references": [],
+ "id": "01f3dee2",
+ "metric": "1,920 diseases; 1,176 with MONDO; 744 without; 196 xref-mappable; 548 unmapped (UMLS 364, MESH 112, NAME 64, DOID 6, MIM 2); 192 distinct targets; xref index 146,038 keys",
+ "observation": "A MONDO cross-reference index was built from the pinned ontology and matched against diseases that lack a MONDO id. A fifth of the unmapped diseases resolve through xrefs, while the rest are UMLS, MeSH or name-derived keys that the index cannot reach.",
+ "references": [],
+ "subject": "F-79",
+ "title": "MONDO cross-references would raise disease identity coverage to 1,372 / 1,920"
+}

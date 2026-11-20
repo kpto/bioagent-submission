@@ -1,0 +1,13 @@
+{
+ "based_revision": "537368d0",
+ "change": null,
+ "code": "P-20",
+ "created_time": "2026-11-17T19:59:03Z",
+ "event_type": "proposal.created",
+ "external_references": [],
+ "id": "4de13849",
+ "rationale": "Because the API query contract shaped the asset (top: 5, TDL facets, nested limits), the proposal was to make the pinned MySQL dump the raw asset, keep the downloader as a fetch and cache tool, read one source relation per table row, and move the kinase slice, identity mapping, aggregation and any sampling into derived SQL with meaning. The expected result is a larger graph with true evidence counts, not a no-change migration.",
+ "references": [],
+ "subject": "P-20",
+ "title": "Replace the API-shaped extract with the pinned Pharos 3.19 dump as the asset"
+}

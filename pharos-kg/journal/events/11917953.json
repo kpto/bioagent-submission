@@ -1,0 +1,13 @@
+{
+ "code": "F-100",
+ "created_time": "2026-11-18T00:07:17Z",
+ "event_type": "finding.created",
+ "evidence": "A subject-centred view of the balanced graph is workable at one hop and not at two.",
+ "external_references": [],
+ "id": "11917953",
+ "metric": "ego1 median 114, p90 578, max 3,398; 562/635 (88.5%) under 500; ego2 median 1,396, p90 12,375, max 37,033; multihop 977/1,000, median 135, max 196",
+ "observation": "Over 635 kinase targets the one-hop ego network has a median of 114 edges (p90 578, max 3,398) and 562/635 (88.5%) fit under 500 edges; the two-hop neighbourhood has median 1,396 (p90 12,375, max 37,033). A multihop peer question returned an answer for 977 of 1,000 sampled queries but with a median of 135 answers (max 196), so answers need ranking.",
+ "references": [],
+ "subject": "F-100",
+ "title": "Balanced graph is workable one hop, not two"
+}

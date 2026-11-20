@@ -1,0 +1,19 @@
+{
+ "code": "F-125",
+ "created_time": "2026-11-11T15:02:03Z",
+ "event_type": "finding.created",
+ "evidence": "Yes \u2014 I understated it. The brief does ask for cross-source integration, and the graph itself is the object being scored.",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "Corrected: the graph is scored and cross-source integration is required",
+   "type": "unattached_correction"
+  }
+ ],
+ "id": "508a68b5",
+ "metric": "same baseline Pharos graph for all teams; UniProt IDs accepted; KGX TSV plus PyTorch Geometric accepted",
+ "observation": "The earlier answer that the competition does not score the graph file on its own was withdrawn: the brief asks the agent to pull in contextual data from public KGs and databases, and the graph is the object under test for the 30% pruning score, the 10% standards score and the held-out link-prediction comparison. What remains unpublished is a direct structural overlap metric against Pharos; comparison is through outcomes, keep/prune verdicts and the four weights. The corrected assessment also notes the current extract is Pharos-only, the arms are compared within the slice rather than against hosted Pharos, pruning is on injected errors, and no KGX/BioLink TSV export exists.",
+ "references": [],
+ "subject": "F-125",
+ "title": "Corrected: the graph is scored and cross-source integration is required"
+}

@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "2170ace9"
+ ],
+ "code": "B-13",
+ "created_time": "2026-11-16T21:25:04Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "The compact profile was prepared with --min-disease-support 5 --compact and rebuilt on the branch. It emits a much smaller term set and annotation count than the full layer, and the full gate passed with pruning F1 1.0 and QA 1.0/1.0.",
+  "message": 36486,
+  "numbers": "5,488 phenotype terms; 7,666 disease_has_phenotype; 15,379 protein_has_phenotype; 6,846 subclass; 15,000 nodes / 67,588 edges; 5/5 suites; pruning F1 1.0; QA 1.0 / 1.0",
+  "status": "built and gated (F-0066)"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "5a2c0ca6",
+ "references": [],
+ "subject": "B-13",
+ "title": "Compact phenotype profile built end to end"
+}

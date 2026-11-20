@@ -1,0 +1,18 @@
+{
+ "code": "EV-14",
+ "created_time": "2026-11-16T20:15:01Z",
+ "evaluated_revision": "ce86bd40",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "778f97da",
+ "references": [],
+ "result": {
+  "detail": "The balanced injected-error pruning suite scored 20 good and 20 injected records. All four injected error types were caught with recall 1.0, but three good records were flagged by R05_duplicate_endpoint before the dedupe fix, giving precision 0.87 and a 0.15 false-positive rate.",
+  "message": 34180,
+  "numbers": "tp 20, fp 3, tn 17, fn 0; precision 0.869565; recall 1.0; F1 0.930232; false_positive_rate 0.15; Brier 0.064813; per-type recall 1.0 (5 injected each)",
+  "status": "passed, later resolved (F1 1.0 after dedupe)"
+ },
+ "subject": "EV-14",
+ "title": "Phenotype-layer full gate passes with three duplicate-endpoint false positives"
+}

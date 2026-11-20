@@ -1,0 +1,33 @@
+{
+ "code": "E-22",
+ "created_time": "2026-11-16T08:12:34Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/combined.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/fair_negatives.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/hard_negative_training.json",
+   "type": "report"
+  }
+ ],
+ "id": "f8dfc3f2",
+ "method": "relation-aware R-GCN over the graph's relation types with a dot-product score",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-22",
+ "title": "R-GCN"
+}

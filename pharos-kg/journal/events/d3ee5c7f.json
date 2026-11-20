@@ -1,0 +1,21 @@
+{
+ "based_revision": "591af43d",
+ "change": null,
+ "code": "P-11",
+ "created_time": "2026-11-16T08:50:06Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "d3ee5c7f",
+ "rationale": "Proposal to add a per-positive negative sampler with a train/eval guard to the committed link-prediction suite, report the positive base rate, and keep the current per-target sampler only as a legacy mode. It remained proposed at the end of the window; the committed gate was not changed.",
+ "references": [],
+ "subject": "P-11",
+ "title": "Fix the committed sampler with per-positive negatives (F-0035)"
+}

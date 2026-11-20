@@ -1,0 +1,13 @@
+{
+ "code": "F-4",
+ "created_time": "2026-11-10T20:23:18Z",
+ "event_type": "finding.created",
+ "evidence": "AUDIT failed identifier_namespaces failed 759 namespace violations",
+ "external_references": [],
+ "id": "900195cd",
+ "metric": "759 namespace violations; property coverage 41/51; 2,061 dangling provenance refs; 1,000/37,697 occurrence coverage",
+ "observation": "Running the suites directly on the 37,697-edge graph failed the audit with 759 identifier-namespace violations because disease keys used DOID, MESH and UMLS without being accepted by the checker. Explainability also failed: property coverage was 41/51 type-property pairs, 2,061 provenance references pointed at step names that did not match step ids, and only 1,000 of 37,697 edges had an occurrence subject.",
+ "references": [],
+ "subject": "F-4",
+ "title": "First evaluation run failed audit and explainability on the full graph"
+}

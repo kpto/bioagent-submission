@@ -1,0 +1,60 @@
+{
+ "code": "EV-216",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "target degree baseline",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/svd_idf_64.json",
+   "type": "report"
+  }
+ ],
+ "id": "b566b734",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "20f1de3b"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "77bfb321"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); degree-matched protocol; IDF-SVD k=64; base/degree rows repeat the shared controls",
+  "config": "IDF weighting; k=64; explained variance 0.47211488226543485",
+  "design": "E-4",
+  "findings": [
+   "F-45",
+   "F-39"
+  ],
+  "graph": "enriched authored graph",
+  "method": "target degree baseline",
+  "metric_text": "macro AUPRC 0.18907; micro AUPRC 0.186376474170148; macro AUROC 0.508156; micro AUROC 0.499873636036222; macro MRR 0.166667; micro MRR 0.166667; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.18907,
+   "macro_auroc": 0.508156,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.166667,
+   "micro_auprc": 0.186376474170148,
+   "micro_auroc": 0.499873636036222,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.166667
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/svd_idf_64.json"
+ },
+ "subject": "B-10",
+ "title": "target degree baseline \u00b7 degree-matched negatives"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-1",
+ "created_time": "2026-11-10T18:42:33Z",
+ "event_type": "finding.created",
+ "evidence": "Their weakness is not that it's a prototype; it's that the evaluation surface is fabricated.",
+ "external_references": [],
+ "id": "f30e7509",
+ "metric": "25 files, ~8,000 lines, 1 commit, 0 tests; 0.934 AUROC; 1,240 nodes / 4,850 triples; +0.012, -0.068; 4 of 5 PMIDs unrelated",
+ "observation": "A code-level audit of the shared BioKG-Agentic-App found 25 files and roughly 8,000 lines with one commit, no tests and no database driver; the five-stage pipeline is a single Gemini prompt that returns JSON nodes and edges. Benchmark metrics are hardcoded profiles (for example 0.934 AUROC, 1,240 nodes, 4,850 triples) and the sliders add fixed deltas such as +0.012 for RGCN and -0.068 without the gene/protein spine, so no model scores anything. Four of five sampled PMIDs cited as provenance resolve to unrelated papers.",
+ "references": [],
+ "subject": "F-1",
+ "title": "Competitor BioKG prototype's benchmark numbers are hardcoded"
+}

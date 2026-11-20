@@ -1,0 +1,13 @@
+{
+ "code": "F-10",
+ "created_time": "2026-11-11T14:16:51Z",
+ "event_type": "finding.created",
+ "evidence": "Occurrence explanations cover 125 of 37,697 edges (25 per edge type)",
+ "external_references": [],
+ "id": "e1835c9d",
+ "metric": "125 of 37,697 edges; 11.5k positives; micro AUPRC 0.9404 / 0.8688 / 0.7829; 0 KGX exports; 0 verdict files",
+ "observation": "A readiness review found occurrence explanations cover only 125 of 37,697 edges, the link-prediction suite is not the competition protocol (five negatives per positive, no GNN, no Pharos baseline comparison), and there is no keep/prune verdict file, no KGX/BioLink export and no public demo. The review measured micro AUPRC 0.9404 static, 0.8688 enriched and 0.7829 pruned, and recommended prioritising a public demo and a real comparison against Pharos.",
+ "references": [],
+ "subject": "F-10",
+ "title": "Gap audit: occurrence explanations and competition-grade prediction are the largest holes"
+}

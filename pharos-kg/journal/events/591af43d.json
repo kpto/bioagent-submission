@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "f224a365"
+ ],
+ "code": "B-10",
+ "created_time": "2026-11-16T06:58:11Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "kgkit revisions record wrote revisions/424beaec2d79057d.json with evaluation status passed. The revision covers 9,512 nodes, 37,697 edges, 47,209 evidence rows and 323 explanation subjects.",
+  "message": 25961,
+  "numbers": "9512 nodes; 37697 edges; 47209 evidence rows; 323 explanation subjects",
+  "status": "recorded"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "591af43d",
+ "references": [],
+ "subject": "B-10",
+ "title": "Revision 424beaec2d79057d pinned with its evaluation"
+}

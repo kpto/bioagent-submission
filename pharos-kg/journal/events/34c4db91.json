@@ -1,0 +1,12 @@
+{
+ "code": "FW-8",
+ "created_time": "2026-11-18T02:30:01Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "34c4db91",
+ "reason": "Both harnesses withheld a held-out test edge only when its type was associated_with, so the inverse copy of every held-out pair stayed in training: withheld 3,086 instead of 6,172. After fixing, TransE inverse is +0.059 macro with sigma 0.034 rather than +0.120, RotatE +0.017, and RGCN +0.004, which is inside run noise. The F-0108 inverse figures and the inverse component of F-0112 were withdrawn and re-measured.",
+ "references": [],
+ "subject": "F-97",
+ "title": "Inverse-relation arms were leaky; their gains are withdrawn",
+ "withdrawn_finding": "0e079aed"
+}

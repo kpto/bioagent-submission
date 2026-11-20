@@ -1,0 +1,13 @@
+{
+ "code": "F-41",
+ "created_time": "2026-11-16T08:45:45Z",
+ "event_type": "finding.created",
+ "evidence": "Node-level HPO/Reactome/STRING counts improve the fair per-positive RGCN from macro AUPRC 0.1301 / micro 0.1419 to 0.3118 / 0.2186",
+ "external_references": [],
+ "id": "43b601fa",
+ "metric": "0.130120 / 0.141856 -> 0.311756 / 0.218556; macro AUROC 0.329 -> 0.698; gatv2 0.099447 / 0.102385",
+ "observation": "Adding HPO/Reactome/STRING counts as node features before message passing lifted the fair per-positive RGCN from 0.130120/0.141856 to 0.311756/0.218556 (macro AUROC 0.329 to 0.698). GATv2 stayed at 0.099447/0.102385 and GraphSAGE was unchanged, so the histogram at 0.683398 still leads; recorded as F-0033.",
+ "references": [],
+ "subject": "F-41",
+ "title": "Node-level external counts partially rescue the fair RGCN"
+}

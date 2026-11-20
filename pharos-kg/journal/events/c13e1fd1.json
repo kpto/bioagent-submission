@@ -1,0 +1,13 @@
+{
+ "code": "F-21",
+ "created_time": "2026-11-16T07:13:34Z",
+ "event_type": "finding.created",
+ "evidence": "HPO genes 232 rows 18641 disease ids 622",
+ "external_references": [],
+ "id": "c13e1fd1",
+ "metric": "603 genes; 635 proteins; 1919 diseases; 1914 unique names; HPO 232 genes / 18641 rows / 622 disease ids; HPOA 402 names / 12786 rows; Reactome 468 proteins / 11298 rows / 1360 pathways; STRING 633 proteins",
+ "observation": "Coverage of the three external sources against 9,512 nodes (603 genes, 635 proteins, 1,919 disease nodes): HPO genes_to_phenotype has 232 gene symbols over 18,641 rows and 622 disease ids, HPOA names 402 diseases over 12,786 rows, Reactome has 468 proteins over 11,298 rows and 1,360 pathways, and STRING has 633 Ensembl proteins. Only 1,914 disease names are unique, which bounds any name-keyed disease feature.",
+ "references": [],
+ "subject": "F-21",
+ "title": "External-source coverage measured against the built graph"
+}

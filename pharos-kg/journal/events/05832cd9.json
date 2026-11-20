@@ -1,0 +1,13 @@
+{
+ "code": "F-123",
+ "created_time": "2026-11-18T18:34:34Z",
+ "event_type": "finding.created",
+ "evidence": "The build publishes two graphs and they reconcile.",
+ "external_references": [],
+ "id": "05832cd9",
+ "metric": "annotated 139.6 MB, 74747 nodes / 239939 edges; graph.jsonl 61.3 MB, 28359 nodes / 150856 edges; evidence 221910",
+ "observation": "A build on master's declared annotate-project pipeline wrote both outputs: the candidate graph with every reported pair and evidence, and graph.jsonl as its keep projection. The counts reconcile, and the shipped graph deliberately carries no annotation field.",
+ "references": [],
+ "subject": "F-123",
+ "title": "The candidate and shipped graphs reconcile"
+}

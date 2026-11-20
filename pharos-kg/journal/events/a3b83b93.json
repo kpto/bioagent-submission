@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "ab499010"
+ ],
+ "code": "B-26",
+ "created_time": "2026-11-18T06:19:05Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "Off relation-extension, mondo_parent and go_parent became asset members and source relations, disease_hierarchy and process_hierarchy joined to published labels, and the edges bound as subclass_of / process_subclass_of. The base builds without the dump archive by falling back to the Parquet cache; go_parent.parquet had to be copied in.",
+  "message": 52997,
+  "numbers": "70260 nodes / 205886 edges; subclass_of 842; process_subclass_of 2576 (vs 2610 with 3035 GO terms); validate 1 asset, 19 bindings, 11 edges, 8 nodes, 65 properties; commit 5f05a40",
+  "status": "accepted"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "a3b83b93",
+ "references": [],
+ "subject": "B-26",
+ "title": "Hierarchy ported onto the release-fed base"
+}

@@ -1,0 +1,49 @@
+{
+ "code": "EV-227",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "IDF-SVD subset search (best micro)",
+    "protocol": "degree-matched validation (9,877 pairs; 18.4% base)"
+   },
+   "name": "experiments/prediction/svd_validation.json",
+   "type": "report"
+  }
+ ],
+ "id": "81867c81",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "20f1de3b"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); validation slice only, not the held-out test; degree-matched validation negatives; subset chosen on validation, not test",
+  "config": "components svd_24,svd_48,svd_64,svd_8,svd_96; 127 subsets searched",
+  "design": "E-4",
+  "findings": [
+   "F-45"
+  ],
+  "graph": "enriched authored graph",
+  "method": "IDF-SVD subset search (best micro)",
+  "metric_text": "macro AUPRC 0.451913; micro AUPRC 0.44153338599368513",
+  "metrics": {
+   "macro_auprc": 0.451913,
+   "micro_auprc": 0.44153338599368513
+  },
+  "protocol": "degree-matched validation (9,877 pairs; 18.4% base)",
+  "report": "experiments/prediction/svd_validation.json"
+ },
+ "subject": "B-10",
+ "title": "IDF-SVD subset search (best micro) \u00b7 degree-matched negatives"
+}

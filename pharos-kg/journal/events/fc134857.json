@@ -1,0 +1,13 @@
+{
+ "code": "F-65",
+ "created_time": "2026-11-16T21:08:08Z",
+ "event_type": "finding.created",
+ "evidence": "The honest conclusion is that node-property features do not reliably help the homogeneous model.",
+ "external_references": [],
+ "id": "fc134857",
+ "metric": "base 0.2445 / 0.2193 (6 features); +TDL 0.1992 / 0.1960 (10); +novelty 0.1921 / 0.1941 (7); +activity 0.1862 / 0.1892 (11); all 0.1862 / 0.1892 (16)",
+ "observation": "TDL one-hot, novelty and ligand/PPI/GO/disease count features were standardised and added to the homogeneous GraphSAGE. TDL and novelty were negative and the count-rich variants collapsed to the base rate, so the graph's own node properties were not adopted as a prediction lever.",
+ "references": [],
+ "subject": "F-65",
+ "title": "Node-property features do not improve the homogeneous core model"
+}

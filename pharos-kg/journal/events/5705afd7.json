@@ -1,0 +1,13 @@
+{
+ "code": "F-112",
+ "created_time": "2026-11-18T05:03:51Z",
+ "event_type": "finding.created",
+ "evidence": "Binds records read `target_build_key: \"P11309\"` while protein nodes are keyed `PHAROS:P11309`",
+ "external_references": [],
+ "id": "5705afd7",
+ "metric": "entries 82250; missing 44888; ligand nodes 1993; pre-ligand build 0.4850/0.4251/0.3104; evidence 93551/93551",
+ "observation": "Binds endpoints were keyed P11309 while protein nodes are keyed PHAROS:P11309, and the evidence index covered only 1,993 ligand nodes with no binds entries. No eval, pytest, pyright or RGCN run had been made on that build, so the last green gate set was the pre-ligand build.",
+ "references": [],
+ "subject": "F-112",
+ "title": "Two defects in the ligand migration before it could be called done"
+}

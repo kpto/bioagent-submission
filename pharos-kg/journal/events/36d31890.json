@@ -1,0 +1,13 @@
+{
+ "code": "F-54",
+ "created_time": "2026-11-16T19:39:06Z",
+ "event_type": "finding.created",
+ "evidence": "Provenance is not normalized: 23,426 edges have no `sources` field, 7,614 have an empty list, 5,914 one source, 743 multiple.",
+ "external_references": [],
+ "id": "36d31890",
+ "metric": "37,697 edges: 23,426 no sources field, 7,614 empty list, 5,914 one source, 694 two, 49 three; 36,954 single-source, 743 multi-source; top sources STRINGDB 2,667, CTD_human 2,306, UNIPROT 436, Reactome 361",
+ "observation": "A count over the built graph showed most emitted edges carry no usable source list, and relation-specific fields (PMIDs, PPI scores, GO evidence codes) do not substitute for a uniform source-diversity measure. This blocks a uniform accuracy/explainability statement about independent corroboration.",
+ "references": [],
+ "subject": "F-54",
+ "title": "Edge provenance is not normalized across relation types"
+}

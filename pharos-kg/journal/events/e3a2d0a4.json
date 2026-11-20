@@ -1,0 +1,26 @@
+{
+ "based_revision": "591af43d",
+ "change": null,
+ "code": "P-9",
+ "created_time": "2026-11-16T07:18:49Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "e3a2d0a4",
+ "rationale": "After the pair-feature sweep the decision was to use HPO and STRING as nonlinear pair features and keep external context out of the linear baseline. Accepted in the ledger as F-0015.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "a7ebc9ae"
+  }
+ ],
+ "subject": "P-9",
+ "title": "Use HPO/STRING as nonlinear pair features (F-0015)"
+}

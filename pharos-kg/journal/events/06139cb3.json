@@ -1,0 +1,13 @@
+{
+ "code": "F-8",
+ "created_time": "2026-11-10T20:45:42Z",
+ "event_type": "finding.created",
+ "evidence": "Occurrence explanations are a declared 25-per-edge-type sample while the evidence sidecar covers every edge.",
+ "external_references": [],
+ "id": "06139cb3",
+ "metric": "25 per edge type; 250 occurrence subjects; 125 of 37,697 edges",
+ "observation": "The explanation document emits up to 25 occurrence subjects per edge type while the evidence sidecar covers every edge, so an arbitrary edge may have no occurrence explanation. The finding was accepted with the sampling declared in the document rather than silently presented as full coverage.",
+ "references": [],
+ "subject": "F-8",
+ "title": "F-0009: occurrence explanations cover a declared sample, not every edge"
+}

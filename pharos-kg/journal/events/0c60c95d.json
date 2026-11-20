@@ -1,0 +1,12 @@
+{
+ "code": "FW-9",
+ "created_time": "2026-11-18T03:22:04Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "0c60c95d",
+ "reason": "With more seeds, ontology hierarchy gives RGCN +0.0062 (five seeds), TransE +0.0261 and RotatE +0.0052 (three seeds), and the ligand policy gives RGCN +0.0025 and TransE +0.0033. The earlier two-seed embedding figures of +0.055/+0.011 were therefore noise on the high side, and the ligand policy's case is usability alone. Reference macro for the same graph varies 0.4664-0.4757 across runs, so a GNN delta below 0.01 is not separable even at five seeds.",
+ "references": [],
+ "subject": "F-102",
+ "title": "Two-seed embedding deltas were high-side noise; ligand policy is prediction-neutral",
+ "withdrawn_finding": "9c858c66"
+}

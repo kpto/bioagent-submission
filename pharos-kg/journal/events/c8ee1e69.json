@@ -1,0 +1,96 @@
+{
+ "code": "EV-37",
+ "created_time": "2026-11-16T07:52:38Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "histogram gradient boosting (base features)",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/ensemble.json",
+   "type": "report"
+  }
+ ],
+ "id": "c8ee1e69",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "5a4b8eec"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "cf708e8f"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e3a2d0a4"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol; five-seed GNN; 95% bootstrap intervals overlap single-model intervals",
+  "config": "5 seeds (0-4); rank averaging; features hpo+string; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-25",
+   "F-24"
+  ],
+  "graph": "enriched authored graph",
+  "method": "histogram gradient boosting (base features)",
+  "metric_text": "macro AUPRC 0.933012; micro AUPRC 0.9328890891373307; macro AUROC 0.913683; micro AUROC 0.9117085862268213; macro MRR 0.88281; micro MRR 0.884385; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.92695, 0.939929], \"auroc\": [0.903493, 0.92114], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.89558, 0.952223], \"macro_auroc\": [0.884638, 0.932179], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.848689, 0.909711], \"mrr\": [0.874361, 0.894669]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.92695,
+    0.939929
+   ],
+   "ci95_auroc": [
+    0.903493,
+    0.92114
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.89558,
+    0.952223
+   ],
+   "ci95_macro_auroc": [
+    0.884638,
+    0.932179
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.848689,
+    0.909711
+   ],
+   "ci95_mrr": [
+    0.874361,
+    0.894669
+   ],
+   "macro_auprc": 0.933012,
+   "macro_auroc": 0.913683,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.88281,
+   "micro_auprc": 0.9328890891373307,
+   "micro_auroc": 0.9117085862268213,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.884385
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/ensemble.json"
+ },
+ "subject": "B-10",
+ "title": "histogram gradient boosting (base features) \u00b7 the committed split"
+}

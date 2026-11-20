@@ -1,0 +1,13 @@
+{
+ "code": "F-28",
+ "created_time": "2026-11-16T08:04:24Z",
+ "event_type": "finding.created",
+ "evidence": "A three-seed GATv2 sweep made eight heads look much better (rank-ensemble macro AUPRC 0.969), but ten seeds brought it back to 0.960, below the four-head model.",
+ "external_references": [],
+ "id": "eb506011",
+ "metric": "8 heads 3 seeds 0.969158 / 0.969010; 8 heads 10 seeds 0.960172 / 0.964290; 4 heads 10 seeds 0.961737 / 0.961672",
+ "observation": "A three-seed GATv2 screen made eight attention heads look much better at 0.969158 macro/0.969010 micro, but ten seeds brought eight heads to 0.960172/0.964290, below the four-head model at 0.961737/0.961672. F-0021 rules three-seed sweeps screening only and ten seeds the decision run.",
+ "references": [],
+ "subject": "F-28",
+ "title": "Three-seed GNN sweeps overstate gains"
+}

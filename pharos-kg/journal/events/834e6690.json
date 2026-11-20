@@ -1,0 +1,12 @@
+{
+ "code": "FW-4",
+ "created_time": "2026-11-17T22:00:31Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "834e6690",
+ "reason": "The first probe reported univariate AUCs of 0.955 (PPI), 0.955 (GO), 0.917 (phenotype), 0.903 (pathway) and 0.848 (tissue) against 0.701 for the direct IDF-SVD score, because shared-context counts were computed on the full association matrix including held-out pairs. Excluding held-out pairs, then restarting the feature from the query pair after two failed fixes, dropped every context feature to 0.541-0.558 while the direct score stayed 0.701; context-only scored 0.2875/0.2604.",
+ "references": [],
+ "subject": "F-20",
+ "title": "Context-signal AUC of 0.95 was leakage; features fall to 0.54-0.56",
+ "withdrawn_finding": "d1d5cebf"
+}

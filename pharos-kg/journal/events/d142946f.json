@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "c2f04dc5"
+ ],
+ "code": "B-6",
+ "created_time": "2026-11-11T14:49:25Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "Authored eval/design.json as the evaluation contract rather than hardcoded copy: two modes, five gates with question, files read, pass and fail conditions, the seed and determinism rules, link-prediction split, negatives, seeds, bootstrap, arms and models, and an eight-step iteration loop. A new tests/test_eval_design.py checks every emitted suite has a gate, that modes reference real gates, and that constants match eval/common.py and eval/link_prediction.py. The design RPC returned format kg-eval-design, 5 gates, 2 modes, seed 1729, link seeds 0-4, arms static/enriched/pruned, 8 iteration steps; the suite ran 55 tests.",
+  "message": 9218,
+  "numbers": "2 modes (quick 4 gates, full 5); 5 gates; seed 1729; link seeds 0-4; 5 negatives per positive; bootstrap 200; test ratio 0.2; 8 iteration steps; 55 tests passed",
+  "status": "built and guarded by contract tests; commit bf8114d"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "d142946f",
+ "references": [],
+ "subject": "B-6",
+ "title": "Machine-readable evaluation design: eval/design.json"
+}

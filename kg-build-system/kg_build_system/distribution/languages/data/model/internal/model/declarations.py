@@ -1,0 +1,33 @@
+"""The frozen authoring facts of one data declaration class."""
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import TYPE_CHECKING, Any
+
+from kg_build_system.distribution.languages.annotations.model.public import Annotation
+from .fields import FieldSpec
+
+if TYPE_CHECKING:
+    from kg_build_system.distribution.languages.meaning.model.public import (
+        Meaning,
+    )
+    from ...public.contract import Definition
+
+
+@dataclass(frozen=True, slots=True)
+class DeclarationSpec:
+    """The facts a declaration class owns after class creation."""
+
+    kind: str
+    name: str | None
+    annotations: tuple[Annotation, ...]
+    fields: tuple[FieldSpec, ...] = ()
+    final: bool = True
+    row_source: Any = None
+    members: tuple[type[Any], ...] = ()
+    asset: Any = None
+    meaning: Meaning | None = None
+    definition: Definition | None = None
+
+
+__all__ = ["DeclarationSpec"]

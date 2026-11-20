@@ -1,0 +1,18 @@
+{
+ "code": "EV-18",
+ "created_time": "2026-11-18T01:41:51Z",
+ "evaluated_revision": "2066f869",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "595bbef5",
+ "references": [],
+ "result": {
+  "detail": "Fixed held-out set with policy_context as reference, TransE and RotatE, two seeds, 100 epochs. Hub pruning (removing context hubs shared by more than 50 targets; 130,670 triples) gives +0.0234/-0.0035 macro/micro under TransE and +0.0445/+0.0107 under RotatE; adding 2,610 subclass_of edges (163,072 triples) gives +0.0545/-0.0003 and +0.0110/+0.0012. Evidence subtypes give +0.0205/-0.0057 and +0.0098/-0.0016, while entity-type triples give +0.0588/+0.0028 under TransE but -0.0128/-0.0169 under RotatE; the types arm has macro sigma 0.026.",
+  "message": 47801,
+  "numbers": "reference TransE 0.332411/0.333661, RotatE 0.337206/0.332989; hubpruned 130,670 triples; hierarchy 163,072; types 232,411; subtype 160,462; types sigma 0.026",
+  "status": "F-0107 accepted; inverse arms later withdrawn"
+ },
+ "subject": "EV-18",
+ "title": "Which design changes help graph embeddings: hub pruning and hierarchy"
+}

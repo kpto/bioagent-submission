@@ -1,0 +1,12 @@
+{
+ "code": "E-2",
+ "created_time": "2026-11-10T23:30:02Z",
+ "event_type": "evaluation.created",
+ "external_references": [],
+ "id": "9ab270b9",
+ "method": "hash split, static/enriched/pruned arms, five seeds, bootstrap resampling",
+ "metric": "macro AUPRC",
+ "references": [],
+ "subject": "E-2",
+ "title": "Held-out link-prediction protocol"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-109",
+ "created_time": "2026-11-18T04:07:10Z",
+ "event_type": "finding.created",
+ "evidence": "phenotype edges buy explainability and cold start, not overall ranking",
+ "external_references": [],
+ "id": "46701882",
+ "metric": "F-0053 core 0.2251/0.2103 vs 0.2224/0.2091; F-0056 core 0.4547/0.4499, disease-phenotype 0.4625/0.4426, +subclass 0.4629/0.4394; F-0045 0.4586/0.5388 vs 0.1709; F-0050 29406 nodes / 90072 edges; F-0064 2-hop diseases 102.9 -> 192.2",
+ "observation": "Reading the branch's own ledger: its ten-seed ablation found no reliable prediction gain from phenotype edges, and its five-seed RGCN put macro inside noise with micro worse. Its cold number came from a model (HPO-similarity borrowing), its layer tripled graph size, and F-0064 showed the usability value is reachability, not prediction.",
+ "references": [],
+ "subject": "F-109",
+ "title": "Phenotype-layer branch agrees on explainability, not on ranking (F-0125)"
+}

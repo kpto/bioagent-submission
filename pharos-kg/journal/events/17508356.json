@@ -1,0 +1,19 @@
+{
+ "code": "F-137",
+ "created_time": "2026-11-19T22:27:00.330940Z",
+ "event_type": "finding.created",
+ "evidence": "data/source/pharos319/manifest.json was read by _cache_is_current; data/source/pharos319-chdb was 321 MB across 31 files with no reader; chdb lived only in the source group, so uv run kbs run could not decode a cold cache.",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "kbs finding add",
+   "type": "cli"
+  }
+ ],
+ "id": "17508356",
+ "metric": "data-side manifests 1 -> 0; unused dump cache 321 MB -> 0; optional decode group 1 -> 0; HPO cold rebuild 4 of 4 tables exact; fake dump extraction writes 1 marker",
+ "observation": "The dump still kept a data-side manifest and an unused second cache; the dump step read the manifest to judge the cache, chdb was only in an optional group, and a cold extraction wrote no cache metadata.",
+ "references": [],
+ "subject": "F-137",
+ "title": "The dump cache still depended on a data-side manifest"
+}

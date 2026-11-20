@@ -1,0 +1,18 @@
+{
+ "code": "EV-16",
+ "created_time": "2026-11-17T23:10:26Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "9ab270b9",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "3be5904c",
+ "references": [],
+ "result": {
+  "detail": "One shared positive set of 11,377 target-disease pairs (9,102 train, 2,275 test, 13,571 evaluation pairs with negatives), five seeds, every graph verified to withhold 2,275 of 2,275 test edges. Degree-matched macro/micro: API graph 0.3035/0.2607, migrated current 0.3110/0.2652, policy_context 0.3112/0.2538. Fair: 0.6897/0.6936, 0.6955/0.7033, 0.6949/0.7022.",
+  "message": 46141,
+  "numbers": "11,377 shared pairs; 2,275 test; 13,571 eval; withheld 2,275/2,275; API 0.3035/0.2607 and 0.6897/0.6936; current 0.3110/0.2652 and 0.6955/0.7033; policy_context 0.3112/0.2538 and 0.6949/0.7022",
+  "status": "recorded F-0101; baseline later corrected in F-0102"
+ },
+ "subject": "EV-16",
+ "title": "Fixed held-out comparison: our graph against the API-era Pharos graph"
+}

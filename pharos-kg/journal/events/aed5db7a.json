@@ -1,0 +1,19 @@
+{
+ "code": "F-136",
+ "created_time": "2026-11-19T22:16:17.381406Z",
+ "event_type": "finding.created",
+ "evidence": "The old fetch payload had asset, reader, cache, manifest and members; the URLs, digests and table row counts were only in data/source/hpo/manifest.json and data/source/opentargets2609/manifest.json. Deleting the manifest stopped a rebuild.",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "kbs finding add",
+   "type": "cli"
+  }
+ ],
+ "id": "aed5db7a",
+ "metric": "release facts in the plan 0 -> 23 source files and 7 table row counts; data-side manifests read at build time 2 -> 0",
+ "observation": "The HPO and Open Targets release pins lived in data/source manifests, so the fetch step read a data file at run time and the workflow plan recorded only a manifest path, not what would be fetched.",
+ "references": [],
+ "subject": "F-136",
+ "title": "The release pins were in data, not in the declaration"
+}

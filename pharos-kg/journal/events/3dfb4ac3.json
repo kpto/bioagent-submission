@@ -1,0 +1,13 @@
+{
+ "code": "F-19",
+ "created_time": "2026-11-16T07:02:35Z",
+ "event_type": "finding.created",
+ "evidence": "The enriched authored graph is the strongest macro-AUPRC result and ties the best micro-AUPRC baseline.",
+ "external_references": [],
+ "id": "3dfb4ac3",
+ "metric": "500 epochs; 5 seeds; 200 bootstrap; 11567 positives; 4999 eval pairs; enriched 0.946854 / 0.939521; pruned 0.841558 / 0.863795; static 0.815509 / 0.897513",
+ "observation": "The stored GPU experiment trains a two-layer GraphSAGE (128 hidden, 500 epochs, dropout 0.3, five seeds, 200 bootstrap resamples) on the committed split: 11,567 positives, 20% held out, five negatives per positive, hash seed 1729, 4,999 evaluation pairs. Enriched authored graph macro AUPRC 0.947 / micro 0.940, pruned 0.842/0.864, static 0.816/0.898, against logistic static 0.926/0.940. The write-up calls it a within-graph ablation: the static arm is a reduced authored graph, not the hosted Pharos baseline.",
+ "references": [],
+ "subject": "F-19",
+ "title": "GraphSAGE ablation is strong but within-graph"
+}

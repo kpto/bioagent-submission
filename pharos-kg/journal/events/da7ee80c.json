@@ -1,0 +1,12 @@
+{
+ "code": "FW-5",
+ "created_time": "2026-11-17T23:10:39Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "da7ee80c",
+ "reason": "The earlier framing, that the evaluation only reconstructs Pharos's own bookkeeping and does not ask for unseen-edge prediction, was withdrawn after reading the brief. Its Key Question asks whether an agent can build a contextualized graph that outperforms Pharos at predicting held-out links, and the Evaluation holds the model fixed on both graphs; only which edge type is held out remains unanswered in the Q&A. The correction also changed which experiment was decisive, from graph-size profiling to the fixed held-out comparison.",
+ "references": [],
+ "subject": "F-10",
+ "title": "The competition does expect prediction of unseen edges",
+ "withdrawn_finding": "e1835c9d"
+}

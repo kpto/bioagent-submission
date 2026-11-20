@@ -1,0 +1,13 @@
+{
+ "code": "F-39",
+ "created_time": "2026-11-16T08:38:29Z",
+ "event_type": "finding.created",
+ "evidence": "hist_base {'auroc': 0.596599, 'auprc': 0.289355, 'hits_at_10': 1.0, 'mrr': 0.541471}",
+ "external_references": [],
+ "id": "77bfb321",
+ "metric": "12230 pairs; 9916 unique negatives; 18.92% base; 5121/11570 exact (44.26%); hist 0.289355 / 0.286595; hpo+string 0.300289 / 0.261905; degree 0.271237 / 0.248203",
+ "observation": "Sampling each negative at the positive disease's training degree (nearest-degree fallback) gives 12,230 pairs, 9,916 unique negatives and an 18.92% base rate, with 5,121 of 11,570 test negatives exactly matched (44.26%). Histogram base scored 0.289355/0.286595, HPO+STRING 0.300289/0.261905 and disease degree 0.271237/0.248203; F-0031 makes this the main robustness test.",
+ "references": [],
+ "subject": "F-39",
+ "title": "Degree-matched negatives leave little signal above degree"
+}

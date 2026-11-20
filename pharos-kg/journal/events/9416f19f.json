@@ -1,0 +1,21 @@
+{
+ "based_revision": "b7a9055e",
+ "change": null,
+ "code": "P-22",
+ "created_time": "2026-11-17T20:53:38Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "9416f19f",
+ "rationale": "count, max and collect have no expression vocabulary and group_by does not aggregate, so target_disease_pair and disease_label keep a project planner that supplies the SQL body while computed_field only states names and types. Two of the six derived relations therefore depend on SQL for their operation. To close the declared-versus-computed gap the module now refuses to compile unless the SQL aliases match the declared columns exactly and the body states GROUP BY, pinned by three tests; adding aggregate operators to the framework grammar was named as the alternative and left as a kg-build-system proposal.",
+ "references": [],
+ "subject": "P-22",
+ "title": "Aggregations stay a project SQL module; computed fields are witnesses"
+}

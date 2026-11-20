@@ -1,0 +1,34 @@
+{
+ "based_revision": "591af43d",
+ "change": null,
+ "code": "P-13",
+ "created_time": "2026-11-16T21:31:01Z",
+ "event_type": "proposal.created",
+ "external_references": [],
+ "id": "4dc6aa12",
+ "rationale": "The core graph (associated_with, binds, interacts_with, participates_in, translates_to) was adopted as the default submission graph: keep every association, prune only structural defects, and reject phenotype or ontology edges, evidence filters and confidence weighting in the core. The compact phenotype profile was left as a branch-scoped variant at that point.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "b3a88632"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "25e45aa9"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "a863c8b8"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "fc134857"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "cdb46e34"
+  }
+ ],
+ "subject": "P-13",
+ "title": "Adopt the core five-relation graph as the submission graph (CD-0007)"
+}

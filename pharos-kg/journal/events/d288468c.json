@@ -1,0 +1,84 @@
+{
+ "code": "EV-383",
+ "created_time": "2026-11-18T01:20:40Z",
+ "evaluated_revision": "2066f869",
+ "evaluation": "3cdf65b2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "pruned arm",
+    "method": "heuristic (degree/common-neighbour/Adamic-Adar features)",
+    "protocol": "committed shared five negatives (current split: 12,343 train / 3,085 test; 5 seeds)"
+   },
+   "name": "eval/report.json",
+   "type": "report"
+  }
+ ],
+ "id": "d288468c",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); current 2026-11-19 rebuild; split differs from the historical 9,253/2,314; supersedes the historical static/enriched/pruned arms in docs/SUBMISSION.md",
+  "config": "5 seeds; target-disease features; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-119",
+   "F-120"
+  ],
+  "graph": "pruned arm",
+  "method": "heuristic (degree/common-neighbour/Adamic-Adar features)",
+  "metric_text": "macro AUPRC 0.661097; micro AUPRC 0.700177; macro AUROC 0.66159; micro AUROC 0.660385; macro MRR 0.480352; micro MRR 0.478336; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.6882, 0.712384], \"auroc\": [0.650603, 0.671027], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.600838, 0.71955], \"macro_auroc\": [0.624948, 0.70483], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.422621, 0.548072], \"mrr\": [0.464505, 0.490546]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.6882,
+    0.712384
+   ],
+   "ci95_auroc": [
+    0.650603,
+    0.671027
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.600838,
+    0.71955
+   ],
+   "ci95_macro_auroc": [
+    0.624948,
+    0.70483
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.422621,
+    0.548072
+   ],
+   "ci95_mrr": [
+    0.464505,
+    0.490546
+   ],
+   "macro_auprc": 0.661097,
+   "macro_auroc": 0.66159,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.480352,
+   "micro_auprc": 0.700177,
+   "micro_auroc": 0.660385,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.478336
+  },
+  "protocol": "committed shared five negatives (current split: 12,343 train / 3,085 test; 5 seeds)",
+  "report": "eval/report.json"
+ },
+ "subject": "B-20",
+ "title": "heuristic (degree/common-neighbour/Adamic-Adar features) \u00b7 the committed split"
+}

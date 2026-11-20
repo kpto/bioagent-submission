@@ -1,0 +1,13 @@
+{
+ "code": "F-116",
+ "created_time": "2026-11-18T06:33:30Z",
+ "event_type": "finding.created",
+ "evidence": "So the evidence split costs ~ **0.029 macro** under this model on this base",
+ "external_references": [],
+ "id": "5c2d79e6",
+ "metric": "base 0.4536/0.3890/0.2856 vs ref 0.4711/0.4015/0.2533; merged 0.4824/0.3951/0.2889; -0.0175 -> +0.0111; split cost ~0.029",
+ "observation": "On the ported base the RGCN run was 0.0175 macro behind the reference; merging interacts_with_experimental and interacts_with_predicted into one interacts_with with the same 3,357 edges flipped it to +0.0111 macro. The split therefore costs about 0.029 macro under this model, twice the 0.015 measured earlier.",
+ "references": [],
+ "subject": "F-116",
+ "title": "The interaction evidence split, not the migration, was the deficit (F-0115)"
+}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">Try it</title>
+  <desc id="desc">Install the plugin once, open the demo folder, ask the agent to read PURPOSE.md, then use your own data with the same plugin.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b45309"/>
+    </marker>
+    <style>
+      .paper { fill: #fbfaf7; stroke: #e7e2d8; }
+      .card { fill: #ffffff; stroke: #ddd6ca; }
+      .step { font: 600 11px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #b45309; letter-spacing: 0.12em; }
+      .title { font: 600 17px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2937; }
+      .body { font: 400 13px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7280; }
+      .flow { stroke: #b45309; stroke-width: 2; fill: none; }
+      .note { font: 400 13px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7280; }
+    </style>
+  </defs>
+
+  <rect class="paper" x="8" y="8" width="944" height="284" rx="18"/>
+
+  <rect class="card" x="40" y="60" width="200" height="150" rx="12"/>
+  <text class="step" x="60" y="88">1 · INSTALL</text>
+  <text class="title" x="60" y="118">Add the plugin</text>
+  <text class="body" x="60" y="144">one entry in</text>
+  <text class="body" x="60" y="164">opencode.jsonc</text>
+  <text class="body" x="60" y="188">frameworkUrl → this copy</text>
+
+  <path class="flow" d="M240 135 H290" marker-end="url(#arrow)"/>
+
+  <rect class="card" x="290" y="60" width="200" height="150" rx="12"/>
+  <text class="step" x="310" y="88">2 · OPEN</text>
+  <text class="title" x="310" y="118">demo/</text>
+  <text class="body" x="310" y="144">four files, as the lab</text>
+  <text class="body" x="310" y="164">sent them</text>
+  <text class="body" x="310" y="188">PURPOSE.md is the ask</text>
+
+  <path class="flow" d="M490 135 H540" marker-end="url(#arrow)"/>
+
+  <rect class="card" x="540" y="60" width="180" height="150" rx="12"/>
+  <text class="step" x="560" y="88">3 · ASK</text>
+  <text class="title" x="560" y="118">/kbs_init</text>
+  <text class="body" x="560" y="144">read PURPOSE.md</text>
+  <text class="body" x="560" y="164">for what I want</text>
+  <text class="body" x="560" y="188">accept or correct</text>
+
+  <path class="flow" d="M720 135 H770" marker-end="url(#arrow)"/>
+
+  <rect class="card" x="770" y="60" width="150" height="150" rx="12"/>
+  <text class="step" x="790" y="88">4 · YOURS</text>
+  <text class="title" x="790" y="118">Your data</text>
+  <text class="body" x="790" y="144">open a folder</text>
+  <text class="body" x="790" y="164">and ask</text>
+  <text class="body" x="790" y="188">same plugin</text>
+
+  <text class="note" x="40" y="250">One install, one demo, then the same loop on your own files.</text>
+</svg>

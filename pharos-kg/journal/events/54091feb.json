@@ -1,0 +1,13 @@
+{
+ "code": "F-106",
+ "created_time": "2026-11-18T02:58:56Z",
+ "event_type": "finding.created",
+ "evidence": "So **+0.055 macro / +0.083 micro**, and **+0.055 / +0.089 on the graph with 69% fewer nodes**",
+ "external_references": [],
+ "id": "54091feb",
+ "metric": "reference 71,949/160,462, 0.4704/0.3984; combined 326,144 triples, 0.5250/0.4817; ligand reference 22,531/114,098, 0.4760/0.4001; ligand combined 116,708 triples, 0.5314/0.4889",
+ "observation": "The combined graph (balanced plus hierarchy, Open Targets evidence classes and inverse relations) reaches 0.5250/0.4817 macro/micro from a 0.4704/0.3984 reference at 326,144 triples. On the ligand-policy graph the same combination (22,531 nodes, 116,708 triples) reaches 0.5314/0.4889 from 0.4760/0.4001. That is +0.055 macro/+0.083 micro, and +0.055/+0.089 with 69% fewer nodes.",
+ "references": [],
+ "subject": "F-106",
+ "title": "The three GNN design changes compose, including on the small graph"
+}

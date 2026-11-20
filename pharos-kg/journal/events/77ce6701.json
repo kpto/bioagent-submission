@@ -1,0 +1,30 @@
+{
+ "based_revision": "a34ff829",
+ "change": null,
+ "code": "P-14",
+ "created_time": "2026-11-16T21:48:26Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "77ce6701",
+ "rationale": "After the homogeneous-cost measurement, the recommendation became core as the robust default for embeddings and homogeneous GNNs, with the compact phenotype profile shipped as the typed, standards and explainability enrichment. The rationale is that the same extra edges help one model family and hurt another.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "8732f107"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "d301d00f"
+  }
+ ],
+ "subject": "P-14",
+ "title": "Recommend a two-profile package: core default plus compact phenotype enrichment"
+}

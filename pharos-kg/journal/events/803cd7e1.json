@@ -1,0 +1,13 @@
+{
+ "code": "F-86",
+ "created_time": "2026-11-17T20:22:23Z",
+ "event_type": "finding.created",
+ "evidence": "Full schema in hand \u2014 92 tables.",
+ "external_references": [],
+ "id": "803cd7e1",
+ "metric": "sha256 86ebfffdd5fd03bcc23ef43a31251d40572ccd7feec62dadd3215f276f8b0953; 2,257,847,063 bytes; 92 tables; disease 21 columns; cmpd_activity 12; ncats_ppi 10; goa 9; protein 14; target 9",
+ "observation": "A full stream of the archive produced a SHA-256 and a table inventory with per-table column names. The tables needed for the five core relations are present, including disease as an evidence-contribution table, cmpd_activity as one measurement per row, and ncats_ppi for interactions.",
+ "references": [],
+ "subject": "F-86",
+ "title": "Pinned dump inventory: 92 tables with the expected grains"
+}

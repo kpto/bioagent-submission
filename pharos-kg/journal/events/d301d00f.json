@@ -1,0 +1,13 @@
+{
+ "code": "F-69",
+ "created_time": "2026-11-16T21:47:22Z",
+ "event_type": "finding.created",
+ "evidence": "The homogeneous cost is clear: core 0.2322 / 0.2133 versus compact 0.1923 / 0.1894.",
+ "external_references": [],
+ "id": "d301d00f",
+ "metric": "homogeneous 10 seeds: core 0.2322 / 0.2133 vs compact 0.1923 / 0.1894; edges 75,394 vs 135,176",
+ "observation": "The same extra edges that help the typed RGCN degrade a homogeneous GraphSAGE, because a model without relation types turns phenotype neighbours into noise. The measured cost is why the recommendation became two profiles rather than one larger graph.",
+ "references": [],
+ "subject": "F-69",
+ "title": "Compact profile hurts homogeneous models, so the two-profile split is necessary"
+}

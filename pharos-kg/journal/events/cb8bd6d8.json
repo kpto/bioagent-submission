@@ -1,0 +1,23 @@
+{
+ "code": "E-3",
+ "created_time": "2026-11-16T08:40:30Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  }
+ ],
+ "id": "cb8bd6d8",
+ "method": "per-positive negatives drawn from the same target's pool, so every positive gets its own negatives and the base rate varies by degree",
+ "metric": "macro and micro AUPRC",
+ "references": [
+  {
+   "linkage_name": "extends",
+   "linked_event": "9ab270b9"
+  }
+ ],
+ "subject": "E-3",
+ "title": "Fair per-positive negatives"
+}

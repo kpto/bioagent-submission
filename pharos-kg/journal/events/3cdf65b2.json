@@ -1,0 +1,23 @@
+{
+ "code": "E-12",
+ "created_time": "2026-11-18T01:19:40Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "eval/report.json",
+   "type": "report"
+  }
+ ],
+ "id": "3cdf65b2",
+ "method": "degree, common-neighbour and Adamic-Adar scores over the target-disease graph, with no learned parameters",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-12",
+ "title": "Heuristic scores"
+}

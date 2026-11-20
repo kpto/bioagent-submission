@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "26f7557a"
+ ],
+ "code": "B-24",
+ "created_time": "2026-11-18T04:09:26Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "mondo_parent and go_parent became source relations, with disease_hierarchy and process_hierarchy joining both endpoints to the published node sets before binding. Unique language keys forced two relation names, recorded as a framework constraint rather than a modelling choice.",
+  "message": 52017,
+  "numbers": "subclass_of 842; process_subclass_of 1768; nodes 14575; edges 78976; evidence 93551 missing 0",
+  "status": "accepted"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "123d5b16",
+ "references": [],
+ "subject": "B-24",
+ "title": "Ontology hierarchy declared between published diseases and processes"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-18",
+ "created_time": "2026-11-16T06:53:53Z",
+ "event_type": "finding.created",
+ "evidence": "True passed 9512 37697",
+ "external_references": [],
+ "id": "6a604c92",
+ "metric": "nodes 9512; edges 37697",
+ "observation": "kgkit audit on the built graph returned status passed with 9,512 nodes and 37,697 edges at revision 424beaec2d79057d. This is the graph-integrity gate (duplicates, dangling endpoints, null keys), not a model result.",
+ "references": [],
+ "subject": "F-18",
+ "title": "Audit gate passes on the built Pharos graph"
+}

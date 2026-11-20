@@ -1,0 +1,92 @@
+{
+ "code": "EV-248",
+ "created_time": "2026-11-16T16:36:41Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-6",
+    "graph": "enriched authored graph",
+    "method": "truncated IDF-SVD (k=96), neighbour-smoothed",
+    "protocol": "target cold start + degree-matched (9,592 pairs; 23.31% base)"
+   },
+   "name": "experiments/prediction/svd_cold_start.json",
+   "type": "report"
+  }
+ ],
+ "id": "233a4757",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "c56cf720"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "bbfbe311"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "d4034956"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); target cold start with degree-matched negatives; neighbour smoothing uses PPI/ligand/GO; later_findings: F-52",
+  "config": "beta 1.0; PPI/ligand/GO neighbour factor smoothing; 120 held-out targets",
+  "design": "E-6",
+  "findings": [
+   "F-49",
+   "F-48"
+  ],
+  "graph": "enriched authored graph",
+  "method": "truncated IDF-SVD (k=96), neighbour-smoothed",
+  "metric_text": "macro AUPRC 0.33115; micro AUPRC 0.38499187192309375; macro AUROC 0.583407; micro AUROC 0.6546310205437544; macro MRR 0.433959; micro MRR 0.496929; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.366174, 0.407195], \"auroc\": [0.641619, 0.666678], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.306812, 0.39415], \"macro_auroc\": [0.508121, 0.658531], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.421518, 0.451407], \"mrr\": [0.483738, 0.508351]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.366174,
+    0.407195
+   ],
+   "ci95_auroc": [
+    0.641619,
+    0.666678
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.306812,
+    0.39415
+   ],
+   "ci95_macro_auroc": [
+    0.508121,
+    0.658531
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.421518,
+    0.451407
+   ],
+   "ci95_mrr": [
+    0.483738,
+    0.508351
+   ],
+   "macro_auprc": 0.33115,
+   "macro_auroc": 0.583407,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.433959,
+   "micro_auprc": 0.38499187192309375,
+   "micro_auroc": 0.6546310205437544,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.496929
+  },
+  "protocol": "target cold start + degree-matched (9,592 pairs; 23.31% base)",
+  "report": "experiments/prediction/svd_cold_start.json"
+ },
+ "subject": "B-10",
+ "title": "truncated IDF-SVD (k=96), neighbour-smoothed \u00b7 target cold start"
+}

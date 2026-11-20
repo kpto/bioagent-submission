@@ -1,0 +1,13 @@
+{
+ "code": "F-111",
+ "created_time": "2026-11-18T04:23:17Z",
+ "event_type": "finding.created",
+ "evidence": "the macro delta is ~2x the reference seed spread but at the 0.01 run-noise floor",
+ "external_references": [],
+ "id": "e4565a13",
+ "metric": "built 0.4850/0.4251/0.3104 vs policy_context 0.4737/0.4000/0.2498; +0.0113 macro, +0.0252 micro, +0.0606 cold; macro_std 0.0036; cold_std 0.0119",
+ "observation": "With 2,610 hierarchy edges declared, the artifact beat the balanced reference on macro, micro and cold in the same run, having trailed by 0.0115 two increments earlier. The macro delta is about twice the reference seed spread but at the 0.01 run-noise floor, so it is parity to a modest lead, not a decisive win.",
+ "references": [],
+ "subject": "F-111",
+ "title": "Hierarchy flips the artifact from trailing to leading (F-0127)"
+}

@@ -1,0 +1,6 @@
+[
+  {"isolate_id": "ISO-001", "gene": "blaTEM-1", "mechanism": "beta-lactamase"},
+  {"isolate_id": "ISO-002", "gene": "aac(3)-IIa", "mechanism": "aminoglycoside modification"},
+  {"isolate_id": "ISO-004", "gene": "gyrA mutation", "mechanism": "target alteration"},
+  {"isolate_id": "ISO-999", "gene": "blaCTX-M-15", "mechanism": "beta-lactamase"}
+]

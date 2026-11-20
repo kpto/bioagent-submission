@@ -1,0 +1,13 @@
+{
+ "code": "F-122",
+ "created_time": "2026-11-18T11:10:39Z",
+ "event_type": "finding.created",
+ "evidence": "So the **interaction threshold is not being applied** under the pinned `dev`",
+ "external_references": [],
+ "id": "87eeaa97",
+ "metric": "193551 vs 150856 edges; +42695; interacts_with 46052 vs 3357; binds 34526; 42695 = 46052 - 3357",
+ "observation": "After pinning the framework path the rebuild produced 28,359 nodes and 193,551 edges, and the whole difference traced to interacts_with at 46,052 instead of 3,357 while binds was correct at 34,526. The delta matched the single-target ligand population and the assistant recorded that the interaction threshold was not being applied and that the artifact shipped the unthresholded STRING graph.",
+ "references": [],
+ "subject": "F-122",
+ "title": "Pin revealed a 42,695-edge interaction gap, read at the time as a regression"
+}

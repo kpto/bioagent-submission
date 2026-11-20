@@ -1,0 +1,13 @@
+{
+ "code": "F-94",
+ "created_time": "2026-11-17T21:57:20Z",
+ "event_type": "finding.created",
+ "evidence": "All 19,165 `mock` rows are self-interactions \u2014 a clean, structural prune class.",
+ "external_references": [],
+ "id": "0abc642f",
+ "metric": "19,165 mock rows; 634 self-loops; duplicates 0; dangling 0",
+ "observation": "The raw PPI table's mock source contributes 19,165 rows and every one is a self-interaction; on the kinase slice they collapse to 634 self-loops. This is the only structural defect class in the raw graphs (duplicates 0, dangling 0) and is absent from the API-era graph, so pruning targets exactly those edges while the rest stay marked by evidence class.",
+ "references": [],
+ "subject": "F-94",
+ "title": "All 19,165 mock PPI rows are self-interactions: 634 kinase self-loops"
+}

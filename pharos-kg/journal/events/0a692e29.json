@@ -1,0 +1,13 @@
+{
+ "code": "F-46",
+ "created_time": "2026-11-16T15:52:00Z",
+ "event_type": "finding.created",
+ "evidence": "On fair per-positive negatives, a 70/30 rank blend of disease degree and the IDF-SVD ensemble reaches macro AUPRC 0.7747 / micro 0.7732",
+ "external_references": [],
+ "id": "0a692e29",
+ "metric": "0.7747 / 0.7732; degree 0.7354 / 0.7087; SVD 0.5434 / 0.6088",
+ "observation": "On fair per-positive negatives a 70/30 rank blend of disease degree and the IDF-SVD ensemble reached 0.7747 macro/0.7732 micro, above degree alone at 0.7354/0.7087 and the SVD alone at 0.5434/0.6088. F-0039 records the degree-aware blend as the fair-protocol candidate.",
+ "references": [],
+ "subject": "F-46",
+ "title": "Degree plus SVD blend wins the fair suite"
+}

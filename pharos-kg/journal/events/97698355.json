@@ -1,0 +1,13 @@
+{
+ "code": "F-98",
+ "created_time": "2026-11-17T22:39:49Z",
+ "event_type": "finding.created",
+ "evidence": "Labels are complete for every layer \u2014 a real usability property.",
+ "external_references": [],
+ "id": "97698355",
+ "metric": "biological_process 3,035/3,035; disease 2,489/2,489; gene 635/635; ligand 3,294/3,294; protein 635/635; phenotype 10,356/10,356; pathway 35,589/35,589; tissue 1,557/1,557",
+ "observation": "All five original node types are fully labelled: 3,035/3,035 biological_process, 2,489/2,489 disease, 635/635 gene, 3,294/3,294 ligand and 635/635 protein. The new layers are likewise complete: phenotype 10,356/10,356, pathway 35,589/35,589, tissue 1,557/1,557 and ligand 59,643/59,663.",
+ "references": [],
+ "subject": "F-98",
+ "title": "Every node in the graph carries a human label"
+}

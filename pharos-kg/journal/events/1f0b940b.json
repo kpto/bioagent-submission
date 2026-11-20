@@ -1,0 +1,33 @@
+{
+ "code": "E-20",
+ "created_time": "2026-11-16T08:03:37Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/cold_start.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/cold_start_degree_matched.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/combined.json",
+   "type": "report"
+  }
+ ],
+ "id": "1f0b940b",
+ "method": "GATv2 attention encoder with a dot-product score",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-20",
+ "title": "GATv2"
+}

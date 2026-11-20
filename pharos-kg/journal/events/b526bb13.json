@@ -1,0 +1,13 @@
+{
+ "code": "F-89",
+ "created_time": "2026-11-17T20:44:46Z",
+ "event_type": "finding.created",
+ "evidence": "Zero overlap is the real finding: the new edges use bare accessions (`P00533`) where the graph key is `PHAROS:P00533`.",
+ "external_references": [],
+ "id": "b526bb13",
+ "metric": "0 shared pairs before the fix; 15,430 new vs 11,384 old; 11,373 reproduced after the prefix fix",
+ "observation": "The first diff showed 15,430 new associated_with edges and 11,384 old ones with zero shared pairs. The new build keys were bare accessions (P00533) while the graph key is PHAROS:P00533; the prefix was moved into the binding and the comparison then reconciled. Endpoints resolved and 11,373 of 11,384 old pairs were reproduced on the next pass.",
+ "references": [],
+ "subject": "F-89",
+ "title": "New disease edges used bare accessions, so zero pairs matched the graph"
+}

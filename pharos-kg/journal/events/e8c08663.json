@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "d5a4078f"
+ ],
+ "code": "B-22",
+ "created_time": "2026-11-18T03:49:51Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "Adds asset hpo (four materialised tables: hp_term 19,894, disease_phenotype 286,651, gene_phenotype 333,983, mondo_xref 20,670) with derived disease_phenotype_annotation, disease_phenotype_graph and phenotype_term_used, a phenotype node and a has_phenotype edge. The built graph is 75,079 records with 4,487 phenotype nodes and 19,133 has_phenotype edges; the evidence sidecar covers 75,079/75,079 with zero missing, and audit, pruning and QA pass.",
+  "message": 51311,
+  "numbers": "hp_term 19,894; disease_phenotype 286,651; gene_phenotype 333,983; mondo_xref 20,670; phenotype nodes 4,487; has_phenotype 19,133; graph 75,079 records; evidence 75,079/75,079, missing 0",
+  "status": "F-0122; committed 0c246d4"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "e8c08663",
+ "references": [],
+ "subject": "B-22",
+ "title": "HPO disease phenotypes declared into the built graph"
+}

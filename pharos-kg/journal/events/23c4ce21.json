@@ -1,0 +1,55 @@
+{
+ "code": "EV-238",
+ "created_time": "2026-11-16T16:26:49Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-9",
+    "graph": "enriched authored graph",
+    "method": "disease degree baseline",
+    "protocol": "real (degree-matched guarded; 5,220 pairs)"
+   },
+   "name": "experiments/prediction/svd_permutation.json",
+   "type": "report"
+  }
+ ],
+ "id": "23c4ce21",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "a64f0adf"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "a989a61d"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); permutation control; 3,666 evaluation-negative overlaps removed; F-51 restates the same numbers; later_findings: F-51",
+  "config": "control score",
+  "design": "E-9",
+  "findings": [
+   "F-47"
+  ],
+  "graph": "enriched authored graph",
+  "method": "disease degree baseline",
+  "metric_text": "macro AUPRC 0.271237; micro AUPRC 0.24820282286267042; macro AUROC 0.552359; micro AUROC 0.5561724536234011; macro MRR 0.351147; micro MRR 0.344649; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.271237,
+   "macro_auroc": 0.552359,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.351147,
+   "micro_auprc": 0.24820282286267042,
+   "micro_auroc": 0.5561724536234011,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.344649
+  },
+  "protocol": "real (degree-matched guarded; 5,220 pairs)",
+  "report": "experiments/prediction/svd_permutation.json"
+ },
+ "subject": "B-10",
+ "title": "disease degree baseline \u00b7 the leakage checks"
+}

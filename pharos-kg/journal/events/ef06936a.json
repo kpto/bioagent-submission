@@ -1,0 +1,13 @@
+{
+ "code": "F-74",
+ "created_time": "2026-11-17T10:50:54Z",
+ "event_type": "finding.created",
+ "evidence": "The ablation is decisive: disease phenotype drives most of the gain, protein phenotype alone is small, and subclass is marginal.",
+ "external_references": [],
+ "id": "ef06936a",
+ "metric": "degree-matched core 0.2508 / 0.2679; +disease 0.2568 / 0.2718; +protein 0.2518 / 0.2705; +both 0.2600 / 0.2761; compact 0.2639 / 0.2773; fair core 0.7098 / 0.6919 to compact 0.7233 / 0.7053",
+ "observation": "Under the leakage-controlled RGCN, disease phenotype alone gave most of the compact profile's gain, protein phenotype alone was small but supplies the target to phenotype to disease multihop, and adding both plus subclass gave the best score. The fair protocol showed the same ordering with a smaller spread.",
+ "references": [],
+ "subject": "F-74",
+ "title": "Component ablation: disease phenotype carries most of the compact gain"
+}

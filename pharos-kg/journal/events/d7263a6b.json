@@ -1,0 +1,87 @@
+{
+ "code": "EV-143",
+ "created_time": "2026-11-16T08:41:30Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-5",
+    "graph": "enriched authored graph",
+    "method": "disease degree baseline",
+    "protocol": "hard same-disease/same-target (13,357 pairs; 17.3% base)"
+   },
+   "name": "experiments/prediction/hard_degree_baseline.json",
+   "type": "report"
+  }
+ ],
+ "id": "d7263a6b",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "d9487197"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "cab873f5"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); hard protocol degree control; degree counters use training positives only",
+  "config": "degree counters from training positives only",
+  "design": "E-5",
+  "findings": [
+   "F-38"
+  ],
+  "graph": "enriched authored graph",
+  "method": "disease degree baseline",
+  "metric_text": "macro AUPRC 0.233304; micro AUPRC 0.25256060396467905; macro AUROC 0.604238; micro AUROC 0.6372643953067568; macro MRR 0.223108; micro MRR 0.230704; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.238511, 0.266782], \"auroc\": [0.622738, 0.647951], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.20643, 0.2822], \"macro_auroc\": [0.554841, 0.649681], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.218191, 0.22831], \"mrr\": [0.22936, 0.232051]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.238511,
+    0.266782
+   ],
+   "ci95_auroc": [
+    0.622738,
+    0.647951
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.20643,
+    0.2822
+   ],
+   "ci95_macro_auroc": [
+    0.554841,
+    0.649681
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.218191,
+    0.22831
+   ],
+   "ci95_mrr": [
+    0.22936,
+    0.232051
+   ],
+   "macro_auprc": 0.233304,
+   "macro_auroc": 0.604238,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.223108,
+   "micro_auprc": 0.25256060396467905,
+   "micro_auroc": 0.6372643953067568,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.230704
+  },
+  "protocol": "hard same-disease/same-target (13,357 pairs; 17.3% base)",
+  "report": "experiments/prediction/hard_degree_baseline.json"
+ },
+ "subject": "B-10",
+ "title": "disease degree baseline \u00b7 hard negatives"
+}

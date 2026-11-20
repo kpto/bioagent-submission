@@ -1,0 +1,13 @@
+{
+ "code": "F-36",
+ "created_time": "2026-11-16T08:35:58Z",
+ "event_type": "finding.created",
+ "evidence": "Target cold-start with 120 held-out targets and per-positive negatives (13,045 pairs, 17.14% positive)",
+ "external_references": [],
+ "id": "5d2bf6c5",
+ "metric": "120 held-out targets; 13045 pairs; 17.14% positive; hist 0.500586 / 0.488776; sage 0.243786 / 0.220993; gatv2 0.094595 / 0.091132",
+ "observation": "Holding out 120 targets (20% per TDL) and all their target-disease edges with per-positive negatives gives 13,045 pairs at a 17.14% positive rate. Histogram base features scored 0.500586/0.488776, GraphSAGE 0.243786/0.220993, GATv2 0.094595/0.091132 and GNN+histogram 0.118811/0.123371; F-0029 records the feature model as the cold-start leader.",
+ "references": [],
+ "subject": "F-36",
+ "title": "Target cold start keeps the feature model on top"
+}

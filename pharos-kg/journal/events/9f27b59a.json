@@ -1,0 +1,13 @@
+{
+ "code": "F-11",
+ "created_time": "2026-11-11T14:54:16Z",
+ "event_type": "finding.created",
+ "evidence": "It scores the agent/system that produced it, against four weighted criteria, plus the track\u2019s held-out link-prediction comparison.",
+ "external_references": [],
+ "id": "9f27b59a",
+ "metric": "40% usability; 30% accuracy/pruning; 20% explainability; 10% standards",
+ "observation": "Reading the brief and Q&A, the assistant reported that the competition scores the agent/system that produced the graph, against usability 40%, accuracy and pruning 30%, explainability 20% and standards 10%, with usability, explainability and standards judged qualitatively. The document gives weights but no precise scoring formula. The Structured Data Integration & Link Prediction track adds an ML comparison (GNN, GCN or embeddings) against the same ML on the shared Pharos baseline, with kinase scope, UniProt IDs for the gold set, and KGX TSV plus a PyTorch Geometric export accepted.",
+ "references": [],
+ "subject": "F-11",
+ "title": "Competition rubric: four weights plus a held-out link-prediction track"
+}

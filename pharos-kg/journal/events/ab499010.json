@@ -1,0 +1,26 @@
+{
+ "based_revision": "d4b8b898",
+ "change": null,
+ "code": "P-27",
+ "created_time": "2026-11-18T06:13:17Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "ab499010",
+ "rationale": "Recommended not merging histories: base on relation-extension, then port ontology hierarchy, the Open Targets evidence class, and HPO disease+gene phenotypes as small gated commits, dropping this branch's duplicate migration. Tests and validate were verified on the branch; build and eval were left to its owning session.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "e4565a13"
+  }
+ ],
+ "subject": "P-27",
+ "title": "Base new designs on relation-extension and port three layers as separate commits"
+}

@@ -1,0 +1,12 @@
+{
+ "code": "PW-5",
+ "created_time": "2026-11-17T03:53:01Z",
+ "event_type": "proposal.withdrawal",
+ "external_references": [],
+ "id": "9084f1d8",
+ "reason": "rejected for the pre-submission window. The recommendation was to skip the full path and semantics MVP before submission: the deadline binds, the likely gain is concentrated in cold-start and hard negatives, and usability plus explainability carry more weight. A 90-minute kill-fast probe on about 200 positives and 200 degree-matched negatives was offered as the only defensible alternative, with a rule that a weak result ends it.",
+ "references": [],
+ "subject": "P-18",
+ "title": "Withdraw P-18",
+ "withdrawn_proposal": "81eed81d"
+}

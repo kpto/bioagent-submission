@@ -1,0 +1,87 @@
+{
+ "code": "EV-129",
+ "created_time": "2026-11-16T08:41:30Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "target degree baseline",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/degree_matched_negatives.json",
+   "type": "report"
+  }
+ ],
+ "id": "de134877",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "77bfb321"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); degree-matched protocol; nearest-degree fallback for the rest; graph signal above degree about 0.02 macro; later proposal P-11 (per-positive sampler fix) postdates this run",
+  "config": "histogram base/HPO+STRING; degree controls; 44.26% exact-degree negatives",
+  "design": "E-4",
+  "findings": [
+   "F-39"
+  ],
+  "graph": "enriched authored graph",
+  "method": "target degree baseline",
+  "metric_text": "macro AUPRC 0.18907; micro AUPRC 0.186376474170148; macro AUROC 0.508156; micro AUROC 0.499873636036222; macro MRR 0.166667; micro MRR 0.166667; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.179255, 0.19506], \"auroc\": [0.486469, 0.512479], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.162276, 0.227951], \"macro_auroc\": [0.465249, 0.551667], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.166667, 0.166667], \"mrr\": [0.166667, 0.166667]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.179255,
+    0.19506
+   ],
+   "ci95_auroc": [
+    0.486469,
+    0.512479
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.162276,
+    0.227951
+   ],
+   "ci95_macro_auroc": [
+    0.465249,
+    0.551667
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.166667,
+    0.166667
+   ],
+   "ci95_mrr": [
+    0.166667,
+    0.166667
+   ],
+   "macro_auprc": 0.18907,
+   "macro_auroc": 0.508156,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.166667,
+   "micro_auprc": 0.186376474170148,
+   "micro_auroc": 0.499873636036222,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.166667
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/degree_matched_negatives.json"
+ },
+ "subject": "B-10",
+ "title": "target degree baseline \u00b7 degree-matched negatives"
+}

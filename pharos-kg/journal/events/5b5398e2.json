@@ -1,0 +1,13 @@
+{
+ "code": "F-75",
+ "created_time": "2026-11-17T10:51:13Z",
+ "event_type": "finding.created",
+ "evidence": "Text does not rescue cold diseases either: text-only 0.2687 / 0.2858, versus raw HPO 0.3097 / 0.2613 and HPO-borrowed SVD 0.4379 / 0.3227.",
+ "external_references": [],
+ "id": "5b5398e2",
+ "metric": "base 0.1711 / 0.1715; raw HPO 0.3097 / 0.2613; HPO-borrowed SVD 0.4379 / 0.3227; ontology+SVD 0.3871 / 0.2873; text 0.2687 / 0.2858",
+ "observation": "The cold-disease split was rerun on the new extract with base, raw HPO, HPO-borrowed SVD and text arms. Borrowed factors stayed the strongest cold-disease adapter and text features were weaker than raw ontology, confirming the earlier ordering on current data.",
+ "references": [],
+ "subject": "F-75",
+ "title": "Cold-disease refresh: HPO-borrowed SVD still beats raw ontology and text"
+}

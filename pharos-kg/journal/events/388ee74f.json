@@ -1,0 +1,53 @@
+{
+ "code": "EV-328",
+ "created_time": "2026-11-17T00:14:27Z",
+ "evaluated_revision": "a34ff829",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "phenotype branch graph (2026-11-16)",
+    "method": "IDF-SVD + typed paths rank blend 0.3",
+    "protocol": "degree-matched (12,230 pairs)"
+   },
+   "name": "experiments/prediction/metapath_pilot.json",
+   "type": "report"
+  }
+ ],
+ "id": "388ee74f",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "5347bab1"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); phenotype branch graph, not the master graph; no earlier finding; later_findings: F-72",
+  "config": "IDF-SVD k=32 + PPI2/shared-GO/shared-phenotype paths; seed 1729",
+  "design": "E-4",
+  "findings": [],
+  "graph": "phenotype branch graph (2026-11-16)",
+  "method": "IDF-SVD + typed paths rank blend 0.3",
+  "metric_text": "macro AUPRC 0.347142; micro AUPRC 0.37637362587465106; macro AUROC 0.650438; micro AUROC 0.704773685823493; macro MRR 0.587339; micro MRR 0.62178; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.347142,
+   "macro_auroc": 0.650438,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.587339,
+   "micro_auprc": 0.37637362587465106,
+   "micro_auroc": 0.704773685823493,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.62178
+  },
+  "protocol": "degree-matched (12,230 pairs)",
+  "report": "experiments/prediction/metapath_pilot.json"
+ },
+ "subject": "B-14",
+ "title": "IDF-SVD + typed paths rank blend 0.3 \u00b7 degree-matched negatives"
+}

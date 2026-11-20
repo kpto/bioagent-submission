@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "4de13849"
+ ],
+ "code": "B-19",
+ "created_time": "2026-11-17T20:47:14Z",
+ "description": {
+  "based_proposals_basis": "two shared topic words",
+  "detail": "Target-disease was rebuilt from the release's disease rows joined to the kinase slice (target.fam='Kinase', 635 targets) through t2tc and protein, with slice, identity and aggregation declared. The graph grew from 9,519 nodes / 37,325 edges to 10,088 / 41,371, and associated_with from 11,384 to 15,430. Of the old pairs 11,378 are reproduced exactly, 4,052 are new and 6 are lost: MONDO:0011895 and MONDO:0010408 rows carrying neither mondoid nor a namespaced did in the raw table.",
+  "message": 44077,
+  "numbers": "nodes 10,088 vs 9,519; edges 41,371 vs 37,325; associated_with 15,430 vs 11,384; shared 11,378; new 4,052; lost 6; max evidence_count 11 vs 5; dangling 0; revision fbaa2db0fd2d1ab7",
+  "status": "accepted (F-0094); committed 9557b14"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "b7a9055e",
+ "references": [],
+ "subject": "B-19",
+ "title": "target_disease migrated to the pinned Pharos 3.19 dump (F-0094)"
+}

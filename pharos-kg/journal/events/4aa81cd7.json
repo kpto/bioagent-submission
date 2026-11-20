@@ -1,0 +1,18 @@
+{
+ "code": "EV-17",
+ "created_time": "2026-11-18T00:16:57Z",
+ "evaluated_revision": "2066f869",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "4aa81cd7",
+ "references": [],
+ "result": {
+  "detail": "Same fixed held-out set (11,377 shared pairs, 2,275 withheld), two seeds, 100 epochs, dimension 64: RGCN scores 0.3091/0.2609 degree-matched and 0.6922/0.6953 fair, TransE 0.2446/0.2132 and 0.6185/0.5834, RotatE 0.2089/0.2101 and 0.6220/0.6546. On the balanced graph TransE is 0.2234/0.2249 degree-matched, below the API graph's TransE and far below the RGCN's 0.3381/0.2744.",
+  "message": 47374,
+  "numbers": "RGCN 0.3091/0.2609 and 0.6922/0.6953; TransE 0.2446/0.2132 and 0.6185/0.5834; RotatE 0.2089/0.2101 and 0.6220/0.6546; balanced TransE 0.2234/0.2249; balanced RGCN 0.3381/0.2744",
+  "status": "F-0106 accepted; claim must name the model family"
+ },
+ "subject": "EV-17",
+ "title": "Graph embeddings are weaker than RGCN on identical graphs"
+}

@@ -1,0 +1,22 @@
+{
+ "code": "F-134",
+ "created_time": "2026-11-19T01:52:46Z",
+ "event_type": "finding.created",
+ "evidence": "Build on master: plan has publish_annotated_records 21, annotate_rule_matches 3, write_annotated_graph 1, project_kept_records 21, write_facts_graph 1, reconcile_outputs 1. graph.annotated.jsonl 74,747 nodes / 239,939 edges with verdict, annotation_rule, annotation_confidence, annotation_reason; graph.jsonl 28,359 / 150,856 with none of the four on any record. Framework revert 9a651e8; validate, build, pytest 62, pyright 0, eval --quick all pass.",
+ "external_references": [
+  {
+   "detail": {
+    "path": "notebook/records/findings/F-0083.json",
+    "state": "accepted"
+   },
+   "name": "F-0083.json",
+   "type": "notebook"
+  }
+ ],
+ "id": "234a09fd",
+ "metric": "annotated 239,939 edges / 74,747 nodes; shipped 150,856 / 28,359; four annotation fields present on every annotated record and absent from every shipped record",
+ "observation": "The graph files are written by a project output module, not the framework file target. write_annotated_graph and write_facts_graph are two instances of one component: they read the declared graph-record artifacts, stamp kind and component the way the framework writer does, and differ in one configuration bit, whether the four annotation fields are written. project_kept_records now only filters verdict = keep and keeps the schema, so every downstream consumer reads one schema; the omission of the annotation from graph.jsonl happens at the file boundary. The framework patches that taught Neo4j and the meta-graph to tolerate a narrowed view are reverted.",
+ "references": [],
+ "subject": "F-134",
+ "title": "A presentation choice belongs to the output module"
+}

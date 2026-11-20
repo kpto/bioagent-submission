@@ -1,0 +1,13 @@
+{
+ "code": "F-90",
+ "created_time": "2026-11-17T20:45:15Z",
+ "event_type": "finding.created",
+ "evidence": "Found a real bug in my key rule: the old slug stripped leading/trailing hyphens (`...-gvhd`), my SQL didn't (`...-gvhd-`).",
+ "external_references": [],
+ "id": "623cc372",
+ "metric": "lost 11 to 6; new-only 4,057 to 4,052; 130 new-only NAME: keys; 5 recovered",
+ "observation": "The old extractor's slug stripped leading and trailing hyphens while the new SQL did not, so every parenthesised disease name got a trailing hyphen. Fixing both key expressions recovered 5 of the 11 initial differences, taking lost pairs from 11 to 6 and new-only pairs from 4,057 to 4,052.",
+ "references": [],
+ "subject": "F-90",
+ "title": "Key rule stripped hyphens wrongly, hiding five recoverable pairs"
+}

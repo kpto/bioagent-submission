@@ -1,0 +1,13 @@
+{
+ "code": "F-58",
+ "created_time": "2026-11-16T20:47:22Z",
+ "event_type": "finding.created",
+ "evidence": "The viewer renders now and has no horizontal overflow at 375/768/1440. But it shows only 5 nodes / 5 edges",
+ "external_references": [],
+ "id": "fb1f2eb6",
+ "metric": "5 nodes / 5 edges; 5 relations; 0 with semantics; 10 missing; snapshot 144 KB (146,713 bytes) vs 455,238 bytes gzipped API response; 9,512 nodes / 37,697 edges in the graph",
+ "observation": "The viewer was serving 500s because the .next build output was missing; after a rebuild it loaded at 375/768/1440 with no horizontal overflow, but the canvas showed 5 nodes and 5 edges with 10 missing semantics. That is the build workflow/design snapshot, not the instance graph, leaving the 40%-weighted usability claim unproven.",
+ "references": [],
+ "subject": "F-58",
+ "title": "Viewer renders only the five-kind design, not the 9,512-instance graph"
+}

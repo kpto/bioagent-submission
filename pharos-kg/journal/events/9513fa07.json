@@ -1,0 +1,18 @@
+{
+ "code": "EV-12",
+ "created_time": "2026-11-16T06:58:07Z",
+ "evaluated_revision": "32bce02c",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "9513fa07",
+ "references": [],
+ "result": {
+  "detail": "The full run over revision 424beaec2d79057d passed all five suites (audit, explainability, link_prediction, pruning, qa) with no failures or skips; the counterfactual check ran at graph level. QA scored 0.909091 over 45 answered questions with 4 partial and 1 incorrect, and the report pins graph sha256 2e8eff9b, explanations sha256 6ca2ead and git commit aec1e7c.",
+  "message": 25951,
+  "numbers": "passed 5; failed 0; skipped 0; qa 0.909091; 45 answered; 4 partial; 1 incorrect",
+  "status": "passed"
+ },
+ "subject": "EV-12",
+ "title": "Full evaluation passes 5/5 at revision 424beaec2d79057d"
+}

@@ -1,0 +1,18 @@
+{
+ "based_revision": "b7a9055e",
+ "change": null,
+ "code": "P-24",
+ "created_time": "2026-11-17T22:07:07Z",
+ "event_type": "proposal.created",
+ "external_references": [],
+ "id": "1f72e27c",
+ "rationale": "Conservative keeps the current five relations plus protein phenotype (about 10.5k nodes / 46k edges), balanced adds pathway and strong expression with PPI thresholded (about 14k / 90k), and complete keeps everything raw with evidence classes (about 70k / 161k) at the risk of a hairball with 3.3k-degree hubs. The options differ in reachable context and asserted-row coverage, not in prediction (F-0097); balanced was adopted in CD-0013 with PPI split by evidence class, expression only at High/Medium, and pruning limited to the 634 self-loops.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "0029c272"
+  }
+ ],
+ "subject": "P-24",
+ "title": "Three design options; balanced adopted"
+}

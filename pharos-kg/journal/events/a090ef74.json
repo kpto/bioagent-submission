@@ -1,0 +1,53 @@
+{
+ "code": "EV-334",
+ "created_time": "2026-11-17T00:14:27Z",
+ "evaluated_revision": "a34ff829",
+ "evaluation": "896182b5",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "phenotype branch graph (2026-11-16)",
+    "method": "typed metapath features only",
+    "protocol": "degree-matched (12,230 pairs)"
+   },
+   "name": "experiments/prediction/metapath_pilot.json",
+   "type": "report"
+  }
+ ],
+ "id": "a090ef74",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "5347bab1"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); phenotype branch graph, not the master graph; no earlier finding; later_findings: F-72",
+  "config": "IDF-SVD k=32 + PPI2/shared-GO/shared-phenotype paths; seed 1729",
+  "design": "E-4",
+  "findings": [],
+  "graph": "phenotype branch graph (2026-11-16)",
+  "method": "typed metapath features only",
+  "metric_text": "macro AUPRC 0.320879; micro AUPRC 0.30712668233061463; macro AUROC 0.600807; micro AUROC 0.6178861381150497; macro MRR 0.516419; micro MRR 0.528284; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.320879,
+   "macro_auroc": 0.600807,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.516419,
+   "micro_auprc": 0.30712668233061463,
+   "micro_auroc": 0.6178861381150497,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.528284
+  },
+  "protocol": "degree-matched (12,230 pairs)",
+  "report": "experiments/prediction/metapath_pilot.json"
+ },
+ "subject": "B-14",
+ "title": "typed metapath features only \u00b7 degree-matched negatives"
+}

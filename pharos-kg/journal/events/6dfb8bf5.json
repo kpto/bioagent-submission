@@ -1,0 +1,87 @@
+{
+ "code": "EV-133",
+ "created_time": "2026-11-16T08:41:30Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "2650fa0c",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-3",
+    "graph": "enriched authored graph",
+    "method": "target degree baseline",
+    "protocol": "fair per-positive (13,807 pairs; 16.76% base)"
+   },
+   "name": "experiments/prediction/fair_degree_baseline.json",
+   "type": "report"
+  }
+ ],
+ "id": "6dfb8bf5",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "cb8bd6d8"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "7a6ba53a"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); fair per-positive degree control; disease degree beats every learned model; later proposal P-11 (per-positive sampler fix) postdates this run",
+  "config": "degree counters from training positives only",
+  "design": "E-3",
+  "findings": [
+   "F-37"
+  ],
+  "graph": "enriched authored graph",
+  "method": "target degree baseline",
+  "metric_text": "macro AUPRC 0.16753; micro AUPRC 0.16782643329527505; macro AUROC 0.500347; micro AUROC 0.5008710536743233; macro MRR 0.166667; micro MRR 0.166667; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.161008, 0.177066], \"auroc\": [0.487996, 0.512513], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.145309, 0.201683], \"macro_auroc\": [0.447158, 0.537716], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.166667, 0.166667], \"mrr\": [0.166667, 0.166667]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.161008,
+    0.177066
+   ],
+   "ci95_auroc": [
+    0.487996,
+    0.512513
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.145309,
+    0.201683
+   ],
+   "ci95_macro_auroc": [
+    0.447158,
+    0.537716
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.166667,
+    0.166667
+   ],
+   "ci95_mrr": [
+    0.166667,
+    0.166667
+   ],
+   "macro_auprc": 0.16753,
+   "macro_auroc": 0.500347,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.166667,
+   "micro_auprc": 0.16782643329527505,
+   "micro_auroc": 0.5008710536743233,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.166667
+  },
+  "protocol": "fair per-positive (13,807 pairs; 16.76% base)",
+  "report": "experiments/prediction/fair_degree_baseline.json"
+ },
+ "subject": "B-10",
+ "title": "target degree baseline \u00b7 fair negatives"
+}

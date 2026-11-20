@@ -1,0 +1,13 @@
+{
+ "code": "F-56",
+ "created_time": "2026-11-16T20:33:56Z",
+ "event_type": "finding.created",
+ "evidence": "The ten-seed graph ablation removes the apparent five-seed protein-phenotype gain: core edges 0.2251 macro / 0.2103 micro; core + protein_has_phenotype 0.2224 / 0.2091",
+ "external_references": [],
+ "id": "5441af6f",
+ "metric": "core 0.2251 / 0.2103; core+protein phenotype 0.2224 / 0.2091; core+disease phenotype 0.1866 / 0.1894; full phenotype+subclass 0.1942 / 0.1895; core edges 75,394; full edges 180,144",
+ "observation": "A ten-seed homogeneous GraphSAGE on the degree-matched split was trained on graph variants under the same split and negatives. Core edges were best; adding protein phenotype edges was slightly worse, disease phenotype much worse, and the full phenotype plus subclass worst, so the phenotype layer looked like noise for models that cannot read relation types.",
+ "references": [],
+ "subject": "F-56",
+ "title": "Homogeneous GraphSAGE: adding the full phenotype layer dilutes the message graph"
+}

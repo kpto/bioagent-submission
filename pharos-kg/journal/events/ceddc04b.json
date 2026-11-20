@@ -1,0 +1,19 @@
+{
+ "based_revision": "7ebc8bf1",
+ "change": null,
+ "code": "P-32",
+ "created_time": "2026-11-19T22:53:29.531372Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "kbs proposal create",
+   "type": "cli"
+  }
+ ],
+ "id": "ceddc04b",
+ "rationale": "Remove Neo4jPlanner: the import bundle has no reader in this project. Keep MetaGraphPlanner and state its reader in README and DESIGN: a maintainer or agent reviewing the component and step catalogue at build/meta_graph.html. The console and the viewer read the plan, not the meta-graph.",
+ "references": [],
+ "subject": "pharos_kg/manifest.py",
+ "title": "Drop the unread Neo4j target; name the meta-graph reader"
+}

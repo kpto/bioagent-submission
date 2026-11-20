@@ -1,0 +1,33 @@
+{
+ "code": "E-16",
+ "created_time": "2026-11-16T15:52:31Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "eval/report.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/edge_selection.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/ensemble_svd.json",
+   "type": "report"
+  }
+ ],
+ "id": "5b6f2bcb",
+ "method": "IDF-weighted target-disease matrix SVD, rank-selected and optionally neighbour-smoothed",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-16",
+ "title": "IDF-weighted SVD"
+}

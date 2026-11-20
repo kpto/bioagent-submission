@@ -1,0 +1,13 @@
+{
+ "code": "F-16",
+ "created_time": "2026-11-16T06:19:34Z",
+ "event_type": "finding.created",
+ "evidence": "\"claims\": [], \"description\": null, \"frames\": [], \"labels\": [], \"limitations\": [], \"purpose\": null",
+ "external_references": [],
+ "id": "b4d90f06",
+ "metric": "explanation subjects 313 (previously 323); property:protein.tdl purpose null, claims [], limitations []",
+ "observation": "The rebuilt explanation document held 313 subjects instead of 323, and node:protein, edge:associated_with and property:protein.tdl all came out with an empty meaning block: no claims, no limitations and a null purpose. The extractor was reading a semantics key that the current blueprint no longer emits, and the tdl property carried claims only. The document kept its other members, so the defect was confined to meaning resolution.",
+ "references": [],
+ "subject": "F-16",
+ "title": "Declarations lost their meaning in the explanation document"
+}

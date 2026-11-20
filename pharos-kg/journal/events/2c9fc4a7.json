@@ -1,0 +1,53 @@
+{
+ "code": "EV-275",
+ "created_time": "2026-11-16T16:37:15Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-3",
+    "graph": "enriched authored graph",
+    "method": "base_hist",
+    "protocol": "fair per-positive (13,807 pairs; 16.76% base)"
+   },
+   "name": "experiments/prediction/svd_robustness.json",
+   "type": "report"
+  }
+ ],
+ "id": "2c9fc4a7",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "cb8bd6d8"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); guarded held-out sets; ensemble beats degree on degree-matched and hard, loses on fair",
+  "config": "control score; degree counters from training positives",
+  "design": "E-3",
+  "findings": [
+   "F-50",
+   "F-51",
+   "F-52"
+  ],
+  "graph": "enriched authored graph",
+  "method": "base_hist",
+  "metric_text": "macro AUPRC 0.634647; micro AUPRC 0.6120476902677721; macro AUROC 0.83618; micro AUROC 0.8227420907288575; macro MRR 0.82353; micro MRR 0.812914; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.634647,
+   "macro_auroc": 0.83618,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.82353,
+   "micro_auprc": 0.6120476902677721,
+   "micro_auroc": 0.8227420907288575,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.812914
+  },
+  "protocol": "fair per-positive (13,807 pairs; 16.76% base)",
+  "report": "experiments/prediction/svd_robustness.json"
+ },
+ "subject": "B-10",
+ "title": "base_hist \u00b7 fair negatives"
+}

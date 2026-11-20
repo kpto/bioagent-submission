@@ -1,0 +1,31 @@
+{
+ "by_type": {
+  "anatomical_entity": 1213,
+  "associated_with": 15430,
+  "binds": 34526,
+  "biological_process": 3833,
+  "disease": 2489,
+  "disease_has_phenotype": 19133,
+  "expressed_in": 11313,
+  "gene": 640,
+  "has_hpo_phenotype": 14920,
+  "has_phenotype": 4904,
+  "hpo_term": 4487,
+  "interacts_with": 3357,
+  "ligand": 12441,
+  "participates_in": 16618,
+  "participates_in_pathway": 26597,
+  "pathway": 2214,
+  "phenotype": 407,
+  "process_subclass_of": 2576,
+  "protein": 635,
+  "subclass_of": 842,
+  "translates_to": 640
+ },
+ "entries": 179215,
+ "limit": 20,
+ "missing": 0,
+ "missing_types": [],
+ "output": "evidence.jsonl",
+ "source": "the projected facts records"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-51",
+ "created_time": "2026-11-16T16:37:15Z",
+ "event_type": "finding.created",
+ "evidence": "shuffling the target side of training edges drops the real score from **0.4389 / 0.4955** to **0.2802 / 0.2525**",
+ "external_references": [],
+ "id": "497134e5",
+ "metric": "879 queries / 5,220 pairs; SVD 0.4218 / 0.5222 vs degree 0.1675 / 0.1680; real 0.4389 / 0.4955 vs permuted 0.2802 / 0.2525",
+ "observation": "On the subset where every negative has exactly the positive disease's training degree, the SVD stays far above the degree prior, which is at chance. A degree-preserving permutation of the training target side collapses the ensemble to near base/degree, so the gain is association pattern rather than topology or residual degree.",
+ "references": [],
+ "subject": "F-51",
+ "title": "Exact-degree subset and target permutation confirm the SVD is not degree"
+}

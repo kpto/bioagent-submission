@@ -1,0 +1,13 @@
+{
+ "code": "F-71",
+ "created_time": "2026-11-17T10:11:41Z",
+ "event_type": "finding.created",
+ "evidence": "The running console does **not** expose a subject input",
+ "external_references": [],
+ "id": "7be20fca",
+ "metric": "PHAROS:P00533 to EGFR with 195 relations; 323 sampled explanation subjects; one iframe input ('Filter the design'); no overflow at 1440",
+ "observation": "The /api/graph-subject endpoint returned the EGFR node with its relations, but the running console rendered the subject as read-only text and the embedded viewer iframe offered only a design filter. The only caller of openSubject was the viewer's postMessage handler, so the instance/subject view was unreachable by a user.",
+ "references": [],
+ "subject": "F-71",
+ "title": "Console subject backend resolves EGFR but the UI exposes no input"
+}

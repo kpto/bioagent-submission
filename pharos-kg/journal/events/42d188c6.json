@@ -1,0 +1,87 @@
+{
+ "code": "EV-184",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "histogram + full-graph SVD features",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/graph_svd_features.json",
+   "type": "report"
+  }
+ ],
+ "id": "42d188c6",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "20f1de3b"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); full-graph SVD negative result; below bipartite IDF-SVD",
+  "config": "symmetric degree normalisation; 32 components",
+  "design": "E-4",
+  "findings": [
+   "F-45"
+  ],
+  "graph": "enriched authored graph",
+  "method": "histogram + full-graph SVD features",
+  "metric_text": "macro AUPRC 0.293958; micro AUPRC 0.29198009509009426; macro AUROC 0.600213; micro AUROC 0.6169221416684942; macro MRR 0.548109; micro MRR 0.552211; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.277414, 0.307315], \"auroc\": [0.605155, 0.627547], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.240915, 0.356416], \"macro_auroc\": [0.551076, 0.644479], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.506375, 0.603265], \"mrr\": [0.538683, 0.567139]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.277414,
+    0.307315
+   ],
+   "ci95_auroc": [
+    0.605155,
+    0.627547
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.240915,
+    0.356416
+   ],
+   "ci95_macro_auroc": [
+    0.551076,
+    0.644479
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.506375,
+    0.603265
+   ],
+   "ci95_mrr": [
+    0.538683,
+    0.567139
+   ],
+   "macro_auprc": 0.293958,
+   "macro_auroc": 0.600213,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.548109,
+   "micro_auprc": 0.29198009509009426,
+   "micro_auroc": 0.6169221416684942,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.552211
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/graph_svd_features.json"
+ },
+ "subject": "B-10",
+ "title": "histogram + full-graph SVD features \u00b7 degree-matched negatives"
+}

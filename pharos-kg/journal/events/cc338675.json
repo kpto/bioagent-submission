@@ -1,0 +1,13 @@
+{
+ "code": "F-119",
+ "created_time": "2026-11-18T07:49:29Z",
+ "event_type": "finding.created",
+ "evidence": "**the reference arm itself spans 0.0143 macro across runs**, larger than several \"effects\"",
+ "external_references": [],
+ "id": "cc338675",
+ "metric": "154 results; 10 incomplete; band 0.0143 macro over 17 identical runs; deltas <0.02 unresolved",
+ "observation": "The run estate audit covered 154 completed (graph, model) results across two harnesses plus 10 runs that did not complete, and established that the identical reference graph moves 0.0143 macro across runs, larger than several quoted effects. Any delta inside the band is now marked unresolved and the band became part of the protocol.",
+ "references": [],
+ "subject": "F-119",
+ "title": "The reference arm spans 0.0143 macro across identical runs"
+}

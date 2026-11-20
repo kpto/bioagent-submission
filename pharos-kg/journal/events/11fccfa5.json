@@ -1,0 +1,13 @@
+{
+ "code": "F-5",
+ "created_time": "2026-11-10T20:45:36Z",
+ "event_type": "finding.created",
+ "evidence": "Enriched features do not beat the static arm on held-out target-disease links",
+ "external_references": [],
+ "id": "11fccfa5",
+ "metric": "macro AUROC 0.895 heuristic / 0.877 logistic enriched vs 0.895 static; F-0006",
+ "observation": "Enriched features (ligand activity, PPI, GO) did not beat the static arm on held-out target-disease links, and the logistic model did slightly worse with them while the Adamic-Adar heuristic was unchanged because it sees only target-disease edges. The decision recorded was to stop claiming enrichment lift and treat the suite as a measurement pending an investigation of feature utility.",
+ "references": [],
+ "subject": "F-5",
+ "title": "F-0006: enrichment gives no lift over the static arm"
+}

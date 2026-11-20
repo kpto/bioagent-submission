@@ -1,0 +1,13 @@
+{
+ "code": "F-50",
+ "created_time": "2026-11-16T16:37:15Z",
+ "event_type": "finding.created",
+ "evidence": "The SVD is the first model to beat degree clearly on degree-matched and hard negatives.",
+ "external_references": [],
+ "id": "65ee4f70",
+ "metric": "degree-matched 0.4439 / 0.4994; hard 0.4532 / 0.5230; fair 0.5646 / 0.6471; base 0.2815 / 0.2758 (degree-matched); degree 0.2712 / 0.2482; fair degree 0.7354 / 0.7087; fair degree 70 / SVD 30 0.7747 / 0.7732",
+ "observation": "The training target-disease matrix was factorised with IDF weighting and rank-averaged truncated SVDs at k = 8, 16, 24, 32, 48, 64, 96; components were selected on a 20% slice of the training positives and the test split was left untouched. It beat degree on degree-matched and hard negatives but stayed below degree on fair random negatives, so a 70/30 degree+SVD blend was kept as a separate fair-protocol candidate.",
+ "references": [],
+ "subject": "F-50",
+ "title": "IDF-weighted target-disease SVD is the first honest model to beat degree"
+}

@@ -1,0 +1,21 @@
+{
+ "based_revision": "2346391f",
+ "change": null,
+ "code": "P-21",
+ "created_time": "2026-11-17T20:38:11Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "c3def031",
+ "rationale": "The adaptor now reads through chdb's first-party MySQLDump format with schema taken from the dump's own CREATE TABLE, so no project code touches rows. Row-count agreement is necessary but not sufficient, so a parity tool was written to compare null counts, per-column value hashes and physical type maps across all 17 tables, with latin1/UTF-8, timezone and enum encoding named as the risks that would falsify the claim.",
+ "references": [],
+ "subject": "P-21",
+ "title": "Native dump reading is in place; truthfulness still needs a value-level parity run"
+}

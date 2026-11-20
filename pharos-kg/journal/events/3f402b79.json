@@ -1,0 +1,92 @@
+{
+ "code": "EV-202",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "truncated IDF-SVD score (k=16)",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/svd_idf_16.json",
+   "type": "report"
+  }
+ ],
+ "id": "3f402b79",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "20f1de3b"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "77bfb321"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); degree-matched protocol; IDF-SVD k=16; base/degree rows repeat the shared controls",
+  "config": "IDF weighting; k=16; explained variance 0.17740349423483642",
+  "design": "E-4",
+  "findings": [
+   "F-45",
+   "F-39"
+  ],
+  "graph": "enriched authored graph",
+  "method": "truncated IDF-SVD score (k=16)",
+  "metric_text": "macro AUPRC 0.405173; micro AUPRC 0.44310585737851094; macro AUROC 0.644029; micro AUROC 0.7018060175657024; macro MRR 0.536342; micro MRR 0.580892; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.424668, 0.463784], \"auroc\": [0.688436, 0.714753], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.338438, 0.48098], \"macro_auroc\": [0.589378, 0.706042], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.482875, 0.59875], \"mrr\": [0.569382, 0.593937]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.424668,
+    0.463784
+   ],
+   "ci95_auroc": [
+    0.688436,
+    0.714753
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.338438,
+    0.48098
+   ],
+   "ci95_macro_auroc": [
+    0.589378,
+    0.706042
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.482875,
+    0.59875
+   ],
+   "ci95_mrr": [
+    0.569382,
+    0.593937
+   ],
+   "macro_auprc": 0.405173,
+   "macro_auroc": 0.644029,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.536342,
+   "micro_auprc": 0.44310585737851094,
+   "micro_auroc": 0.7018060175657024,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.580892
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/svd_idf_16.json"
+ },
+ "subject": "B-10",
+ "title": "truncated IDF-SVD score (k=16) \u00b7 degree-matched negatives"
+}

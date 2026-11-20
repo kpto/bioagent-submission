@@ -1,0 +1,13 @@
+{
+ "code": "F-32",
+ "created_time": "2026-11-16T08:16:39Z",
+ "event_type": "finding.created",
+ "evidence": "gatv2 macro 0.996601 micro 0.994458",
+ "external_references": [],
+ "id": "a395690d",
+ "metric": "120 targets; 2236 test positives; 600 unique negatives; 2836 pairs; 0.996601 / 0.994458; 0.996912 / 0.995381",
+ "observation": "The first cold-start run held out 120 targets and all their target-disease edges but evaluated with only 600 unique negatives for 2,236 test positives, giving 2,836 pairs. It reported GATv2 0.996601/0.994458, 60/40 GATv2+GraphSAGE 0.996912/0.995381 and a GNN/histogram mix 0.996714/0.995655; the figure was later withdrawn.",
+ "references": [],
+ "subject": "F-32",
+ "title": "First target cold-start run scored 0.997 on a defective sample"
+}

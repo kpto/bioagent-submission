@@ -1,0 +1,30 @@
+{
+ "based_revision": "4d95ed80",
+ "change": null,
+ "code": "P-19",
+ "created_time": "2026-11-17T10:54:24Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "d3100431",
+ "rationale": "Proposed mapping the 196 reachable diseases to MONDO accessions without changing the existing build key, so the graph gains ontology identity for standards and matching while the identifier used for joins stays stable. It was recorded as proposed, not implemented.",
+ "references": [
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "f4ee2ecb"
+  },
+  {
+   "linkage_name": "rests_on",
+   "linked_event": "01f3dee2"
+  }
+ ],
+ "subject": "P-19",
+ "title": "CD-0008: normalize disease identity through MONDO cross-references"
+}

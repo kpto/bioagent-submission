@@ -1,0 +1,81 @@
+{
+ "code": "EV-290",
+ "created_time": "2026-11-16T19:37:09Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-7",
+    "graph": "enriched authored graph",
+    "method": "histogram gradient boosting (base features)",
+    "protocol": "disease cold start (83 held-out diseases; 4,773 pairs; 17.26% base)"
+   },
+   "name": "experiments/prediction/ontology_cold_disease.json",
+   "type": "report"
+  }
+ ],
+ "id": "fc32c17b",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "84e8c365"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); disease cold start; every candidate disease has training degree zero; P-12 recorded just after commit; later_findings: F-53",
+  "config": "HPO-borrowed SVD k=32; negatives from held-out diseases only",
+  "design": "E-7",
+  "findings": [],
+  "graph": "enriched authored graph",
+  "method": "histogram gradient boosting (base features)",
+  "metric_text": "macro AUPRC 0.170921; micro AUPRC 0.1717650434766836; macro AUROC 0.500364; micro AUROC 0.4981103118154529; macro MRR 0.166667; micro MRR 0.166667; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.159648, 0.189785], \"auroc\": [0.479457, 0.518774], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.145209, 0.234751], \"macro_auroc\": [0.429962, 0.572708], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.166667, 0.166667], \"mrr\": [0.166667, 0.166667]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.159648,
+    0.189785
+   ],
+   "ci95_auroc": [
+    0.479457,
+    0.518774
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.145209,
+    0.234751
+   ],
+   "ci95_macro_auroc": [
+    0.429962,
+    0.572708
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.166667,
+    0.166667
+   ],
+   "ci95_mrr": [
+    0.166667,
+    0.166667
+   ],
+   "macro_auprc": 0.170921,
+   "macro_auroc": 0.500364,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.166667,
+   "micro_auprc": 0.1717650434766836,
+   "micro_auroc": 0.4981103118154529,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.166667
+  },
+  "protocol": "disease cold start (83 held-out diseases; 4,773 pairs; 17.26% base)",
+  "report": "experiments/prediction/ontology_cold_disease.json"
+ },
+ "subject": "B-10",
+ "title": "histogram gradient boosting (base features) \u00b7 disease cold start"
+}

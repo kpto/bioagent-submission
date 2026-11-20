@@ -1,0 +1,92 @@
+{
+ "code": "EV-169",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "histogram base + IDF-SVD rank blend (base_60_svd_all)",
+    "protocol": "degree-matched (12,230 pairs; 18.92% base)"
+   },
+   "name": "experiments/prediction/ensemble_svd.json",
+   "type": "report"
+  }
+ ],
+ "id": "cb4639c2",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "20f1de3b"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "0a692e29"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); early SVD ensemble; superseded by svd_robustness (all seven components); same 12,230 degree-matched pairs",
+  "config": "components 16/32/64; IDF weighting; seed 1729",
+  "design": "E-4",
+  "findings": [
+   "F-45",
+   "F-46"
+  ],
+  "graph": "enriched authored graph",
+  "method": "histogram base + IDF-SVD rank blend (base_60_svd_all)",
+  "metric_text": "macro AUPRC 0.356978; micro AUPRC 0.3775148949167833; macro AUROC 0.646452; micro AUROC 0.684212009226683; macro MRR 0.632538; micro MRR 0.676188; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.358414, 0.396704], \"auroc\": [0.672714, 0.695322], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.30379, 0.423578], \"macro_auroc\": [0.581396, 0.69013], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.581057, 0.687314], \"mrr\": [0.663032, 0.688984]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.358414,
+    0.396704
+   ],
+   "ci95_auroc": [
+    0.672714,
+    0.695322
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.30379,
+    0.423578
+   ],
+   "ci95_macro_auroc": [
+    0.581396,
+    0.69013
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.581057,
+    0.687314
+   ],
+   "ci95_mrr": [
+    0.663032,
+    0.688984
+   ],
+   "macro_auprc": 0.356978,
+   "macro_auroc": 0.646452,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.632538,
+   "micro_auprc": 0.3775148949167833,
+   "micro_auroc": 0.684212009226683,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.676188
+  },
+  "protocol": "degree-matched (12,230 pairs; 18.92% base)",
+  "report": "experiments/prediction/ensemble_svd.json"
+ },
+ "subject": "B-10",
+ "title": "histogram base + IDF-SVD rank blend (base_60_svd_all) \u00b7 degree-matched negatives"
+}

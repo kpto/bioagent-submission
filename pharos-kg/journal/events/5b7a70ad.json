@@ -1,0 +1,21 @@
+{
+ "based_revision": "a34ff829",
+ "change": null,
+ "code": "P-17",
+ "created_time": "2026-11-17T03:47:37Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "5b7a70ad",
+ "rationale": "Scope was triaged by feasibility before the competition closed. A typed 2-3 hop metapath index plus specificity and evidence features plus evaluation on existing splits was judged feasible in 3-5 hours; LLM plausibility scoring at scale, NBFNet/BioPathNet training, soft proof aggregation and a faithfulness study were not.",
+ "references": [],
+ "subject": "P-17",
+ "title": "Path/semantics MVP is a few hours; the full program is not"
+}

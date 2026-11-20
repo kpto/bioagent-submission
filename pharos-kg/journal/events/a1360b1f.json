@@ -1,0 +1,87 @@
+{
+ "code": "EV-111",
+ "created_time": "2026-11-16T08:13:34Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-5",
+    "graph": "enriched authored graph",
+    "method": "50/50 GNN + external histogram",
+    "protocol": "hard same-disease/same-target (13,357 pairs; 17.3% base)"
+   },
+   "name": "experiments/prediction/hard_negatives.json",
+   "type": "report"
+  }
+ ],
+ "id": "a1360b1f",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "d9487197"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "5a2e8417"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); hard same-disease/same-target protocol (17.3% base); 20 hard pairs removed from training; Hits@10 uninformative (five negatives)",
+  "config": "GATv2/GraphSAGE 2 layers, 128 hidden, dropout 0.3, 300 epochs, 10 seeds; 3 same-disease + 2 same-target negatives",
+  "design": "E-5",
+  "findings": [
+   "F-31"
+  ],
+  "graph": "enriched authored graph",
+  "method": "50/50 GNN + external histogram",
+  "metric_text": "macro AUPRC 0.295501; micro AUPRC 0.2273417002442879; macro AUROC 0.620246; micro AUROC 0.6240555795444397; macro MRR 0.48461; micro MRR 0.463411; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.217176, 0.237941], \"auroc\": [0.610467, 0.635754], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.232907, 0.365], \"macro_auroc\": [0.56936, 0.66796], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.425586, 0.543534], \"mrr\": [0.450703, 0.475031]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.217176,
+    0.237941
+   ],
+   "ci95_auroc": [
+    0.610467,
+    0.635754
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.232907,
+    0.365
+   ],
+   "ci95_macro_auroc": [
+    0.56936,
+    0.66796
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.425586,
+    0.543534
+   ],
+   "ci95_mrr": [
+    0.450703,
+    0.475031
+   ],
+   "macro_auprc": 0.295501,
+   "macro_auroc": 0.620246,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.48461,
+   "micro_auprc": 0.2273417002442879,
+   "micro_auroc": 0.6240555795444397,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.463411
+  },
+  "protocol": "hard same-disease/same-target (13,357 pairs; 17.3% base)",
+  "report": "experiments/prediction/hard_negatives.json"
+ },
+ "subject": "B-10",
+ "title": "50/50 GNN + external histogram \u00b7 hard negatives"
+}

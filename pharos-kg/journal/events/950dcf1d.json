@@ -1,0 +1,87 @@
+{
+ "code": "EV-236",
+ "created_time": "2026-11-16T16:26:49Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-9",
+    "graph": "enriched authored graph",
+    "method": "IDF-SVD rank ensemble (k=8..96)",
+    "protocol": "real (degree-matched guarded; 5,220 pairs)"
+   },
+   "name": "experiments/prediction/svd_permutation.json",
+   "type": "report"
+  }
+ ],
+ "id": "950dcf1d",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "a64f0adf"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "a989a61d"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); permutation control; 3,666 evaluation-negative overlaps removed; F-51 restates the same numbers; later_findings: F-51",
+  "config": "real association matrix",
+  "design": "E-9",
+  "findings": [
+   "F-47"
+  ],
+  "graph": "enriched authored graph",
+  "method": "IDF-SVD rank ensemble (k=8..96)",
+  "metric_text": "macro AUPRC 0.438911; micro AUPRC 0.4955479835432365; macro AUROC 0.725779; micro AUROC 0.7702778098342412; macro MRR 0.613211; micro MRR 0.689103; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.482319, 0.515629], \"auroc\": [0.762591, 0.780203], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.38079, 0.531322], \"macro_auroc\": [0.670915, 0.784127], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.572329, 0.670543], \"mrr\": [0.678354, 0.702516]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.482319,
+    0.515629
+   ],
+   "ci95_auroc": [
+    0.762591,
+    0.780203
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.38079,
+    0.531322
+   ],
+   "ci95_macro_auroc": [
+    0.670915,
+    0.784127
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.572329,
+    0.670543
+   ],
+   "ci95_mrr": [
+    0.678354,
+    0.702516
+   ],
+   "macro_auprc": 0.438911,
+   "macro_auroc": 0.725779,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.613211,
+   "micro_auprc": 0.4955479835432365,
+   "micro_auroc": 0.7702778098342412,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.689103
+  },
+  "protocol": "real (degree-matched guarded; 5,220 pairs)",
+  "report": "experiments/prediction/svd_permutation.json"
+ },
+ "subject": "B-10",
+ "title": "IDF-SVD rank ensemble (k=8..96) \u00b7 the leakage checks"
+}

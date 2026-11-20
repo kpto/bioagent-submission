@@ -1,0 +1,18 @@
+{
+ "code": "EV-20",
+ "created_time": "2026-11-18T02:07:36Z",
+ "evaluated_revision": "2066f869",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "4017ce96",
+ "references": [],
+ "result": {
+  "detail": "On the balanced graph the OT-evidence subtype graph leaves TransE at 0.318952/0.305731, down from 0.332411/0.333661, while RotatE rises to 0.345405/0.329201 from 0.337208/0.332994. The gain is therefore family-specific: it helps the relation-aware GNN and the rotational embedding but not the translational one.",
+  "message": 48231,
+  "numbers": "TransE 0.332411/0.333661 to 0.318952/0.305731; RotatE 0.337208/0.332994 to 0.345405/0.329201",
+  "status": "F-0111 accepted"
+ },
+ "subject": "EV-20",
+ "title": "Same Open Targets split hurts TransE and helps RotatE"
+}

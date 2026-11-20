@@ -1,0 +1,96 @@
+{
+ "code": "EV-92",
+ "created_time": "2026-11-16T08:13:34Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "40/60 (GATv2+GraphSAGE) + RGCN",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/combined.json",
+   "type": "report"
+  }
+ ],
+ "id": "cebb7b50",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "47dcbb34"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "fd034878"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e3a2d0a4"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol (46.3% base); RGCN 0.976 is an easy-gate result, not deployment performance",
+  "config": "10 seeds per model; rank-average each model then mix; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-27",
+   "F-30"
+  ],
+  "graph": "enriched authored graph",
+  "method": "40/60 (GATv2+GraphSAGE) + RGCN",
+  "metric_text": "macro AUPRC 0.97446; micro AUPRC 0.9665001053132981; macro AUROC 0.968372; micro AUROC 0.9557361956771913; macro MRR 0.966489; micro MRR 0.963123; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.962459, 0.9709], \"auroc\": [0.94913, 0.961614], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.954967, 0.981451], \"macro_auroc\": [0.961342, 0.974389], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.95998, 0.972179], \"mrr\": [0.955913, 0.969322]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.962459,
+    0.9709
+   ],
+   "ci95_auroc": [
+    0.94913,
+    0.961614
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.954967,
+    0.981451
+   ],
+   "ci95_macro_auroc": [
+    0.961342,
+    0.974389
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.95998,
+    0.972179
+   ],
+   "ci95_mrr": [
+    0.955913,
+    0.969322
+   ],
+   "macro_auprc": 0.97446,
+   "macro_auroc": 0.968372,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.966489,
+   "micro_auprc": 0.9665001053132981,
+   "micro_auroc": 0.9557361956771913,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.963123
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/combined.json"
+ },
+ "subject": "B-10",
+ "title": "40/60 (GATv2+GraphSAGE) + RGCN \u00b7 the committed split"
+}

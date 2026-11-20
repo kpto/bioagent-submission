@@ -1,0 +1,87 @@
+{
+ "code": "EV-112",
+ "created_time": "2026-11-16T08:13:34Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-5",
+    "graph": "enriched authored graph",
+    "method": "60/40 GATv2 + GraphSAGE",
+    "protocol": "hard same-disease/same-target (13,357 pairs; 17.3% base)"
+   },
+   "name": "experiments/prediction/hard_negatives.json",
+   "type": "report"
+  }
+ ],
+ "id": "86cb7880",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "d9487197"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "5a2e8417"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); hard same-disease/same-target protocol (17.3% base); 20 hard pairs removed from training; Hits@10 uninformative (five negatives)",
+  "config": "GATv2/GraphSAGE 2 layers, 128 hidden, dropout 0.3, 300 epochs, 10 seeds; 3 same-disease + 2 same-target negatives",
+  "design": "E-5",
+  "findings": [
+   "F-31"
+  ],
+  "graph": "enriched authored graph",
+  "method": "60/40 GATv2 + GraphSAGE",
+  "metric_text": "macro AUPRC 0.223439; micro AUPRC 0.2213947902796094; macro AUROC 0.598776; micro AUROC 0.617546667380463; macro MRR 0.424602; micro MRR 0.436495; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.211263, 0.232924], \"auroc\": [0.604313, 0.629589], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.195796, 0.277019], \"macro_auroc\": [0.551054, 0.64783], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.393512, 0.458904], \"mrr\": [0.42497, 0.444384]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.211263,
+    0.232924
+   ],
+   "ci95_auroc": [
+    0.604313,
+    0.629589
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.195796,
+    0.277019
+   ],
+   "ci95_macro_auroc": [
+    0.551054,
+    0.64783
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.393512,
+    0.458904
+   ],
+   "ci95_mrr": [
+    0.42497,
+    0.444384
+   ],
+   "macro_auprc": 0.223439,
+   "macro_auroc": 0.598776,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.424602,
+   "micro_auprc": 0.2213947902796094,
+   "micro_auroc": 0.617546667380463,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.436495
+  },
+  "protocol": "hard same-disease/same-target (13,357 pairs; 17.3% base)",
+  "report": "experiments/prediction/hard_negatives.json"
+ },
+ "subject": "B-10",
+ "title": "60/40 GATv2 + GraphSAGE \u00b7 hard negatives"
+}

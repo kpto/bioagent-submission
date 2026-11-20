@@ -1,0 +1,18 @@
+{
+ "code": "EV-22",
+ "created_time": "2026-11-18T03:28:45Z",
+ "evaluated_revision": "1fdb3bcd",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "12e89bef",
+ "references": [],
+ "result": {
+  "detail": "The shipped configuration (recommended export plus HPO layers, 27,405 nodes / 151,231 edges) scores 0.4964 macro, 0.4543 micro and 0.3614 cold AUPRC against 0.4712/0.4033/0.2560 for the balanced reference, three seeds on the fixed held-out set. Cold seed spread is 0.0088, so the cold gain is about twelve times its noise.",
+  "message": 50719,
+  "numbers": "27,405 nodes / 151,231 edges; macro 0.4964, micro 0.4543, cold 0.3614; reference 0.4712/0.4033/0.2560; cold std 0.0088",
+  "status": "F-0121; recommended export"
+ },
+ "subject": "EV-22",
+ "title": "Shipped graph: 0.4964 macro / 0.4543 micro / 0.3614 cold"
+}

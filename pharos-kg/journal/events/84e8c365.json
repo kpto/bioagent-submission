@@ -1,0 +1,23 @@
+{
+ "code": "E-7",
+ "created_time": "2026-11-16T19:36:09Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  }
+ ],
+ "id": "84e8c365",
+ "method": "held-out diseases with negatives drawn from them; ontology similarity may borrow factors from training diseases",
+ "metric": "macro and micro AUPRC",
+ "references": [
+  {
+   "linkage_name": "extends",
+   "linked_event": "9ab270b9"
+  }
+ ],
+ "subject": "E-7",
+ "title": "Disease cold start"
+}

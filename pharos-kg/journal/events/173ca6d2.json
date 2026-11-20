@@ -1,0 +1,13 @@
+{
+ "code": "F-72",
+ "created_time": "2026-11-17T10:42:55Z",
+ "event_type": "finding.created",
+ "evidence": "The new compact pilot confirms the pattern: paths are complementary in the low-direct quartiles (AUC 0.618 vs 0.520 and 0.659 vs 0.535) but do not improve the global score.",
+ "external_references": [],
+ "id": "173ca6d2",
+ "metric": "degree-matched Q1 path AUC 0.618 vs direct 0.520; hard Q1 0.659 vs 0.535; test positives 2,278; degree-matched eval pairs 12,206; hard eval pairs 14,830; exact-degree rate 0.4468",
+ "observation": "Typed 2-3 hop paths (PPI bridge, shared GO, shared phenotype, PPI plus phenotype) were scored with IDF specificity and curated-evidence weights on the rebuilt compact graph. Paths did not improve the global direct IDF-SVD score, but path AUC exceeded direct AUC in the lowest direct-score quartile on both degree-matched and hard negatives.",
+ "references": [],
+ "subject": "F-72",
+ "title": "Metapath pilot: no global gain, complementary in the lowest direct-score quartile"
+}

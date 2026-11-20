@@ -1,0 +1,13 @@
+{
+ "code": "F-6",
+ "created_time": "2026-11-10T20:45:39Z",
+ "event_type": "finding.created",
+ "evidence": "The pruned arm loses predictive signal (macro AUPRC 0.74 logistic, 0.59 heuristic) because the policy removes edges the training graph needs.",
+ "external_references": [],
+ "id": "395bf7b2",
+ "metric": "pruned macro AUPRC 0.74 logistic, 0.59 heuristic; F-0007",
+ "observation": "The pruned arm lost predictive signal because the rule set deletes low-evidence target-disease edges that the model needs, dropping macro AUPRC to 0.744 for logistic and 0.595 for the heuristic. The decision recorded was that pruning must be evaluated per relation and must not delete the evidence the predictor depends on.",
+ "references": [],
+ "subject": "F-6",
+ "title": "F-0007: pruning removes training signal and lowers prediction quality"
+}

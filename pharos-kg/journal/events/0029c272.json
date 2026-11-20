@@ -1,0 +1,13 @@
+{
+ "code": "F-91",
+ "created_time": "2026-11-17T21:51:39Z",
+ "event_type": "finding.created",
+ "evidence": "PPI alone is 46,686 pairs among kinases versus 2,415 in the graph \u2014 a 19\u00d7 jump.",
+ "external_references": [],
+ "id": "0029c272",
+ "metric": "PPI 46,686 vs 2,415; ligand-target 82,340 vs 10,000; GO 17,239 vs 12,891; disease 15,430 vs 11,384; raw_all 69,609 nodes / 160,806 edges; current 10,088 / 41,371; degree max 3,373 vs 733",
+ "observation": "Over the 635-kinase slice the dump holds 46,686 PPI pairs versus 2,415 in the graph, 82,340 ligand-target pairs versus 10,000, 17,239 GO pairs versus 12,891 and 15,430 disease pairs versus 11,384. Building all of it gives 69,609 nodes / 160,806 edges against 10,088 / 41,371. The full graph's degree p50/p90/p99/max is 1/2/60/3,373 versus 2/14/133/733, driven by 58,812 ligand nodes and the PPI hairball.",
+ "references": [],
+ "subject": "F-91",
+ "title": "Raw release carries 4-19x more rows per relation than the API graph"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "F-83",
+ "created_time": "2026-11-17T19:34:59Z",
+ "event_type": "finding.created",
+ "evidence": "Partly. The **implementation** reflects the design; the **records and reader docs** do not fully reflect it.",
+ "external_references": [],
+ "id": "d535858d",
+ "metric": "CD-0007 9,512 / 37,697 vs current 9,519 / 37,325; branch docs 15,000 / 67,588 and 0.4714 / 0.8768 vs current 15,007 / 67,390 and 0.2577 / 0.7240; DEMO 1,919 / 2,703 / 3,061 vs 1,920 / 2,415 / 3,035",
+ "observation": "An audit compared implementation, ledger and docs on both branches. The build matched CD-0006 and CD-0007, but CD-0007 still stated 9,512 / 37,697, the branch docs kept 15,000 / 67,588 and the transductive metrics, DEMO.md kept 1,919 diseases / 2,703 PPI / 3,061 GO terms, and master referenced branch-only records F-0064 to F-0070 and CD-0006.",
+ "references": [],
+ "subject": "F-83",
+ "title": "Design records and reader docs do not match the built graph"
+}

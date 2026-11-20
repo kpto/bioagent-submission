@@ -1,0 +1,21 @@
+{
+ "based_proposals": [
+  "92e0ea7e",
+  "3bb91f7e"
+ ],
+ "code": "B-7",
+ "created_time": "2026-11-16T02:35:48Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "Added experiments/gnn/ with the reproducible link_prediction.py, the five-seed report, external_context.json and a README, and recorded two accepted findings: F-0012 for the GraphSAGE result and F-0013 for the external-context loss. eval/design.json gained a Prediction models section listing logistic regression, truncated SVD and GraphSAGE with their measured scores and an explicit note that the GNN result is a within-graph ablation. No declaration, graph.jsonl, explanations.json or graph record changed; the ledger went to 12 rows.",
+  "message": 10910,
+  "numbers": "12 findings; macro AUPRC 0.947 / micro 0.940; 5 seeds; 500 epochs; 4 experiment files",
+  "status": "committed 0c5dde6; KG unchanged"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "7db80880",
+ "references": [],
+ "subject": "B-7",
+ "title": "GNN experiment packaged and recorded without editing the KG"
+}

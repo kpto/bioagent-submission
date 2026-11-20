@@ -1,0 +1,12 @@
+{
+ "code": "PW-3",
+ "created_time": "2026-11-16T07:03:14Z",
+ "event_type": "proposal.withdrawal",
+ "external_references": [],
+ "id": "56362ed6",
+ "reason": "withdrawn. tools/export_competition.py was written to emit KGX nodes/edges TSV, keep/prune verdicts and a PyTorch Geometric export from the committed build, because the Q&A accepted KGX TSV plus PyG. It failed to load graph records and produced eight pyright errors; the file was removed at 07:52:29, so no competition export was shipped.",
+ "references": [],
+ "subject": "P-8",
+ "title": "Withdraw P-8",
+ "withdrawn_proposal": "80e82da5"
+}

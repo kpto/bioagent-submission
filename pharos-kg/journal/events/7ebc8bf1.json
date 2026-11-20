@@ -1,0 +1,54 @@
+{
+ "based_proposals": [
+  "7321d3dd"
+ ],
+ "code": "B-32",
+ "created_time": "2026-11-19T02:05:00Z",
+ "description": {
+  "adopted": "CD-0006",
+  "detail": "Pruning is a post-processing chain of workflow steps, not a filter in the relation declarations. Every relation emits candidates with the evidence a decision needs (source score and sources, target count, measured activity). The annotation fields (verdict, annotation_rule, annotation_confidence, annotation_reason) are declared properties of every node and edge, inherited from two abstract categories, and every binding seeds them with keep and three empty arrays. publish_annotated_records re-publishes each component's records unchanged under the annotated opening. annotate_rule_matches contributes one step per rule and component it governs; each step appends that rule's mark (module, confidence, reason) where its predicate holds and sets the verdict to prune. project_kept_records keeps the records whose verdict is keep and keeps the schema intact; write_facts_graph writes graph.jsonl without the four declared fields, so the shipped file carries facts and no editorial field. Two writers publish the two outputs, and reconcile_outputs fails the build unless annotated minus pruned equals shipped for nodes and edges. A rule is one module with its own predicate, confidence, reason and boundary tests; adding a rule adds a step and changes no other step.",
+  "numbers": "annotated 74,747 nodes / 239,939 edges; shipped 28,359 / 150,856; four annotation fields absent from the shipped file",
+  "recorded": "2026-11-18T08:30:00+00:00",
+  "status": "adopted"
+ },
+ "event_type": "revision.created",
+ "external_references": [
+  {
+   "detail": {
+    "path": "notebook/records/designs/CD-0006.json",
+    "state": "adopted"
+   },
+   "name": "CD-0006.json",
+   "type": "notebook"
+  }
+ ],
+ "id": "7ebc8bf1",
+ "references": [
+  {
+   "linkage_name": "premise",
+   "linked_event": "cc338675"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "14909512"
+  },
+  {
+   "linkage_name": "evaluated_by",
+   "linked_event": "b0aaf9ac"
+  },
+  {
+   "linkage_name": "evaluated_by",
+   "linked_event": "2f46a800"
+  },
+  {
+   "linkage_name": "evaluated_by",
+   "linked_event": "d67646e5"
+  },
+  {
+   "linkage_name": "evaluated_by",
+   "linked_event": "234a09fd"
+  }
+ ],
+ "subject": "B-32",
+ "title": "Pruning is a post-processing projection: one annotated graph, two outputs"
+}

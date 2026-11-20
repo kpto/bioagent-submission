@@ -1,0 +1,18 @@
+{
+ "code": "EV-21",
+ "created_time": "2026-11-18T03:09:53Z",
+ "evaluated_revision": "1fdb3bcd",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "f25b992d",
+ "references": [],
+ "result": {
+  "detail": "HPO 2026-09-02 annotations give 19,133 disease-to-phenotype edges (610 of 2,489 graph diseases) and a protein-to-phenotype layer (15,390 edges over 245 kinases, 4,487 phenotype nodes). On 1,223 cold diseases (at most one training pair; 172 test positives) cold AUPRC is 0.2446 reference, 0.2642 with disease-to-phenotype only and 0.3072 with both, while macro/micro move 0.4744 to 0.4899/0.4080.",
+  "message": 50629,
+  "numbers": "cold diseases 1,223; cold test positives 172; cold AUPRC 0.2446 / 0.2642 / 0.3072; macro 0.4744 to 0.4899; micro 0.3982 to 0.4080; 19,133 disease-phenotype edges; 15,390 protein edges; 4,487 phenotype nodes",
+  "status": "F-0119 accepted"
+ },
+ "subject": "EV-21",
+ "title": "HPO phenotypes lift cold-disease AUPRC from 0.245 to 0.307"
+}

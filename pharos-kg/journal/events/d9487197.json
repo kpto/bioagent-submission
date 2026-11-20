@@ -1,0 +1,23 @@
+{
+ "code": "E-5",
+ "created_time": "2026-11-16T08:12:34Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  }
+ ],
+ "id": "d9487197",
+ "method": "same-disease and same-target negatives that share an endpoint with the positive",
+ "metric": "macro and micro AUPRC",
+ "references": [
+  {
+   "linkage_name": "extends",
+   "linked_event": "9ab270b9"
+  }
+ ],
+ "subject": "E-5",
+ "title": "Hard negatives"
+}

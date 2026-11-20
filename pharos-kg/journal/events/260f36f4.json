@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "92e0ea7e"
+ ],
+ "code": "B-8",
+ "created_time": "2026-11-16T02:51:36Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "revisions/f11c429a1fa75e9f.json records the emitted graph over the Pharos 3.19 kinase family: 635 targets and relation counts for diseases, genes, GO terms, ligands, ligand activity, PPI, target-disease and translations, with five of five suites passed. The same build loads as 47,209 records, 9,512 nodes and 37,697 edges, yielding 11,567 target-disease positive edges split 9,253 train / 2,314 test and stratified by TDL (tchem 6,920 positives; tclin 2,304; tbio 2,290; tdark 53). The data manifest is ab8d722ea9c2fa36cd54b3d123f12da2f8b4e6f54f5239b2d9f5c4228fcc5322.",
+  "message": 10925,
+  "numbers": "targets 635; diseases 1919; genes 603; go_annotation 12823; go_terms 3061; ligand_activity 10000; ligands 3294; ppi 2703; target_disease 11568; translations 603; nodes 9512; edges 37697; records 47209; positives 11567",
+  "status": "current revision at that time"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "260f36f4",
+ "references": [],
+ "subject": "B-8",
+ "title": "Current graph revision f11c429a1fa75e9f and its counts"
+}

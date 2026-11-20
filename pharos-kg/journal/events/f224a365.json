@@ -1,0 +1,21 @@
+{
+ "based_revision": "260f36f4",
+ "change": null,
+ "code": "P-7",
+ "created_time": "2026-11-16T06:22:26Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "f224a365",
+ "rationale": "ProteinNode.tdl carried three claims but no purpose and no limitations, which left the sufficiency rubric's limitation question unanswered for the property. It was given a purpose about stratifying a kinase by its Pharos Target Development Level and limitations saying the level is a release classification, not a probability or a measure of evidence quality. The blueprint fingerprint moved to 424beaec2d79057d and the following quick gate passed.",
+ "references": [],
+ "subject": "P-7",
+ "title": "The tdl property gets a purpose and limitations"
+}

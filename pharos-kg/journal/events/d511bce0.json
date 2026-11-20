@@ -1,0 +1,53 @@
+{
+ "code": "EV-366",
+ "created_time": "2026-11-17T22:36:26Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "ppi700",
+    "method": "RGCN (relation-aware)",
+    "protocol": "degree-matched"
+   },
+   "name": "experiments/prediction/results/rgcn_subtype_degree.json",
+   "type": "report"
+  }
+ ],
+ "id": "d511bce0",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "0e079aed"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "1c7c7dc9"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); PPI evidence-subtype ablation at identical edge count",
+  "config": "RGCN; 114392 edges; 5 relations (ppi700 vs ppi_subtype); macro_std 0.00488303616206148",
+  "design": "E-4",
+  "findings": [
+   "F-97"
+  ],
+  "graph": "ppi700",
+  "method": "RGCN (relation-aware)",
+  "metric_text": "macro AUPRC 0.2820282; micro AUPRC 0.2817263648729129",
+  "metrics": {
+   "macro_auprc": 0.2820282,
+   "micro_auprc": 0.2817263648729129
+  },
+  "protocol": "degree-matched",
+  "report": "experiments/prediction/results/rgcn_subtype_degree.json"
+ },
+ "subject": "B-19",
+ "title": "RGCN (relation-aware) \u00b7 degree-matched negatives"
+}

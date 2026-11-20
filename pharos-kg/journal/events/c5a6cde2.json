@@ -1,0 +1,19 @@
+{
+ "code": "F-129",
+ "created_time": "2026-11-17T20:23:08Z",
+ "event_type": "finding.created",
+ "evidence": "It is not a bulk loader, despite the name.",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "executemany is per-statement overhead, not a DuckDB ingest limit",
+   "type": "unattached_correction"
+  }
+ ],
+ "id": "c5a6cde2",
+ "metric": "executemany 20,000 rows in 12.8 s \u2192 1,561 rows/s; json+read 20,000 rows in 0.02 s \u2192 1,064,909 rows/s; ratio 682x",
+ "observation": "A first benchmark was reported as DuckDB being unusable at 1,586 rows/s for extraction. The correction, on request, was that executemany executes the statement once per row, so the figure measures per-statement overhead; the same rows loaded through NDJSON and one read_json reached about 1.06M rows/s.",
+ "references": [],
+ "subject": "F-129",
+ "title": "executemany is per-statement overhead, not a DuckDB ingest limit"
+}

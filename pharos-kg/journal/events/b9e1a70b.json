@@ -1,0 +1,19 @@
+{
+ "code": "F-138",
+ "created_time": "2026-11-19T22:53:26.180829Z",
+ "event_type": "finding.created",
+ "evidence": "No neo4j or meta_graph mention in README, DESIGN, AGENTS or docs except the artifact list; the console reads journal/events and the viewer reads build/workflow_plan.json; a full build produced build/neo4j-import/ with no consumer.",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "kbs finding add",
+   "type": "cli"
+  }
+ ],
+ "id": "b9e1a70b",
+ "metric": "targets with no named consumer 1 -> 0; named targets 1 (meta-graph, maintainer/agent); graph 28,359 / 150,856 unchanged",
+ "observation": "The build wrote a Neo4j import and a meta-graph, but no document named a reader for either. The Neo4j import was not read by the console, the viewer or any test; the meta-graph is a design-review catalogue.",
+ "references": [],
+ "subject": "F-138",
+ "title": "One output target had no reader"
+}

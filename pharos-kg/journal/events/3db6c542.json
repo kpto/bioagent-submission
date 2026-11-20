@@ -1,0 +1,87 @@
+{
+ "code": "EV-147",
+ "created_time": "2026-11-16T08:49:39Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-3",
+    "graph": "enriched authored graph + node features",
+    "method": "60/40 GATv2 + GraphSAGE",
+    "protocol": "fair per-positive (13,807 pairs; 16.76% base)"
+   },
+   "name": "experiments/prediction/fair_negatives_node_features.json",
+   "type": "report"
+  }
+ ],
+ "id": "3db6c542",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "cb8bd6d8"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "43b601fa"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); fair per-positive protocol; node-feature ablation; only RGCN moves materially; still below histogram; later proposal P-11 (per-positive sampler fix) postdates this run",
+  "config": "2 layers, 128 hidden, 10 seeds; per-positive deterministic negatives; ['target_hpo_count', 'disease_hpo_count', 'target_reactome_count', 'target_string_count']",
+  "design": "E-3",
+  "findings": [
+   "F-41"
+  ],
+  "graph": "enriched authored graph + node features",
+  "method": "60/40 GATv2 + GraphSAGE",
+  "metric_text": "macro AUPRC 0.124571; micro AUPRC 0.13900200609288157; macro AUROC 0.298027; micro AUROC 0.44445282954165244; macro MRR 0.389914; micro MRR 0.484644; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.133852, 0.145092], \"auroc\": [0.434015, 0.453901], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.114091, 0.141894], \"macro_auroc\": [0.290583, 0.305498], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.378159, 0.405566], \"mrr\": [0.469505, 0.500658]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.133852,
+    0.145092
+   ],
+   "ci95_auroc": [
+    0.434015,
+    0.453901
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.114091,
+    0.141894
+   ],
+   "ci95_macro_auroc": [
+    0.290583,
+    0.305498
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.378159,
+    0.405566
+   ],
+   "ci95_mrr": [
+    0.469505,
+    0.500658
+   ],
+   "macro_auprc": 0.124571,
+   "macro_auroc": 0.298027,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.389914,
+   "micro_auprc": 0.13900200609288157,
+   "micro_auroc": 0.44445282954165244,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.484644
+  },
+  "protocol": "fair per-positive (13,807 pairs; 16.76% base)",
+  "report": "experiments/prediction/fair_negatives_node_features.json"
+ },
+ "subject": "B-10",
+ "title": "60/40 GATv2 + GraphSAGE \u00b7 fair negatives"
+}

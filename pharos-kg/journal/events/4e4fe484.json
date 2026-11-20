@@ -1,0 +1,13 @@
+{
+ "code": "F-53",
+ "created_time": "2026-11-16T19:39:06Z",
+ "event_type": "finding.created",
+ "evidence": "HPO-borrowed disease factors reach **0.4586 / 0.5388** on disease cold start, against **0.2245 / 0.1972** for raw HPO features and **0.1709 / 0.1718** for the base histogram.",
+ "external_references": [],
+ "id": "4e4fe484",
+ "metric": "base 0.1709 / 0.1718; raw HPO 0.2245 / 0.1972; HPO-borrowed IDF-SVD 0.4586 / 0.5388; 1,919 diseases; 83 held out; 4,773 eval pairs; 412 HPO-covered diseases; 245 covered targets; base rate 0.1726",
+ "observation": "Held-out diseases have no training target-disease edges and almost no intrinsic content. Ancestor-closed HPO features and HPO-similarity borrowing of disease SVD factors were tested on 83 held-out diseases; borrowed factors roughly doubled the raw-ontology score and beat both the base histogram and the target-degree control.",
+ "references": [],
+ "subject": "F-53",
+ "title": "Disease cold start: raw HPO helps, HPO-borrowed SVD factors help much more"
+}

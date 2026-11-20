@@ -1,0 +1,13 @@
+{
+ "code": "F-102",
+ "created_time": "2026-11-18T01:48:56Z",
+ "event_type": "finding.created",
+ "evidence": "The design changes split cleanly by model family, and only one helps both.",
+ "external_references": [],
+ "id": "9c858c66",
+ "metric": "reference 0.475728/0.398291; inverse +0.0162/+0.0209; inverse+types +0.0170/+0.0200; hierarchy +0.0080/-0.0011; types -0.0026/-0.0006; subtype -0.0146; 3 seeds",
+ "observation": "RGCN on the fixed held-out set (15,430 pairs, 3,086 test, 13,401 eval, three seeds) with reference policy_context 0.475728/0.398291 measured inverse +0.0162/+0.0209, inverse+types +0.0170/+0.0200, ontology hierarchy +0.0080/-0.0011, entity types -0.0026/-0.0006 and PPI evidence subtype -0.0146. Only ontology hierarchy kept a positive macro sign across the families tested.",
+ "references": [],
+ "subject": "F-102",
+ "title": "Design changes split by model family under RGCN"
+}

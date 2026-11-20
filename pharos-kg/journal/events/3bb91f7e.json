@@ -1,0 +1,21 @@
+{
+ "based_revision": "d142946f",
+ "change": null,
+ "code": "P-5",
+ "created_time": "2026-11-16T02:03:59Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "3bb91f7e",
+ "rationale": "Advised against spending the remaining time on a new GNN unless PyTorch Geometric was already installed and working, on the grounds that the truncated-SVD arm is already a graph embedding and already shows the authored graph's value under that model class. The advice was superseded four minutes later when the user supplied a GPU box with 2x NVIDIA H200 NVL, 32 cores and 1.5 TB RAM, where torch 2.11.0+cu128 and torch-geometric 2.8.1 were installed and a GraphSAGE experiment was run on the committed split.",
+ "references": [],
+ "subject": "P-5",
+ "title": "Skip a from-scratch GNN for the remaining day"
+}

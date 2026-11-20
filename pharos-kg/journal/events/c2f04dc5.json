@@ -1,0 +1,21 @@
+{
+ "based_revision": "4095391c",
+ "change": null,
+ "code": "P-3",
+ "created_time": "2026-11-10T19:03:49Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "beginning"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "c2f04dc5",
+ "rationale": "Proposed promoting the viewer's TypeScript provenance model into a deterministic Python explain service emitting one Explanation document that the viewer, CLI, HTTP and later agents all render. Every subject (graph, node, edge, property, binding, asset) must answer eight questions, including what would remove it, and occurrence-level evidence is carried in an evidence sidecar keyed by build key rather than as edge properties. The gates proposed were coverage (100% of the demo slice), resolvability (100%, no dangling refs), sufficiency (20 subjects \u00d7 5 questions, \u2265 90%, under 60s), consistency, counterfactual (20/20 sampled edges) and standards (100% CURIE and PROV-O mapping).",
+ "references": [],
+ "subject": "P-3",
+ "title": "Explainability as a build artifact with its own gates"
+}

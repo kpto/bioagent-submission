@@ -1,0 +1,12 @@
+{
+ "code": "FW-3",
+ "created_time": "2026-11-17T10:45:32Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "d5958077",
+ "reason": "The earlier compact-profile gains (0.4714 degree-matched, 0.8768 fair) were produced with held-out target-disease edges still present in message passing. Removing held-out edges from the message graph gives much lower but honest scores, and the compact profile's advantage shrinks to +0.005/+0.008 degree-matched and +0.013/+0.014 fair.",
+ "references": [],
+ "subject": "F-68",
+ "title": "Leakage-controlled RGCN numbers are far below the earlier transductive numbers",
+ "withdrawn_finding": "8732f107"
+}

@@ -1,0 +1,55 @@
+{
+ "code": "EV-224",
+ "created_time": "2026-11-16T15:53:31Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "enriched authored graph",
+    "method": "IDF-SVD rank ensemble (ensemble_k16_32_64)",
+    "protocol": "degree-matched validation (9,877 pairs; 18.4% base)"
+   },
+   "name": "experiments/prediction/svd_validation.json",
+   "type": "report"
+  }
+ ],
+ "id": "46b71306",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "20f1de3b"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); validation slice only, not the held-out test; degree-matched validation negatives",
+  "config": "rank ensemble of validated component counts",
+  "design": "E-4",
+  "findings": [
+   "F-45"
+  ],
+  "graph": "enriched authored graph",
+  "method": "IDF-SVD rank ensemble (ensemble_k16_32_64)",
+  "metric_text": "macro AUPRC 0.424481; micro AUPRC 0.40830790509905657; macro AUROC 0.712459; micro AUROC 0.7284253623416015; macro MRR 0.622873; micro MRR 0.648019; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.424481,
+   "macro_auroc": 0.712459,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.622873,
+   "micro_auprc": 0.40830790509905657,
+   "micro_auroc": 0.7284253623416015,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.648019
+  },
+  "protocol": "degree-matched validation (9,877 pairs; 18.4% base)",
+  "report": "experiments/prediction/svd_validation.json"
+ },
+ "subject": "B-10",
+ "title": "IDF-SVD rank ensemble (ensemble_k16_32_64) \u00b7 degree-matched negatives"
+}

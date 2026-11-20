@@ -1,0 +1,18 @@
+{
+ "code": "EV-24",
+ "created_time": "2026-11-18T06:26:02Z",
+ "evaluated_revision": "3ab629e4",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "79867831",
+ "references": [],
+ "result": {
+  "detail": "One-hop usability on the base was as good as the research graph, and coverage was 64.6% through protein and disease intermediates only, because the base had protein->phenotype but not disease->phenotype. That gap motivated the HPO port.",
+  "message": 53162,
+  "numbers": "1-hop median 104, p90 414, 92.9% under 500; coverage 9975/15430 (64.6%); intermediates protein 45890 / disease 4134",
+  "status": "accepted"
+ },
+ "subject": "EV-24",
+ "title": "Usability and explanation coverage of the ported base"
+}

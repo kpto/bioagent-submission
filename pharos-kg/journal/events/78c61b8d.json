@@ -1,0 +1,13 @@
+{
+ "code": "F-118",
+ "created_time": "2026-11-18T07:17:59Z",
+ "event_type": "finding.created",
+ "evidence": "The interaction split is a trade, not a defect.",
+ "external_references": [],
+ "id": "78c61b8d",
+ "metric": "split -0.0175/-0.0124/+0.0322; merged no HPO +0.0111/-0.0061/+0.0378; HPO split -0.0096/+0.0171/+0.0856; HPO merged +0.0067/+0.0051/+0.0655",
+ "observation": "Four configurations on one base separated two effects: merging the interaction split buys macro and micro but costs cold, while HPO supplies a reproducible cold gain in every variant. The merged default is positive on all three; the split version is the cold specialist.",
+ "references": [],
+ "subject": "F-118",
+ "title": "The interaction split is a cold-start/macro trade (F-0117)"
+}

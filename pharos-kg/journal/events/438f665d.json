@@ -1,0 +1,53 @@
+{
+ "code": "EV-368",
+ "created_time": "2026-11-17T22:36:26Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-3",
+    "graph": "ppi700",
+    "method": "RGCN (relation-aware)",
+    "protocol": "fair per-positive"
+   },
+   "name": "experiments/prediction/results/rgcn_subtype_fair.json",
+   "type": "report"
+  }
+ ],
+ "id": "438f665d",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "cb8bd6d8"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "0e079aed"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "1c7c7dc9"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); PPI evidence-subtype ablation at identical edge count",
+  "config": "RGCN; 114392 edges; 5 relations (ppi700 vs ppi_subtype); macro_std 0.0036530262194514776",
+  "design": "E-3",
+  "findings": [
+   "F-97"
+  ],
+  "graph": "ppi700",
+  "method": "RGCN (relation-aware)",
+  "metric_text": "macro AUPRC 0.7585738; micro AUPRC 0.7124747826513915",
+  "metrics": {
+   "macro_auprc": 0.7585738,
+   "micro_auprc": 0.7124747826513915
+  },
+  "protocol": "fair per-positive",
+  "report": "experiments/prediction/results/rgcn_subtype_fair.json"
+ },
+ "subject": "B-19",
+ "title": "RGCN (relation-aware) \u00b7 fair negatives"
+}

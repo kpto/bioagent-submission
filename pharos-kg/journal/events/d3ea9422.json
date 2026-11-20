@@ -1,0 +1,13 @@
+{
+ "code": "F-29",
+ "created_time": "2026-11-16T08:07:08Z",
+ "event_type": "finding.created",
+ "evidence": "Current biomedical KG work favors path-based reasoning with a background graph reserved for message passing, node-type-aware hard negatives, and leakage-aware test splits",
+ "external_references": [],
+ "id": "d3ea9422",
+ "metric": "",
+ "observation": "The online scan concluded that current biomedical KG work favours path-based reasoning over a background graph, node-type-aware hard negatives and leakage-aware test splits, and that random-split scores overstate real ranking. Recorded as F-0022 and written into docs/RESEARCH.md with BioPathNet, Context Pooling, MuCoS, R-HGNN, ULTRA and TxGNN.",
+ "references": [],
+ "subject": "F-29",
+ "title": "Literature points to path reasoning and leakage-aware evaluation"
+}

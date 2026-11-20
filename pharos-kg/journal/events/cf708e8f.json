@@ -1,0 +1,13 @@
+{
+ "code": "F-24",
+ "created_time": "2026-11-16T07:24:44Z",
+ "event_type": "finding.created",
+ "evidence": "A rank ensemble of the seed-averaged GraphSAGE and the HPO+STRING histogram model improves both macro and micro AUPRC over either component.",
+ "external_references": [],
+ "id": "cf708e8f",
+ "metric": "rank 0.948859 / 0.952483; 70/30 0.949354 / 0.955772; gnn 0.935867 / 0.938604; hist 0.944786 / 0.943522",
+ "observation": "A rank ensemble of the seed-averaged GraphSAGE and the HPO+STRING histogram gave 0.948859 macro/0.952483 micro, and a 70/30 GNN/histogram mix gave 0.949354/0.955772. Components were GNN 0.935867/0.938604 and histogram 0.944786/0.943522; recorded as F-0017.",
+ "references": [],
+ "subject": "F-24",
+ "title": "GNN plus external histogram rank ensemble beats both components"
+}

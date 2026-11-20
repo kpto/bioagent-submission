@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permissions": [
+    { "action": "edit", "resource": "build/*", "effect": "deny" },
+    { "action": "edit", "resource": "journal/events/*", "effect": "deny" },
+    { "action": "edit", "resource": "exports/*", "effect": "deny" },
+    { "action": "edit", "resource": "*graph.jsonl", "effect": "deny" },
+    { "action": "edit", "resource": "*meta_graph.json", "effect": "deny" }
+  ]
+}

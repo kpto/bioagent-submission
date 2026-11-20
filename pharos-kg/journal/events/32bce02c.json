@@ -1,0 +1,21 @@
+{
+ "based_proposals": [
+  "f0dcaa62",
+  "f224a365"
+ ],
+ "code": "B-9",
+ "created_time": "2026-11-16T06:30:31Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "The alignment build was recorded as revision 424beaec2d79057d at 2026-11-16T06:30:09 over manifest ab8d722e, with 5 nodes, 5 edges, 10 bindings and 41 properties. Knowledge-base and docs pages were then moved from f11c429a1fa75e9f to 424beaec2d79057d with the new graph and explanation hashes. Until the full run finished, eval/report.json still pinned f11c429a1fa75e9f while eval/quick.json already carried 424beaec2d79057d.",
+  "message": 23969,
+  "numbers": "revision 424beaec2d79057d; graph_sha256 99d6a8dfbf836155883162426da9047015ac0d825242ead471cf201353eba7ed; explanations_sha256 6ca2eadd6ae86a662403f4edc49357e7ee19da092b90d43add81c70bb03d42e4; git_commit 82531592d9f5e6a8736d64dde518fc0398307099; manifest ab8d722ea9c2fa36cd54b3d123f12da2f8b4e6f54f5239b2d9f5c4228fcc5322",
+  "status": "recorded"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "32bce02c",
+ "references": [],
+ "subject": "B-9",
+ "title": "Revision 424beaec2d79057d recorded and pinned in the docs"
+}

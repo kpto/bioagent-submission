@@ -1,0 +1,53 @@
+{
+ "code": "EV-350",
+ "created_time": "2026-11-17T22:07:27Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "current",
+    "method": "RGCN (relation-aware)",
+    "protocol": "degree-matched (shared split/negatives)"
+   },
+   "name": "experiments/prediction/results/rgcn_variants_degree.json",
+   "type": "report"
+  }
+ ],
+ "id": "1bcc342c",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "0029c272"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "1f72e27c"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); coverage ablation; prediction recorded as EV-15, but no finding states the AUPRC; differences about 0.01 against sigma 0.003-0.011",
+  "config": "RGCN 5 seeds; 38286 edges; 5 relations; macro_std 0.0015737713429847511",
+  "design": "E-4",
+  "findings": [
+   "F-91"
+  ],
+  "graph": "current",
+  "method": "RGCN (relation-aware)",
+  "metric_text": "macro AUPRC 0.29061459999999995; micro AUPRC 0.2905512972267636",
+  "metrics": {
+   "macro_auprc": 0.29061459999999995,
+   "micro_auprc": 0.2905512972267636
+  },
+  "protocol": "degree-matched (shared split/negatives)",
+  "report": "experiments/prediction/results/rgcn_variants_degree.json"
+ },
+ "subject": "B-19",
+ "title": "RGCN (relation-aware) \u00b7 degree-matched negatives"
+}

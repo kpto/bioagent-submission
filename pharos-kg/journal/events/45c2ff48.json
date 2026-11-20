@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "c2f04dc5"
+ ],
+ "code": "B-4",
+ "created_time": "2026-11-10T20:24:10Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "The snapshot now emits up to 25 occurrence subjects per edge type instead of every edge, which cut the explanation document from 2,073 subjects and 36 MB to 323 subjects (61 declaration subjects and 250 occurrence subjects) and 5.4 MB. The sampling is declared in the document so a reader can tell a sample from full coverage; the evidence sidecar still covers every edge.",
+  "message": 4006,
+  "numbers": "2,073 \u2192 323 subjects; 61 declaration + 250 occurrence; 36 MB \u2192 5.4 MB; 25 per edge type",
+  "status": "built; sampling declared"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "45c2ff48",
+ "references": [],
+ "subject": "B-4",
+ "title": "Explanation document reduced to 323 subjects by occurrence sampling"
+}

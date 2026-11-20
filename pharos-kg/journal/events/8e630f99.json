@@ -1,0 +1,22 @@
+{
+ "based_proposals": [
+  "e0309188",
+  "a4d7f585",
+  "c2f04dc5"
+ ],
+ "code": "B-1",
+ "created_time": "2026-11-10T19:24:21Z",
+ "description": {
+  "based_proposals_basis": "proposals created since the previous build (inferred)",
+  "detail": "The declaration tree compiled to a graph named pharos_kinase with 5 node kinds, 5 edge kinds, 10 relations, 1 asset and 10 bindings, revision 0bdbf62907a0f25e. The compiled plan had 53 steps and 70 connections, and the project validated with only the missing data manifest outstanding.",
+  "message": 1178,
+  "numbers": "5 nodes, 5 edges, 10 relations, 0 projections, 1 asset, 10 bindings; revision 0bdbf62907a0f25e; 53 steps, 70 connections",
+  "status": "built"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "8e630f99",
+ "references": [],
+ "subject": "B-1",
+ "title": "First compiled Pharos blueprint"
+}

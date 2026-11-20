@@ -1,0 +1,6 @@
+isolate_id,species,sample_site,collected_on
+ISO-001,Escherichia coli,urine,2026-02-03
+ISO-002,Klebsiella pneumoniae,blood,2026-02-04
+ISO-003,Staphylococcus aureus,wound,2026-02-05
+ISO-004,Pseudomonas aeruginosa,sputum,2026-02-06
+ISO-005,Escherichia coli,urine,2026-02-07

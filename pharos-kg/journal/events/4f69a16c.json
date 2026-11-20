@@ -1,0 +1,18 @@
+{
+ "code": "EV-9",
+ "created_time": "2026-11-16T06:19:03Z",
+ "evaluated_revision": "260f36f4",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "4f69a16c",
+ "references": [],
+ "result": {
+  "detail": "The first quick evaluation of revision 0d02e41fe37c3fac failed only the explainability suite; audit, pruning and QA passed and link prediction was skipped. The run reported a fresh explanations hash and graph hash for the rebuilt tree, so the report was not stale. This is the regression that the meaning lookup and property meaning work then addressed.",
+  "message": 21739,
+  "numbers": "audit passed; explainability failed; pruning passed; qa passed; link_prediction skipped; revision 0d02e41fe37c3fac; explanations_sha256 7a42054320825d56eb7d7a4c52912e1645b343595f4055755295b6f7bf0bb7a4; graph_sha256 b14ee2aec5a67c69e79b6abce03ec87efdf7fcfe5d55ded6e99f36fc222fba7e",
+  "status": "failed"
+ },
+ "subject": "EV-9",
+ "title": "Quick gate fails explainability after the declaration move"
+}

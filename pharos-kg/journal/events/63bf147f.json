@@ -1,0 +1,23 @@
+{
+ "code": "E-17",
+ "created_time": "2026-11-16T15:52:31Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/graph_svd_features.json",
+   "type": "report"
+  }
+ ],
+ "id": "63bf147f",
+ "method": "truncated SVD of the whole graph's relation matrix",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-17",
+ "title": "Full-graph SVD"
+}

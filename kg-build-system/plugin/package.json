@@ -1,0 +1,17 @@
+{
+  "name": "opencode-kbs",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "OpenCode entry point for a kg-build-system project",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "README.md",
+    "skills",
+    "src"
+  ],
+  "dependencies": {
+    "@opencode/plugin": "latest"
+  }
+}

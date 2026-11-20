@@ -1,0 +1,53 @@
+{
+ "code": "EV-338",
+ "created_time": "2026-11-17T22:07:27Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-8",
+    "graph": "enriched authored graph",
+    "method": "IDF-SVD + all context",
+    "protocol": "leakage-controlled fixed held-out (16,060 eval pairs)"
+   },
+   "name": "experiments/prediction/results/context_signal.json",
+   "type": "report"
+  }
+ ],
+ "id": "2f4616ea",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "f7afc3ca"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "1f72e27c"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); leakage-controlled rerun; the earlier 0.95 context AUC is withdrawn by FW-4; no accepted finding states these AUPRCs",
+  "config": "context features and IDF-SVD; 48,894 train pairs",
+  "design": "E-8",
+  "findings": [],
+  "graph": "enriched authored graph",
+  "method": "IDF-SVD + all context",
+  "metric_text": "macro AUPRC 0.370932; micro AUPRC 0.41438138155735627; macro AUROC 0.66649; micro AUROC 0.706242961935901; macro MRR 0.534781; micro MRR 0.592339; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.370932,
+   "macro_auroc": 0.66649,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.534781,
+   "micro_auprc": 0.41438138155735627,
+   "micro_auroc": 0.706242961935901,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.592339
+  },
+  "protocol": "leakage-controlled fixed held-out (16,060 eval pairs)",
+  "report": "experiments/prediction/results/context_signal.json"
+ },
+ "subject": "B-19",
+ "title": "IDF-SVD + all context \u00b7 the fixed held-out split"
+}

@@ -1,0 +1,19 @@
+{
+ "code": "F-124",
+ "created_time": "2026-11-10T19:49:38Z",
+ "event_type": "finding.created",
+ "evidence": "The graph is a bounded-per-target sample of the release (40 rows for Tclin/Tchem, 10 for Tbio/Tdark), not the whole of Pharos.",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "Sampling rule corrected from 100 rows per target to a stratified 40/10 rule",
+   "type": "unattached_correction"
+  }
+ ],
+ "id": "018886be",
+ "metric": "100 \u2192 40 \u2192 40 Tclin/Tchem, 10 Tbio/Tdark",
+ "observation": "The project documents and graph semantics initially stated the extract sampled at most 100 diseases, interactions and GO annotations per target, and this was changed to 40 per target and then to a TDL-stratified rule: 40 nested rows for Tclin/Tchem and 10 for Tbio/Tdark because the API gateway times out on heavy Tbio pages. The normaliser trims every target to the same stratum rule so the manifest description matches the data.",
+ "references": [],
+ "subject": "F-124",
+ "title": "Sampling rule corrected from 100 rows per target to a stratified 40/10 rule"
+}

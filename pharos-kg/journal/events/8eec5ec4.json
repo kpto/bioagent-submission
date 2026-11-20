@@ -1,0 +1,13 @@
+{
+ "code": "F-105",
+ "created_time": "2026-11-18T02:20:55Z",
+ "event_type": "finding.created",
+ "evidence": "The audit gate is red for a reason that predates this turn \u2014 let me pin it down precisely and record it.",
+ "external_references": [],
+ "id": "8eec5ec4",
+ "metric": "46,837/51,459 to 51,459/51,459; missing 4,622 = 4,052 pairs + 570 diseases; edges 90.2%, nodes 94.3%",
+ "observation": "kgkit eval --quick reported evidence coverage 46,837/51,459 (90.2% of edges, 94.3% of nodes) with 4,622 records missing: 4,052 associated_with pairs and 570 disease nodes, because the sidecar still indexed the pre-migration JSON extracts. Deriving it from the release with the declaration's own identity rule brought it to 51,459/51,459 and all audit, pruning and QA suites passed.",
+ "references": [],
+ "subject": "F-105",
+ "title": "Audit gate was red because the evidence sidecar ignored the migration"
+}

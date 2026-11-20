@@ -1,0 +1,23 @@
+{
+ "code": "E-18",
+ "created_time": "2026-11-16T19:36:09Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/ontology_cold_disease.json",
+   "type": "report"
+  }
+ ],
+ "id": "4fe44406",
+ "method": "IDF-SVD whose disease factors are borrowed from HPO-similar training diseases for a held-out disease",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-18",
+ "title": "Ontology-borrowed SVD"
+}

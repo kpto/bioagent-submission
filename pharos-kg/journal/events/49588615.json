@@ -1,0 +1,13 @@
+{
+ "code": "F-26",
+ "created_time": "2026-11-16T07:36:21Z",
+ "event_type": "finding.created",
+ "evidence": "gnn_rank_ensemble macro 0.952756 micro 0.9603862487891772",
+ "external_references": [],
+ "id": "49588615",
+ "metric": "0.952756 / 0.960386; CI [0.909049, 0.972134]; 90/10 0.952183 / 0.958946; 10 seeds",
+ "observation": "Extending to ten seeds raised the GraphSAGE rank ensemble to 0.952756 macro/0.960386 micro (95% macro interval [0.909049, 0.972134]); the 90/10 external mix gave 0.952183/0.958946. F-0019 makes ten-seed rank averaging the stable GNN baseline, and the five-seed figures were replaced across the docs.",
+ "references": [],
+ "subject": "F-26",
+ "title": "Ten-seed GraphSAGE rank ensemble is the stable baseline"
+}

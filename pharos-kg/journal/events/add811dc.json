@@ -1,0 +1,13 @@
+{
+ "code": "F-92",
+ "created_time": "2026-11-17T21:54:23Z",
+ "event_type": "finding.created",
+ "evidence": "PPI is the weak relation: 97% are STRING-only predictions (median score 210/1000), while disease edges lack confidence but binds edges are well-cited.",
+ "external_references": [],
+ "id": "add811dc",
+ "metric": "46,686 PPI pairs, 45,317 STRING-only; 273 with p_int; 2,415 old pairs, 271 at p_int>=0.5; STRING score 158/210/504; disease conf 1,605/15,430, sources 5,252; binds 82,340 rows / 43,198 pairs",
+ "observation": "97% of the 46,686 PPI pairs are STRING-only predictions, with STRING score quantiles 158/210/504, and p_int exists for only 273 pairs; all 2,415 old interacts_with pairs are present in raw but only 271 have p_int at or above 0.5. Disease edges carry a confidence on 10.4% (1,605 of 15,430) and a source on 5,252, while binds edges are well cited (82,340 rows over 43,198 pairs).",
+ "references": [],
+ "subject": "F-92",
+ "title": "PPI is the weak relation: mostly STRING predictions, p_int on 273 pairs"
+}

@@ -1,0 +1,47 @@
+{
+ "code": "EV-364",
+ "created_time": "2026-11-17T22:36:26Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-3",
+    "graph": "policy_context",
+    "method": "RGCN (relation-aware)",
+    "protocol": "fair per-positive"
+   },
+   "name": "experiments/prediction/results/rgcn_policy_context.json",
+   "type": "report"
+  }
+ ],
+ "id": "fdb68157",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "cb8bd6d8"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "1f72e27c"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); round-2 balanced-design run; no finding states these AUPRCs; later_findings: F-100, F-102",
+  "config": "RGCN 5 seeds; 157377 edges; 8 relations; macro_std 0.0037767072748625713",
+  "design": "E-3",
+  "findings": [],
+  "graph": "policy_context",
+  "method": "RGCN (relation-aware)",
+  "metric_text": "macro AUPRC 0.7635344; micro AUPRC 0.7195941812000665",
+  "metrics": {
+   "macro_auprc": 0.7635344,
+   "micro_auprc": 0.7195941812000665
+  },
+  "protocol": "fair per-positive",
+  "report": "experiments/prediction/results/rgcn_policy_context.json"
+ },
+ "subject": "B-19",
+ "title": "RGCN (relation-aware) \u00b7 fair negatives"
+}

@@ -1,0 +1,12 @@
+{
+ "code": "PW-4",
+ "created_time": "2026-11-16T08:14:07Z",
+ "event_type": "proposal.withdrawal",
+ "external_references": [],
+ "id": "6d946245",
+ "reason": "rejected (F-0034). Proposal to train the relation-aware RGCN with node-type-aware hard negatives and report random-negative and hard-negative ranking side by side, motivated by the hard-negative collapse. It was implemented as hard_negative_training.py and rejected by F-0034, which measured worse ranking with hard-negative training.",
+ "references": [],
+ "subject": "P-10",
+ "title": "Withdraw P-10",
+ "withdrawn_proposal": "83c18f30"
+}

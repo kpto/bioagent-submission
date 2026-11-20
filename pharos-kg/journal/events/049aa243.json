@@ -1,0 +1,49 @@
+{
+ "code": "EV-119",
+ "created_time": "2026-11-16T08:13:34Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "RGCN (relation-aware)",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/rgcn.json",
+   "type": "report"
+  }
+ ],
+ "id": "049aa243",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "fd034878"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol; dot-product decoder; relations associated_with/ligand_target/ppi/go plus reverses; mean of seed metrics, not the rank ensemble",
+  "config": "2 layers, 128 hidden, 300 epochs, 10 seeds; mean of per-seed metrics",
+  "design": "E-2",
+  "findings": [
+   "F-30"
+  ],
+  "graph": "enriched authored graph",
+  "method": "RGCN (relation-aware)",
+  "metric_text": "macro AUPRC 0.95065; micro AUPRC 0.937113",
+  "metrics": {
+   "macro_auprc": 0.95065,
+   "micro_auprc": 0.937113
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/rgcn.json"
+ },
+ "subject": "B-10",
+ "title": "RGCN (relation-aware) \u00b7 the committed split"
+}

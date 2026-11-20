@@ -1,0 +1,55 @@
+{
+ "code": "EV-301",
+ "created_time": "2026-11-16T21:14:12Z",
+ "evaluated_revision": "69dd4cb3",
+ "evaluation": "5b6f2bcb",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-10",
+    "graph": "enriched authored graph",
+    "method": "IDF-SVD cosine (per-relation)",
+    "protocol": "per-relation held-out (participates_in; per-positive 5 negatives; 12823 pairs; 0.1673 base)"
+   },
+   "name": "experiments/prediction/relation_link_prediction.json",
+   "type": "report"
+  }
+ ],
+ "id": "d25f6d0e",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "c4c70805"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "a863c8b8"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); per-relation held-out, not target-disease; source/target degree controls",
+  "config": "k=32; source/target IDF-SVD factors; 20% test",
+  "design": "E-10",
+  "findings": [
+   "F-64"
+  ],
+  "graph": "enriched authored graph",
+  "method": "IDF-SVD cosine (per-relation)",
+  "metric_text": "macro AUPRC 0.431181; micro AUPRC 0.4311811093071957; macro AUROC 0.723065; micro AUROC 0.7230653596286105; macro MRR 0.61974; micro MRR 0.61974; macro Hits@10 1.0; micro Hits@10 1.0",
+  "metrics": {
+   "macro_auprc": 0.431181,
+   "macro_auroc": 0.723065,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.61974,
+   "micro_auprc": 0.4311811093071957,
+   "micro_auroc": 0.7230653596286105,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.61974
+  },
+  "protocol": "per-relation held-out (participates_in; per-positive 5 negatives; 12823 pairs; 0.1673 base)",
+  "report": "experiments/prediction/relation_link_prediction.json"
+ },
+ "subject": "B-12",
+ "title": "IDF-SVD cosine (per-relation) \u00b7 a held-out relation"
+}

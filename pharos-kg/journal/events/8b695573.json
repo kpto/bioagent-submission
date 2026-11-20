@@ -1,0 +1,13 @@
+{
+ "code": "F-87",
+ "created_time": "2026-11-17T20:26:11Z",
+ "event_type": "finding.created",
+ "evidence": "15,430 pairs vs the current 11,384 \u2014 a clean, explainable difference (the 40-disease cap is gone).",
+ "external_references": [],
+ "id": "8b695573",
+ "metric": "fam='Kinase' 635 targets; 18,738 contributions; 625 targets with disease; 15,430 pairs; 2,489 diseases; max 11 rows per pair, mean 1.21; 10 targets with no disease row; current API graph 11,384 pairs",
+ "observation": "Joining t2tc to target on fam = Kinase reproduces exactly 635 targets, then joining disease contributions through protein gives more target-disease pairs than the API extract because the 40-disease and top-5 caps are gone. Median rows per pair is one, with a long tail, so evidence counts are genuinely uneven.",
+ "references": [],
+ "subject": "F-87",
+ "title": "Dump grain is one row per contribution; the kinase slice is 15,430 pairs"
+}

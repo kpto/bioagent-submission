@@ -1,0 +1,13 @@
+{
+ "code": "F-59",
+ "created_time": "2026-11-16T20:52:19Z",
+ "event_type": "finding.created",
+ "evidence": "HPO `subclass_of` adds **nothing** (0.4625 \u2192 0.4629) while doubling nodes to 29,382.",
+ "external_references": [],
+ "id": "5668699e",
+ "metric": "core 0.4547 / 0.4499 (9,512 nodes); +disease no subclass 0.4625 / 0.4426 (13,144); +HPO subclass 0.4629 / 0.4394 (29,382); support>=5 0.4622 / 0.4387 (10,966); +protein 0.4573 / 0.4538 (13,403); MONDO 0.4721 / 0.4416 \u2192 0.4598 / 0.4357",
+ "observation": "A five-seed RGCN ablation separated phenotype annotation value from ontology size. Keeping disease phenotypes without subclass already captured the gain; restricting phenotypes to terms annotated to at least five graph diseases kept the gain with 1,454 extra nodes, while adding MONDO disease ancestry on top of core+HPO lowered the typed score.",
+ "references": [],
+ "subject": "F-59",
+ "title": "HPO subclass adds 16,238 nodes for +0.0004 macro; MONDO ancestry is negative"
+}

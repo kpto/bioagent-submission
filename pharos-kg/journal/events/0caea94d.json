@@ -1,0 +1,13 @@
+{
+ "code": "F-85",
+ "created_time": "2026-11-17T20:01:01Z",
+ "event_type": "finding.created",
+ "evidence": "Historical source snapshots \u2014 NCATS team \u2014 https://opendata.ncats.nih.gov/public/pharos/archive/",
+ "external_references": [],
+ "id": "0caea94d",
+ "metric": "pharos319.sql.gz 2,257,847,063 bytes (29-Apr-2024); pharos318 2.21 GB; pharos317 2.20 GB; pharos316 2.19 GB; pharos_tcrd6124m 8.25 GB",
+ "observation": "The challenge brief only names the Pharos portal, but the team Q&A gives the historical source snapshots hosted by NCATS and states that all teams share the same baseline graph. The archive holds full MySQL dumps for Pharos 3.16 to 3.19 and a TCRD dump, so a pinned raw source exists outside the API.",
+ "references": [],
+ "subject": "F-85",
+ "title": "Competition material points to the NCATS archive, not the live API"
+}

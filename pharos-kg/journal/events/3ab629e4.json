@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "ab499010"
+ ],
+ "code": "B-27",
+ "created_time": "2026-11-18T06:23:49Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "The interaction threshold (experimental, or STRING >= 700) and the ligand policy (HAVING count >= 2, with label rows filtered to the same eligible set) were added to the branch's row operations. Counts landed on the research targets and the graph shrank by roughly two thirds.",
+  "message": 53108,
+  "numbers": "ligands 58829 -> 12441 (target 12429); binds 80914 -> 34526 (target 34452); PPI 735 + 45317 -> 735 + 2622 = 3357; 70260/205886 -> 23872/116803; commit d4ae309",
+  "status": "accepted"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "3ab629e4",
+ "references": [],
+ "subject": "B-27",
+ "title": "Interaction threshold and multi-target ligand policy applied to the base"
+}

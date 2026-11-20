@@ -1,0 +1,33 @@
+{
+ "code": "E-23",
+ "created_time": "2026-11-16T07:51:38Z",
+ "event_type": "evaluation.created",
+ "external_references": [
+  {
+   "detail": null,
+   "name": "eval/link_prediction.py",
+   "type": "code"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/cold_start.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/cold_start_degree_matched.json",
+   "type": "report"
+  },
+  {
+   "detail": null,
+   "name": "experiments/prediction/combined.json",
+   "type": "report"
+  }
+ ],
+ "id": "8e4f2f92",
+ "method": "rank-average of two or more model scores, including the GNN, histogram and SVD combinations",
+ "metric": "macro and micro AUPRC",
+ "references": [],
+ "subject": "E-23",
+ "title": "Rank ensembles"
+}

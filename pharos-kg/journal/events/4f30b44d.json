@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "c2f04dc5"
+ ],
+ "code": "B-5",
+ "created_time": "2026-11-10T20:45:43Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "The revision record pins the blueprint fingerprint, the data manifest digest, the extract counts, pharos319 and the full evaluation summary of 5 passed and 0 failed. It is the only artifact kgctl compare reads, and the quick gate was later separated so it cannot overwrite this full report.",
+  "message": 4632,
+  "numbers": "revision f11c429a1fa75e9f; manifest ab8d722ea9c2fa36cd54b3d123f12da2f8b4e6f54f5239b2d9f5c4228fcc5322; 5 passed, 0 failed; pharos319",
+  "status": "recorded"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "4f30b44d",
+ "references": [],
+ "subject": "B-5",
+ "title": "Revision f11c429a1fa75e9f recorded with its evaluation"
+}

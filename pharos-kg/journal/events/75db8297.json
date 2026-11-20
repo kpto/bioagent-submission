@@ -1,0 +1,81 @@
+{
+ "code": "EV-288",
+ "created_time": "2026-11-16T19:37:09Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "77fcd1b0",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-7",
+    "graph": "enriched authored graph",
+    "method": "histogram + HPO-borrowed IDF-SVD",
+    "protocol": "disease cold start (83 held-out diseases; 4,773 pairs; 17.26% base)"
+   },
+   "name": "experiments/prediction/ontology_cold_disease.json",
+   "type": "report"
+  }
+ ],
+ "id": "75db8297",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "84e8c365"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); disease cold start; every candidate disease has training degree zero; P-12 recorded just after commit; later_findings: F-53",
+  "config": "HPO-borrowed SVD k=32; negatives from held-out diseases only",
+  "design": "E-7",
+  "findings": [],
+  "graph": "enriched authored graph",
+  "method": "histogram + HPO-borrowed IDF-SVD",
+  "metric_text": "macro AUPRC 0.239794; micro AUPRC 0.21516582825950348; macro AUROC 0.463368; micro AUROC 0.44563789038394874; macro MRR 0.370632; micro MRR 0.364179; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.195094, 0.240863], \"auroc\": [0.424837, 0.466687], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.197022, 0.35605], \"macro_auroc\": [0.369737, 0.556081], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.330815, 0.413878], \"mrr\": [0.347661, 0.379743]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.195094,
+    0.240863
+   ],
+   "ci95_auroc": [
+    0.424837,
+    0.466687
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.197022,
+    0.35605
+   ],
+   "ci95_macro_auroc": [
+    0.369737,
+    0.556081
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.330815,
+    0.413878
+   ],
+   "ci95_mrr": [
+    0.347661,
+    0.379743
+   ],
+   "macro_auprc": 0.239794,
+   "macro_auroc": 0.463368,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.370632,
+   "micro_auprc": 0.21516582825950348,
+   "micro_auroc": 0.44563789038394874,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.364179
+  },
+  "protocol": "disease cold start (83 held-out diseases; 4,773 pairs; 17.26% base)",
+  "report": "experiments/prediction/ontology_cold_disease.json"
+ },
+ "subject": "B-10",
+ "title": "histogram + HPO-borrowed IDF-SVD \u00b7 disease cold start"
+}

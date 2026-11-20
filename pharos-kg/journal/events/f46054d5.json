@@ -1,0 +1,13 @@
+{
+ "code": "F-121",
+ "created_time": "2026-11-18T07:55:29Z",
+ "event_type": "finding.created",
+ "evidence": "\"keep\": 150856,  \"prune\": 0,  \"rule_hits\": {}",
+ "external_references": [],
+ "id": "f46054d5",
+ "metric": "keep 150856; prune 0; rule_hits {}; verdicts.tsv 40.0 MB / 150856 rows; nodes.tsv 2.4 MB; edges.tsv 24.3 MB",
+ "observation": "The exporter produced a full competition package but scored only edges that survived into the graph, so every row said keep and no rule fired. The 30 percent criterion asks for a keep/prune verdict and confidence per Pharos edge, so the pruning third was unaddressed.",
+ "references": [],
+ "subject": "F-121",
+ "title": "Pruning verdicts are empty: keep 150,856, prune 0"
+}

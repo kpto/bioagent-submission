@@ -1,0 +1,21 @@
+{
+ "based_revision": "d142946f",
+ "change": null,
+ "code": "P-4",
+ "created_time": "2026-11-16T02:03:59Z",
+ "event_type": "proposal.created",
+ "external_references": [
+  {
+   "detail": {
+    "basis": "latest build before the proposal"
+   },
+   "name": "based_revision",
+   "type": "inference"
+  }
+ ],
+ "id": "92e0ea7e",
+ "rationale": "Proposed freezing the current Pharos-only graph as a true baseline, then adding safe external context (Reactome pathway membership, STRING/BioGRID PPI confidence, HPO phenotype similarity, ChEMBL ligand profiles, GO evidence codes) while avoiding direct target-disease tables from Open Targets or DisGeNET because they can leak the held-out label. The plan also called for merging multiple sources per edge, giving every edge a keep/prune/undecided verdict with confidence, explaining every edge, and exporting KGX TSV, keeping the schema small rather than adding node kinds for coverage. The thesis was that each edge should be decision-ready rather than that the graph should be larger; the external-context step was later tested in its raw-edge form and rejected.",
+ "references": [],
+ "subject": "P-4",
+ "title": "Six-move plan to win on the authored KG"
+}

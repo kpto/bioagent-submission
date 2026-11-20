@@ -1,0 +1,13 @@
+{
+ "code": "F-120",
+ "created_time": "2026-11-18T07:50:51Z",
+ "event_type": "finding.created",
+ "evidence": "**Two splits are never pooled.**",
+ "external_references": [],
+ "id": "14909512",
+ "metric": "2275 vs 3086 held-out pairs; 10 incomplete runs; 2 five-byte logs; cold hits@10 = 1.0 over 17 runs",
+ "observation": "Fair-mode arms were only run on the legacy 2,275-pair split while every later run uses 3,086, so no fair-vs-degree comparison is made now. The wrapper echoed DONE unconditionally, hiding 10 killed runs including two 5-byte logs, and cold hits@10 was 1.0 by construction and is retired.",
+ "references": [],
+ "subject": "F-120",
+ "title": "Two splits are never pooled; DONE was unconditional; one metric was forced"
+}

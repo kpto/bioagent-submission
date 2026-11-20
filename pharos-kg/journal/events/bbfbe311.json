@@ -1,0 +1,13 @@
+{
+ "code": "F-49",
+ "created_time": "2026-11-16T16:17:14Z",
+ "event_type": "finding.created",
+ "evidence": "Adding ligand-Jaccard and GO-Jaccard neighbours to the PPI smoothing raises degree-matched target cold start from 0.3209 / 0.3663 (PPI only) to 0.3389 / 0.3876 macro / micro.",
+ "external_references": [],
+ "id": "bbfbe311",
+ "metric": "0.338890 / 0.387562; PPI-only 0.3209 / 0.3663; base 0.2879 / 0.3136",
+ "observation": "Adding ligand-Jaccard and GO-Jaccard neighbours to the PPI smoothing raised degree-matched target cold start from 0.3209/0.3663 (PPI only) to 0.338890/0.387562 macro/micro, against the base histogram 0.2879/0.3136. F-0042 adopts the ligand/GO neighbours in the cold-start smoothing.",
+ "references": [],
+ "subject": "F-49",
+ "title": "Ligand and GO neighbours improve cold-start smoothing again"
+}

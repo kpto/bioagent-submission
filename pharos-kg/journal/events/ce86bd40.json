@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "80e82da5"
+ ],
+ "code": "B-11",
+ "created_time": "2026-11-16T19:52:39Z",
+ "description": {
+  "based_proposals_basis": "two shared topic words",
+  "detail": "The exporter writes nodes.tsv, edges.tsv, verdicts.tsv and graph.npz plus schema and README, reconciling emitted edges with verdict rows. Its first run pruned 1,015 edges, 1,014 of them associated_with under R09_invalid_probability (max_conf > 1) and one under R08_impossible_activity; that prune count was later corrected.",
+  "message": 33848,
+  "numbers": "9,512 nodes; 37,697 edges; 37,697 verdicts; keep 36,682; prune 1,015 (R09 1,014, R08 1); threshold 0.5",
+  "status": "published (c2da4db), verdict counts superseded"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "ce86bd40",
+ "references": [],
+ "subject": "B-11",
+ "title": "Competition export package built: KGX TSV, verdicts and PyG arrays"
+}

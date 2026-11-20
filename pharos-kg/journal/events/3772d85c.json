@@ -1,0 +1,18 @@
+{
+ "code": "EV-2",
+ "created_time": "2026-11-10T20:29:36Z",
+ "evaluated_revision": "45c2ff48",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "3772d85c",
+ "references": [],
+ "result": {
+  "detail": "The quick gate passed audit, explainability, pruning and QA while skipping link prediction, with sufficiency at 20/20 and zero unresolved occurrence subjects. Pruning used 100 good and 100 injected records and passed its precision/recall/F1 thresholds of 0.8; QA scored positives and negatives on 30 questions. This quick report is a gate, not the revision artifact.",
+  "message": 4134,
+  "numbers": "4 passed, 1 skipped; precision 0.990099, recall 1.0, F1 0.995025; 100 good / 100 injected; QA positive 1.0, negative 1.0, 30 evaluated; sufficiency 20/20",
+  "status": "passed"
+ },
+ "subject": "EV-2",
+ "title": "Quick gate passes 4 of 5 suites"
+}

@@ -1,0 +1,92 @@
+{
+ "code": "EV-123",
+ "created_time": "2026-11-16T08:41:30Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "43eb9ff3",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-6",
+    "graph": "enriched authored graph",
+    "method": "GraphSAGE",
+    "protocol": "target cold start (120 targets; 13,045 pairs; 17.14% base)"
+   },
+   "name": "experiments/prediction/cold_start.json",
+   "type": "report"
+  }
+ ],
+ "id": "69f9e3c8",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "c56cf720"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "5d2bf6c5"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "c876b8dd"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); target cold start with random negatives; degree shortcut not controlled; earlier 0.997 withdrawn (FW-1)",
+  "config": "10 seeds; held-out target-disease edges; targets keep ligand/PPI/GO edges",
+  "design": "E-6",
+  "findings": [
+   "F-36",
+   "F-35"
+  ],
+  "graph": "enriched authored graph",
+  "method": "GraphSAGE",
+  "metric_text": "macro AUPRC 0.243786; micro AUPRC 0.22099309273031031; macro AUROC 0.624779; micro AUROC 0.6699560352790219; macro MRR 0.683975; micro MRR 0.727206; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.212481, 0.228564], \"auroc\": [0.660707, 0.676556], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.188207, 0.358341], \"macro_auroc\": [0.528641, 0.687458], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.611284, 0.766645], \"mrr\": [0.712165, 0.74362]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.212481,
+    0.228564
+   ],
+   "ci95_auroc": [
+    0.660707,
+    0.676556
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.188207,
+    0.358341
+   ],
+   "ci95_macro_auroc": [
+    0.528641,
+    0.687458
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.611284,
+    0.766645
+   ],
+   "ci95_mrr": [
+    0.712165,
+    0.74362
+   ],
+   "macro_auprc": 0.243786,
+   "macro_auroc": 0.624779,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.683975,
+   "micro_auprc": 0.22099309273031031,
+   "micro_auroc": 0.6699560352790219,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.727206
+  },
+  "protocol": "target cold start (120 targets; 13,045 pairs; 17.14% base)",
+  "report": "experiments/prediction/cold_start.json"
+ },
+ "subject": "B-10",
+ "title": "GraphSAGE \u00b7 target cold start"
+}

@@ -1,0 +1,18 @@
+{
+ "code": "EV-6",
+ "created_time": "2026-11-11T14:48:22Z",
+ "evaluated_revision": "4f30b44d",
+ "evaluation": "61aad223",
+ "event_type": "evaluation.run",
+ "external_references": [],
+ "id": "b3ef4bc3",
+ "references": [],
+ "result": {
+  "detail": "The knowledge base states five deterministic suites over one revision, each with a named pass condition: audit (no duplicates, dangling endpoints or null keys; evidence coverage 1.0), explainability (full type/property/binding coverage, no dangling provenance, sufficiency 20/20, counterfactual in full mode), pruning (precision, recall and F1 each >= 0.8), QA (accuracy >= 0.9, negative accuracy >= 0.9, zero unparsed) and link prediction. All five pass at this revision, and the page explicitly says passing is a statement about structure and measurement, not biological truth.",
+  "message": 9072,
+  "numbers": "5/5 suites passed; evidence coverage 1.0; sufficiency 20/20; pruning precision/recall/F1 >= 0.8; QA accuracy and negative accuracy >= 0.9; zero unparsed",
+  "status": "passed at f11c429a1fa75e9f"
+ },
+ "subject": "EV-6",
+ "title": "Five gates pass at revision f11c429a1fa75e9f"
+}

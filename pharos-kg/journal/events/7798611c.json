@@ -1,0 +1,96 @@
+{
+ "code": "EV-41",
+ "created_time": "2026-11-16T07:52:38Z",
+ "evaluated_revision": "591af43d",
+ "evaluation": "8e4f2f92",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-2",
+    "graph": "enriched authored graph",
+    "method": "rank ensemble: 5-seed GraphSAGE + external histogram (70/30)",
+    "protocol": "committed shared five negatives (4,999 pairs)"
+   },
+   "name": "experiments/prediction/ensemble.json",
+   "type": "report"
+  }
+ ],
+ "id": "7798611c",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "9ab270b9"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "5a4b8eec"
+  },
+  {
+   "linkage_name": "premise",
+   "linked_event": "cf708e8f"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "e3a2d0a4"
+  }
+ ],
+ "result": {
+  "caveat": "HISTORICAL (2026-11-10 extract); committed shared-negative protocol; five-seed GNN; 95% bootstrap intervals overlap single-model intervals",
+  "config": "5 seeds (0-4); rank averaging; features hpo+string; 95% bootstrap CI",
+  "design": "E-2",
+  "findings": [
+   "F-25",
+   "F-24"
+  ],
+  "graph": "enriched authored graph",
+  "method": "rank ensemble: 5-seed GraphSAGE + external histogram (70/30)",
+  "metric_text": "macro AUPRC 0.945944; micro AUPRC 0.9495177092970314; macro AUROC 0.920672; micro AUROC 0.9242667497171295; macro MRR 0.918473; micro MRR 0.916162; macro Hits@10 1.0; micro Hits@10 1.0; 95% CI {\"auprc\": [0.943746, 0.955134], \"auroc\": [0.91574, 0.932679], \"hits_at_10\": [1.0, 1.0], \"macro_auprc\": [0.903255, 0.965102], \"macro_auroc\": [0.878762, 0.942502], \"macro_hits_at_10\": [1.0, 1.0], \"macro_mrr\": [0.898501, 0.93619], \"mrr\": [0.906742, 0.925219]}",
+  "metrics": {
+   "ci95_auprc": [
+    0.943746,
+    0.955134
+   ],
+   "ci95_auroc": [
+    0.91574,
+    0.932679
+   ],
+   "ci95_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_auprc": [
+    0.903255,
+    0.965102
+   ],
+   "ci95_macro_auroc": [
+    0.878762,
+    0.942502
+   ],
+   "ci95_macro_hits_at_10": [
+    1.0,
+    1.0
+   ],
+   "ci95_macro_mrr": [
+    0.898501,
+    0.93619
+   ],
+   "ci95_mrr": [
+    0.906742,
+    0.925219
+   ],
+   "macro_auprc": 0.945944,
+   "macro_auroc": 0.920672,
+   "macro_hits_at_10": 1.0,
+   "macro_mrr": 0.918473,
+   "micro_auprc": 0.9495177092970314,
+   "micro_auroc": 0.9242667497171295,
+   "micro_hits_at_10": 1.0,
+   "micro_mrr": 0.916162
+  },
+  "protocol": "committed shared five negatives (4,999 pairs)",
+  "report": "experiments/prediction/ensemble.json"
+ },
+ "subject": "B-10",
+ "title": "rank ensemble: 5-seed GraphSAGE + external histogram (70/30) \u00b7 the committed split"
+}

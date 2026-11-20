@@ -1,0 +1,12 @@
+{
+ "code": "FW-6",
+ "created_time": "2026-11-17T23:10:39Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "a01941e5",
+ "reason": "The documented enriched 0.4452 versus raw-associations 0.3789 came from runs that left held-out edges in the message graph. Those figures were superseded by the fixed-eval table and marked as not to be quoted.",
+ "references": [],
+ "subject": "F-127",
+ "title": "Old scorecard AUPRC figures were leaky and are not quotable",
+ "withdrawn_finding": "a90f7bb5"
+}

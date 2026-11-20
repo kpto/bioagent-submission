@@ -1,0 +1,13 @@
+{
+ "code": "F-114",
+ "created_time": "2026-11-18T05:07:05Z",
+ "event_type": "finding.created",
+ "evidence": "The uncovered third cannot be covered by pathway, expression, MP phenotype or variants",
+ "external_references": [],
+ "id": "833b0c81",
+ "metric": "uncovered 4969 (32.2%); 4148 / 2065 / 840 / 721; median 14 other targets; pathway 331936 rows / 12984 proteins; expression 10563981; phenotype 424516; sequence_variant 1063403; gwas 124149 rows / 2693 traits",
+ "observation": "The layer-candidacy test on the 4,969 uncovered edges found they hang off disease-side structure, while every remaining release table is target-side: pathway, expression, MP phenotype and sequence_variant carry no disease column. gwas is the one open check because its traits are http URLs, so the assistant deliberately stopped short of recording a finding.",
+ "references": [],
+ "subject": "F-114",
+ "title": "The uncovered third of explanation coverage is a sourcing problem (not recorded)"
+}

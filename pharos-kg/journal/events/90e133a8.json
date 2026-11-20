@@ -1,0 +1,13 @@
+{
+ "code": "F-104",
+ "created_time": "2026-11-18T01:51:53Z",
+ "event_type": "finding.created",
+ "evidence": "Short answer: **directionally consistent, absolutely not comparable** \u2014 and the incomparability is expected, because negative sampling and metrics differ.",
+ "external_references": [],
+ "id": "90e133a8",
+ "metric": "BioPathNet MRR 0.547 / Hits@10 0.72; drug-disease MRR 0.23-0.83; TransE MRR 0.0045 vs path 0.186; ours 0.29-0.48 degree, 0.62-0.77 fair, KGE 0.23-0.34; random approx 0.167",
+ "observation": "Community results use MRR/Hits@k over thousands of candidates while ours are AUPRC over 1:5 sampled pairs. BioPathNet reports gene-function MRR 0.547 with Hits@10 0.72 and drug-disease MRR 0.23-0.83, and its KGE baselines show TransE 0.0045 versus path-based 0.186, the same ordering as our RGCN 0.29-0.48 against TransE/RotatE 0.23-0.34. With five negatives per positive the random baseline is about 0.167, so degree-matched 0.29-0.48 is 1.7-2.9x chance and fair 0.62-0.77 is 3.7-4.6x.",
+ "references": [],
+ "subject": "F-104",
+ "title": "Numbers are directionally consistent with the literature but not comparable"
+}

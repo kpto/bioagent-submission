@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "77ce6701"
+ ],
+ "code": "B-16",
+ "created_time": "2026-11-17T10:41:10Z",
+ "description": {
+  "based_proposals_basis": "two shared topic words",
+  "detail": "The compact profile was regenerated with --min-disease-support 5 --compact on the new extract and recorded as its own revision. The full four-suite gate passed and the exporter reconciled the rebuilt graph; the revision also repaired an ID collision that had overwritten the drift finding.",
+  "message": 39677,
+  "numbers": "15,007 nodes; 67,390 edges; 82,397 records; 5,488 terms; 7,840 disease_has_phenotype; 15,379 protein_has_phenotype; 6,846 subclass; 422/1,920 diseases and 245/635 targets mapped; revision 956ddd8e1e7fdf1e; 4/4 suites; keep 67,389 / prune 1",
+  "status": "published (F-0075)"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "4d95ed80",
+ "references": [],
+ "subject": "B-16",
+ "title": "Compact profile rebuilt on the 2026-11-17 extract"
+}

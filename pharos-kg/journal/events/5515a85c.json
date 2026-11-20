@@ -1,0 +1,20 @@
+{
+ "based_proposals": [
+  "ab499010"
+ ],
+ "code": "B-30",
+ "created_time": "2026-11-18T06:55:57Z",
+ "description": {
+  "based_proposals_basis": "latest proposal before the build (inferred)",
+  "detail": "Adding protein->HPO edges completed the pair with hpo_term as the intermediate type, and gates passed on the resulting graph. The graph reached the size the notebook's numbers describe.",
+  "message": 53632,
+  "numbers": "has_hpo_phenotype 14920; 28359 nodes / 150856 edges; coverage 10461/15430 (67.8%), p90 12, max 186; hpo_term intermediates 18173; commit 20393d9",
+  "status": "accepted"
+ },
+ "event_type": "revision.created",
+ "external_references": [],
+ "id": "5515a85c",
+ "references": [],
+ "subject": "B-30",
+ "title": "Kinase HPO phenotypes complete the pair; coverage returns to 67.8%"
+}

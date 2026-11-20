@@ -1,0 +1,12 @@
+{
+ "code": "FW-2",
+ "created_time": "2026-11-16T08:36:27Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "90346b06",
+ "reason": "The 0.9761 RGCN figure had been presented as the strongest macro-AUPRC result; the negative-sampler audit showed it sits on a 46.3% positive base rate with 2,085 reused evaluation negatives. docs/SUBMISSION.md, README and the knowledge base were rewritten so the fair per-positive suite is the headline (histogram 0.6834/0.6201, RGCN 0.1301/0.1419).",
+ "references": [],
+ "subject": "F-34",
+ "title": "0.9761 RGCN reframed as an easy shared-negative result",
+ "withdrawn_finding": "7ff4bc4a"
+}

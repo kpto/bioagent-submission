@@ -1,0 +1,12 @@
+{
+ "code": "FW-7",
+ "created_time": "2026-11-17T23:24:59Z",
+ "event_type": "finding.withdrawal",
+ "external_references": [],
+ "id": "3d762eff",
+ "reason": "Reconstructing the baseline as the whole dump projected to the same five relations (69,609 nodes / 160,806 edges) instead of the sampled API extract reverses the claim. Complete Pharos scores 0.3081/0.2524 degree-matched and 0.6945/0.7000 fair; our balanced graph 0.3055/0.2550 and 0.6900/0.7013. The earlier +0.0075/+0.0045 was against a sampled subset, so the result is parity (-0.0026 degree, -0.0045 fair, sigma 0.004-0.012).",
+ "references": [],
+ "subject": "F-1",
+ "title": "Against the complete Pharos KG the graph is at parity, not ahead",
+ "withdrawn_finding": "f30e7509"
+}

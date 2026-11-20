@@ -1,0 +1,13 @@
+{
+ "code": "F-110",
+ "created_time": "2026-11-18T04:07:21Z",
+ "event_type": "finding.created",
+ "evidence": "`interacts_with` 2,415 -> **3,357** edges",
+ "external_references": [],
+ "id": "c9def9c3",
+ "metric": "interacts_with 2415 -> 3357; built 0.4751/0.4149/0.3094 vs policy_context 0.4760/0.4001/0.2516; -0.0009 macro, +0.0148 micro, +0.0578 cold",
+ "observation": "Taking interactions from the release at a declared threshold (experimental sources, or STRING >= 700) instead of the capped extract raised interacts_with from 2,415 to 3,357 edges, the count the research variant carried. In the same RGCN run the artifact moved from 0.0115 macro behind the balanced reference to 0.0009 behind, with micro and cold ahead.",
+ "references": [],
+ "subject": "F-110",
+ "title": "Interaction migration closes almost the whole gap (F-0126)"
+}

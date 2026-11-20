@@ -1,0 +1,13 @@
+{
+ "code": "F-20",
+ "created_time": "2026-11-16T07:05:06Z",
+ "event_type": "finding.created",
+ "evidence": "Naively adding external edges made the model worse.",
+ "external_references": [],
+ "id": "d1d5cebf",
+ "metric": "14870, 9253, 2387 edges; baseline 0.955507 / 0.942289; HPO 0.933871 / 0.936002; Reactome 0.938412 / 0.940845; STRING 0.936466 / 0.93888",
+ "observation": "A seed-0 test added public sources as ordinary message-passing edges: HPO genes_to_phenotype (14,870 edges) scored 0.934 macro/0.936 micro, Reactome (9,253) 0.938/0.941 and STRING >=700 (2,387) 0.936/0.939, all below the enriched baseline 0.956/0.942. Recorded as F-0013: external sources belong in evidence, source-independence features or keep/prune verdicts, not message-passing context.",
+ "references": [],
+ "subject": "F-20",
+ "title": "External sources as message-passing edges degraded the GNN"
+}

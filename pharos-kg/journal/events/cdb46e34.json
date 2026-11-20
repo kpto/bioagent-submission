@@ -1,0 +1,13 @@
+{
+ "code": "F-67",
+ "created_time": "2026-11-16T21:27:34Z",
+ "event_type": "finding.created",
+ "evidence": "IDF remains the best weighting: 0.3666 / 0.4302 versus sqrt-IDF 0.3207 / 0.3777, PPMI 0.3451 / 0.3946, and row 0.2468 / 0.2543.",
+ "external_references": [],
+ "id": "cdb46e34",
+ "metric": "IDF 0.3666 / 0.4302; sqrt-IDF 0.3207 / 0.3777; PPMI 0.3451 / 0.3946; row-normalised 0.2468 / 0.2543; evidence-count IDF 0.3694 / 0.4230",
+ "observation": "Row-normalised, sqrt-IDF, PPMI and evidence-count variants were added to the same SVD edge-selection protocol. Plain IDF remained best on both macro and micro, so the earlier weighting rule held after the extra variants.",
+ "references": [],
+ "subject": "F-67",
+ "title": "IDF is the best of the tested matrix weightings"
+}

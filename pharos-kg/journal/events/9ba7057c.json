@@ -1,0 +1,13 @@
+{
+ "code": "F-15",
+ "created_time": "2026-11-16T02:35:16Z",
+ "event_type": "finding.created",
+ "evidence": "Adding HPO target-phenotype (14,870), Reactome target-pathway (9,253) or STRING target-target (2,387) edges as ordinary message-passing context lowered macro AUPRC",
+ "external_references": [],
+ "id": "9ba7057c",
+ "metric": "HPO 14,870 edges -> macro 0.934 / micro 0.936; Reactome 9,253 -> 0.938 / 0.941; STRING 2,387 -> 0.936 / 0.939; enriched baseline 0.956 / 0.942; disease-phenotype matches 0",
+ "observation": "HPO gene-to-phenotype, Reactome and STRING >=700 interactions were downloaded, mapped to existing keys and added to the enriched arm as ordinary message-passing edges. Each run at seed 0 scored below the 0.956 enriched baseline, so the assistant concluded external sources must not be dumped in as undifferentiated adjacency and should instead act as edge-level evidence, source-independence features, pruning inputs or a relation-aware model. Only 3 of 1,160 MONDO disease keys matched HPO disease rows, so the HPO mapping went through gene symbols instead (603 translations, 14,870 edges).",
+ "references": [],
+ "subject": "F-15",
+ "title": "Raw external edges lowered link-prediction AUPRC"
+}

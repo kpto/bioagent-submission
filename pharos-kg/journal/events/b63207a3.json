@@ -1,0 +1,13 @@
+{
+ "code": "F-101",
+ "created_time": "2026-11-18T00:08:58Z",
+ "event_type": "finding.created",
+ "evidence": "Four domains sit unused in the release and three external sources would add what it structurally lacks.",
+ "external_references": [],
+ "id": "b63207a3",
+ "metric": "sequence_variant 1,025,736 rows / 529 proteins / 10,580 pairs; gwas 4,883 / 513 proteins; generif 79,518 / 631 proteins; drug_activity 517 / 211 targets / 121 drugs; ortholog_disease 37,852; mondo_parent 38,453; go_parent 68,650; do_parent 10,880",
+ "observation": "sequence_variant has 1,025,736 rows over 529 proteins (10,580 protein-variant pairs), gwas 4,883 rows over 513 proteins with mapped trait URIs, generif 79,518 rows over 631 proteins, drug_activity 517 rows over 211 targets and 121 drugs, and ortholog_disease 37,852 rows. The hierarchy tables (mondo_parent 38,453, go_parent 68,650, do_parent 10,880) later supplied the only design change measured to help both families.",
+ "references": [],
+ "subject": "F-101",
+ "title": "Four untapped domains in the release, measured over the kinases"
+}

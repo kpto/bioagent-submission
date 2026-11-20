@@ -1,0 +1,47 @@
+{
+ "code": "EV-360",
+ "created_time": "2026-11-17T22:36:26Z",
+ "evaluated_revision": "b7a9055e",
+ "evaluation": "f8dfc3f2",
+ "event_type": "evaluation.run",
+ "external_references": [
+  {
+   "detail": {
+    "design": "E-4",
+    "graph": "current",
+    "method": "RGCN (relation-aware)",
+    "protocol": "degree-matched (shared split/negatives)"
+   },
+   "name": "experiments/prediction/results/rgcn_policy_context.json",
+   "type": "report"
+  }
+ ],
+ "id": "d6a5d031",
+ "references": [
+  {
+   "linkage_name": "design",
+   "linked_event": "1663d182"
+  },
+  {
+   "linkage_name": "proposal",
+   "linked_event": "1f72e27c"
+  }
+ ],
+ "result": {
+  "caveat": "CURRENT (2026-11-17+ extract); round-2 balanced-design run; no finding states these AUPRCs; later_findings: F-100, F-102",
+  "config": "RGCN 5 seeds; 38286 edges; 5 relations; macro_std 0.0024952125841298696",
+  "design": "E-4",
+  "findings": [],
+  "graph": "current",
+  "method": "RGCN (relation-aware)",
+  "metric_text": "macro AUPRC 0.29068639999999996; micro AUPRC 0.29221948050608393",
+  "metrics": {
+   "macro_auprc": 0.29068639999999996,
+   "micro_auprc": 0.29221948050608393
+  },
+  "protocol": "degree-matched (shared split/negatives)",
+  "report": "experiments/prediction/results/rgcn_policy_context.json"
+ },
+ "subject": "B-19",
+ "title": "RGCN (relation-aware) \u00b7 degree-matched negatives"
+}
