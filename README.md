@@ -8,7 +8,7 @@ directory. That opens a guided menu:
 3. **I mean the actual graph** — explain each bundled artifact, its path and its job in the competition.
 4. **The graph format is not quite right...** — name the format; I take the author role and change the declarations.
 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
-6. **I still don't trust you; make a new graph for me** — move to `demo/`, run `/kbs_init`, then stop and ask before the auto demo.
+6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; that confirmation covers moving, `/kbs_init`, the auto build and the first revision.
 
 The submission is committed in three branches:
 

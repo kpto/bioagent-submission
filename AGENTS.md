@@ -45,7 +45,7 @@ When the user opens this folder, offer the same menu:
 > 3. **I mean the actual graph** — explain each bundled artifact, its path and its job in the competition.
 > 4. **The graph format is not quite right...** — name the format; I take the author role and change the declarations.
 > 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
-> 6. **I still don't trust you; make a new graph for me** — move the session to `demo/`, run `/kbs_init`, then stop and ask.
+> 6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; that confirmation covers the move, `/kbs_init`, the auto build and the first revision.
 >
 > Which would you like?
 
@@ -86,15 +86,24 @@ Then follow the choice:
 - **5. I don't trust you; I want to build it myself.** Show the commands and step
   aside. Do not run them unless asked.
 - **6. I still don't trust you; make a new graph for me.** Do this in order:
-  1. Move the OpenCode session to `demo/`.
-  2. In `demo/`, run `/kbs_init` with no task and let it create the project.
-  3. Stop and report. Say: **“For this demo I will read `PURPOSE.md` as the
-     task. `/kbs_auto` will be on, so I will make the design decisions and
-     create a KG revision. Shall I proceed?”**
-  4. Wait for the user's affirmation. Do not read `PURPOSE.md`, design, build or
-     create a revision before they affirm.
-  5. On affirmation, turn `/kbs_auto` on with `PURPOSE.md` as the task; it runs
-     the demo and records the revision.
+  1. Briefly explain the demo before moving:
+     `demo/` holds four messy antimicrobial exports and a lab lead's
+     `PURPOSE.md`. The story: the lab wants to know which isolates are resistant
+     to which antibiotics and what evidence supports each result. This is the
+     same method on a new domain, not a second Pharos.
+
+     You can also try this on your own data for any purpose; the demo is not staged.
+  2. Ask for confirmation **once**: **“If you proceed, I will move to `demo/`,
+     run `/kbs_init`, read `PURPOSE.md` as the task under `/kbs_auto`, make the
+     design decisions and create the first KG revision. This one confirmation
+     covers the whole demo. Shall I proceed?”**
+     Wait for the answer. Do not move, initialise, read files, build or create a
+     revision before the user confirms.
+  3. On confirmation, call `kbs_move` with `demo`. Do not use a shell `cd`.
+  4. Run `/kbs_init` in `demo/` with no task, then turn `/kbs_auto` on with
+     `PURPOSE.md` as the task. Do not stop for a second acceptance after
+     `/kbs_init`; the first confirmation already covered the design, build and
+     revision.
 
 
 Ask once. If the user says "show me" or "go", give the one-paragraph summary and
