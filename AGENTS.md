@@ -45,7 +45,7 @@ When the user opens this folder, offer the same menu:
 > 3. **I mean the actual graph** — explain each bundled artifact, its path and its job in the competition.
 > 4. **The graph format is not quite right...** — name the format; I take the author role and change the declarations.
 > 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
-> 6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; that confirmation covers the move, `/kbs_init`, the auto build and the first revision.
+> 6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; then move, register locally, initialise and auto-build the first revision.
 >
 > Which would you like?
 
@@ -99,8 +99,11 @@ Then follow the choice:
      covers the whole demo. Shall I proceed?”**
      Wait for the answer. Do not move, initialise, read files, build or create a
      revision before the user confirms.
-  3. On confirmation, call `kbs_move` with `demo`. Do not use a shell `cd`.
-  4. Run `/kbs_init` in `demo/` with no task, then turn `/kbs_auto` on with
+  3. On confirmation, move the OpenCode session to `demo/` using the host's session move. Do not use a shell `cd`.
+  4. Register the plugin locally in `demo/opencode.json` with the included
+     framework's `plugin/` directory and `frameworkUrl`; merge with any existing
+     local config. Reload OpenCode if `/kbs_init` is not available.
+  5. Run `/kbs_init` in `demo/` with no task, then turn `/kbs_auto` on with
      `PURPOSE.md` as the task. Do not stop for a second acceptance after
      `/kbs_init`; the first confirmation already covered the design, build and
      revision.
@@ -198,25 +201,28 @@ uv run kbs revision list                  # the design ledger
 
 ## 5. Edit the Pharos KG design for format X
 
-If the user chooses this, ask for format X and its consumer if they are not
-stated: the schema, the file or endpoint, and who reads it. Then:
+If the user chooses this, then:
 
-1. **Ask before installing the plugin.** If it is not already installed, add
-   the framework's `plugin/` directory to `~/.config/opencode/opencode.jsonc` with
-   `frameworkUrl` pointing at the included framework directory. Do not edit the
-   global config without the user's consent.
-2. **Move to `pharos-kg/`.** It is already a framework project, so do not
-   run `/kbs_init` again; use the design skill.
-3. **Edit the design, not a script.** Decide whether X is a target (a named
+1. **Ask for format X and its consumer** if they are not stated: the schema, the
+   file or endpoint, and who reads it.
+2. **Move to `pharos-kg/`.** Move the OpenCode session there; if the host
+   cannot move it, ask the user to open that folder.
+3. **Register the plugin locally.** Write or merge `pharos-kg/opencode.json`
+   with the included framework's `plugin/` directory and `frameworkUrl` pointing
+   at the included framework. Do not edit the global config. Reload OpenCode if
+   the design skill or `/kbs_init` is not present.
+4. **It is already a framework project**, so do not run `/kbs_init`; use the
+   design skill.
+5. **Edit the design, not a script.** Decide whether X is a target (a named
    consumer) or a step in the existing workflow. Add the planner and executor
    that contribute the step under `pharos_kg/modules/`, declare the target in
    `pharos_kg/manifest.py`, and let the plan carry its configuration. The plan
    is the documentation; do not add a post-build script.
-4. **Record the design change.** Record a finding and a proposal; a revision
+6. **Record the design change.** Record a finding and a proposal; a revision
    records it when approved.
-5. **Run the gates:** `kbs check`, `kbs workflow`, `kbs run`; read the report,
+7. **Run the gates:** `kbs check`, `kbs workflow`, `kbs run`; read the report,
    open the output, and add a test for its shape.
-6. **A format with no named consumer is not a target.** Ask who reads it, or
+8. **A format with no named consumer is not a target.** Ask who reads it, or
    keep the conversion inside a step used by a named reader. If X needs a new
    property or record, state that in the proposal.
 

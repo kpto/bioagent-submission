@@ -1,7 +1,7 @@
 import { execFile } from "node:child_process"
 import { existsSync, readdirSync } from "node:fs"
 import { readdir, readFile, rename } from "node:fs/promises"
-import { join, resolve } from "node:path"
+import { join } from "node:path"
 import { fileURLToPath } from "node:url"
 import { promisify } from "node:util"
 

@@ -8,7 +8,7 @@ directory. That opens a guided menu:
 3. **I mean the actual graph** — explain each bundled artifact, its path and its job in the competition.
 4. **The graph format is not quite right...** — name the format; I take the author role and change the declarations.
 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
-6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; that confirmation covers moving, `/kbs_init`, the auto build and the first revision.
+6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; then move to `demo/`, register the plugin locally, run `/kbs_init` and auto-build the first revision.
 
 The submission is committed in three branches:
 
@@ -204,20 +204,19 @@ command from you.
 
 ![Try it: install the plugin, open demo/, ask the agent to read PURPOSE.md, then use your own data](docs/try-it.svg)
 
-### 1. Install and move in one session
+### 1. Move and register locally
 
 Open a new OpenCode session and give it this one prompt:
 
-> Go to `<submission>`. If the OpenCode plugin is not already installed, install
-> it from the included framework's `plugin/` directory into my global
-> `~/.config/opencode/opencode.jsonc`, with `frameworkUrl` pointing at the
-> included framework. Then move this session to `./demo`.
+> Move this session to `<submission>/demo`. In that directory, register the
+> plugin locally: write `opencode.json` with the plugin at
+> `../kg-build-system/plugin` and `frameworkUrl` pointing at
+> `../kg-build-system`.
 
 Replace the first token with the absolute path to the submission folder.
 
-The plugin loads as soon as the entry is written; no restart is needed. The
-session is now in `demo/`. If `/kbs_init` does not appear, restart OpenCode once;
-the session reopens in `demo/`.
+If `/kbs_init` does not appear after registering, reload OpenCode once. The
+session stays in `demo/`, and the local plugin is active there.
 
 ### 2. Run the demo
 
