@@ -5,11 +5,10 @@ directory. That opens a guided menu:
 
 1. **What is this?** — a guided read of this README, one section at a time.
 2. **Show me the graph** — build if needed, then run `kbs up`.
-3. **I mean the actual graph** — explain the bundled artifact and how it answers a request.
+3. **I mean the actual graph** — explain each bundled artifact, its path and its job in the competition.
 4. **The graph format is not quite right...** — name the format; I take the author role and change the declarations.
 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
-6. **I still don't trust you; make a new graph for me** — use the demo.
-
+6. **I still don't trust you; make a new graph for me** — move to `demo/`, run `/kbs_init`, then stop and ask before the auto demo.
 
 The submission is committed in three branches:
 

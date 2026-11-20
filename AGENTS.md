@@ -12,6 +12,23 @@ This folder is a competition submission. It contains four things:
 Read `README.md` first for the argument and the exact prompts. This file is the
 agent's short guide to what the workspace can do.
 
+## First: confirm OpenCode V2
+
+Before the menu, before installing anything, and before any command, check the
+host you are running in:
+
+- `OPENCODE=1` (or the session otherwise identifying itself as OpenCode) means
+  you are inside OpenCode.
+- `opencode --version` must report a **v2.x** version.
+
+If either check fails, warn the user:
+
+> This plugin is for OpenCode V2; you appear to be running **<host/version>**.
+> Some commands may not work here.
+
+Do not block the rest of the menu solely on this check; state the risk and let
+the user decide whether to continue.
+
 ## Submission navigation
 
 **Magic keyword: `Menu please`.** If a user message contains the phrase
@@ -25,10 +42,10 @@ When the user opens this folder, offer the same menu:
 >
 > 1. **What is this?** — a guided read of this README, one section at a time.
 > 2. **Show me the graph** — open the viewer and console with `kbs up`.
-> 3. **I mean the actual graph** — explain the bundled artifact and how it answers a request.
+> 3. **I mean the actual graph** — explain each bundled artifact, its path and its job in the competition.
 > 4. **The graph format is not quite right...** — name the format; I take the author role and change the declarations.
 > 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
-> 6. **I still don't trust you; make a new graph for me** — use the demo.
+> 6. **I still don't trust you; make a new graph for me** — move the session to `demo/`, run `/kbs_init`, then stop and ask.
 >
 > Which would you like?
 
@@ -45,18 +62,40 @@ Then follow the choice:
 - **2. Show me the graph.** If `pharos-kg/build/workflow_plan.json` is present,
   start the viewer and console; otherwise build first. Give both URLs and leave
   them running for the session.
-- **3. I mean the actual graph.** Explain the bundled artifact:
-  `build/graph.jsonl`, `build/graph.annotated.jsonl` and `build/evidence.jsonl`,
-  and how a request maps to node and edge keys and their `build_key`. Do not
-  rebuild; read what is there.
+- **3. I mean the actual graph.** Explain the bundled artifacts against the
+  competition, not as a file listing. Do not rebuild; read what is there.
+
+  | Artifact | What it is | Competition job |
+  | --- | --- | --- |
+  | `pharos-kg/build/graph.jsonl.gz` | 28,359 nodes / 150,856 edges, the keep projection | **the scored graph file**; this is the graph a judge reads or consumes |
+  | `pharos-kg/build/graph.annotated.jsonl.gz` | 74,747 / 239,939 candidates, including records marked `prune` | **accuracy and pruning**: every candidate and the keep/prune decision |
+  | `pharos-kg/build/evidence.jsonl.gz` | 179,215 evidence records keyed by `build_key` | **usability and trust**: why a node or edge exists, traceable to its source row |
+  | `pharos-kg/build/evidence_manifest.json` | evidence counts, coverage and missing totals | **evidence completeness**: proves the sidecar covers every shipped record |
+  | `pharos-kg/build/workflow_plan.json` | the compiled 251-step plan | **standards and generalisation**: the build is declared, inspectable and rerunnable |
+  | `pharos-kg/build/build_report.json` | the execution report | **reproducibility**: what ran, what published, what failed |
+  | `pharos-kg/build/meta_graph.html` / `.json` | the component and step catalogue | **architecture and generalisation**: how the build is assembled for a reviewer |
+
+  All paths are relative to the submission root; the files are in
+  `pharos-kg/build/`. The first three are gzip-compressed in `full`; `gunzip`
+  them before reading. A request maps to node and edge keys and their `build_key`;
+  explain that mapping through the evidence sidecar.
 - **4. The graph format is not quite right.** Ask for the exact format and who
   consumes it. Take the KG-author role immediately: edit the declarations under
   `pharos_kg/`, then run `kbs check` and the build. Do not write a post-build
   script.
 - **5. I don't trust you; I want to build it myself.** Show the commands and step
   aside. Do not run them unless asked.
-- **6. I still don't trust you; make a new graph for me.** Move to `demo/` and
-  run the demo flow; use the same method on that new domain.
+- **6. I still don't trust you; make a new graph for me.** Do this in order:
+  1. Move the OpenCode session to `demo/`.
+  2. In `demo/`, run `/kbs_init` with no task and let it create the project.
+  3. Stop and report. Say: **“For this demo I will read `PURPOSE.md` as the
+     task. `/kbs_auto` will be on, so I will make the design decisions and
+     create a KG revision. Shall I proceed?”**
+  4. Wait for the user's affirmation. Do not read `PURPOSE.md`, design, build or
+     create a revision before they affirm.
+  5. On affirmation, turn `/kbs_auto` on with `PURPOSE.md` as the task; it runs
+     the demo and records the revision.
+
 
 Ask once. If the user says "show me" or "go", give the one-paragraph summary and
 point to `README.md`; do not start a build or a viewer until they ask for one.
@@ -125,7 +164,7 @@ way), make sure the plugin is installed from the framework's plugin directory if
 The agent reads the files, proposes the graph and its readers, and stops for
 correction. After the user accepts, it declares and builds one layer at a time.
 `/kbs_auto <task>` lets it finish the remaining work without asking between
-layers, but it stops before recording a revision for the user to approve.
+layers and records the revision when the gates pass.
 Do not copy the Pharos declarations into the demo; the point is the same method
 on a new domain.
 

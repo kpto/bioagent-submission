@@ -1,7 +1,7 @@
 import { execFile } from "node:child_process"
 import { existsSync, readdirSync } from "node:fs"
 import { readdir, readFile, rename } from "node:fs/promises"
-import { join } from "node:path"
+import { join, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 import { promisify } from "node:util"
 
@@ -42,7 +42,7 @@ const AUTONOMY = `AUTONOMOUS MODE. Work the user's request to completion without
 - Do not ask for approval to edit, declare, or continue. Finish the task.
 - Fix a failure by changing the declaration, never the test or a built artifact; rerun until the gates pass.
 - Record findings and proposals as you go.
-- Do not create a revision. When the task is finished and the gates pass, stop and report the result and the revision you would record; the user records it.`
+- Record findings and proposals as you go. When the task is finished and the gates pass, create the proposal(s) the change needs and record the revision that implements them; report its code. Do not stop before the revision is recorded.`
 
 type QueuedRequest = {
   id?: string
@@ -357,7 +357,7 @@ Rules:
   a decision is still theirs.
 - At the first stage boundary, tell the user they can say
   \`/kbs_auto <task>\` to let you finish the remaining work autonomously; it
-  leaves the revision for them to record.`
+  records the revision when the gates pass.`
 }
 
 export default Plugin.define({
@@ -464,7 +464,7 @@ export default Plugin.define({
       editor.add({
         name: "kbs_auto",
         description:
-          "Finish the current task without asking for approval; do not create a revision",
+          "Finish the current task without asking for approval and record its revision",
         execute: async ({ sessionID, prompt, delivery }) => {
           const project = findProject(directory)
           if (!project) {
@@ -500,8 +500,8 @@ export default Plugin.define({
           await ctx.session.prompt({
             sessionID,
             text: task
-              ? `Autonomous mode is on. Work this request to completion:\n\n${task}\n\nDo not stop between layers or ask for approval to edit. Finish the task; do not create a revision.`
-              : "Autonomous mode is on. Continue the current task; finish it without asking for approval to edit, and do not create a revision.",
+              ? `Autonomous mode is on. Work this request to completion:\n\n${task}\n\nDo not stop between layers or ask for approval to edit. Finish the task and record its revision.`
+              : "Autonomous mode is on. Continue the current task; finish it without asking for approval to edit, and record its revision.",
             skills: [{ id: SKILL_ID }],
             delivery,
           })

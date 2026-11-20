@@ -112,12 +112,11 @@ each turn with what you did, what you recorded, what you assumed and one
 question or next command. Do not try to finish the graph in one turn.
 
 At the first stage boundary, tell the user that `/kbs_auto <task>` lets the
-agent finish the remaining work without questions and leave the revision for
-them to record.
+agent finish the remaining work without questions and record the revision.
 
 In the plugin's autonomous mode these stages are internal: finish them, run the
-gates, and stop after the task is complete. Do not create a revision; report what
-would be recorded and leave it to the user.
+gates, and record the proposals and the revision they implement before reporting
+the revision code.
 
 **Talk at the reader's level.** Report what the graph can answer and what it
 cannot, in the user's words. Name assets, relations, bindings, adapters and

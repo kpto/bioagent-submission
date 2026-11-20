@@ -30,8 +30,8 @@ when the workspace is already a kg-build-system project.
 ```
 
 In autonomous mode the agent declares, builds, runs and tests without asking for
-approval to edit or continue. It finishes the task, then reports the result and
-the revision it would record. It never records the revision itself.
+approval to edit or continue. It finishes the task, records the proposals and the
+revision they implement, and reports the revision code.
 
 Then it hands over a fixed sequence:
 
