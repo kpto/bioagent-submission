@@ -9,4 +9,4 @@ I'm not asking what to prescribe, and a missing result is not the same as a
 susceptible one. The files are messy in places; please don't quietly clean them
 up.
 
-Can you start from the four files here?
+Please use all the files here, including the instrument worksheet.

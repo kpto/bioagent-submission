@@ -227,7 +227,7 @@ In the same session, now in `demo/`, say:
 /kbs_init read PURPOSE.md for what I want
 ```
 
-The agent reads the four files, proposes the graph and its readers, and stops for
+The agent reads the five files, including the semi-structured instrument report, proposes the graph and its readers, and stops for
 your correction. Accept or correct it; it then works in small steps, records each
 decision, and keeps the decision console and design viewer open.
 

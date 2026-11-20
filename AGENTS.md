@@ -6,7 +6,7 @@ This folder is a competition submission. It contains four things:
 | --- | --- |
 | `kg-build-system/` | the framework: the design language, the build engine and the `opencode-kbs` plugin |
 | `pharos-kg/` | the worked graph: a pure declaration package for the framework, over the Pharos 3.19 kinase family |
-| `demo/` | four messy exports and a lab lead's `PURPOSE.md`, for the same method on a new domain |
+| `demo/` | four structured exports, one semi-structured instrument report, and a lab lead's `PURPOSE.md` |
 | `docs/` | the figures used by the README |
 
 Read `README.md` first for the argument and the exact prompts. This file is the
@@ -87,8 +87,8 @@ Then follow the choice:
   aside. Do not run them unless asked.
 - **6. I still don't trust you; make a new graph for me.** Do this in order:
   1. Briefly explain the demo before moving:
-     `demo/` holds four messy antimicrobial exports and a lab lead's
-     `PURPOSE.md`. The story: the lab wants to know which isolates are resistant
+     `demo/` holds four structured antimicrobial exports, one semi-structured
+     instrument report, and a lab lead's `PURPOSE.md`. The story: the lab wants to know which isolates are resistant
      to which antibiotics and what evidence supports each result. This is the
      same method on a new domain, not a second Pharos.
 

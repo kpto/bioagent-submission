@@ -1,0 +1,45 @@
+Clinical Microbiology — Vitek 2 worksheet
+Run: 2026-02-12    Printed: 2026-02-13    Operator: bench 2
+
+Each block is one isolate. The quick-view rows below are the instrument's own
+wording; the interpreted result is the last field. "—" means the instrument
+reported no value. Comments are free text and may repeat.
+
+--- ISO-001 ---
+specimen: urine
+organism: Escherichia coli
+ampicillin       | MIC | >32  | mg/L | R | ESBL screen positive
+ciprofloxacin    | MIC | 0.25 | mg/L | S | —
+comment: ESBL confirmation pending; do not call this susceptible to ampicillin.
+
+--- ISO-002 ---
+specimen: blood
+organism: Klebsiella pneumoniae
+gentamicin       | MIC | 2    | mg/L | S | —
+comment: growth at 24 h only; repeat from the original bottle if needed.
+
+--- ISO-003 ---
+specimen: wound
+organism: Staphylococcus aureus
+vancomycin       | MIC | 1    | mg/L | S | —
+ampicillin       | MIC | 0.5  | mg/L | S | —
+comment: —
+
+--- ISO-004 ---
+specimen: sputum
+organism: Pseudomonas aeruginosa
+ciprofloxacin    | MIC | 4    | mg/L | R | —
+gentamicin       | MIC | 500  | µg/mL | S | unit as printed; do not convert
+comment: mucoid morphology; the plate reader flagged the gentamicin well twice.
+
+--- ISO-005 ---
+specimen: urine
+organism: Escherichia coli
+ampicillin       | MIC | —    | mg/L | — | no result
+comment: insufficient growth for a reliable MIC; not the same as susceptible.
+
+--- ISO-999 ---
+specimen: —
+organism: —
+gentamicin       | MIC | 8    | mg/L | R | —
+comment: isolate sheet missing; result kept because the instrument reported it.
