@@ -4,9 +4,9 @@ Connect the LLM provider you prefer, then type “Menu please” in this reposit
 directory. That opens a guided menu:
 
 1. **What is this?** — a guided read of this README, one section at a time.
-2. **Show me the graph** — build if needed, then run `kbs up`.
-3. **I mean the actual graph** — explain each bundled artifact, its path and its job in the competition.
-4. **The graph format is not quite right...** — name the format; I take the author role and change the declarations.
+2. **Show me the graph** — visualise the Pharos KG design.
+3. **I mean the actual graph** — explain each bundled artifact of the Pharos KG, its path and its job in the competition.
+4. **The graph format is not quite right...** — name the format; I take the author role and change the Pharos KG design.
 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
 6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; then move to `demo/`, register the plugin locally, run `/kbs_init` and auto-build the first revision.
 
