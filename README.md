@@ -10,17 +10,9 @@ directory. That opens a guided menu:
 5. **I don't trust you; I want to build it myself** — show `kbs check` and `kbs run`, then step aside.
 6. **I still don't trust you; make a new graph for me** — explain the demo story and ask once; then move to `demo/`, register the plugin locally, run `/kbs_init` and auto-build the first revision.
 
-The submission is committed in three branches:
-
-| Branch | Contains |
-| --- | --- |
-| `slim` | Source plus `build/workflow_plan.json` |
-| `cache` | `slim` plus the pinned source caches in `data/` |
-| `full` | `cache` plus the built graph, evidence, report and meta-graph |
-
 **What you need**
 - `uv`
-- OpenCode Desktop or the OpenCode CLI
+- OpenCode V2 Desktop or the OpenCode V2 CLI
 
 `chdb` has no Windows wheel, so `uv sync` skips it there; the pinned Parquet cache
 in `data/` supplies every table without it. Rebuilding from the MySQL dump is a
