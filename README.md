@@ -110,39 +110,18 @@ ledger is the evidence.
 The artifact answers one question: why is a kinase linked to a disease, a compound,
 another kinase or a biological process — and what does that link not mean?
 
-### Build it, then open it
+### Open it, then build it
 
-From `pharos-kg/`, `kbs` executes the 251-step plan and serves both reading
-surfaces. Every model command takes `--project pharos_kg`; without it `kbs`
-looks for `manifest.py` in the current directory.
+From `pharos-kg/`, both reading surfaces open without a build: the compiled plan
+is already shipped at `build/workflow_plan.json`.
 
 ```console
 uv sync
-uv run kbs blueprint --project pharos_kg
-uv run kbs workflow --project pharos_kg
-uv run kbs check --project pharos_kg
-uv run kbs run --project pharos_kg
-```
-
-`kbs blueprint` prints the authored blueprint. `kbs check` reads the argument
-back. `kbs run` executes the declared plan and
-writes `build/`. A prebuilt copy is included under `pharos-kg/build/`; running
-`kbs run` reproduces it. The output is: `graph.jsonl`, `graph.annotated.jsonl`, `evidence.jsonl`,
-`workflow_plan.json`, `build_report.json` and the meta-graph.
-A cold `data/` downloads and verifies each release before the first build. On a
-terminal the run shows live progress; `--no-monitor` leaves the JSON report
-alone.
-
-Then start the viewer and the console:
-
-```console
 uv run kbs up --project .
 ```
 
 The design viewer opens at `http://127.0.0.1:8000/` and the decision console at
-`http://127.0.0.1:8000/console/`. Add `--no-open` on a remote shell and
-`--port 8787` to change the port. `uv run kbs view --snapshot
-build/workflow_plan.json` serves the viewer alone, after a build.
+`http://127.0.0.1:8000/console/`.
 
 | Surface | What to read |
 | --- | --- |
@@ -158,6 +137,30 @@ Both surfaces, from the built Pharos graph:
 The console is the process; the viewer is the artifact. Both read the same
 project: the console from `journal/events/`, the viewer from
 `build/workflow_plan.json`.
+
+#### Build it
+
+Rebuilding is optional. `kbs` executes the 251-step plan and writes `build/`.
+Every model command takes `--project pharos_kg`, the declaration package that
+holds `manifest.py`; `up` takes `--project .`, the project root that holds
+`build/` and `journal/`. Without `--project`, `kbs` looks for `manifest.py` in
+the current directory.
+
+```console
+uv run kbs blueprint --project pharos_kg
+uv run kbs workflow --project pharos_kg
+uv run kbs check --project pharos_kg
+uv run kbs run --project pharos_kg
+```
+
+`kbs blueprint` prints the authored blueprint. `kbs check` reads the argument
+back. `kbs run` executes the declared plan and writes `build/`. A prebuilt copy
+is included under `pharos-kg/build/`; running `kbs run` reproduces it. The output
+is: `graph.jsonl`, `graph.annotated.jsonl`, `evidence.jsonl`,
+`workflow_plan.json`, `build_report.json` and the meta-graph.
+A cold `data/` downloads and verifies each release before the first build. On a
+terminal the run shows live progress; `--no-monitor` leaves the JSON report
+alone.
 
 ### The process, and its evidence
 
